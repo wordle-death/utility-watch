@@ -1,0 +1,32 @@
+name: tests
+
+on:
+  push:
+    branches-ignore: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m unittest discover -s tests -t . -v
+
+  # Fetch every live feed without writing anything, to confirm each one
+  # is reachable from GitHub and parses. Only runs on branches, not main.
+  live-feeds:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m collectors.run power --dry-run
+      - run: python -m collectors.run water --dry-run
