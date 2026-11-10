@@ -8,6 +8,7 @@ Field names were read from each live feed in November 2026; where a feed's
 field names were not confirmed, parsers try several likely names.
 """
 
+from .power import FeedError
 from .common import (
     fetch_json,
     first_key,
@@ -25,12 +26,19 @@ RAW_SAMPLES = {}
 ENTERGY_NOLA_URL = "https://entergy.datacapable.com/datacapable/v2/p/entergy/r/nola/map/events"
 
 
+def _require(condition, message):
+    if not condition:
+        raise FeedError(message)
+
+
 def parse_entergy(payload):
+    _require(isinstance(payload, list), "Entergy feed did not return a list")
     events = []
-    for item in payload or []:
+    for item in payload:
         events.append(
             {
-                "id": f"{item.get('id')}-{item.get('startTime')}",
+                # Entergy's ID stays the same if the outage's start is revised.
+                "id": item.get("id"),
                 "start": from_epoch_ms(item.get("startTime")),
                 "etr": from_epoch_ms(item.get("etrTime")),
                 "customers": to_int(item.get("numPeople")),
@@ -74,8 +82,10 @@ def _idaho_item(item):
 
 def parse_idaho_current(payload):
     """Live outages use "oms" field names; their IDs match the restored list's."""
+    _require(isinstance((payload or {}).get("object"), dict) and isinstance(payload["object"].get("outages"), list),
+             "Idaho Power current feed is missing object.outages")
     events = []
-    for item in ((payload or {}).get("object") or {}).get("outages") or []:
+    for item in payload["object"]["outages"]:
         events.append(
             {
                 "id": first_key(item, "omsOutageId", "osiOutageId", "outageId"),
@@ -95,7 +105,8 @@ def parse_idaho_current(payload):
 
 
 def parse_idaho_restored(payload):
-    return [_idaho_item(item) for item in (payload or {}).get("list") or []]
+    _require(isinstance((payload or {}).get("list"), list), "Idaho Power restored feed is missing list")
+    return [_idaho_item(item) for item in payload["list"]]
 
 
 def collect_idaho_power():
@@ -114,8 +125,9 @@ MLGW_TZ = "America/Chicago"
 
 
 def parse_mlgw(payload):
+    _require(isinstance((payload or {}).get("features"), list), "MLGW feed is missing features")
     events = []
-    for feature in (payload or {}).get("features") or []:
+    for feature in payload["features"]:
         props = feature.get("properties") or {}
         coords = (feature.get("geometry") or {}).get("coordinates") or [None, None]
         events.append(
@@ -145,16 +157,17 @@ SRP_TZ = "America/Phoenix"
 
 
 def parse_srp(payload):
+    _require(isinstance(payload, list), "SRP feed did not return a list")
     events = []
-    for item in payload or []:
+    for item in payload:
         lat, lon = item.get("latitude"), item.get("longitude")
         start_raw = first_key(item, "outageBeginTime", "outageStartTime", "beginTime", "startTime", "outageBegan")
         explicit_id = first_key(item, "outageId", "outageID", "id", "eventId", "incidentId")
         events.append(
             {
-                # SRP's feed has no confirmed ID field; fall back to location.
+                # If SRP ever omits its ID, fall back to location plus start time.
                 "id": explicit_id
-                or short_hash(round(float(lat or 0), 4), round(float(lon or 0), 4), item.get("crossRoadText")),
+                or short_hash(round(float(lat or 0), 4), round(float(lon or 0), 4), start_raw),
                 "start": from_local(start_raw, SRP_TZ) if start_raw else None,
                 "etr": None,
                 "customers": to_int(item.get("numberCustomersAffected")),
@@ -190,8 +203,19 @@ SWBNO_LAYER = (
 )
 
 
-def fetch_swbno():
-    return fetch_json(
-        SWBNO_LAYER,
-        params={"where": "1=1", "outFields": "*", "outSR": "4326", "f": "geojson"},
-    )
+def fetch_swbno(page_size=500, max_pages=20):
+    """Fetch every advisory area, page by page, so a capped response is never mistaken for the full layer."""
+    features = []
+    for page in range(max_pages):
+        payload = fetch_json(
+            SWBNO_LAYER,
+            params={"where": "1=1", "outFields": "*", "outSR": "4326", "f": "geojson",
+                    "orderByFields": "OBJECTID", "resultOffset": page * page_size,
+                    "resultRecordCount": page_size},
+        )
+        _require(isinstance((payload or {}).get("features"), list), "S&WB layer response has no features list")
+        features.extend(payload["features"])
+        more = payload.get("exceededTransferLimit") or (payload.get("properties") or {}).get("exceededTransferLimit")
+        if not more and len(payload["features"]) < page_size:
+            return {"type": "FeatureCollection", "features": features}
+    raise FeedError("S&WB layer still had more pages after the page limit")

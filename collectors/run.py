@@ -5,9 +5,10 @@
     python -m collectors.run power --dry-run  # fetch and parse, write nothing
 
 Each source runs on its own; one failing feed does not stop the others.
-The run exits with an error only if every source failed, so a single broken
-feed does not send failure emails every 15 minutes. Failures are recorded in
-data/status.json and printed in the job summary.
+Failures are recorded in data/status-<group>.json and the job summary. A
+scheduled run exits with an error only when a source first goes 6 hours
+without a successful run, so a broken feed sends one failure email, not one
+every 15 minutes. A dry run exits with an error if any source fails.
 """
 
 import argparse
@@ -18,7 +19,35 @@ import traceback
 
 from . import power, sources, water
 from . import common
-from .common import iso, now_utc, read_json, write_json
+from datetime import timedelta
+
+from .common import iso, now_utc, parse_iso, read_json, write_json
+
+STALE_AFTER = timedelta(hours=6)
+# Refresh last_success at most hourly, so status files do not change every run.
+HEARTBEAT = timedelta(minutes=55)
+
+
+def _record_status(group, now, results, failures):
+    """Update data/status-<group>.json; return sources that just went stale."""
+    path = common.DATA / f"status-{group}.json"
+    status = read_json(path, {})
+    for result in results:
+        entry = status.get(result["source"], {})
+        last = parse_iso(entry.get("last_success"))
+        if entry.get("last_error") or last is None or now - last >= HEARTBEAT:
+            status[result["source"]] = {"last_success": iso(now), "last_error": None}
+    newly_stale = []
+    for key, error in failures.items():
+        entry = status.setdefault(key, {"last_success": None})
+        entry["last_error"] = error
+        entry.setdefault("failing_since", iso(now))
+        healthy_at = parse_iso(entry.get("last_success")) or parse_iso(entry["failing_since"])
+        if now - healthy_at >= STALE_AFTER and not entry.get("alerted"):
+            entry["alerted"] = True
+            newly_stale.append(key)
+    write_json(path, status)
+    return newly_stale
 
 
 def _summary(lines):
@@ -58,23 +87,20 @@ def run(group, dry_run=False):
             failures[key] = f"{type(exc).__name__}: {exc}"
             traceback.print_exc()
 
+    alert = []
     if not dry_run:
-        status = read_json(common.DATA / "status.json", {})
-        for result in results:
-            status[result["source"]] = {"last_success": iso(now), "last_error": None}
-        for key, error in failures.items():
-            status.setdefault(key, {"last_success": None})
-            status[key]["last_error"] = error
-            status[key]["last_error_at"] = iso(now)
-        write_json(common.DATA / "status.json", status)
+        alert = _record_status(group, now, results, failures)
 
     report = {"run_at": iso(now), "group": group, "dry_run": dry_run, "results": results, "failures": failures}
     print(json.dumps(report, indent=1))
     lines = [f"### {group} collection {'(dry run) ' if dry_run else ''}at {iso(now)}"]
     lines += [f"- {r['source']}: " + ", ".join(f"{k}={v}" for k, v in r.items() if k not in ("source", "sample", "raw_sample")) for r in results]
     lines += [f"- **{k} failed:** {v}" for k, v in failures.items()]
+    lines += [f"- **{k} has had no successful run for {STALE_AFTER}.**" for k in alert]
     _summary(lines)
-    return 1 if jobs and len(failures) == len(jobs) else 0
+    if dry_run:
+        return 1 if failures else 0
+    return 1 if alert else 0
 
 
 def main(argv=None):

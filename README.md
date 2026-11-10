@@ -20,13 +20,19 @@ Not yet collected: APS (Phoenix) and Portland General Electric (Portland). Their
 
 - `data/power/<source>/active.json`: outages open as of the last run.
 - `data/power/<source>/events/YYYY-MM.jsonl`: one line per closed outage, with start, end, peak customers and customer-hours.
-- `data/water/swbno/advisories.geojson`: the current copy of S&WB's advisory layer.
-- `data/water/swbno/changes.jsonl`: every advisory added, changed or removed.
-- `data/status.json`: when each source last succeeded or failed.
+- `data/water/swbno/advisories.geojson`: every advisory area S&WB has published. Areas S&WB later removes stay here, marked `removed_at`.
+- `data/water/swbno/changes.jsonl`: every advisory added, changed, removed or restored.
+- `data/status-power.json`, `data/status-water.json`: when each source last succeeded or failed.
 
 ### How outage ends are measured
 
-Most feeds drop an outage when power returns, without saying when. An outage that disappears is closed at the midpoint between the last run that saw it and the first that did not; both times are kept in `end_window`. Customer-hours are added up between runs using the customer count from the earlier run. Idaho Power reports its own end times, and those are used instead.
+Most feeds drop an outage when power returns, without saying when. An outage that disappears is closed at the midpoint between the last run that saw it and the first that did not; both times are kept in `end_window`. Customer-hours are added up between runs using the customer count from the earlier run, and hours before the first sighting are kept in a separate field. Idaho Power reports its own end times, and those are used instead. `max_gap_minutes` records the longest stretch between sightings, so outages measured through delayed runs can be flagged.
+
+### Safeguards
+
+- A feed whose response is missing its expected fields, or lists an outage without an ID, is treated as a failed run, not as "no outages."
+- If a feed suddenly shows no outages while three or more were open, nothing is closed until the next run confirms it.
+- A source that fails keeps running on schedule. It sends one failure email after 6 hours without a successful run, not one per run.
 
 ## Running locally
 
@@ -41,4 +47,4 @@ python -m collectors.run water
 
 ## Scheduled runs
 
-`.github/workflows/collect.yml` runs power every 15 minutes and water hourly, then commits any changes to `main`. `tests.yml` runs the tests on every pull request and checks the live feeds on every branch push.
+`collect-power.yml` runs every 15 minutes and `collect-water.yml` hourly; each commits any changes to `main`. `tests.yml` runs the tests on every pull request and checks the live feeds on every branch push.

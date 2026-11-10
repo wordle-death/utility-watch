@@ -9,7 +9,9 @@ import unittest
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from collectors import common, power, sources, water
+from unittest import mock
+
+from collectors import common, power, run, sources, water
 
 T0 = datetime(2026, 11, 10, 18, 0, tzinfo=timezone.utc)
 
@@ -60,7 +62,13 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(event["customers"], 73)
         self.assertEqual(event["start"], datetime(2026, 11, 4, 14, 0, tzinfo=timezone.utc))
         self.assertIsNone(event["cause"])
-        self.assertEqual(event["id"], "229-1793800800000")
+        self.assertEqual(event["id"], 229)
+
+    def test_schema_change_is_an_error(self):
+        with self.assertRaises(power.FeedError):
+            sources.parse_mlgw({"type": "FeatureCollection"})
+        with self.assertRaises(power.FeedError):
+            sources.parse_idaho_current({"object": None})
 
     def test_idaho_restored_local_time(self):
         event = sources.parse_idaho_restored(IDAHO_RESTORED_SAMPLE)[0]
@@ -112,6 +120,9 @@ class PowerTests(TempData):
         self.assertEqual(row["peak_customers"], 300)
         # 100 customers for 1 hour, then 300 for half of the final hour-long gap.
         self.assertEqual(row["customer_hours_observed"], 250.0)
+        # Plus 30 minutes at 100 customers before the first run saw it.
+        self.assertEqual(row["customer_hours"], 300.0)
+        self.assertEqual(row["max_gap_minutes"], 60)
         self.assertEqual(row["end_basis"], "midpoint_estimate")
         self.assertEqual(row["end"], common.iso(T0 + timedelta(hours=1, minutes=30)))
         self.assertEqual(row["duration_hours"], 2.0)
@@ -136,7 +147,43 @@ class PowerTests(TempData):
         power.update("x", [], T0 + timedelta(minutes=15), restored)
         rows = self.log("x")
         self.assertEqual(len(rows), 1)
-        self.assertEqual(rows[0]["customer_hours_observed"], 20.0)
+        self.assertEqual(rows[0]["customer_hours"], 20.0)
+        self.assertEqual(rows[0]["customer_hours_basis"], "reported_duration")
+
+    def test_old_restored_outage_is_not_logged(self):
+        end = T0 - timedelta(days=9)
+        restored = [dict(outage(5, 20, end - timedelta(hours=1)), end=end)]
+        for minutes in (0, 15, 30):
+            power.update("x", [], T0 + timedelta(minutes=minutes), restored)
+        self.assertEqual(self.log("x", "2026-11") + self.log("x", "2026-10"), [])
+
+    def test_sudden_empty_snapshot_is_held_once(self):
+        start = T0 - timedelta(hours=1)
+        power.update("x", [outage(i, 10, start) for i in range(5)], T0)
+        held = power.update("x", [], T0 + timedelta(minutes=15))
+        self.assertTrue(held.get("held_empty_snapshot"))
+        self.assertEqual(held["active"], 5)
+        # Back on the next run: nothing was closed or reopened.
+        back = power.update("x", [outage(i, 10, start) for i in range(5)], T0 + timedelta(minutes=30))
+        self.assertEqual((back["opened"], back["closed"]), (0, 0))
+        # Empty twice in a row: now they close.
+        power.update("x", [], T0 + timedelta(minutes=45))
+        closed = power.update("x", [], T0 + timedelta(minutes=60))
+        self.assertEqual(closed["closed"], 5)
+
+    def test_missing_id_is_an_error(self):
+        with self.assertRaises(power.FeedError):
+            power.update("x", [outage(None, 10)], T0)
+
+    def test_duplicate_ids_are_kept_apart(self):
+        summary = power.update("x", [outage("a", 3), outage("a", 100)], T0)
+        self.assertEqual((summary["active"], summary["customers_out"]), (2, 103))
+
+    def test_log_goes_to_month_outage_ended(self):
+        nov1 = datetime(2026, 11, 1, 0, 10, tzinfo=timezone.utc)
+        power.update("x", [outage(1, 10, nov1 - timedelta(hours=1))], nov1 - timedelta(minutes=30))
+        power.update("x", [], nov1 - timedelta(minutes=20))
+        self.assertEqual(len(self.log("x", "2026-10")), 1)
 
     def test_no_change_leaves_files_untouched(self):
         power.update("x", [], T0)
@@ -158,12 +205,40 @@ class WaterTests(TempData):
         kinds = [json.loads(line)["change"] for line in lines]
         self.assertEqual(kinds, ["added", "updated", "added"])
 
+    def test_removed_area_is_kept_with_geometry(self):
+        water.update_swbno({"features": [self.feature(1, "active"), self.feature(2, "active")]}, T0)
+        water.update_swbno({"features": [self.feature(2, "active")]}, T0)
+        saved = json.loads((common.DATA / "water" / "swbno" / "advisories.geojson").read_text())
+        kept = {f["properties"]["OBJECTID"]: f for f in saved["features"]}
+        self.assertIn("removed_at", kept[1])
+        self.assertIn("geometry", kept[1])
+
+    def test_paging_collects_every_page(self):
+        pages = [{"features": [self.feature(i, "a") for i in range(500)], "exceededTransferLimit": True},
+                 {"features": [self.feature(i, "a") for i in range(500, 520)]}]
+        with mock.patch.object(sources, "fetch_json", side_effect=pages):
+            self.assertEqual(len(sources.fetch_swbno()["features"]), 520)
+
     def test_empty_response_does_not_erase_copy(self):
         water.update_swbno({"features": [self.feature(1, "active")]}, T0)
         with self.assertRaises(ValueError):
             water.update_swbno({"features": []}, T0)
         saved = json.loads((common.DATA / "water" / "swbno" / "advisories.geojson").read_text())
         self.assertEqual(len(saved["features"]), 1)
+
+
+class StatusTests(TempData):
+    def test_one_alert_after_six_hours_of_failure(self):
+        run._record_status("power", T0, [{"source": "x"}], {})
+        alerts = [run._record_status("power", T0 + timedelta(hours=h), [], {"x": "boom"}) for h in (1, 5, 7, 8)]
+        self.assertEqual(alerts, [[], [], ["x"], []])
+
+    def test_success_heartbeat_is_hourly(self):
+        run._record_status("power", T0, [{"source": "x"}], {})
+        path = common.DATA / "status-power.json"
+        before = path.read_text()
+        run._record_status("power", T0 + timedelta(minutes=15), [{"source": "x"}], {})
+        self.assertEqual(path.read_text(), before)
 
 
 if __name__ == "__main__":
