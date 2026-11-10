@@ -44,6 +44,7 @@ def run(group, dry_run=False):
                         "restored_listed": len(restored or []),
                         "customers_out": sum(e["customers"] for e in current),
                         "sample": {k: str(v) for k, v in (current[0] if current else {}).items()},
+                        "raw_sample": sources.RAW_SAMPLES.get(key),
                     })
                 else:
                     results.append(power.update(key, current, now, restored))
@@ -70,7 +71,7 @@ def run(group, dry_run=False):
     report = {"run_at": iso(now), "group": group, "dry_run": dry_run, "results": results, "failures": failures}
     print(json.dumps(report, indent=1))
     lines = [f"### {group} collection {'(dry run) ' if dry_run else ''}at {iso(now)}"]
-    lines += [f"- {r['source']}: " + ", ".join(f"{k}={v}" for k, v in r.items() if k not in ("source", "sample")) for r in results]
+    lines += [f"- {r['source']}: " + ", ".join(f"{k}={v}" for k, v in r.items() if k not in ("source", "sample", "raw_sample")) for r in results]
     lines += [f"- **{k} failed:** {v}" for k, v in failures.items()]
     _summary(lines)
     return 1 if jobs and len(failures) == len(jobs) else 0

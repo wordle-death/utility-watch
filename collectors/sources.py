@@ -17,6 +17,9 @@ from .common import (
     to_int,
 )
 
+# First raw record per feed from the latest fetch, for dry-run inspection.
+RAW_SAMPLES = {}
+
 # --- Entergy New Orleans (DataCapable platform) ---------------------------
 
 ENTERGY_NOLA_URL = "https://entergy.datacapable.com/datacapable/v2/p/entergy/r/nola/map/events"
@@ -82,7 +85,10 @@ def parse_idaho_restored(payload):
 
 
 def collect_idaho_power():
-    current = parse_idaho_current(fetch_json(IDAHO_CURRENT_URL, headers=IDAHO_HEADERS))
+    raw = fetch_json(IDAHO_CURRENT_URL, headers=IDAHO_HEADERS)
+    outages = ((raw or {}).get("object") or {}).get("outages") or []
+    RAW_SAMPLES["idaho-power"] = outages[0] if outages else None
+    current = parse_idaho_current(raw)
     restored = parse_idaho_restored(fetch_json(IDAHO_RESTORED_URL, headers=IDAHO_HEADERS))
     return current, restored
 
