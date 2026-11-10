@@ -73,10 +73,24 @@ def _idaho_item(item):
 
 
 def parse_idaho_current(payload):
-    outages = ((payload or {}).get("object") or {}).get("outages") or []
-    events = [_idaho_item(item) for item in outages]
-    for event in events:
-        event.pop("end", None)
+    """Live outages use "oms" field names; their IDs match the restored list's."""
+    events = []
+    for item in ((payload or {}).get("object") or {}).get("outages") or []:
+        events.append(
+            {
+                "id": first_key(item, "omsOutageId", "osiOutageId", "outageId"),
+                "start": from_local(first_key(item, "omsOutageStartDate", "outageStartDate"), IDAHO_TZ),
+                "etr": from_local(item.get("omsEstimatedOutageRestorationDate"), IDAHO_TZ),
+                "customers": to_int(first_key(item, "omsCustomerCount", "totalAffectedPremises")),
+                "cause": item.get("probableCause"),
+                "status": item.get("omsStatusDescription"),
+                "kind": "PLANNED" if item.get("isPlannedOutage") else "UNPLANNED",
+                "lat": item.get("latitude"),
+                "lon": item.get("longitude"),
+                "zips": [z.get("outageZipName") for z in item.get("outageZip") or [] if z.get("outageZipName")],
+                "places": [c.get("outageCityName") for c in item.get("outageCity") or [] if c.get("outageCityName")],
+            }
+        )
     return events
 
 

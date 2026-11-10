@@ -69,6 +69,19 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(event["end"].hour, 22)
         self.assertEqual(event["zips"], ["83201"])
 
+    def test_idaho_current(self):
+        payload = {"object": {"outages": [{
+            "omsOutageId": 2600001444, "omsCustomerCount": 48, "omsOutageStartDate": "2026-11-10T14:36:13.447",
+            "omsStatusDescription": "On-site", "probableCause": "Object In Line", "isPlannedOutage": False,
+            "omsEstimatedOutageRestorationDate": "2026-11-10T17:30:00", "latitude": 43.56, "longitude": -117.0,
+            "outageCity": [{"omsOutageId": 0, "outageCityName": "HOMEDALE"}],
+            "outageZip": [{"omsOutageId": 0, "outageZipName": "83628"}]}]}}
+        event = sources.parse_idaho_current(payload)[0]
+        self.assertEqual(event["id"], 2600001444)
+        self.assertEqual(event["customers"], 48)
+        self.assertEqual(event["start"], datetime(2026, 11, 10, 21, 36, 13, tzinfo=timezone.utc))
+        self.assertEqual((event["zips"], event["places"]), (["83628"], ["HOMEDALE"]))
+
     def test_idaho_current_empty(self):
         payload = {"object": {"outages": [], "totalCustomersAffected": 0}}
         self.assertEqual(sources.parse_idaho_current(payload), [])
