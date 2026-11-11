@@ -4,13 +4,13 @@
   "1542442": {
    "cause": null,
    "customer_hours_before_first_seen": 3.3,
-   "customer_hours_observed": 2.2155555555555555,
+   "customer_hours_observed": 2.4669444444444446,
    "customers": 1,
    "etr": null,
    "first_seen": "2026-11-11T00:28:41Z",
    "id": "1542442",
    "kind": null,
-   "last_seen": "2026-11-11T02:41:37Z",
+   "last_seen": "2026-11-11T02:56:42Z",
    "lat": 35.03979,
    "lon": -89.95849,
    "max_gap_minutes": 118,
@@ -24,13 +24,13 @@
   "1542486": {
    "cause": null,
    "customer_hours_before_first_seen": 16.1,
-   "customer_hours_observed": 35.44888888888889,
+   "customer_hours_observed": 39.471111111111114,
    "customers": 16,
    "etr": null,
    "first_seen": "2026-11-11T00:28:41Z",
    "id": "1542486",
    "kind": null,
-   "last_seen": "2026-11-11T02:41:37Z",
+   "last_seen": "2026-11-11T02:56:42Z",
    "lat": 35.12723,
    "lon": -90.00469,
    "max_gap_minutes": 118,
@@ -41,24 +41,24 @@
    "status": "Trouble Shooter is determining repairs required",
    "zips": []
   },
-  "1542495": {
+  "1542496": {
    "cause": null,
-   "customer_hours_before_first_seen": 0.3,
+   "customer_hours_before_first_seen": 0.2,
    "customer_hours_observed": 0.0,
    "customers": 1,
    "etr": null,
-   "first_seen": "2026-11-11T02:41:37Z",
-   "id": "1542495",
+   "first_seen": "2026-11-11T02:56:42Z",
+   "id": "1542496",
    "kind": null,
-   "last_seen": "2026-11-11T02:41:37Z",
-   "lat": 35.01979,
-   "lon": -90.06696,
+   "last_seen": "2026-11-11T02:56:42Z",
+   "lat": 35.06698,
+   "lon": -89.9332,
    "max_gap_minutes": 0,
    "peak_customers": 1,
    "places": [],
-   "start": "2026-11-11T02:25:32Z",
+   "start": "2026-11-11T02:44:08Z",
    "start_basis": "reported",
-   "status": "Customer Svc is working this single customer outage",
+   "status": "The extent of the outage has been determined",
    "zips": []
   }
  },
@@ -70,6 +70,7 @@
   "1542487": "2026-11-11T02:26:34Z",
   "1542488": "2026-11-11T02:26:34Z",
   "1542489": "2026-11-11T02:26:34Z",
-  "1542494": "2026-11-11T02:41:37Z"
+  "1542494": "2026-11-11T02:41:37Z",
+  "1542495": "2026-11-11T02:56:42Z"
  }
 }
