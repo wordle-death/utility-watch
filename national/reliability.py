@@ -26,6 +26,8 @@ import pandas as pd
 URL = "https://s3.us-west-2.amazonaws.com/pudl.catalyst.coop/nightly/core_eia861__yearly_reliability.parquet"
 OUT = Path(__file__).resolve().parent.parent / "data" / "national" / "reliability.json"
 MIN_CUSTOMERS = 1000  # ignore very small systems when ranking
+MIN_POOL = 500  # fewer comparable utilities than this in the latest year means the source table changed
+MINUTES_IN_YEAR = 366 * 24 * 60
 
 COLUMNS = {
     "saidi_w_major_event_days_minutes": "saidi_with",
@@ -42,10 +44,17 @@ def tidy(raw):
     df = df.rename(columns=COLUMNS)
     df["standard"] = df["standard"].astype("string").str.lower().fillna("unknown")
     df["ieee"] = df["standard"].str.contains("ieee")
+    # Blank out values that cannot be outage minutes: more than a year, or the
+    # utility's own ID number typed into the field (City of Milan, TN: 12532).
+    for measure in ("saidi_with", "saidi_without"):
+        bad = (df[measure] > MINUTES_IN_YEAR) | ((df[measure] == df["utility_id_eia"]) & (df["utility_id_eia"] >= 1000))
+        df.loc[bad, measure] = float("nan")
     df = df.dropna(subset=["saidi_with", "saidi_without"], how="all")
     df = df.sort_values("ieee", ascending=False).drop_duplicates(["utility_id_eia", "state", "year"])
+    if "data_maturity" not in df:
+        df["data_maturity"] = None
     keep = ["utility_id_eia", "utility_name_eia", "state", "entity_type", "year", "customers",
-            "standard", "ieee", *COLUMNS.values()]
+            "standard", "ieee", "data_maturity", *COLUMNS.values()]
     return df[keep].sort_values(["year", "utility_id_eia", "state"]).reset_index(drop=True)
 
 
@@ -103,6 +112,9 @@ def _num(value):
 
 def build(df):
     latest = int(df["year"].max())
+    if len(rank(df, latest)) < MIN_POOL:
+        raise ValueError(f"only {len(rank(df, latest))} comparable utilities in {latest}; the source table has changed")
+    maturity = sorted(str(v) for v in df[df["year"] == latest]["data_maturity"].dropna().unique())
     utilities = []
     for row in df[df["year"] == latest].itertuples():
         utilities.append({
@@ -125,6 +137,9 @@ def build(df):
         "source": "EIA Form 861 reliability data via PUDL (Catalyst Cooperative)",
         "source_url": URL,
         "latest_year": latest,
+        # "final" or "provisional", as PUDL labels the latest year; provisional figures can still change.
+        "latest_year_data_maturity": maturity,
+        "unit": "One row per utility per state. A utility that serves several states is ranked once in each.",
         "ranking_rule": f"IEEE-standard reporters with at least {MIN_CUSTOMERS} customers",
         "national_by_year": national,
         "utilities_latest_year": utilities,

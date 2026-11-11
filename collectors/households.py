@@ -159,8 +159,13 @@ def build(features, blocks, previous=None, touching=touching_geoids):
         fingerprint = _fingerprint(feature)
         old = previous.get(key)
         have_occupancy = any(b["occupied"] is not None for b in blocks)
-        if old and old.get("geometry_hash") == fingerprint and (old.get("occupied_households") is not None or not have_occupancy):
-            counts = {k: old[k] for k in ("people", "housing_units", "occupied_households", "blocks", "method")}
+        reusable = (old and old.get("geometry_hash") == fingerprint
+                    and (old.get("occupied_households") is not None or not have_occupancy)
+                    # Upper-bound rows saved before block lists were kept are counted again.
+                    and (old.get("method") == "blocks_inside" or "block_geoids" in old))
+        if reusable:
+            counts = {k: old[k] for k in ("people", "housing_units", "occupied_households", "blocks", "method",
+                                          "block_geoids") if k in old}
         else:
             counts = count_inside(feature.get("geometry"), blocks)
             counts["method"] = "blocks_inside"
@@ -169,7 +174,9 @@ def build(features, blocks, previous=None, touching=touching_geoids):
                 counts = {"people": sum(b["people"] for b in hit), "housing_units": sum(b["units"] for b in hit),
                           "occupied_households": sum(b["occupied"] or 0 for b in hit)
                           if any(b["occupied"] is not None for b in blocks) else None, "blocks": len(hit),
-                          "method": "blocks_touching_upper_bound"}
+                          "method": "blocks_touching_upper_bound",
+                          # Kept so areas that share blocks are not counted twice when combined.
+                          "block_geoids": sorted(b["geoid"] for b in hit)}
         rows.append({
             "key": key, "objectid": props.get("OBJECTID"), "title": props.get("Advisory_Title"),
             "status": props.get("Adv_Status"), "begin": iso(from_epoch_ms(props.get("Public_Begin_DT"))),

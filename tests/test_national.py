@@ -46,7 +46,31 @@ class ReliabilityTests(unittest.TestCase):
         self.assertEqual(entry["saidi_with_national_avg"], 550.0)
         self.assertEqual(entry["saidi_with_peer_count"], 10)
 
+    def test_national_average_is_weighted_by_customers(self):
+        df = reliability.tidy(pd.concat([table(), pd.DataFrame([
+            (60, "Big", "TX", "Investor Owned", "2025-01-01", 9_000_000, "ieee_standard", 0.0, 0.0, 0, 0)],
+            columns=table().columns)]))
+        # Ten utilities of 100k averaging 550, plus one of 9 million at 0.
+        self.assertEqual(reliability.weighted_mean(reliability.rank(df, 2025), "saidi_with"), 55.0)
+        # The big one is outside the half-to-double peer range of utility 8.
+        self.assertEqual(reliability.profile(df, 8, "LA")[0]["saidi_with_peer_count"], 10)
+
+    def test_impossible_values_are_dropped(self):
+        extra = pd.DataFrame([
+            (12532, "ID typed as minutes", "TN", "Municipal", "2025-01-01", 5000, "ieee_standard", 12532.0, 90.0, 1, 1),
+            (70, "Over a year", "TX", "Municipal", "2025-01-01", 5000, "ieee_standard", 900_000.0, 80.0, 1, 1)],
+            columns=table().columns)
+        df = reliability.tidy(pd.concat([table(), extra]))
+        self.assertEqual(len(reliability.rank(df, 2025, "saidi_with")), 10)
+        self.assertEqual(len(reliability.rank(df, 2025, "saidi_without")), 12)
+
+    def test_build_fails_when_too_few_utilities(self):
+        with self.assertRaises(ValueError):
+            reliability.build(self.df)
+
     def test_build_shape(self):
+        reliability.MIN_POOL, saved = 5, reliability.MIN_POOL
+        self.addCleanup(setattr, reliability, "MIN_POOL", saved)
         result = reliability.build(self.df)
         self.assertEqual(result["latest_year"], 2025)
         self.assertEqual(len(result["utilities_latest_year"]), 12)
