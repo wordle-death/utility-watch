@@ -4,13 +4,13 @@
   "1542442": {
    "cause": null,
    "customer_hours_before_first_seen": 3.3,
-   "customer_hours_observed": 1.9647222222222223,
+   "customer_hours_observed": 2.2155555555555555,
    "customers": 1,
    "etr": null,
    "first_seen": "2026-11-11T00:28:41Z",
    "id": "1542442",
    "kind": null,
-   "last_seen": "2026-11-11T02:26:34Z",
+   "last_seen": "2026-11-11T02:41:37Z",
    "lat": 35.03979,
    "lon": -89.95849,
    "max_gap_minutes": 118,
@@ -24,13 +24,13 @@
   "1542486": {
    "cause": null,
    "customer_hours_before_first_seen": 16.1,
-   "customer_hours_observed": 31.435555555555556,
+   "customer_hours_observed": 35.44888888888889,
    "customers": 16,
    "etr": null,
    "first_seen": "2026-11-11T00:28:41Z",
    "id": "1542486",
    "kind": null,
-   "last_seen": "2026-11-11T02:26:34Z",
+   "last_seen": "2026-11-11T02:41:37Z",
    "lat": 35.12723,
    "lon": -90.00469,
    "max_gap_minutes": 118,
@@ -38,27 +38,27 @@
    "places": [],
    "start": "2026-11-10T23:28:26Z",
    "start_basis": "reported",
-   "status": "Tree Trimming is clearing debris from the area",
+   "status": "Trouble Shooter is determining repairs required",
    "zips": []
   },
-  "1542494": {
+  "1542495": {
    "cause": null,
-   "customer_hours_before_first_seen": 0.2,
+   "customer_hours_before_first_seen": 0.3,
    "customer_hours_observed": 0.0,
    "customers": 1,
    "etr": null,
-   "first_seen": "2026-11-11T02:26:34Z",
-   "id": "1542494",
+   "first_seen": "2026-11-11T02:41:37Z",
+   "id": "1542495",
    "kind": null,
-   "last_seen": "2026-11-11T02:26:34Z",
-   "lat": 35.08994,
-   "lon": -89.95661,
+   "last_seen": "2026-11-11T02:41:37Z",
+   "lat": 35.01979,
+   "lon": -90.06696,
    "max_gap_minutes": 0,
    "peak_customers": 1,
    "places": [],
-   "start": "2026-11-11T02:16:14Z",
+   "start": "2026-11-11T02:25:32Z",
    "start_basis": "reported",
-   "status": "The extent of the outage has been determined",
+   "status": "Customer Svc is working this single customer outage",
    "zips": []
   }
  },
@@ -69,6 +69,7 @@
   "1542485": "2026-11-11T02:26:34Z",
   "1542487": "2026-11-11T02:26:34Z",
   "1542488": "2026-11-11T02:26:34Z",
-  "1542489": "2026-11-11T02:26:34Z"
+  "1542489": "2026-11-11T02:26:34Z",
+  "1542494": "2026-11-11T02:41:37Z"
  }
 }
