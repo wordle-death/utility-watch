@@ -14,6 +14,7 @@ result is marked as an upper bound.
 
 import argparse
 import json
+import os
 import sys
 import urllib.error
 import urllib.parse
@@ -32,15 +33,18 @@ SMALL_AREA_PEOPLE = 100  # below this, also count touching blocks
 def load_blocks():
     """Orleans Parish blocks: [{geoid, lat, lon, people, units, occupied}], cached in the repo."""
     path = common.DATA / "census" / f"blocks-{STATE}{COUNTY}.json"
+    key = os.environ.get("CENSUS_API_KEY")
     cached = read_json(path, None)
-    if cached:
+    # Reuse the saved table, unless a key has since been added and it lacks occupancy.
+    if cached and (cached.get("has_occupied") or not key):
         return cached["blocks"]
     points = fetch_json(TIGER_BLOCKS, params={
         "where": f"STATE='{STATE}' AND COUNTY='{COUNTY}'",
         "outFields": "GEOID,INTPTLAT,INTPTLON,POP100,HU100", "returnGeometry": "false", "f": "json"}, timeout=120)
     if points.get("exceededTransferLimit") or not points.get("features"):
         raise FeedError("TIGERweb block list was empty or cut short")
-    occupied = _occupied_units()
+    # The Census API needs a free key. Without one, occupied households are left blank.
+    occupied = _occupied_units(key) if key else {}
     blocks = []
     for feature in points["features"]:
         a = feature["attributes"]
@@ -49,18 +53,19 @@ def load_blocks():
                        "occupied": occupied.get(a["GEOID"])})
     if sum(b["people"] for b in blocks) < 300_000:
         raise FeedError("Orleans Parish block total is too low; the block list is incomplete")
-    if sum(b["occupied"] is None for b in blocks) > len(blocks) * 0.02:
+    if key and sum(b["occupied"] is None for b in blocks) > len(blocks) * 0.02:
         # Do not cache a table without occupancy; try again next run.
         raise FeedError("Census occupied-housing table did not join to the block list")
     blocks.sort(key=lambda b: b["geoid"])
-    write_json(path, {"source": "2020 Census (TIGERweb interior points; DHC tables P1, H3)", "blocks": blocks})
+    write_json(path, {"source": "2020 Census (TIGERweb block counts; occupied units from DHC table H3)",
+                      "has_occupied": bool(key), "blocks": blocks})
     return blocks
 
 
-def _occupied_units():
+def _occupied_units(key):
     """Occupied housing units by block GEOID, from 2020 Census table H3."""
     query = urllib.parse.urlencode({"get": "H3_002N", "for": "block:*",
-                                    "in": f"state:{STATE} county:{COUNTY} tract:*"})
+                                    "in": f"state:{STATE} county:{COUNTY} tract:*", "key": key})
     request = urllib.request.Request(f"{CENSUS_DHC}?{query}", headers={"User-Agent": common.USER_AGENT})
     try:
         with urllib.request.urlopen(request, timeout=120) as response:
@@ -121,7 +126,8 @@ def count_inside(geometry, blocks):
         for b in blocks:
             if box[0] <= b["lon"] <= box[2] and box[1] <= b["lat"] <= box[3] and contains(geometry, b["lon"], b["lat"]):
                 people += b["people"]; units += b["units"]; occupied += b["occupied"] or 0; n += 1
-    return {"people": people, "housing_units": units, "occupied_households": occupied, "blocks": n}
+    known = any(b["occupied"] is not None for b in blocks)
+    return {"people": people, "housing_units": units, "occupied_households": occupied if known else None, "blocks": n}
 
 
 def touching_geoids(geometry):
@@ -152,7 +158,8 @@ def build(features, blocks, previous=None, touching=touching_geoids):
         key = str(props.get("GlobalID") or props.get("OBJECTID"))
         fingerprint = _fingerprint(feature)
         old = previous.get(key)
-        if old and old.get("geometry_hash") == fingerprint:
+        have_occupancy = any(b["occupied"] is not None for b in blocks)
+        if old and old.get("geometry_hash") == fingerprint and (old.get("occupied_households") is not None or not have_occupancy):
             counts = {k: old[k] for k in ("people", "housing_units", "occupied_households", "blocks", "method")}
         else:
             counts = count_inside(feature.get("geometry"), blocks)
@@ -160,7 +167,8 @@ def build(features, blocks, previous=None, touching=touching_geoids):
             if counts["people"] < SMALL_AREA_PEOPLE and feature.get("geometry"):
                 hit = [by_geoid[g] for g in touching(feature["geometry"]) if g in by_geoid]
                 counts = {"people": sum(b["people"] for b in hit), "housing_units": sum(b["units"] for b in hit),
-                          "occupied_households": sum(b["occupied"] or 0 for b in hit), "blocks": len(hit),
+                          "occupied_households": sum(b["occupied"] or 0 for b in hit)
+                          if any(b["occupied"] is not None for b in blocks) else None, "blocks": len(hit),
                           "method": "blocks_touching_upper_bound"}
         rows.append({
             "key": key, "objectid": props.get("OBJECTID"), "title": props.get("Advisory_Title"),

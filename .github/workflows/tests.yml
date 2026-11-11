@@ -32,5 +32,7 @@ jobs:
       - run: python -m collectors.run power --dry-run
       - run: python -m collectors.run water --dry-run
       - run: python -m collectors.households --dry-run
+        env:
+          CENSUS_API_KEY: ${{ secrets.CENSUS_API_KEY }}
       - run: pip install -q -r national/requirements.txt
       - run: python -m national.reliability --inspect
