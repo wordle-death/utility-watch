@@ -1,0 +1,51 @@
+name: collect-power
+
+on:
+  schedule:
+    - cron: "3,18,33,48 * * * *"  # every 15 minutes; GitHub may delay or skip scheduled runs
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# One power run at a time. Power and water write different files, so their
+# runs never conflict with each other.
+concurrency:
+  group: collect-power
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Collect
+        id: collect
+        continue-on-error: true
+        run: python -m collectors.run power
+      - name: Commit data
+        run: |
+          git config user.name "utility-watch-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -q -m "data: power $(date -u +%Y-%m-%dT%H:%MZ)"
+            pushed=no
+            for attempt in 1 2 3; do
+              if git pull --rebase --quiet origin main && git push --quiet; then pushed=yes; break; fi
+              git rebase --abort 2>/dev/null || true
+              sleep 5
+            done
+            [ "$pushed" = yes ] || { echo "Push failed after 3 attempts."; exit 1; }
+          fi
+      # Fail the run, which sends one email, only when a source has just gone
+      # 6 hours without a successful collection.
+      - name: Report stale source
+        if: steps.collect.outcome == 'failure'
+        run: exit 1
