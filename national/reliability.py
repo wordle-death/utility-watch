@@ -151,7 +151,9 @@ def main(argv=None):
                 print(raw[column].value_counts(dropna=False).head(12).to_string())
         print("years", sorted(pd.to_datetime(raw["report_date"]).dt.year.unique()))
     df = tidy(raw)
-    matches = find(df, args.find)[["utility_id_eia", "utility_name_eia", "state"]].drop_duplicates()
+    # A utility's name can change over the years; keep its latest name per ID and state.
+    matches = (find(df, args.find).sort_values("year")
+               .drop_duplicates(["utility_id_eia", "state"], keep="last")[["utility_id_eia", "utility_name_eia", "state"]])
     print(matches.to_string())
     for match in matches.itertuples():
         print(json.dumps(profile(df, match.utility_id_eia, match.state), indent=1))

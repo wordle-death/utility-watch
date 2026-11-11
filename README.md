@@ -34,6 +34,10 @@ Most feeds drop an outage when power returns, without saying when. An outage tha
 - If a feed suddenly shows no outages while three or more were open, nothing is closed until the next run confirms it.
 - A source that fails keeps running on schedule. It sends one failure email after 6 hours without a successful run, not one per run.
 
+## National power comparison
+
+`national/reliability.py` downloads the federal EIA Form 861 reliability table (via PUDL) and writes `data/national/reliability.json`: every utility's latest outage minutes per customer (SAIDI) and outage count per customer (SAIFI), national averages by year since 2013, and a year-by-year profile of selected utilities against the nation and their peers. Rankings use only utilities that report under the IEEE standard and have at least 1,000 customers. Peers are utilities of the same ownership type with between half and double the customer count. The customer-weighted national averages match EIA's published figures. `national.yml` refreshes it monthly.
+
 ## Running locally
 
 Python 3.11 or newer, no packages needed.
