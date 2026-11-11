@@ -22,6 +22,7 @@ Not yet collected: APS (Phoenix) and Portland General Electric (Portland). Their
 - `data/power/<source>/events/YYYY-MM.jsonl`: one line per closed outage, with start, end, peak customers and customer-hours.
 - `data/water/swbno/advisories.geojson`: every advisory area S&WB has published. Areas S&WB later removes stay here, marked `removed_at`.
 - `data/water/swbno/changes.jsonl`: every advisory added, changed, removed or restored.
+- `data/water/swbno/advisory_counts.json`: people, housing units and occupied households inside each advisory area, from 2020 Census blocks. Areas too small to contain a block's interior point count every touching block and are marked as an upper bound.
 - `data/status-power.json`, `data/status-water.json`: when each source last succeeded or failed.
 
 ### How outage ends are measured

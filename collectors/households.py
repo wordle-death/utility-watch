@@ -1,0 +1,188 @@
+"""Count the people and households inside each S&WB boil-water advisory area.
+
+    python -m collectors.households            # update data/water/swbno/advisory_counts.json
+    python -m collectors.households --dry-run  # compute and print a summary, write nothing
+
+Method: a 2020 Census block counts toward an advisory when the block's
+interior point falls inside the advisory polygon. Counts come from the 2020
+Census (people, housing units, occupied housing units).
+
+Advisory areas smaller than a block (a few street segments) contain no
+interior points. For those, every block the area touches is counted and the
+result is marked as an upper bound.
+"""
+
+import argparse
+import json
+import sys
+
+from . import common
+from .common import fetch_json, from_epoch_ms, iso, read_json, short_hash, write_json
+from .power import FeedError
+
+STATE, COUNTY = "22", "071"  # Orleans Parish, Louisiana
+TIGER_BLOCKS = "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Tracts_Blocks/MapServer/2/query"
+CENSUS_DHC = "https://api.census.gov/data/2020/dec/dhc"
+SMALL_AREA_PEOPLE = 100  # below this, also count touching blocks
+
+
+def load_blocks():
+    """Orleans Parish blocks: [{geoid, lat, lon, people, units, occupied}], cached in the repo."""
+    path = common.DATA / "census" / f"blocks-{STATE}{COUNTY}.json"
+    cached = read_json(path, None)
+    if cached:
+        return cached["blocks"]
+    points = fetch_json(TIGER_BLOCKS, params={
+        "where": f"STATE='{STATE}' AND COUNTY='{COUNTY}'",
+        "outFields": "GEOID,INTPTLAT,INTPTLON", "returnGeometry": "false", "f": "json"}, timeout=120)
+    if points.get("exceededTransferLimit") or not points.get("features"):
+        raise FeedError("TIGERweb block list was empty or cut short")
+    table = fetch_json(CENSUS_DHC, params={
+        "get": "P1_001N,H3_001N,H3_002N", "for": "block:*", "in": f"state:{STATE} county:{COUNTY}"}, timeout=120)
+    header, rows = table[0], table[1:]
+    col = {name: header.index(name) for name in header}
+    counts = {}
+    for row in rows:
+        geoid = row[col["state"]] + row[col["county"]] + row[col["tract"]] + row[col["block"]]
+        counts[geoid] = (int(row[col["P1_001N"]]), int(row[col["H3_001N"]]), int(row[col["H3_002N"]]))
+    blocks = []
+    for feature in points["features"]:
+        a = feature["attributes"]
+        people, units, occupied = counts.get(a["GEOID"], (0, 0, 0))
+        blocks.append({"geoid": a["GEOID"], "lat": float(a["INTPTLAT"]), "lon": float(a["INTPTLON"]),
+                       "people": people, "units": units, "occupied": occupied})
+    if sum(b["people"] for b in blocks) < 300_000:
+        raise FeedError("Census block counts did not join; Orleans Parish total is too low")
+    blocks.sort(key=lambda b: b["geoid"])
+    write_json(path, {"source": "2020 Census (TIGERweb interior points; DHC tables P1, H3)", "blocks": blocks})
+    return blocks
+
+
+def _in_ring(x, y, ring):
+    inside = False
+    j = len(ring) - 1
+    for i in range(len(ring)):
+        xi, yi = ring[i][0], ring[i][1]
+        xj, yj = ring[j][0], ring[j][1]
+        if (yi > y) != (yj > y) and x < (xj - xi) * (y - yi) / (yj - yi) + xi:
+            inside = not inside
+        j = i
+    return inside
+
+
+def polygons(geometry):
+    """GeoJSON Polygon or MultiPolygon as a list of polygons, each a list of rings."""
+    if not geometry:
+        return []
+    if geometry["type"] == "Polygon":
+        return [geometry["coordinates"]]
+    if geometry["type"] == "MultiPolygon":
+        return geometry["coordinates"]
+    return []
+
+
+def contains(geometry, lon, lat):
+    for rings in polygons(geometry):
+        # Even-odd across rings, so holes are excluded.
+        if sum(_in_ring(lon, lat, ring) for ring in rings) % 2 == 1:
+            return True
+    return False
+
+
+def bbox(geometry):
+    xs = [p[0] for rings in polygons(geometry) for ring in rings for p in ring]
+    ys = [p[1] for rings in polygons(geometry) for ring in rings for p in ring]
+    return (min(xs), min(ys), max(xs), max(ys)) if xs else None
+
+
+def count_inside(geometry, blocks):
+    box = bbox(geometry)
+    people = units = occupied = n = 0
+    if box:
+        for b in blocks:
+            if box[0] <= b["lon"] <= box[2] and box[1] <= b["lat"] <= box[3] and contains(geometry, b["lon"], b["lat"]):
+                people += b["people"]; units += b["units"]; occupied += b["occupied"]; n += 1
+    return {"people": people, "housing_units": units, "occupied_households": occupied, "blocks": n}
+
+
+def touching_geoids(geometry):
+    """GEOIDs of blocks an area touches, asked of TIGERweb one polygon at a time."""
+    geoids = set()
+    for rings in polygons(geometry):
+        result = fetch_json(TIGER_BLOCKS, params={
+            "geometry": json.dumps({"rings": rings, "spatialReference": {"wkid": 4326}}),
+            "geometryType": "esriGeometryPolygon", "inSR": "4326", "spatialRel": "esriSpatialRelIntersects",
+            "where": f"STATE='{STATE}' AND COUNTY='{COUNTY}'", "outFields": "GEOID",
+            "returnGeometry": "false", "f": "json"}, timeout=60)
+        if "features" not in result:
+            raise FeedError("TIGERweb intersect query failed")
+        geoids.update(f["attributes"]["GEOID"] for f in result["features"])
+    return geoids
+
+
+def _fingerprint(feature):
+    return short_hash(repr(feature.get("geometry")))
+
+
+def build(features, blocks, previous=None, touching=touching_geoids):
+    by_geoid = {b["geoid"]: b for b in blocks}
+    previous = {row["key"]: row for row in (previous or [])}
+    rows = []
+    for feature in features:
+        props = feature.get("properties") or {}
+        key = str(props.get("GlobalID") or props.get("OBJECTID"))
+        fingerprint = _fingerprint(feature)
+        old = previous.get(key)
+        if old and old.get("geometry_hash") == fingerprint:
+            counts = {k: old[k] for k in ("people", "housing_units", "occupied_households", "blocks", "method")}
+        else:
+            counts = count_inside(feature.get("geometry"), blocks)
+            counts["method"] = "blocks_inside"
+            if counts["people"] < SMALL_AREA_PEOPLE and feature.get("geometry"):
+                hit = [by_geoid[g] for g in touching(feature["geometry"]) if g in by_geoid]
+                counts = {"people": sum(b["people"] for b in hit), "housing_units": sum(b["units"] for b in hit),
+                          "occupied_households": sum(b["occupied"] for b in hit), "blocks": len(hit),
+                          "method": "blocks_touching_upper_bound"}
+        rows.append({
+            "key": key, "objectid": props.get("OBJECTID"), "title": props.get("Advisory_Title"),
+            "status": props.get("Adv_Status"), "begin": iso(from_epoch_ms(props.get("Public_Begin_DT"))),
+            "end": iso(from_epoch_ms(props.get("Public_End_DT"))), "removed_at": feature.get("removed_at"),
+            "geometry_hash": fingerprint, **counts,
+        })
+    rows.sort(key=lambda r: (r["begin"] or "", r["key"]))
+    return rows
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--dry-run", action="store_true")
+    args = parser.parse_args(argv)
+    base = common.DATA / "water" / "swbno"
+    if args.dry_run:
+        from . import sources
+        features = sources.fetch_swbno()["features"]
+    else:
+        features = read_json(base / "advisories.geojson", {"features": []})["features"]
+    blocks = load_blocks()
+    previous = read_json(base / "advisory_counts.json", {"advisories": []})["advisories"]
+    rows = build(features, blocks, previous)
+    summary = {
+        "advisories": len(rows),
+        "parish_people": sum(b["people"] for b in blocks),
+        "parish_occupied_households": sum(b["occupied"] for b in blocks),
+        "upper_bound_rows": sum(r["method"] != "blocks_inside" for r in rows),
+        "zero_rows": sum(r["people"] == 0 for r in rows),
+        "largest": max(rows, key=lambda r: r["people"], default=None),
+        "latest": rows[-3:],
+    }
+    print(json.dumps(summary, indent=1))
+    if not args.dry_run:
+        write_json(base / "advisory_counts.json", {
+            "method": "2020 Census blocks whose interior point is inside the advisory area; "
+                      "areas under 100 people count every touching block as an upper bound",
+            "advisories": rows})
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
