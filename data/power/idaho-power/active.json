@@ -1,134 +1,40 @@
 {
  "empty_streak": 0,
  "events": {
-  "2600001323": {
+  "2600001522": {
    "cause": "Under Investigation",
-   "customer_hours_before_first_seen": 31.3,
+   "customer_hours_before_first_seen": 6.8,
    "customer_hours_observed": 0.0,
-   "customers": 24,
-   "etr": "2026-11-11T20:00:00Z",
-   "first_seen": "2026-11-11T17:28:53Z",
-   "id": "2600001323",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-11T17:28:53Z",
-   "lat": 42.85828837,
-   "lon": -112.46856265,
-   "max_gap_minutes": 0,
-   "peak_customers": 24,
-   "places": [
-    "POCATELLO"
-   ],
-   "start": "2026-11-11T16:10:45Z",
-   "start_basis": "reported",
-   "status": "Pending",
-   "zips": [
-    "83204"
-   ]
-  },
-  "2600001468": {
-   "cause": "Third-Party Damage",
-   "customer_hours_before_first_seen": 44.7,
-   "customer_hours_observed": 0.0,
-   "customers": 27,
-   "etr": "2026-11-11T20:00:00Z",
-   "first_seen": "2026-11-11T17:28:53Z",
-   "id": "2600001468",
+   "customers": 11,
+   "etr": "2026-11-12T01:00:00Z",
+   "first_seen": "2026-11-11T23:38:23Z",
+   "id": "2600001522",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-11T17:28:53Z",
-   "lat": 42.54765812,
-   "lon": -114.8047281,
+   "last_seen": "2026-11-11T23:38:23Z",
+   "lat": 43.58527268,
+   "lon": -116.74871141,
    "max_gap_minutes": 0,
-   "peak_customers": 27,
-   "places": [
-    "BUHL"
-   ],
-   "start": "2026-11-11T15:49:33Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83316"
-   ]
-  },
-  "2600001469": {
-   "cause": "Equipment Issue",
-   "customer_hours_before_first_seen": 18.1,
-   "customer_hours_observed": 0.0,
-   "customers": 12,
-   "etr": "2026-11-11T18:30:00Z",
-   "first_seen": "2026-11-11T17:28:53Z",
-   "id": "2600001469",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-11T17:28:53Z",
-   "lat": 44.01827327,
-   "lon": -116.9485039,
-   "max_gap_minutes": 0,
-   "peak_customers": 12,
-   "places": [
-    "ONTARIO"
-   ],
-   "start": "2026-11-11T15:58:18Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "97914"
-   ]
-  },
-  "2600001474": {
-   "cause": "Object In Line",
-   "customer_hours_before_first_seen": 21.5,
-   "customer_hours_observed": 0.0,
-   "customers": 28,
-   "etr": "2026-11-11T17:30:00Z",
-   "first_seen": "2026-11-11T17:28:53Z",
-   "id": "2600001474",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-11T17:28:53Z",
-   "lat": 43.61416737,
-   "lon": -116.71074606,
-   "max_gap_minutes": 0,
-   "peak_customers": 28,
+   "peak_customers": 11,
    "places": [
     "CALDWELL"
    ],
-   "start": "2026-11-11T16:42:48Z",
+   "start": "2026-11-11T23:01:19Z",
    "start_basis": "reported",
-   "status": "On-site",
+   "status": "Assigned",
    "zips": [
     "83607"
-   ]
-  },
-  "2600001476": {
-   "cause": "Object In Line",
-   "customer_hours_before_first_seen": 65.0,
-   "customer_hours_observed": 0.0,
-   "customers": 118,
-   "etr": "2026-11-11T18:30:00Z",
-   "first_seen": "2026-11-11T17:28:53Z",
-   "id": "2600001476",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-11T17:28:53Z",
-   "lat": 43.58712297,
-   "lon": -116.20318286,
-   "max_gap_minutes": 0,
-   "peak_customers": 118,
-   "places": [
-    "BOISE"
-   ],
-   "start": "2026-11-11T16:55:51Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83705"
    ]
   }
  },
  "logged_recent": {
+  "2600000353": "2026-11-11T23:38:23Z",
   "2600000557": "2026-11-11T00:28:41Z",
   "2600000904": "2026-11-11T00:28:41Z",
   "2600000939": "2026-11-11T00:28:41Z",
   "2600000968": "2026-11-11T00:28:41Z",
   "2600001052": "2026-11-11T00:28:41Z",
   "2600001118": "2026-11-11T00:28:41Z",
+  "2600001323": "2026-11-11T23:38:23Z",
   "2600001351": "2026-11-11T00:28:41Z",
   "2600001370": "2026-11-11T00:28:41Z",
   "2600001376": "2026-11-11T00:28:41Z",
@@ -139,6 +45,12 @@
   "2600001444": "2026-11-11T00:28:41Z",
   "2600001445": "2026-11-11T00:28:41Z",
   "2600001462": "2026-11-11T17:28:53Z",
-  "2600001467": "2026-11-11T17:28:53Z"
+  "2600001467": "2026-11-11T17:28:53Z",
+  "2600001468": "2026-11-11T23:38:23Z",
+  "2600001469": "2026-11-11T23:38:23Z",
+  "2600001474": "2026-11-11T23:38:23Z",
+  "2600001476": "2026-11-11T23:38:23Z",
+  "2600001508": "2026-11-11T23:38:23Z",
+  "2600001514": "2026-11-11T23:38:23Z"
  }
 }
