@@ -126,7 +126,31 @@ class ReleaseTests(unittest.TestCase):
                    "people": 333330, "housing_units": 170672, "method": "blocks_inside"}]
         sr.attach_areas(advisories, counts)
         self.assertEqual(advisories[0]["people"], 333330)
-        self.assertIn("area_estimated_from_similar_advisory", advisories[0]["flags"])
+        self.assertEqual(advisories[0]["flags"], ["area_from_named_area_lookup", "other_named_places_not_counted"])
+
+    def test_named_area_uses_whole_drawing_not_partial_or_combined(self):
+        counts = [
+            {"key": "whole", "begin": "2019-10-03T05:00:00Z", "title": "Precautionary B.W.A. in Lower 9th Ward",
+             "people": 8475, "housing_units": 4051, "method": "blocks_inside"},
+            {"key": "combined", "begin": "2019-02-04T06:00:00Z", "title": "B.W.A. for Almonaster to Canal, L9W",
+             "people": 23923, "housing_units": 12469, "method": "blocks_inside"},
+            {"key": "partial", "begin": "2020-01-01T06:00:00Z", "title": "Limited part of Lower 9th Ward",
+             "people": 90000, "housing_units": 1, "method": "blocks_inside"},
+            {"key": "vi", "begin": "2019-08-16T05:00:00Z", "title": "Venetian Isles boil water advisory",
+             "people": 757, "housing_units": 396, "method": "blocks_inside"},
+        ]
+        self.assertEqual(sr.named_areas(counts)["lower9"]["key"], "whole")
+        advisories = sr.build_advisories([
+            rel(1, "2016-06-02T15:00:00Z", "Precautionary Boil Water Advisory For Lower Ninth Ward Area of New Orleans"),
+            rel(2, "2016-06-03T15:00:00Z", "Boil Water Advisory Lifted for Lower Ninth Ward"),
+            rel(3, "2013-12-18T15:00:00Z", "Boil Water Advisory For A Limited Area of Venetian Isles"),
+            rel(4, "2013-12-19T15:00:00Z", "Boil Water Advisory Lifted for Venetian Isles"),
+        ])
+        sr.attach_areas(advisories, counts)
+        limited, lower9 = advisories
+        self.assertEqual((lower9["people"], lower9["person_hours"]), (8475, 8475 * 24))
+        self.assertEqual(lower9["flags"], ["area_from_named_area_lookup"])
+        self.assertIsNone(limited["people"])  # "a limited area of" is not the whole place
 
     def test_areas_and_person_hours(self):
         advisories = sr.build_advisories([

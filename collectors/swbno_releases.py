@@ -40,15 +40,19 @@ ITEM = re.compile(
     r'href="/PressReleases/Details/(\d+)"[^>]*>\s*<h4[^>]*>(.*?)</h4>\s*(?:<p>(.*?)</p>)?', re.S)
 STOPWORDS = set("""a an the for of in and to is are at on new orleans precautionary boil water advisory advisories
 bwa issued canceled cancelled lifted testing progress portion portions area areas neighborhood limited remains effect
-swbno update updated majority part parts all entire following""".split())
+swbno update updated majority part parts all entire following no nola area only still place city parish""".split())
 # Place names that share words ("East Bank" and "New Orleans East") become single tokens.
 PHRASES = [
     (r"new orleans east|n\.?\s?o\.? east|\bno east", "noeast"),
     (r"east\s?bank", "eastbank"),
     (r"west\s?bank", "westbank"),
     (r"lower (9th|ninth)( ward)?|\bl9w\b", "lower9"),
+    (r"venetian isles?", "venetian"),
 ]
-BROAD = ("eastbank", "westbank")  # areas wide enough to borrow a count from a similar advisory
+# Areas S&WB names as a whole and has drawn for other advisories. An advisory
+# for one of these with no map of its own reuses that drawing.
+NAMED_AREAS = ("eastbank", "westbank", "lower9", "venetian")
+
 
 
 def _text(fragment):
@@ -129,7 +133,7 @@ def area_tokens(title):
 
 
 LIFT_WORDS = re.compile(r"\b(cancel+ed|lifi?ted|rescinded)\b", re.I)
-LIMITING = re.compile(r"\b(limited|parts?|portions?|some|areas?|uptown)\b", re.I)
+LIMITING = re.compile(r"\b(limited|parts?|portions?|some|multiple|large|uptown)\b", re.I)
 
 
 def lift_tokens(title):
@@ -195,6 +199,25 @@ def build_advisories(releases):
     return advisories
 
 
+def named_areas(counts):
+    """For each whole named area, the map area S&WB drew for it.
+
+    Uses only drawings whose title names that area and no other place, and
+    takes the largest, so a partial drawing is not mistaken for the whole.
+    """
+    chosen = {}
+    for row in counts:
+        tokens = area_tokens(row.get("title") or "")
+        places = tokens & set(NAMED_AREAS)
+        # The title must name this area and nothing else ("Almonaster to Canal, L9W" is a different shape).
+        if len(places) != 1 or tokens != places or row["method"] != "blocks_inside" or LIMITING.search(row.get("title") or ""):
+            continue
+        name = next(iter(places))
+        if name not in chosen or row["people"] > chosen[name]["people"]:
+            chosen[name] = row
+    return chosen
+
+
 def attach_areas(advisories, counts, union=None):
     """Match map areas to advisories by date and name, then add people-hours.
 
@@ -225,12 +248,7 @@ def attach_areas(advisories, counts, union=None):
             target["flags"].append("area_matched_by_date_only")
         target["area_keys"].append(row["key"])
 
-    broad = {}
-    for row in counts:
-        for token in BROAD:
-            named = token in area_tokens(row.get("title") or "")
-            if named and (token not in broad or row["people"] > broad[token]["people"]):
-                broad[token] = row
+    named = named_areas(counts)
 
     for advisory in advisories:
         rows = [by_key[key] for key in advisory["area_keys"]]
@@ -242,12 +260,20 @@ def attach_areas(advisories, counts, union=None):
             if len(rows) > 1:
                 advisory["flags"].append("multiple_areas_summed_may_overlap")
         else:
-            whole = not LIMITING.search(advisory["title"])  # "the East Bank", not "parts of the East Bank"
-            borrowed = next((broad[t] for t in BROAD if whole and t in advisory["area_tokens"] and t in broad), None)
-            if borrowed:
-                advisory["people"], advisory["housing_units"] = borrowed["people"], borrowed["housing_units"]
-                advisory["area_borrowed_from"] = borrowed["key"]
-                advisory["flags"].append("area_estimated_from_similar_advisory")
+            # "the East Bank" names a whole area; "parts of the East Bank" does not.
+            whole = not LIMITING.search(advisory["title"])
+            reused = [named[t]["key"] for t in NAMED_AREAS if whole and t in advisory["area_tokens"] and t in named]
+            if reused:
+                if len(reused) > 1 and union:
+                    advisory["people"], advisory["housing_units"] = union(reused)
+                else:
+                    advisory["people"] = sum(by_key[k]["people"] for k in reused)
+                    advisory["housing_units"] = sum(by_key[k]["housing_units"] for k in reused)
+                advisory["area_reused_from"] = reused
+                advisory["flags"].append("area_from_named_area_lookup")
+                other = set(advisory["area_tokens"]) - set(NAMED_AREAS)
+                if other:
+                    advisory["flags"].append("other_named_places_not_counted")
             else:
                 advisory["flags"].append("no_map_area")
         advisory["upper_bound"] = any(r["method"] != "blocks_inside" for r in rows)
