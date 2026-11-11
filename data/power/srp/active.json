@@ -1,41 +1,19 @@
 {
  "empty_streak": 0,
  "events": {
-  "261121466": {
-   "cause": "We are investigating the cause of the outage.",
-   "customer_hours_before_first_seen": 0.7,
-   "customer_hours_observed": 2.4669444444444446,
-   "customers": 1,
-   "etr": null,
-   "first_seen": "2026-11-11T00:28:41Z",
-   "id": "261121466",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-11T02:56:42Z",
-   "lat": 33.2528899727311,
-   "lon": -111.539540108385,
-   "max_gap_minutes": 118,
-   "peak_customers": 1,
-   "places": [
-    "N KENWORTHY  RD TO N SCHNEPF  RD AND E AIRPORT  DR TO E OCOTILLO  RD"
-   ],
-   "start": "2026-11-10T23:47:46Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
   "261121509": {
    "cause": "An underground power cable has failed. SRP crews are working to restore power.",
    "customer_hours_before_first_seen": 0.1,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 1.5033333333333332,
    "customers": 6,
    "etr": null,
    "first_seen": "2026-11-11T02:56:42Z",
    "id": "261121509",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-11T02:56:42Z",
+   "last_seen": "2026-11-11T03:11:44Z",
    "lat": 33.380021396077396,
    "lon": -111.927646964771,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "peak_customers": 6,
    "places": [
     "S COLLEGE  AVE TO S LAKESHORE  DR AND E SUPERSTITION  FWY TO E GUADALUPE  RD"
@@ -47,6 +25,7 @@
   }
  },
  "logged_recent": {
-  "261121450": "2026-11-11T02:26:34Z"
+  "261121450": "2026-11-11T02:26:34Z",
+  "261121466": "2026-11-11T03:11:44Z"
  }
 }
