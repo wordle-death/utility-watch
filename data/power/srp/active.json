@@ -1,54 +1,11 @@
 {
  "empty_streak": 0,
- "events": {
-  "261121509": {
-   "cause": "An underground power cable has failed. SRP crews are working to restore power.",
-   "customer_hours_before_first_seen": 0.1,
-   "customer_hours_observed": 40.99,
-   "customers": 6,
-   "etr": null,
-   "first_seen": "2026-11-11T02:56:42Z",
-   "id": "261121509",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-11T09:46:36Z",
-   "lat": 33.380021396077396,
-   "lon": -111.927646964771,
-   "max_gap_minutes": 139,
-   "peak_customers": 6,
-   "places": [
-    "S COLLEGE  AVE TO S LAKESHORE  DR AND E SUPERSTITION  FWY TO E GUADALUPE  RD"
-   ],
-   "start": "2026-11-11T02:55:35Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
-  "261121509#2": {
-   "cause": "An underground power cable has failed. SRP crews are working to restore power.",
-   "customer_hours_before_first_seen": 21.2,
-   "customer_hours_observed": 19.918333333333333,
-   "customers": 6,
-   "etr": null,
-   "first_seen": "2026-11-11T06:27:25Z",
-   "id": "261121509#2",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-11T09:46:36Z",
-   "lat": 33.380021396077396,
-   "lon": -111.927646964771,
-   "max_gap_minutes": 139,
-   "peak_customers": 6,
-   "places": [
-    "S COLLEGE  AVE TO S LAKESHORE  DR AND E SUPERSTITION  FWY TO E GUADALUPE  RD"
-   ],
-   "start": "2026-11-11T02:55:35Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  }
- },
+ "events": {},
  "logged_recent": {
   "261121450": "2026-11-11T02:26:34Z",
   "261121466": "2026-11-11T03:11:44Z",
+  "261121509": "2026-11-11T17:28:53Z",
+  "261121509#2": "2026-11-11T17:28:53Z",
   "261121528": "2026-11-11T05:42:16Z"
  }
 }

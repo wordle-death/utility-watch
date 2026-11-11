@@ -1,24 +1,64 @@
 {
  "empty_streak": 0,
  "events": {
-  "1542507": {
+  "1542516": {
    "cause": null,
-   "customer_hours_before_first_seen": 1.4,
+   "customer_hours_before_first_seen": 1.8,
    "customer_hours_observed": 0.0,
    "customers": 1,
    "etr": null,
-   "first_seen": "2026-11-11T09:46:36Z",
-   "id": "1542507",
+   "first_seen": "2026-11-11T17:28:53Z",
+   "id": "1542516",
    "kind": null,
-   "last_seen": "2026-11-11T09:46:36Z",
-   "lat": 35.18895,
-   "lon": -89.82286,
+   "last_seen": "2026-11-11T17:28:53Z",
+   "lat": 35.01065,
+   "lon": -89.999,
    "max_gap_minutes": 0,
    "peak_customers": 1,
    "places": [],
-   "start": "2026-11-11T08:21:02Z",
+   "start": "2026-11-11T15:41:14Z",
    "start_basis": "reported",
-   "status": "Waiting to be analyzed",
+   "status": "Customer Svc is working this single customer outage",
+   "zips": []
+  },
+  "1542517": {
+   "cause": null,
+   "customer_hours_before_first_seen": 4.8,
+   "customer_hours_observed": 0.0,
+   "customers": 3,
+   "etr": null,
+   "first_seen": "2026-11-11T17:28:53Z",
+   "id": "1542517",
+   "kind": null,
+   "last_seen": "2026-11-11T17:28:53Z",
+   "lat": 35.12266,
+   "lon": -89.66793,
+   "max_gap_minutes": 0,
+   "peak_customers": 3,
+   "places": [],
+   "start": "2026-11-11T15:53:11Z",
+   "start_basis": "reported",
+   "status": "A crew is currently working on the problem",
+   "zips": []
+  },
+  "1542519": {
+   "cause": "Preventive Maintenance",
+   "customer_hours_before_first_seen": 0.2,
+   "customer_hours_observed": 0.0,
+   "customers": 1,
+   "etr": null,
+   "first_seen": "2026-11-11T17:28:53Z",
+   "id": "1542519",
+   "kind": null,
+   "last_seen": "2026-11-11T17:28:53Z",
+   "lat": 35.134,
+   "lon": -89.88508,
+   "max_gap_minutes": 0,
+   "peak_customers": 1,
+   "places": [],
+   "start": "2026-11-11T17:16:35Z",
+   "start_basis": "reported",
+   "status": "Waiting for an available crew to perform repairs",
    "zips": []
   }
  },
@@ -41,6 +81,7 @@
   "1542500": "2026-11-11T06:57:32Z",
   "1542501": "2026-11-11T06:42:28Z",
   "1542503": "2026-11-11T09:46:36Z",
-  "1542504": "2026-11-11T09:46:36Z"
+  "1542504": "2026-11-11T09:46:36Z",
+  "1542507": "2026-11-11T17:28:53Z"
  }
 }
