@@ -1,0 +1,2072 @@
+{
+ "advisories": [
+  {
+   "area_keys": [],
+   "area_tokens": [
+    "bank",
+    "east",
+    "parish"
+   ],
+   "flags": [
+    "no_map_area"
+   ],
+   "hours": 37.0,
+   "housing_units": null,
+   "issued_at": "2010-11-20T13:41:00Z",
+   "lifted_at": "2010-11-22T02:44:00Z",
+   "people": null,
+   "person_hours": null,
+   "release_ids": [
+    206,
+    208,
+    209
+   ],
+   "title": "Boil Water Advisory Issued for Entire East Bank of Orleans Parish",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [],
+   "area_tokens": [
+    "eastern",
+    "large"
+   ],
+   "flags": [
+    "no_map_area"
+   ],
+   "hours": 29.0,
+   "housing_units": null,
+   "issued_at": "2012-05-02T10:02:00Z",
+   "lifted_at": "2012-05-03T15:04:00Z",
+   "people": null,
+   "person_hours": null,
+   "release_ids": [
+    285,
+    286
+   ],
+   "title": "Boil Water Advisory Issued For Large Area of Eastern New Orleans",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [],
+   "area_tokens": [
+    "board",
+    "isles",
+    "issues",
+    "order",
+    "sewerage",
+    "venetian"
+   ],
+   "flags": [
+    "no_map_area"
+   ],
+   "hours": 23.9,
+   "housing_units": null,
+   "issued_at": "2012-09-01T00:07:00Z",
+   "lifted_at": "2012-09-02T00:03:00Z",
+   "people": null,
+   "person_hours": null,
+   "release_ids": [
+    306,
+    307
+   ],
+   "title": "Sewerage and Water Board Issues Boil Water Order for all of Venetian Isles",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [],
+   "area_tokens": [
+    "bank",
+    "east",
+    "parish"
+   ],
+   "flags": [
+    "no_map_area"
+   ],
+   "hours": 29.5,
+   "housing_units": null,
+   "issued_at": "2013-03-03T16:27:00Z",
+   "lifted_at": "2013-03-04T21:58:00Z",
+   "people": null,
+   "person_hours": null,
+   "release_ids": [
+    340,
+    341,
+    342
+   ],
+   "title": "Boil Water Advisory Issued for All of East Bank of New Orleans Parish",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [],
+   "area_tokens": [
+    "bank",
+    "east"
+   ],
+   "flags": [
+    "no_map_area"
+   ],
+   "hours": 31.5,
+   "housing_units": null,
+   "issued_at": "2015-07-24T15:22:00Z",
+   "lifted_at": "2015-07-25T22:50:00Z",
+   "people": null,
+   "person_hours": null,
+   "release_ids": [
+    602,
+    604
+   ],
+   "title": "Boil Water Advisory Issued for the Eastbank of New Orleans",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [],
+   "area_tokens": [
+    "bank",
+    "east"
+   ],
+   "flags": [
+    "no_lift_release_found",
+    "no_map_area"
+   ],
+   "hours": null,
+   "housing_units": null,
+   "issued_at": "2015-09-24T13:38:00Z",
+   "lifted_at": null,
+   "people": null,
+   "person_hours": null,
+   "release_ids": [
+    697,
+    698,
+    701
+   ],
+   "title": "Boil Water Advisory Issued for the Eastbank of New Orleans",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [],
+   "area_tokens": [
+    "lower",
+    "ninth",
+    "ward"
+   ],
+   "flags": [
+    "no_map_area"
+   ],
+   "hours": 29.4,
+   "housing_units": null,
+   "issued_at": "2016-06-02T19:31:00Z",
+   "lifted_at": "2016-06-04T00:53:00Z",
+   "people": null,
+   "person_hours": null,
+   "release_ids": [
+    1138,
+    1139,
+    1142
+   ],
+   "title": "Precautionary Boil Water Advisory For Lower Ninth Ward Area of New Orleans",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [],
+   "area_tokens": [
+    "isles",
+    "only",
+    "venetian"
+   ],
+   "flags": [
+    "no_map_area"
+   ],
+   "hours": 50.4,
+   "housing_units": null,
+   "issued_at": "2017-06-22T16:59:00Z",
+   "lifted_at": "2017-06-24T19:23:00Z",
+   "people": null,
+   "person_hours": null,
+   "release_ids": [
+    1771,
+    1774,
+    1775,
+    1776
+   ],
+   "title": "Precautionary Boil Water Advisory Only for Venetian Isles Area",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [],
+   "area_tokens": [
+    "bank",
+    "east"
+   ],
+   "flags": [
+    "no_map_area"
+   ],
+   "hours": 25.1,
+   "housing_units": null,
+   "issued_at": "2017-09-20T15:07:00Z",
+   "lifted_at": "2017-09-21T16:16:00Z",
+   "people": null,
+   "person_hours": null,
+   "release_ids": [
+    1890,
+    1892,
+    1893
+   ],
+   "title": "Precautionary Boil Water Advisory for East Bank of New Orleans",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [],
+   "area_tokens": [
+    "bank",
+    "parish",
+    "place",
+    "still",
+    "west"
+   ],
+   "flags": [
+    "no_map_area"
+   ],
+   "hours": 12.6,
+   "housing_units": null,
+   "issued_at": "2018-01-25T00:08:00Z",
+   "lifted_at": "2018-01-25T12:41:00Z",
+   "people": null,
+   "person_hours": null,
+   "release_ids": [
+    2068,
+    2069
+   ],
+   "title": "Precautionary Boil Water Advisory Still in Place for West Bank of Orleans Parish",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [],
+   "area_tokens": [
+    "isles",
+    "venetian"
+   ],
+   "flags": [
+    "no_lift_release_found",
+    "no_map_area"
+   ],
+   "hours": null,
+   "housing_units": null,
+   "issued_at": "2018-05-22T19:19:00Z",
+   "lifted_at": null,
+   "people": null,
+   "person_hours": null,
+   "release_ids": [
+    3265
+   ],
+   "title": "Precautionary Boil Water Advisory for Venetian Isles",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [],
+   "area_tokens": [
+    "bank",
+    "east"
+   ],
+   "flags": [
+    "no_map_area"
+   ],
+   "hours": 50.1,
+   "housing_units": null,
+   "issued_at": "2018-11-17T15:19:00Z",
+   "lifted_at": "2018-11-19T17:28:00Z",
+   "people": null,
+   "person_hours": null,
+   "release_ids": [
+    3452,
+    3455,
+    3456
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for the East Bank of New Orleans",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "6836e2e4-2c5b-4f29-be85-3d32bf94fafe"
+   ],
+   "area_tokens": [
+    "9th",
+    "lower",
+    "upper",
+    "ward"
+   ],
+   "flags": [],
+   "hours": 25.6,
+   "housing_units": 12469,
+   "issued_at": "2019-02-04T17:34:00Z",
+   "lifted_at": "2019-02-05T19:08:00Z",
+   "people": 23923,
+   "person_hours": 612429,
+   "release_ids": [
+    3473,
+    3474,
+    3475
+   ],
+   "title": "Precautionary Boil Water Advisory for Lower 9th Ward, portions of Upper 9th Ward",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "6fa3a373-7f1f-46c7-93ab-f4f10fb141ce"
+   ],
+   "area_tokens": [
+    "uptown"
+   ],
+   "flags": [],
+   "hours": 55.2,
+   "housing_units": 16845,
+   "issued_at": "2019-05-03T10:05:00Z",
+   "lifted_at": "2019-05-05T17:15:00Z",
+   "partial_lift_at": "2019-05-04T20:30:00Z",
+   "people": 36286,
+   "person_hours": 2002987,
+   "release_ids": [
+    3496,
+    3497,
+    3498,
+    3499,
+    3500
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Limited Area in Uptown New Orleans",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "0c46e4c9-aebd-4639-89bb-6f887f6bdcaa"
+   ],
+   "area_tokens": [
+    "east"
+   ],
+   "flags": [],
+   "hours": 35.4,
+   "housing_units": 396,
+   "issued_at": "2019-08-16T09:14:00Z",
+   "lifted_at": "2019-08-17T20:40:00Z",
+   "people": 757,
+   "person_hours": 26798,
+   "release_ids": [
+    3516,
+    3517,
+    3518
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Limited Area in New Orleans East",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "cbbe21ac-443e-4d3f-90e1-662f3da2481a"
+   ],
+   "area_tokens": [
+    "east"
+   ],
+   "flags": [],
+   "hours": 33.8,
+   "housing_units": 7650,
+   "issued_at": "2019-09-13T03:12:00Z",
+   "lifted_at": "2019-09-14T12:59:00Z",
+   "people": 17913,
+   "person_hours": 605459,
+   "release_ids": [
+    3521,
+    3522,
+    3524
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Limited Area of New Orleans East",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "13c16735-3b7e-4535-907d-778d36799e31",
+    "701de6e3-6005-4efd-8ded-a089b34ee0f1"
+   ],
+   "area_tokens": [
+    "9th",
+    "east",
+    "lower",
+    "ward"
+   ],
+   "flags": [
+    "multiple_areas_summed_may_overlap"
+   ],
+   "hours": 35.1,
+   "housing_units": 8670,
+   "issued_at": "2019-10-04T02:36:00Z",
+   "lifted_at": "2019-10-05T13:43:00Z",
+   "people": 19426,
+   "person_hours": 681853,
+   "release_ids": [
+    3527,
+    3528,
+    3529
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Lower 9th Ward and Limited Area in New Orleans East",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "d038b88c-aa7e-4d16-a712-8723a8076892"
+   ],
+   "area_tokens": [
+    "called",
+    "uptown"
+   ],
+   "flags": [],
+   "hours": 36.3,
+   "housing_units": 47153,
+   "issued_at": "2019-10-12T22:25:00Z",
+   "lifted_at": "2019-10-14T10:43:00Z",
+   "people": 89427,
+   "person_hours": 3246200,
+   "release_ids": [
+    3533,
+    3534,
+    3535
+   ],
+   "title": "Precautionary Boil Water Advisory called for Uptown New Orleans",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "48a81814-01da-446d-9401-b5d6926e1ef0"
+   ],
+   "area_tokens": [
+    "reinstated",
+    "uptown"
+   ],
+   "flags": [],
+   "hours": 25.4,
+   "housing_units": 47153,
+   "issued_at": "2019-10-14T15:23:00Z",
+   "lifted_at": "2019-10-15T16:46:00Z",
+   "people": 89427,
+   "person_hours": 2271446,
+   "release_ids": [
+    3536,
+    3537,
+    3538
+   ],
+   "title": "Precautionary Boil Water Advisory Reinstated for Uptown New Orleans",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "79a6bc82-e1d0-4f78-a7da-54fe6a13ebc8"
+   ],
+   "area_tokens": [
+    "east"
+   ],
+   "flags": [],
+   "hours": 24.6,
+   "housing_units": 7912,
+   "issued_at": "2019-11-14T13:43:00Z",
+   "lifted_at": "2019-11-15T14:20:00Z",
+   "people": 18560,
+   "person_hours": 456576,
+   "release_ids": [
+    3544,
+    3545,
+    3547
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Limited Parts of New Orleans East",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "8ee84dfb-d22d-479e-853d-fb12044705fd"
+   ],
+   "area_tokens": [
+    "east"
+   ],
+   "flags": [],
+   "hours": 35.8,
+   "housing_units": 7912,
+   "issued_at": "2019-11-21T01:40:00Z",
+   "lifted_at": "2019-11-22T13:25:00Z",
+   "people": 18560,
+   "person_hours": 664448,
+   "release_ids": [
+    3550,
+    3551,
+    3552
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Limited Parts of New Orleans East",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "8c4710bb-0dde-41a7-b87a-5ca14af94214"
+   ],
+   "area_tokens": [
+    "algiers"
+   ],
+   "flags": [],
+   "hours": 24.7,
+   "housing_units": 23076,
+   "issued_at": "2019-12-14T20:53:00Z",
+   "lifted_at": "2019-12-15T21:37:00Z",
+   "people": 50506,
+   "person_hours": 1247498,
+   "release_ids": [
+    3561,
+    3562,
+    3563
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Algiers",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "6b53f21c-4fdf-4ed0-b070-794bc2f09d9f"
+   ],
+   "area_tokens": [
+    "bank",
+    "west"
+   ],
+   "flags": [],
+   "hours": 24.7,
+   "housing_units": 23076,
+   "issued_at": "2020-01-06T18:12:00Z",
+   "lifted_at": "2020-01-07T18:53:00Z",
+   "people": 50506,
+   "person_hours": 1247498,
+   "release_ids": [
+    3565,
+    3566,
+    3567
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for West Bank of New Orleans",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "b2b26fef-575f-48fe-8894-6b21f3f93a46"
+   ],
+   "area_tokens": [
+    "desire",
+    "near"
+   ],
+   "flags": [],
+   "hours": 35.9,
+   "housing_units": 176,
+   "issued_at": "2020-07-19T01:52:00Z",
+   "lifted_at": "2020-07-20T13:45:00Z",
+   "people": 369,
+   "person_hours": 13247,
+   "release_ids": [
+    3596,
+    3597,
+    3598
+   ],
+   "title": "Precautionary boil-water advisory issued for limited area near the Desire neighborhood",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "fbf1b505-ccec-4a66-9fcc-8609d01d2bd6"
+   ],
+   "area_tokens": [
+    "9th",
+    "lower",
+    "small",
+    "upper",
+    "ward"
+   ],
+   "flags": [],
+   "hours": 23.6,
+   "housing_units": 6242,
+   "issued_at": "2020-08-23T18:01:00Z",
+   "lifted_at": "2020-08-24T17:38:00Z",
+   "people": 12295,
+   "person_hours": 290162,
+   "release_ids": [
+    3610,
+    3611,
+    3612
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Lower 9th Ward and Small Portion of Upper 9th Ward",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "b75caca3-f3fe-4477-aea5-f337b5dc185e"
+   ],
+   "area_tokens": [
+    "east"
+   ],
+   "flags": [],
+   "hours": 21.2,
+   "housing_units": 5106,
+   "issued_at": "2020-09-11T22:04:00Z",
+   "lifted_at": "2020-09-12T19:16:00Z",
+   "people": 12427,
+   "person_hours": 263452,
+   "release_ids": [
+    3614,
+    3616,
+    3617
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for A Limited Area of New Orleans East",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "62223258-4216-40ab-8600-aeed96140d4a"
+   ],
+   "area_tokens": [
+    "algiers",
+    "coast",
+    "lower"
+   ],
+   "flags": [],
+   "hours": 25.1,
+   "housing_units": 682,
+   "issued_at": "2020-10-02T17:21:00Z",
+   "lifted_at": "2020-10-03T18:28:00Z",
+   "people": 1757,
+   "person_hours": 44101,
+   "release_ids": [
+    3622,
+    3623,
+    3624
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Lower Coast Algiers",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "1f013d37-6860-406a-907a-e8de596517ba",
+    "973a9f43-9438-43a3-82d9-20881b8f01f4"
+   ],
+   "area_tokens": [
+    "east",
+    "island",
+    "oak",
+    "subdivision"
+   ],
+   "flags": [
+    "multiple_areas_summed_may_overlap"
+   ],
+   "hours": 23.2,
+   "housing_units": 4935,
+   "issued_at": "2020-11-14T18:10:00Z",
+   "lifted_at": "2020-11-15T17:23:00Z",
+   "people": 12161,
+   "person_hours": 282135,
+   "release_ids": [
+    3629,
+    3630,
+    3631
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for a Limited Area of New Orleans East and the Oak Island Subdivision",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "dd693234-b594-46a2-8f67-fb8370e04c3d"
+   ],
+   "area_tokens": [
+    "17th",
+    "bounded",
+    "by",
+    "canal",
+    "cemetery",
+    "club",
+    "country",
+    "lane",
+    "marguerite",
+    "metairie",
+    "palmetto",
+    "street"
+   ],
+   "flags": [],
+   "hours": 29.0,
+   "housing_units": 199,
+   "issued_at": "2020-12-19T15:05:00Z",
+   "lifted_at": "2020-12-20T20:03:00Z",
+   "people": 511,
+   "person_hours": 14819,
+   "release_ids": [
+    3636,
+    3637,
+    3638
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for a Limited Area Bounded by Palmetto Street, Marguerite Lane, New Orleans Country Club/Metairie Cemetery and 17th Street Canal",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "752a91ef-98ea-437b-8a26-2e714ac93010",
+    "cd0f587b-246f-4259-a934-fcdc6101605f"
+   ],
+   "area_tokens": [
+    "east"
+   ],
+   "flags": [
+    "multiple_areas_summed_may_overlap"
+   ],
+   "hours": 23.1,
+   "housing_units": 8963,
+   "issued_at": "2020-12-23T19:59:00Z",
+   "lifted_at": "2020-12-24T19:07:00Z",
+   "people": 21075,
+   "person_hours": 486833,
+   "release_ids": [
+    3639,
+    3640,
+    3641
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for a Limited Area of New Orleans East",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "c3dd65e0-c0d9-4f97-99c0-b68c587974f5"
+   ],
+   "area_tokens": [],
+   "flags": [],
+   "hours": 35.2,
+   "housing_units": 47491,
+   "issued_at": "2021-05-13T01:59:00Z",
+   "lifted_at": "2021-05-14T13:14:00Z",
+   "people": 89806,
+   "person_hours": 3161171,
+   "release_ids": [
+    3650,
+    3651,
+    3652
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for a Limited Areas of New Orleans",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "baf717ee-f1fb-40e1-a45b-6e32a3fd855b"
+   ],
+   "area_tokens": [
+    "east"
+   ],
+   "flags": [],
+   "hours": 47.2,
+   "housing_units": 2012,
+   "issued_at": "2021-10-21T15:35:00Z",
+   "lifted_at": "2021-10-23T14:47:00Z",
+   "people": 4602,
+   "person_hours": 217214,
+   "release_ids": [
+    3663,
+    3664,
+    3665,
+    3666
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for a Limited Area of New Orleans East",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "1cc99373-0288-4a9c-9a3e-2b083531b101"
+   ],
+   "area_tokens": [
+    "algiers",
+    "coast",
+    "lower",
+    "upper"
+   ],
+   "flags": [],
+   "hours": 24.5,
+   "housing_units": 4935,
+   "issued_at": "2022-02-06T19:25:00Z",
+   "lifted_at": "2022-02-07T19:56:00Z",
+   "people": 10859,
+   "person_hours": 266046,
+   "release_ids": [
+    3679,
+    3680,
+    3681
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for part of Upper Coast Algiers, Lower Coast Algiers",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "48fe385d-7813-415d-8aed-3f29bd24ceed",
+    "950ff6b6-becb-4d44-a982-b2b6e88c4668",
+    "c3578059-684f-43de-9cec-2277a8443b01"
+   ],
+   "area_tokens": [],
+   "flags": [
+    "multiple_areas_summed_may_overlap"
+   ],
+   "hours": 44.4,
+   "housing_units": 27516,
+   "issued_at": "2022-02-22T17:10:00Z",
+   "lifted_at": "2022-02-24T13:36:00Z",
+   "people": 61006,
+   "person_hours": 2708666,
+   "release_ids": [
+    3685,
+    3688,
+    3689
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for parts of New Orleans",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "14e64d93-7917-40d6-bbfd-9e3990fe7dd5"
+   ],
+   "area_tokens": [
+    "east"
+   ],
+   "flags": [],
+   "hours": 24.8,
+   "housing_units": 5778,
+   "issued_at": "2022-04-30T14:20:00Z",
+   "lifted_at": "2022-05-01T15:05:00Z",
+   "people": 13797,
+   "person_hours": 342166,
+   "release_ids": [
+    3694,
+    3695,
+    3696
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for part of New Orleans East",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "3c8a6fac-ad5a-4dd2-9f70-e01aa9a9dae1",
+    "63e15f2f-1372-42bd-80a8-b3e4d7af85f1"
+   ],
+   "area_tokens": [
+    "east",
+    "island",
+    "oak",
+    "subdivision"
+   ],
+   "flags": [
+    "multiple_areas_summed_may_overlap"
+   ],
+   "hours": 25.0,
+   "housing_units": 6074,
+   "issued_at": "2022-05-12T16:17:00Z",
+   "lifted_at": "2022-05-13T17:18:00Z",
+   "people": 14536,
+   "person_hours": 363400,
+   "release_ids": [
+    4697,
+    4698,
+    4699
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for part of New Orleans East, Oak Island Subdivision",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "c37d1830-1fd4-4913-a457-f6632b4562d6"
+   ],
+   "area_tokens": [
+    "bank",
+    "west"
+   ],
+   "flags": [],
+   "hours": 25.0,
+   "housing_units": 4376,
+   "issued_at": "2022-07-11T13:38:00Z",
+   "lifted_at": "2022-07-12T14:39:00Z",
+   "people": 9387,
+   "person_hours": 234675,
+   "release_ids": [
+    4703,
+    4704,
+    4705
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for parts of New Orleans Westbank",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "2e21eb82-a6f6-4949-904d-7dba0cab7978",
+    "68da1a0e-7605-4090-9310-5476780b5c3e",
+    "99cfb4c7-56bc-4544-9b0c-189cc619eaa9"
+   ],
+   "area_tokens": [
+    "bank",
+    "west"
+   ],
+   "flags": [
+    "multiple_areas_summed_may_overlap"
+   ],
+   "hours": 43.9,
+   "housing_units": 1497,
+   "issued_at": "2022-08-01T19:34:00Z",
+   "lifted_at": "2022-08-03T15:29:00Z",
+   "people": 4279,
+   "person_hours": 187848,
+   "release_ids": [
+    4706,
+    4707,
+    4708
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for parts of New Orleans Westbank",
+   "upper_bound": true
+  },
+  {
+   "area_keys": [
+    "a6d905be-5266-4a2d-932a-8beb9b26df92"
+   ],
+   "area_tokens": [
+    "east"
+   ],
+   "flags": [],
+   "hours": 25.1,
+   "housing_units": 5967,
+   "issued_at": "2022-09-02T13:21:00Z",
+   "lifted_at": "2022-09-03T14:27:00Z",
+   "people": 14553,
+   "person_hours": 365280,
+   "release_ids": [
+    4710,
+    4711,
+    4712
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for parts of New Orleans East",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "e06602fc-7930-41b0-927a-0e48c10e6cea"
+   ],
+   "area_tokens": [],
+   "flags": [],
+   "hours": 22.9,
+   "housing_units": 904,
+   "issued_at": "2023-02-19T19:22:00Z",
+   "lifted_at": "2023-02-20T18:14:00Z",
+   "people": 1700,
+   "person_hours": 38930,
+   "release_ids": [
+    4727,
+    4728
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Limited Portion of New Orleans",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "6ea21630-da24-4af9-887f-e79ff8d97459",
+    "cde5a782-45bc-482b-8e93-c8a88c752702",
+    "0373ce7c-7d7c-47a8-808a-cc399177d271"
+   ],
+   "area_tokens": [
+    "uptown",
+    "very"
+   ],
+   "flags": [
+    "multiple_areas_summed_may_overlap"
+   ],
+   "hours": 43.7,
+   "housing_units": 434,
+   "issued_at": "2023-04-10T02:12:00Z",
+   "lifted_at": "2023-04-11T21:54:00Z",
+   "people": 845,
+   "person_hours": 36926,
+   "release_ids": [
+    4734,
+    4735,
+    4736
+   ],
+   "title": "Precautionary Boil Water Advisory for Very Limited Portion of Uptown New Orleans",
+   "upper_bound": true
+  },
+  {
+   "area_keys": [
+    "6bf95b25-4aab-440b-99ef-ac7648c7813e",
+    "731ed677-35a2-43ff-a8b3-a0aa3d97ce2f"
+   ],
+   "area_tokens": [
+    "east"
+   ],
+   "flags": [
+    "multiple_areas_summed_may_overlap"
+   ],
+   "hours": 23.7,
+   "housing_units": 7839,
+   "issued_at": "2023-06-16T18:04:00Z",
+   "lifted_at": "2023-06-17T17:46:00Z",
+   "people": 18388,
+   "person_hours": 435796,
+   "release_ids": [
+    4750,
+    4751,
+    4752
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for parts of New Orleans East",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "c36a0bbf-eb59-4c13-a809-dc910c0ea497",
+    "d9175ebf-2df9-48ad-87df-5a372491b450"
+   ],
+   "area_tokens": [
+    "50",
+    "closure",
+    "emergency",
+    "gentilly",
+    "island",
+    "main",
+    "oak",
+    "subdivision"
+   ],
+   "flags": [
+    "multiple_areas_summed_may_overlap"
+   ],
+   "hours": 38.7,
+   "housing_units": 552,
+   "issued_at": "2023-06-28T02:23:00Z",
+   "lifted_at": "2023-06-29T17:07:00Z",
+   "people": 1140,
+   "person_hours": 44118,
+   "release_ids": [
+    4753,
+    4754,
+    4755
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for parts of Gentilly, Oak Island Subdivision; Emergency Closure of 50” Water Main in Progress",
+   "upper_bound": true
+  },
+  {
+   "area_keys": [
+    "962711e2-2b2a-4571-a8e2-5e26dadd7812"
+   ],
+   "area_tokens": [
+    "east"
+   ],
+   "flags": [],
+   "hours": 21.8,
+   "housing_units": 5778,
+   "issued_at": "2023-06-29T22:37:00Z",
+   "lifted_at": "2023-06-30T20:22:00Z",
+   "people": 13797,
+   "person_hours": 300775,
+   "release_ids": [
+    4756,
+    4757,
+    4760
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Limited Part of New Orleans East",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "23ab062b-ca30-4402-a929-b77028b559c8",
+    "53f99fb8-faaa-4453-84c7-815199c9897d"
+   ],
+   "area_tokens": [
+    "algiers",
+    "bank",
+    "coast",
+    "lower",
+    "west"
+   ],
+   "flags": [
+    "multiple_areas_summed_may_overlap"
+   ],
+   "hours": 25.4,
+   "housing_units": 985,
+   "issued_at": "2023-09-03T19:39:00Z",
+   "lifted_at": "2023-09-04T21:05:00Z",
+   "people": 2545,
+   "person_hours": 64643,
+   "release_ids": [
+    4770,
+    4771,
+    4772
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Limited Portion of the Westbank, Lower Coast Algiers",
+   "upper_bound": true
+  },
+  {
+   "area_keys": [
+    "950e1f1e-945b-44d3-a18d-7e232ab22264"
+   ],
+   "area_tokens": [
+    "algiers",
+    "coast",
+    "lower"
+   ],
+   "flags": [],
+   "hours": 29.7,
+   "housing_units": 677,
+   "issued_at": "2023-09-06T20:31:00Z",
+   "lifted_at": "2023-09-08T02:12:00Z",
+   "people": 1747,
+   "person_hours": 51886,
+   "release_ids": [
+    4773,
+    4774,
+    4775
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Portion Lower Coast Algiers",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "0b8a18ba-a9ff-418f-a267-ac18b8b7e13d"
+   ],
+   "area_tokens": [
+    "algiers",
+    "coast",
+    "lower"
+   ],
+   "flags": [],
+   "hours": 21.6,
+   "housing_units": 677,
+   "issued_at": "2023-09-22T17:44:00Z",
+   "lifted_at": "2023-09-23T15:20:00Z",
+   "people": 1747,
+   "person_hours": 37735,
+   "release_ids": [
+    4778,
+    4780
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Portion Lower Coast Algiers",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "31eda73c-1acf-445b-bc63-0ff110fd4fba"
+   ],
+   "area_tokens": [
+    "uptown"
+   ],
+   "flags": [],
+   "hours": 35.7,
+   "housing_units": 7006,
+   "issued_at": "2023-09-29T01:46:00Z",
+   "lifted_at": "2023-09-30T13:30:00Z",
+   "people": 13964,
+   "person_hours": 498515,
+   "release_ids": [
+    4781,
+    4782,
+    4783
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Portion of Uptown New Orleans",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "c87e9567-11b1-48c4-a8b5-295ee72fc684"
+   ],
+   "area_tokens": [
+    "east"
+   ],
+   "flags": [],
+   "hours": 25.4,
+   "housing_units": 657,
+   "issued_at": "2023-11-04T14:57:00Z",
+   "lifted_at": "2023-11-05T16:23:00Z",
+   "people": 1911,
+   "person_hours": 48539,
+   "release_ids": [
+    4786,
+    4787,
+    4788
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Limited Part of New Orleans East",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "c40e928f-841a-4461-96f2-1e6d00f06378"
+   ],
+   "area_tokens": [
+    "east"
+   ],
+   "flags": [],
+   "hours": 48.5,
+   "housing_units": 1660,
+   "issued_at": "2024-01-30T16:05:00Z",
+   "lifted_at": "2024-02-01T16:38:00Z",
+   "people": 3820,
+   "person_hours": 185270,
+   "release_ids": [
+    4824,
+    4825,
+    4827,
+    4829
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Limited Part of New Orleans East",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "3e9065bc-9752-49d0-89a2-a41883e1a2ff"
+   ],
+   "area_tokens": [
+    "uptown"
+   ],
+   "flags": [],
+   "hours": 23.8,
+   "housing_units": 17459,
+   "issued_at": "2024-02-01T21:22:00Z",
+   "lifted_at": "2024-02-02T21:11:00Z",
+   "people": 31542,
+   "person_hours": 750700,
+   "release_ids": [
+    4830,
+    4831,
+    4832
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for parts of Uptown",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [],
+   "area_tokens": [
+    "9th",
+    "lower",
+    "neighborhoods",
+    "surrounding",
+    "ward"
+   ],
+   "flags": [
+    "no_map_area"
+   ],
+   "hours": 25.4,
+   "housing_units": null,
+   "issued_at": "2024-03-30T15:20:00Z",
+   "lifted_at": "2024-03-31T16:41:00Z",
+   "people": null,
+   "person_hours": null,
+   "release_ids": [
+    4850,
+    4851,
+    4852
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Lower 9th Ward and Surrounding Neighborhoods",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "64cb61cd-8986-4662-a82c-0977aa384b16",
+    "d89d1bb5-a1b5-41c8-894f-26b5d4fe6d01"
+   ],
+   "area_tokens": [
+    "lower",
+    "ninth",
+    "surrounding",
+    "ward"
+   ],
+   "flags": [
+    "multiple_areas_summed_may_overlap"
+   ],
+   "hours": 26.7,
+   "housing_units": 10489,
+   "issued_at": "2024-04-05T12:04:00Z",
+   "lifted_at": "2024-04-06T14:45:00Z",
+   "people": 19648,
+   "person_hours": 524602,
+   "release_ids": [
+    4857,
+    4858,
+    4859
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for the Lower Ninth Ward and Surrounding Area",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "81571ac4-a7a1-4754-a59b-8487a4d9b107"
+   ],
+   "area_tokens": [
+    "algiers",
+    "coast",
+    "lower"
+   ],
+   "flags": [],
+   "hours": 24.3,
+   "housing_units": 677,
+   "issued_at": "2024-04-13T19:37:00Z",
+   "lifted_at": "2024-04-14T19:54:00Z",
+   "people": 1747,
+   "person_hours": 42452,
+   "release_ids": [
+    4864,
+    4865,
+    4866
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Lower Coast Algiers",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [],
+   "area_tokens": [
+    "algiers",
+    "bank",
+    "east",
+    "point"
+   ],
+   "flags": [
+    "no_map_area"
+   ],
+   "hours": 40.7,
+   "housing_units": null,
+   "issued_at": "2024-08-07T01:15:00Z",
+   "lifted_at": "2024-08-08T17:59:00Z",
+   "people": null,
+   "person_hours": null,
+   "release_ids": [
+    4881,
+    4882,
+    4883,
+    4884
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for entire East Bank of New Orleans and Algiers Point",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "3b39cc8e-9edc-495c-9948-5f96baed7684",
+    "8202ce6a-0a1d-44bb-afce-2a18dcd127ad"
+   ],
+   "area_tokens": [
+    "airport",
+    "east",
+    "including",
+    "island",
+    "lakefront",
+    "oak"
+   ],
+   "flags": [
+    "multiple_areas_summed_may_overlap"
+   ],
+   "hours": 26.2,
+   "housing_units": 18740,
+   "issued_at": "2024-08-27T14:59:00Z",
+   "lifted_at": "2024-08-28T17:12:00Z",
+   "people": 43972,
+   "person_hours": 1152066,
+   "release_ids": [
+    4893,
+    4894,
+    4895
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for parts of New Orleans East including the Lakefront Airport and Oak Island",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "de686a3a-cdbc-477c-8ffc-d639442d23f0"
+   ],
+   "area_tokens": [
+    "bank",
+    "west"
+   ],
+   "flags": [],
+   "hours": 23.4,
+   "housing_units": 23129,
+   "issued_at": "2024-10-11T22:03:00Z",
+   "lifted_at": "2024-10-12T21:30:00Z",
+   "people": 50600,
+   "person_hours": 1184040,
+   "release_ids": [
+    4920,
+    4921,
+    4923
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for the Westbank of New Orleans",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "4092a6bf-5bee-49e8-92c6-24256cd62dac"
+   ],
+   "area_tokens": [
+    "east"
+   ],
+   "flags": [],
+   "hours": 23.8,
+   "housing_units": 5388,
+   "issued_at": "2024-12-04T15:08:00Z",
+   "lifted_at": "2024-12-05T14:54:00Z",
+   "people": 13150,
+   "person_hours": 312970,
+   "release_ids": [
+    4938,
+    4939,
+    4940
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Limited Part of New Orleans East",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "71e45a59-1b34-4c23-86ab-4dece155f4c3"
+   ],
+   "area_tokens": [
+    "9th",
+    "lower",
+    "neighborhoods",
+    "surrounding",
+    "ward"
+   ],
+   "flags": [],
+   "hours": 28.2,
+   "housing_units": 4051,
+   "issued_at": "2024-12-17T14:42:00Z",
+   "lifted_at": "2024-12-18T18:56:00Z",
+   "people": 8475,
+   "person_hours": 238995,
+   "release_ids": [
+    4948,
+    4950,
+    4952
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Lower 9th Ward and Surrounding Neighborhoods",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "919072fc-ca18-4cb5-9621-be750122f498"
+   ],
+   "area_tokens": [
+    "east"
+   ],
+   "flags": [],
+   "hours": 37.8,
+   "housing_units": 5388,
+   "issued_at": "2024-12-19T01:45:00Z",
+   "lifted_at": "2024-12-20T15:33:00Z",
+   "people": 13150,
+   "person_hours": 497070,
+   "release_ids": [
+    4954,
+    4955,
+    4956
+   ],
+   "title": "Precautionary Boil Water Advisory for Limited Parts of New Orleans East",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [],
+   "area_tokens": [
+    "9th",
+    "east",
+    "isles",
+    "lower",
+    "multiple",
+    "venetian",
+    "ward"
+   ],
+   "flags": [
+    "no_map_area"
+   ],
+   "hours": 23.4,
+   "housing_units": null,
+   "issued_at": "2025-01-20T19:01:00Z",
+   "lifted_at": "2025-01-21T18:24:00Z",
+   "people": null,
+   "person_hours": null,
+   "release_ids": [
+    4965,
+    4966,
+    4967
+   ],
+   "title": "Precautionary Boil Water Advisories Issued for Multiple Areas in New Orleans East, the Lower 9th Ward and Venetian Isles",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "553a2eaa-7310-470f-b15b-c9cfe20968ef",
+    "5bdfdbe1-6f0b-4135-a8b1-a837e6468531",
+    "847f3cd9-b2f0-4e6b-b78f-11dc01c7c829"
+   ],
+   "area_tokens": [
+    "east",
+    "isles",
+    "venetian"
+   ],
+   "flags": [
+    "multiple_areas_summed_may_overlap"
+   ],
+   "hours": 139.1,
+   "housing_units": 1849,
+   "issued_at": "2025-01-23T01:36:00Z",
+   "lifted_at": "2025-01-28T20:40:00Z",
+   "partial_lift_at": "2025-01-27T22:36:00Z",
+   "people": 4294,
+   "person_hours": 597295,
+   "release_ids": [
+    4969,
+    4970,
+    4975,
+    4976
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Parts of New Orleans East and Venetian Isles",
+   "upper_bound": true
+  },
+  {
+   "area_keys": [],
+   "area_tokens": [
+    "bank",
+    "east"
+   ],
+   "flags": [
+    "no_lift_release_found",
+    "no_map_area"
+   ],
+   "hours": null,
+   "housing_units": null,
+   "issued_at": "2025-01-26T18:59:00Z",
+   "lifted_at": null,
+   "people": null,
+   "person_hours": null,
+   "release_ids": [
+    4973,
+    4974
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for the East Bank of New Orleans",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "f2cf596a-9c92-44c9-92c6-3c7855890175"
+   ],
+   "area_tokens": [
+    "east"
+   ],
+   "flags": [],
+   "hours": 29.1,
+   "housing_units": 9536,
+   "issued_at": "2025-03-19T14:58:00Z",
+   "lifted_at": "2025-03-20T20:06:00Z",
+   "people": 22232,
+   "person_hours": 646951,
+   "release_ids": [
+    4979,
+    4980,
+    4981
+   ],
+   "title": "Precautionary Boil Water Advisory for Limited Parts of New Orleans East",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "fc4b71d2-526a-45ac-baec-d34435043b87"
+   ],
+   "area_tokens": [
+    "east"
+   ],
+   "flags": [],
+   "hours": 23.2,
+   "housing_units": 7650,
+   "issued_at": "2025-06-02T15:33:00Z",
+   "lifted_at": "2025-06-03T14:45:00Z",
+   "people": 17913,
+   "person_hours": 415582,
+   "release_ids": [
+    4991,
+    4992,
+    4993
+   ],
+   "title": "Precautionary Boil Water Advisory for Limited Parts of New Orleans East",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "8299e1d9-b879-4842-817d-b5598a310428",
+    "9abb5a25-f46a-4255-88e0-8f02c67733db"
+   ],
+   "area_tokens": [
+    "bank",
+    "east"
+   ],
+   "flags": [
+    "multiple_areas_summed_may_overlap"
+   ],
+   "hours": 61.5,
+   "housing_units": 31775,
+   "issued_at": "2025-06-28T05:50:00Z",
+   "lifted_at": "2025-06-30T19:22:00Z",
+   "partial_lift_at": "2025-06-29T19:10:00Z",
+   "people": 60890,
+   "person_hours": 3744735,
+   "release_ids": [
+    4998,
+    5002,
+    5004,
+    5005
+   ],
+   "title": "Precautionary Boil Water Advisory for Limited Parts of East Bank",
+   "upper_bound": true
+  },
+  {
+   "area_keys": [
+    "424a058f-4a53-45f3-8ac6-082c2e96dbdc",
+    "6f7ca6de-8958-40d3-83a2-7fe1bed0b987",
+    "a7356671-db0d-4054-b95c-782f7c436366"
+   ],
+   "area_tokens": [
+    "east"
+   ],
+   "flags": [
+    "multiple_areas_summed_may_overlap"
+   ],
+   "hours": 94.1,
+   "housing_units": 1386,
+   "issued_at": "2025-07-10T18:37:00Z",
+   "lifted_at": "2025-07-14T16:41:00Z",
+   "partial_lift_at": "2025-07-11T19:56:00Z",
+   "people": 3268,
+   "person_hours": 307519,
+   "release_ids": [
+    5006,
+    5008,
+    5011,
+    5013
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Limited Portion of New Orleans East",
+   "upper_bound": true
+  },
+  {
+   "area_keys": [
+    "869ebe07-0a20-47b3-a79e-3af37252e33d"
+   ],
+   "area_tokens": [
+    "isles",
+    "venetian"
+   ],
+   "flags": [],
+   "hours": 43.5,
+   "housing_units": 346,
+   "issued_at": "2025-07-14T21:50:00Z",
+   "lifted_at": "2025-07-16T17:22:00Z",
+   "people": 671,
+   "person_hours": 29188,
+   "release_ids": [
+    5014,
+    5016,
+    5018
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Venetian Isles",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "141c818e-db11-4a3e-8481-82e3b537d8db",
+    "807717f1-5505-4b4e-83df-f5b275ea7d24"
+   ],
+   "area_tokens": [
+    "east"
+   ],
+   "flags": [
+    "multiple_areas_summed_may_overlap"
+   ],
+   "hours": 48.3,
+   "housing_units": 5369,
+   "issued_at": "2025-11-14T17:09:00Z",
+   "lifted_at": "2025-11-16T17:25:00Z",
+   "people": 13167,
+   "person_hours": 635966,
+   "release_ids": [
+    5035,
+    5036,
+    5038,
+    5039
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Limited Portion of New Orleans East",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "bb7b55d2-67fc-47aa-9a52-c094261bd2a5"
+   ],
+   "area_tokens": [
+    "east"
+   ],
+   "flags": [],
+   "hours": 25.4,
+   "housing_units": 1255,
+   "issued_at": "2025-11-18T14:47:00Z",
+   "lifted_at": "2025-11-19T16:13:00Z",
+   "people": 3192,
+   "person_hours": 81077,
+   "release_ids": [
+    5041,
+    5043,
+    5044
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Limited Portion of New Orleans East",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "73e3d736-1765-44cb-ab3c-bea913b64a1d"
+   ],
+   "area_tokens": [
+    "uptown"
+   ],
+   "flags": [],
+   "hours": 42.2,
+   "housing_units": 47246,
+   "issued_at": "2026-02-01T01:16:00Z",
+   "lifted_at": "2026-02-02T19:28:00Z",
+   "people": 89538,
+   "person_hours": 3778504,
+   "release_ids": [
+    5056,
+    5057,
+    5058
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for a portion of Uptown",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "5218b091-af9e-4bc3-ae87-5d1a3473d747"
+   ],
+   "area_tokens": [
+    "large",
+    "uptown"
+   ],
+   "flags": [],
+   "hours": 30.5,
+   "housing_units": 59262,
+   "issued_at": "2026-02-23T11:56:00Z",
+   "lifted_at": "2026-02-24T18:27:00Z",
+   "people": 101632,
+   "person_hours": 3099776,
+   "release_ids": [
+    5059,
+    5060,
+    5061,
+    5062,
+    5063,
+    5064
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for a Large Portion of Uptown",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "614c83d5-97ed-42c8-af46-d7243e8702f4"
+   ],
+   "area_tokens": [
+    "broadmoor",
+    "cooper",
+    "fontainebleau",
+    "hoffman",
+    "marlyville",
+    "triangle"
+   ],
+   "flags": [],
+   "hours": 41.5,
+   "housing_units": 7006,
+   "issued_at": "2026-02-26T00:07:00Z",
+   "lifted_at": "2026-02-27T17:34:00Z",
+   "people": 14665,
+   "person_hours": 608598,
+   "release_ids": [
+    5065,
+    5066,
+    5067
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for a Portion of Marlyville-Fontainebleau, Broadmoor, Hoffman Triangle and B.W. Cooper",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "816bff81-3b91-450a-a922-377f863e92c7",
+    "a8c35837-21e6-4399-81ec-ba97573e353b",
+    "f1ca0fdf-5069-45d0-a29e-696c6d37bfe2"
+   ],
+   "area_tokens": [
+    "bank",
+    "east"
+   ],
+   "flags": [
+    "multiple_areas_summed_may_overlap"
+   ],
+   "hours": 27.2,
+   "housing_units": 121176,
+   "issued_at": "2026-03-09T11:16:00Z",
+   "lifted_at": "2026-03-10T14:30:00Z",
+   "people": 219386,
+   "person_hours": 5967299,
+   "release_ids": [
+    5068,
+    5069,
+    5070
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for the East Bank of New Orleans",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "e5733d8b-3bf4-403c-a50b-0e8e3cf7bf78"
+   ],
+   "area_tokens": [
+    "east"
+   ],
+   "flags": [],
+   "hours": 25.4,
+   "housing_units": 2661,
+   "issued_at": "2026-05-19T14:50:00Z",
+   "lifted_at": "2026-05-20T16:17:00Z",
+   "people": 6992,
+   "person_hours": 177597,
+   "release_ids": [
+    5078,
+    5079,
+    5080
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Portion of New Orleans East",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "f3313be3-7f28-48f3-823e-1657b2f31a79"
+   ],
+   "area_tokens": [
+    "lake",
+    "shore",
+    "vista"
+   ],
+   "flags": [],
+   "hours": 50.1,
+   "housing_units": 773,
+   "issued_at": "2026-06-03T14:58:00Z",
+   "lifted_at": "2026-06-05T17:04:00Z",
+   "people": 1925,
+   "person_hours": 96442,
+   "release_ids": [
+    5084,
+    5085,
+    5086
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Portion of Lake Shore - Lake Vista",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "02eeda82-7a1e-42b0-9344-c0c56b23efa7"
+   ],
+   "area_tokens": [
+    "east"
+   ],
+   "flags": [],
+   "hours": 33.2,
+   "housing_units": 9725,
+   "issued_at": "2026-06-27T10:05:00Z",
+   "lifted_at": "2026-06-28T19:19:00Z",
+   "people": 22707,
+   "person_hours": 753872,
+   "release_ids": [
+    5094,
+    5095,
+    5096
+   ],
+   "title": "Precautionary Boil Water Advisory Issued a portion of New Orleans East",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "1aa9c3f7-bb3e-49c5-a39a-a4c8aa48f2c3",
+    "5ed59967-f1d7-45a9-8da5-861f07f50ae6",
+    "c793629a-ce36-4228-897b-68a47cd06af4"
+   ],
+   "area_tokens": [
+    "bank",
+    "west"
+   ],
+   "flags": [
+    "multiple_areas_summed_may_overlap"
+   ],
+   "hours": 29.0,
+   "housing_units": 23205,
+   "issued_at": "2026-07-25T11:54:00Z",
+   "lifted_at": "2026-07-26T16:52:00Z",
+   "people": 50788,
+   "person_hours": 1472852,
+   "release_ids": [
+    5105,
+    5106,
+    5107
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for the Westbank of New Orleans",
+   "upper_bound": true
+  },
+  {
+   "area_keys": [
+    "1d0b7e63-c8a6-431f-b99e-e0da0c78abf6"
+   ],
+   "area_tokens": [
+    "isles",
+    "venetian"
+   ],
+   "flags": [],
+   "hours": 72.3,
+   "housing_units": 305,
+   "issued_at": "2026-08-07T18:03:00Z",
+   "lifted_at": "2026-08-10T18:22:00Z",
+   "people": 564,
+   "person_hours": 40777,
+   "release_ids": [
+    5108,
+    5114
+   ],
+   "title": "Precautionary Boil Water Advisory Issued Venetian Isles",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "1b7770a9-ebc3-4a9e-9c10-88c9c066abe4",
+    "5a218ed9-da38-452d-bddd-970ffeed2aaa"
+   ],
+   "area_tokens": [
+    "bank",
+    "west"
+   ],
+   "flags": [
+    "area_matched_by_date_only",
+    "multiple_areas_summed_may_overlap"
+   ],
+   "hours": 109.7,
+   "housing_units": 25602,
+   "issued_at": "2026-08-08T06:45:00Z",
+   "lifted_at": "2026-08-12T20:27:00Z",
+   "partial_lift_at": "2026-08-10T22:20:00Z",
+   "people": 55244,
+   "person_hours": 6060267,
+   "release_ids": [
+    5109,
+    5110,
+    5111,
+    5112,
+    5115,
+    5116
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for the West Bank New Orleans",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "2fd4337c-4c14-42ca-a38b-cead0a27a590"
+   ],
+   "area_tokens": [
+    "east"
+   ],
+   "flags": [],
+   "hours": 29.4,
+   "housing_units": 5287,
+   "issued_at": "2026-10-15T10:26:00Z",
+   "lifted_at": "2026-10-16T15:48:00Z",
+   "people": 12550,
+   "person_hours": 368970,
+   "release_ids": [
+    5121,
+    5122,
+    5123
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for a portion of New Orleans East",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "e27cdcbb-7834-4f10-9403-9bc1fb6311d4"
+   ],
+   "area_tokens": [
+    "memorial",
+    "park"
+   ],
+   "flags": [],
+   "hours": 27.1,
+   "housing_units": 2067,
+   "issued_at": "2026-10-17T15:26:00Z",
+   "lifted_at": "2026-10-18T18:31:00Z",
+   "people": 4107,
+   "person_hours": 111300,
+   "release_ids": [
+    5124,
+    5125,
+    5126
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for Memorial Park Neighborhood",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
+    "5c4d08ac-b94a-447c-a061-b12fb8570449"
+   ],
+   "area_tokens": [
+    "east"
+   ],
+   "flags": [],
+   "hours": 29.0,
+   "housing_units": 13281,
+   "issued_at": "2026-10-22T13:02:00Z",
+   "lifted_at": "2026-10-23T18:03:00Z",
+   "people": 31535,
+   "person_hours": 914515,
+   "release_ids": [
+    5127,
+    5128,
+    5130
+   ],
+   "title": "Precautionary Boil Water Advisory Issued for a portion of New Orleans East",
+   "upper_bound": false
+  }
+ ],
+ "by_year_complete_only": {
+  "2019": {
+   "advisories": 10,
+   "person_hours": 11815694
+  },
+  "2020": {
+   "advisories": 8,
+   "person_hours": 2642247
+  },
+  "2021": {
+   "advisories": 2,
+   "person_hours": 3378385
+  },
+  "2022": {
+   "advisories": 7,
+   "person_hours": 4468081
+  },
+  "2023": {
+   "advisories": 10,
+   "person_hours": 1557863
+  },
+  "2024": {
+   "advisories": 9,
+   "person_hours": 4888165
+  },
+  "2025": {
+   "advisories": 8,
+   "person_hours": 6458313
+  },
+  "2026": {
+   "advisories": 13,
+   "person_hours": 23450769
+  }
+ },
+ "map_areas_unmatched": [
+  "cd1ec9a8-5f2d-41e6-8f2c-0140ab586b76",
+  "17ffd2f6-16fc-4827-9dbe-13582364a9bd",
+  "ba3b36de-c9c1-49d1-a547-22f496b62bd8",
+  "1e9a5ade-667c-4ffa-9632-30ed3f3435b8",
+  "37d0ab21-d2f8-4e7c-89a4-b9421cfaf87d",
+  "1e2dab14-0985-4c32-80dd-3a5774025926",
+  "c02e6071-8dee-4b4e-a1aa-8885e66ca481",
+  "ef948cb3-6c42-4769-ac55-9ed466c12b92",
+  "f4b8853f-1f03-4036-950b-49a9a3c387e9"
+ ],
+ "method": "Advisories grouped from S&WB press releases (issued to canceled); map areas matched by date; people from 2020 Census blocks. See flags on each advisory for uncertain steps."
+}
