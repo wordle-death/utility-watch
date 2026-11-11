@@ -35,11 +35,18 @@ class ReleaseTests(unittest.TestCase):
         self.assertEqual(sr.classify("Water Pressure Restored; Boil Water Advisory Remains in Effect"), "update")
 
     def test_collect_stops_when_nothing_new(self):
-        pages = {0: LIST_HTML, 1: LIST_HTML}
         calls = []
-        found = sr.collect({}, fetch=lambda p: calls.append(p) or pages[p], pause=0)
+        found = sr.collect({}, fetch=lambda page, search: calls.append((page, search)) or LIST_HTML, pause=0)
         self.assertEqual(len(found), 2)
-        self.assertEqual(calls, [0, 1])
+        self.assertEqual(calls, [(1, "boil"), (2, "boil")])
+
+    def test_collect_falls_back_when_search_is_empty(self):
+        found = sr.collect({}, fetch=lambda page, search: "" if search else LIST_HTML, pause=0)
+        self.assertEqual(len(found), 2)
+
+    def test_collect_fails_when_site_returns_nothing(self):
+        with self.assertRaises(sr.FeedError):
+            sr.collect({}, fetch=lambda page, search: "", pause=0)
 
     def test_two_overlapping_advisories_close_separately(self):
         releases = [

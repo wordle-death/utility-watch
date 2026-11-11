@@ -64,27 +64,35 @@ def parse_list(page_html):
 
 
 def fetch_page(page, search="boil"):
-    query = urllib.parse.urlencode({"search": search, "sortBy": "PRDate", "sortDir": "desc",
-                                    "page": page, "pageSize": 25})
-    request = urllib.request.Request(f"{LIST_URL}?{query}", headers={"User-Agent": common.USER_AGENT})
+    """One list page (pages count from 1). search=None lists every release."""
+    params = {"sortBy": "PRDate", "sortDir": "desc", "page": page, "pageSize": 25}
+    if search:
+        params["search"] = search
+    request = urllib.request.Request(f"{LIST_URL}?{urllib.parse.urlencode(params)}",
+                                     headers={"User-Agent": common.USER_AGENT})
     with urllib.request.urlopen(request, timeout=40) as response:
         return response.read().decode("utf-8", "replace")
 
 
 def collect(known, fetch=fetch_page, pause=1.0):
-    """Fetch list pages, newest first, until a page holds nothing new."""
-    found = {}
-    for page in range(MAX_PAGES):
-        items = parse_list(fetch(page))
-        if page == 0 and not items:
-            raise FeedError("S&WB press release list returned no items; its layout may have changed")
-        new = [r for r in items if str(r["id"]) not in known and r["id"] not in found]
-        for release in new:
-            found[release["id"]] = release
-        if not items or not new:
-            break
-        time.sleep(pause)
-    return list(found.values())
+    """Fetch list pages, newest first, until a page holds nothing new.
+
+    Uses the site's search for "boil"; if that returns nothing, reads the
+    unfiltered list instead.
+    """
+    for search in ("boil", None):
+        found = {}
+        for page in range(1, MAX_PAGES + 1):
+            items = parse_list(fetch(page, search))
+            new = [r for r in items if str(r["id"]) not in known and r["id"] not in found]
+            for release in new:
+                found[release["id"]] = release
+            if not items or not new:
+                break
+            time.sleep(pause)
+        if page > 1 or items:
+            return list(found.values())
+    raise FeedError("S&WB press release list returned no items; its layout may have changed")
 
 
 def is_boil(release):
