@@ -23,6 +23,9 @@ jobs:
   # is reachable from GitHub and parses. Only runs on branches, not main.
   live-feeds:
     if: github.event_name == 'push'
+    # A feed that is down should show as a failed job without failing the
+    # whole run, so it does not send a failure email.
+    continue-on-error: true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

@@ -41,7 +41,14 @@ ITEM = re.compile(
 STOPWORDS = set("""a an the for of in and to is are at on new orleans precautionary boil water advisory advisories
 bwa issued canceled cancelled lifted testing progress portion portions area areas neighborhood limited remains effect
 swbno update updated majority part parts all entire following""".split())
-ALIASES = {"westbank": "west bank", "eastbank": "east bank", "n.o.": "new orleans", "no east": "east"}
+# Place names that share words ("East Bank" and "New Orleans East") become single tokens.
+PHRASES = [
+    (r"new orleans east|n\.?\s?o\.? east|\bno east", "noeast"),
+    (r"east\s?bank", "eastbank"),
+    (r"west\s?bank", "westbank"),
+    (r"lower (9th|ninth)( ward)?|\bl9w\b", "lower9"),
+]
+BROAD = ("eastbank", "westbank")  # areas wide enough to borrow a count from a similar advisory
 
 
 def _text(fragment):
@@ -101,23 +108,38 @@ def is_boil(release):
 
 def classify(title):
     t = title.lower()
-    lifted = re.search(r"\b(cancel+ed|lifted|rescinded)\b", t)
-    if lifted and re.search(r"remains? in effect|majority|partial", t):
+    lifted = re.search(r"\b(cancel+ed|lifi?ted|rescinded)\b", t)
+    if lifted and re.search(r"remains? in (effect|place)|majority|partial|extend", t):
         return "partial_lift"
     if lifted:
         return "lifted"
     if "testing in progress" in t or "testing underway" in t:
         return "testing"
-    if "boil" in t and ("issued" in t or "issues" in t or t.startswith("precautionary boil water advisory")):
+    opened = re.search(r"\b(issued|issues|expanded|reinstated|called)\b", t)
+    if "boil" in t and (opened or t.startswith(("precautionary boil water advisory", "boil water advisory for"))):
         return "issued"
     return "update"
 
 
 def area_tokens(title):
     t = title.lower()
-    for alias, plain in ALIASES.items():
-        t = t.replace(alias, plain)
+    for pattern, token in PHRASES:
+        t = re.sub(pattern, f" {token} ", t)
     return {w for w in re.findall(r"[a-z0-9]+", t) if w not in STOPWORDS and len(w) > 1}
+
+
+LIFT_WORDS = re.compile(r"\b(cancel+ed|lifi?ted|rescinded)\b", re.I)
+LIMITING = re.compile(r"\b(limited|parts?|portions?|some|areas?|uptown)\b", re.I)
+
+
+def lift_tokens(title):
+    """Place names in the part of a title that says an advisory was lifted.
+
+    "Canceled for Majority of East Bank; Advisory Remains for New Orleans East"
+    lifts the East Bank, not New Orleans East.
+    """
+    clauses = [c for c in re.split(r";", title) if LIFT_WORDS.search(c)]
+    return area_tokens(" ".join(clauses))
 
 
 def build_advisories(releases):
@@ -126,7 +148,7 @@ def build_advisories(releases):
     for release in sorted((r for r in releases if is_boil(r)), key=lambda r: (r["published"], r["id"])):
         kind = classify(release["title"])
         when = parse_iso(release["published"])
-        tokens = area_tokens(release["title"])
+        tokens = lift_tokens(release["title"]) if kind in ("lifted", "partial_lift") else area_tokens(release["title"])
         open_ones = [a for a in open_ones if when - parse_iso(a["issued_at"]) <= timedelta(days=14)]
 
         def best(candidates):
@@ -135,7 +157,9 @@ def build_advisories(releases):
 
         overlap, _, match = best(open_ones)
         if kind == "issued":
-            if match and overlap and when - parse_iso(match["issued_at"]) <= timedelta(days=3):
+            smaller = min(len(tokens), len(match["area_tokens"])) if match else 0
+            same_area = match and smaller and overlap / smaller >= 0.6
+            if same_area and when - parse_iso(match["issued_at"]) <= timedelta(days=3):
                 match["release_ids"].append(release["id"])  # a re-issue or correction
                 continue
             advisory = {"issued_at": release["published"], "lifted_at": None, "title": release["title"],
@@ -149,13 +173,21 @@ def build_advisories(releases):
                 match["flags"].append("release_matched_by_time_only")
             match["release_ids"].append(release["id"])
             if kind == "partial_lift":
-                match["partial_lift_at"] = release["published"]
+                # Only stop the clock if the lifted part is this advisory's own area;
+                # "canceled for West Bank" does not lift an East Bank advisory.
+                if overlap:
+                    match.setdefault("partial_lift_at", release["published"])
             elif kind == "lifted":
                 match["lifted_at"] = release["published"]
                 open_ones.remove(match)
     for advisory in advisories:
-        if advisory["lifted_at"]:
-            hours = (parse_iso(advisory["lifted_at"]) - parse_iso(advisory["issued_at"])).total_seconds() / 3600
+        # Count hours up to the first lift. When most of the area was released
+        # early, the smaller area that stayed under advisory is not counted.
+        end = advisory.get("partial_lift_at") or advisory["lifted_at"]
+        if advisory.get("partial_lift_at"):
+            advisory["flags"].append("remainder_after_partial_lift_not_counted")
+        if end:
+            hours = (parse_iso(end) - parse_iso(advisory["issued_at"])).total_seconds() / 3600
             advisory["hours"] = round(hours, 1)
         else:
             advisory["hours"] = None
@@ -163,41 +195,92 @@ def build_advisories(releases):
     return advisories
 
 
-def attach_areas(advisories, counts):
-    """Match map areas to advisories by local date, then add people-hours."""
-    by_day = {}
+def attach_areas(advisories, counts, union=None):
+    """Match map areas to advisories by date and name, then add people-hours.
+
+    union(keys) returns (people, housing_units) for several areas without
+    counting overlapping blocks twice; without it, areas are summed.
+    """
+    by_key = {row["key"]: row for row in counts}
     for advisory in advisories:
-        day = parse_iso(advisory["issued_at"]).astimezone(LOCAL).date()
-        by_day.setdefault(day, []).append(advisory)
-        advisory.update(area_keys=[], people=0, housing_units=0, upper_bound=False)
+        advisory.update(area_keys=[], people=None, housing_units=None, upper_bound=False)
     unmatched = []
     for row in counts:
         if not row.get("begin"):
             continue
         day = parse_iso(row["begin"]).astimezone(LOCAL).date()
-        candidates = [a for offset in (0, -1, 1) for a in by_day.get(day + timedelta(days=offset), [])]
-        if not candidates:
+        tokens = area_tokens(row.get("title") or "")
+        scored = []
+        for advisory in advisories:
+            gap = abs((parse_iso(advisory["issued_at"]).astimezone(LOCAL).date() - day).days)
+            shared = len(tokens & set(advisory["area_tokens"]))
+            # Within a day, the date is enough. Two or three days apart needs a shared place name.
+            if gap <= 1 or (gap <= 3 and shared):
+                scored.append((shared, -gap, advisory["issued_at"], advisory))
+        if not scored:
             unmatched.append(row["key"])
             continue
-        tokens = area_tokens(row.get("title") or "")
-        target = max(candidates, key=lambda a: (len(tokens & set(a["area_tokens"])),
-                                                -abs((parse_iso(a["issued_at"]).astimezone(LOCAL).date() - day).days)))
-        if len(candidates) > 1 and not tokens & set(target["area_tokens"]):
+        shared, _, _, target = max(scored, key=lambda item: item[:3])
+        if len(scored) > 1 and not shared:
             target["flags"].append("area_matched_by_date_only")
         target["area_keys"].append(row["key"])
-        target["people"] += row["people"]
-        target["housing_units"] += row["housing_units"]
-        target["upper_bound"] = target["upper_bound"] or row["method"] != "blocks_inside"
+
+    broad = {}
+    for row in counts:
+        for token in BROAD:
+            named = token in area_tokens(row.get("title") or "")
+            if named and (token not in broad or row["people"] > broad[token]["people"]):
+                broad[token] = row
+
     for advisory in advisories:
-        if not advisory["area_keys"]:
-            advisory["flags"].append("no_map_area")
-            advisory["people"] = advisory["housing_units"] = None
-        if len(advisory["area_keys"]) > 1:
-            advisory["flags"].append("multiple_areas_summed_may_overlap")
+        rows = [by_key[key] for key in advisory["area_keys"]]
+        if len(rows) > 1 and union:
+            advisory["people"], advisory["housing_units"] = union(advisory["area_keys"])
+        elif rows:
+            advisory["people"] = sum(r["people"] for r in rows)
+            advisory["housing_units"] = sum(r["housing_units"] for r in rows)
+            if len(rows) > 1:
+                advisory["flags"].append("multiple_areas_summed_may_overlap")
+        else:
+            whole = not LIMITING.search(advisory["title"])  # "the East Bank", not "parts of the East Bank"
+            borrowed = next((broad[t] for t in BROAD if whole and t in advisory["area_tokens"] and t in broad), None)
+            if borrowed:
+                advisory["people"], advisory["housing_units"] = borrowed["people"], borrowed["housing_units"]
+                advisory["area_borrowed_from"] = borrowed["key"]
+                advisory["flags"].append("area_estimated_from_similar_advisory")
+            else:
+                advisory["flags"].append("no_map_area")
+        advisory["upper_bound"] = any(r["method"] != "blocks_inside" for r in rows)
         known = advisory["people"] is not None and advisory["hours"] is not None
         advisory["person_hours"] = round(advisory["people"] * advisory["hours"]) if known else None
         advisory["flags"] = sorted(set(advisory["flags"]))
     return unmatched
+
+
+def block_union(base, counts):
+    """A union(keys) function that counts each Census block once across overlapping areas."""
+    from . import households
+    blocks = households.load_blocks()
+    features = read_json(base / "advisories.geojson", {"features": []})["features"]
+    geometry = {str((f.get("properties") or {}).get("GlobalID") or (f.get("properties") or {}).get("OBJECTID")):
+                f.get("geometry") for f in features}
+    by_key = {row["key"]: row for row in counts}
+
+    def union(keys):
+        inside, people, units = {}, 0, 0
+        for key in keys:
+            if by_key[key]["method"] != "blocks_inside":
+                people += by_key[key]["people"]  # too small to hold a block's interior point; add as counted
+                units += by_key[key]["housing_units"]
+                continue
+            box = households.bbox(geometry.get(key))
+            for b in blocks if box else []:
+                if (b["geoid"] not in inside and box[0] <= b["lon"] <= box[2] and box[1] <= b["lat"] <= box[3]
+                        and households.contains(geometry[key], b["lon"], b["lat"])):
+                    inside[b["geoid"]] = b
+        return people + sum(b["people"] for b in inside.values()), units + sum(b["units"] for b in inside.values())
+
+    return union
 
 
 def main(argv=None):
@@ -212,7 +295,7 @@ def main(argv=None):
     releases = list(saved.values())
     advisories = build_advisories(releases)
     counts = read_json(base / "advisory_counts.json", {"advisories": []})["advisories"]
-    unmatched = attach_areas(advisories, counts)
+    unmatched = attach_areas(advisories, counts, block_union(base, counts) if counts else None)
     complete = [a for a in advisories if a["person_hours"] is not None]
     by_year = {}
     for advisory in complete:
