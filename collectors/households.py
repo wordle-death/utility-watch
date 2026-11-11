@@ -15,6 +15,9 @@ result is marked as an upper bound.
 import argparse
 import json
 import sys
+import urllib.error
+import urllib.parse
+import urllib.request
 
 from . import common
 from .common import fetch_json, from_epoch_ms, iso, read_json, short_hash, write_json
@@ -34,28 +37,44 @@ def load_blocks():
         return cached["blocks"]
     points = fetch_json(TIGER_BLOCKS, params={
         "where": f"STATE='{STATE}' AND COUNTY='{COUNTY}'",
-        "outFields": "GEOID,INTPTLAT,INTPTLON", "returnGeometry": "false", "f": "json"}, timeout=120)
+        "outFields": "GEOID,INTPTLAT,INTPTLON,POP100,HU100", "returnGeometry": "false", "f": "json"}, timeout=120)
     if points.get("exceededTransferLimit") or not points.get("features"):
         raise FeedError("TIGERweb block list was empty or cut short")
-    table = fetch_json(CENSUS_DHC, params={
-        "get": "P1_001N,H3_001N,H3_002N", "for": "block:*", "in": f"state:{STATE} county:{COUNTY}"}, timeout=120)
-    header, rows = table[0], table[1:]
-    col = {name: header.index(name) for name in header}
-    counts = {}
-    for row in rows:
-        geoid = row[col["state"]] + row[col["county"]] + row[col["tract"]] + row[col["block"]]
-        counts[geoid] = (int(row[col["P1_001N"]]), int(row[col["H3_001N"]]), int(row[col["H3_002N"]]))
+    occupied = _occupied_units()
     blocks = []
     for feature in points["features"]:
         a = feature["attributes"]
-        people, units, occupied = counts.get(a["GEOID"], (0, 0, 0))
         blocks.append({"geoid": a["GEOID"], "lat": float(a["INTPTLAT"]), "lon": float(a["INTPTLON"]),
-                       "people": people, "units": units, "occupied": occupied})
+                       "people": int(a["POP100"] or 0), "units": int(a["HU100"] or 0),
+                       "occupied": occupied.get(a["GEOID"])})
     if sum(b["people"] for b in blocks) < 300_000:
-        raise FeedError("Census block counts did not join; Orleans Parish total is too low")
+        raise FeedError("Orleans Parish block total is too low; the block list is incomplete")
+    if sum(b["occupied"] is None for b in blocks) > len(blocks) * 0.02:
+        # Do not cache a table without occupancy; try again next run.
+        raise FeedError("Census occupied-housing table did not join to the block list")
     blocks.sort(key=lambda b: b["geoid"])
     write_json(path, {"source": "2020 Census (TIGERweb interior points; DHC tables P1, H3)", "blocks": blocks})
     return blocks
+
+
+def _occupied_units():
+    """Occupied housing units by block GEOID, from 2020 Census table H3."""
+    query = urllib.parse.urlencode({"get": "H3_002N", "for": "block:*",
+                                    "in": f"state:{STATE} county:{COUNTY} tract:*"})
+    request = urllib.request.Request(f"{CENSUS_DHC}?{query}", headers={"User-Agent": common.USER_AGENT})
+    try:
+        with urllib.request.urlopen(request, timeout=120) as response:
+            body = response.read().decode("utf-8")
+    except urllib.error.HTTPError as exc:
+        raise FeedError(f"Census API HTTP {exc.code}: {exc.read()[:200]!r}")
+    try:
+        table = json.loads(body)
+    except ValueError:
+        raise FeedError(f"Census API did not return JSON: {body[:200]!r}")
+    header, rows = table[0], table[1:]
+    col = {name: header.index(name) for name in header}
+    return {row[col["state"]] + row[col["county"]] + row[col["tract"]] + row[col["block"]]: int(row[col["H3_002N"]])
+            for row in rows}
 
 
 def _in_ring(x, y, ring):
@@ -101,7 +120,7 @@ def count_inside(geometry, blocks):
     if box:
         for b in blocks:
             if box[0] <= b["lon"] <= box[2] and box[1] <= b["lat"] <= box[3] and contains(geometry, b["lon"], b["lat"]):
-                people += b["people"]; units += b["units"]; occupied += b["occupied"]; n += 1
+                people += b["people"]; units += b["units"]; occupied += b["occupied"] or 0; n += 1
     return {"people": people, "housing_units": units, "occupied_households": occupied, "blocks": n}
 
 
@@ -141,7 +160,7 @@ def build(features, blocks, previous=None, touching=touching_geoids):
             if counts["people"] < SMALL_AREA_PEOPLE and feature.get("geometry"):
                 hit = [by_geoid[g] for g in touching(feature["geometry"]) if g in by_geoid]
                 counts = {"people": sum(b["people"] for b in hit), "housing_units": sum(b["units"] for b in hit),
-                          "occupied_households": sum(b["occupied"] for b in hit), "blocks": len(hit),
+                          "occupied_households": sum(b["occupied"] or 0 for b in hit), "blocks": len(hit),
                           "method": "blocks_touching_upper_bound"}
         rows.append({
             "key": key, "objectid": props.get("OBJECTID"), "title": props.get("Advisory_Title"),
@@ -169,7 +188,7 @@ def main(argv=None):
     summary = {
         "advisories": len(rows),
         "parish_people": sum(b["people"] for b in blocks),
-        "parish_occupied_households": sum(b["occupied"] for b in blocks),
+        "parish_occupied_households": sum(b["occupied"] or 0 for b in blocks),
         "upper_bound_rows": sum(r["method"] != "blocks_inside" for r in rows),
         "zero_rows": sum(r["people"] == 0 for r in rows),
         "largest": max(rows, key=lambda r: r["people"], default=None),
