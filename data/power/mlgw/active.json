@@ -1,42 +1,22 @@
 {
  "empty_streak": 0,
  "events": {
-  "1542503": {
+  "1542507": {
    "cause": null,
-   "customer_hours_before_first_seen": 0.3,
-   "customer_hours_observed": 5.017777777777779,
-   "customers": 4,
-   "etr": null,
-   "first_seen": "2026-11-11T06:12:21Z",
-   "id": "1542503",
-   "kind": null,
-   "last_seen": "2026-11-11T07:27:37Z",
-   "lat": 35.21466,
-   "lon": -89.8825,
-   "max_gap_minutes": 15,
-   "peak_customers": 4,
-   "places": [],
-   "start": "2026-11-11T06:07:47Z",
-   "start_basis": "reported",
-   "status": "A crew is currently working on the problem",
-   "zips": []
-  },
-  "1542504": {
-   "cause": null,
-   "customer_hours_before_first_seen": 0.1,
+   "customer_hours_before_first_seen": 1.4,
    "customer_hours_observed": 0.0,
    "customers": 1,
    "etr": null,
-   "first_seen": "2026-11-11T07:27:37Z",
-   "id": "1542504",
+   "first_seen": "2026-11-11T09:46:36Z",
+   "id": "1542507",
    "kind": null,
-   "last_seen": "2026-11-11T07:27:37Z",
+   "last_seen": "2026-11-11T09:46:36Z",
    "lat": 35.18895,
    "lon": -89.82286,
    "max_gap_minutes": 0,
    "peak_customers": 1,
    "places": [],
-   "start": "2026-11-11T07:23:33Z",
+   "start": "2026-11-11T08:21:02Z",
    "start_basis": "reported",
    "status": "Waiting to be analyzed",
    "zips": []
@@ -59,6 +39,8 @@
   "1542498": "2026-11-11T06:12:21Z",
   "1542499": "2026-11-11T04:57:08Z",
   "1542500": "2026-11-11T06:57:32Z",
-  "1542501": "2026-11-11T06:42:28Z"
+  "1542501": "2026-11-11T06:42:28Z",
+  "1542503": "2026-11-11T09:46:36Z",
+  "1542504": "2026-11-11T09:46:36Z"
  }
 }

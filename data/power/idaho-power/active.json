@@ -1,6 +1,31 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "2600001462": {
+   "cause": "Equipment Issue",
+   "customer_hours_before_first_seen": 15.9,
+   "customer_hours_observed": 0.0,
+   "customers": 11,
+   "etr": "2026-11-11T10:00:00Z",
+   "first_seen": "2026-11-11T09:46:36Z",
+   "id": "2600001462",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-11T09:46:36Z",
+   "lat": 43.60235251,
+   "lon": -116.20620566,
+   "max_gap_minutes": 0,
+   "peak_customers": 11,
+   "places": [
+    "BOISE"
+   ],
+   "start": "2026-11-11T08:19:39Z",
+   "start_basis": "reported",
+   "status": "On-site",
+   "zips": [
+    "83706"
+   ]
+  }
+ },
  "logged_recent": {
   "2600000557": "2026-11-11T00:28:41Z",
   "2600000904": "2026-11-11T00:28:41Z",
