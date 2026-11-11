@@ -1,0 +1,43 @@
+name: national
+
+# Federal reliability data changes about once a year; check monthly.
+on:
+  schedule:
+    - cron: "23 9 5 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: national
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q -r national/requirements.txt
+      - run: python -m national.reliability
+      - name: Commit data
+        run: |
+          git config user.name "utility-watch-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/national
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -q -m "data: national reliability $(date -u +%Y-%m-%d)"
+            pushed=no
+            for attempt in 1 2 3; do
+              if git pull --rebase --quiet origin main && git push --quiet; then pushed=yes; break; fi
+              git rebase --abort 2>/dev/null || true
+              sleep 5
+            done
+            [ "$pushed" = yes ] || { echo "Push failed after 3 attempts."; exit 1; }
+          fi
