@@ -2,8 +2,12 @@ name: collect-power
 
 on:
   schedule:
-    - cron: "3,18,33,48 * * * *"  # every 15 minutes; GitHub may delay or skip scheduled runs
+    - cron: "4,19,34,49 * * * *"  # every 15 minutes; GitHub may delay or skip scheduled runs
   workflow_dispatch:
+    inputs:
+      hours:
+        description: "Keep collecting every 15 minutes for this many hours (0 = collect once). A stopgap for when scheduled runs are not firing."
+        default: "0"
 
 permissions:
   contents: write
@@ -17,7 +21,7 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 350
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -26,26 +30,22 @@ jobs:
       - name: Collect
         id: collect
         continue-on-error: true
-        run: python -m collectors.run power
-      - name: Commit data
+        env:
+          HOURS: ${{ inputs.hours || '0' }}
         run: |
-          git config user.name "utility-watch-bot"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data
-          if git diff --cached --quiet; then
-            echo "No changes."
-          else
-            git commit -q -m "data: power $(date -u +%Y-%m-%dT%H:%MZ)"
-            pushed=no
-            for attempt in 1 2 3; do
-              if git pull --rebase --quiet origin main && git push --quiet; then pushed=yes; break; fi
-              git rebase --abort 2>/dev/null || true
-              sleep 5
-            done
-            [ "$pushed" = yes ] || { echo "Push failed after 3 attempts."; exit 1; }
-          fi
+          case "$HOURS" in ''|*[!0-9]*) HOURS=0 ;; esac
+          [ "$HOURS" -gt 5 ] && HOURS=5
+          end=$((SECONDS + HOURS * 3600))
+          status=0
+          while :; do
+            python -m collectors.run power || status=$?
+            scripts/commit_data.sh power || status=$?
+            [ "$SECONDS" -ge "$end" ] && break
+            sleep 900
+          done
+          exit $status
       # Fail the run, which sends one email, only when a source has just gone
-      # 6 hours without a successful collection.
-      - name: Report stale source
+      # 6 hours without a successful collection, or a push failed.
+      - name: Report problem
         if: steps.collect.outcome == 'failure'
         run: exit 1

@@ -35,22 +35,7 @@ jobs:
         env:
           CENSUS_API_KEY: ${{ secrets.CENSUS_API_KEY }}
       - name: Commit data
-        run: |
-          git config user.name "utility-watch-bot"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data
-          if git diff --cached --quiet; then
-            echo "No changes."
-          else
-            git commit -q -m "data: water $(date -u +%Y-%m-%dT%H:%MZ)"
-            pushed=no
-            for attempt in 1 2 3; do
-              if git pull --rebase --quiet origin main && git push --quiet; then pushed=yes; break; fi
-              git rebase --abort 2>/dev/null || true
-              sleep 5
-            done
-            [ "$pushed" = yes ] || { echo "Push failed after 3 attempts."; exit 1; }
-          fi
+        run: scripts/commit_data.sh "water"
       # Fail the run, which sends one email, only when a source has just gone
       # 6 hours without a successful collection.
       - name: Report stale source
