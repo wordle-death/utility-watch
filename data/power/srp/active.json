@@ -1,0 +1,50 @@
+{
+ "empty_streak": 0,
+ "events": {
+  "261121450": {
+   "cause": "Electrical equipment has been hit or damaged. SRP crews are working to restore power.",
+   "customer_hours_before_first_seen": 13.2,
+   "customer_hours_observed": 0.0,
+   "customers": 5,
+   "etr": null,
+   "first_seen": "2026-11-11T00:28:41Z",
+   "id": "261121450",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-11T00:28:41Z",
+   "lat": 33.471019077898205,
+   "lon": -112.2604117562045,
+   "max_gap_minutes": 0,
+   "peak_customers": 5,
+   "places": [
+    "N 95TH  AVE TO N 91ST  AVE AND W THOMAS  RD TO W MCDOWELL  RD"
+   ],
+   "start": "2026-11-10T21:50:46Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  },
+  "261121466": {
+   "cause": "We are investigating the cause of the outage.",
+   "customer_hours_before_first_seen": 0.7,
+   "customer_hours_observed": 0.0,
+   "customers": 1,
+   "etr": null,
+   "first_seen": "2026-11-11T00:28:41Z",
+   "id": "261121466",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-11T00:28:41Z",
+   "lat": 33.2528899727311,
+   "lon": -111.539540108385,
+   "max_gap_minutes": 0,
+   "peak_customers": 1,
+   "places": [
+    "N KENWORTHY  RD TO N SCHNEPF  RD AND E AIRPORT  DR TO E OCOTILLO  RD"
+   ],
+   "start": "2026-11-10T23:47:46Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  }
+ },
+ "logged_recent": {}
+}
