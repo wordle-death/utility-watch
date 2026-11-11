@@ -27,6 +27,13 @@ jobs:
         id: collect
         continue-on-error: true
         run: python -m collectors.run water
+      # Count people and households inside each advisory area. A Census
+      # outage must not block saving the advisory areas themselves.
+      - name: Count households
+        continue-on-error: true
+        run: python -m collectors.households
+        env:
+          CENSUS_API_KEY: ${{ secrets.CENSUS_API_KEY }}
       - name: Commit data
         run: |
           git config user.name "utility-watch-bot"
