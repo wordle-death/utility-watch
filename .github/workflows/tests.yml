@@ -34,5 +34,6 @@ jobs:
       - run: python -m collectors.households --dry-run
         env:
           CENSUS_API_KEY: ${{ secrets.CENSUS_API_KEY }}
+      - run: python -m collectors.swbno_releases --dry-run
       - run: pip install -q -r national/requirements.txt
       - run: python -m national.reliability --inspect

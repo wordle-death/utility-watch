@@ -23,6 +23,8 @@ Not yet collected: APS (Phoenix) and Portland General Electric (Portland). Their
 - `data/water/swbno/advisories.geojson`: every advisory area S&WB has published. Areas S&WB later removes stay here, marked `removed_at`.
 - `data/water/swbno/changes.jsonl`: every advisory added, changed, removed or restored.
 - `data/water/swbno/advisory_counts.json`: people, housing units and occupied households inside each advisory area, from 2020 Census blocks. Areas too small to contain a block's interior point count every touching block and are marked as an upper bound.
+- `data/water/swbno/releases.json`: every S&WB press release that mentions a boil-water advisory.
+- `data/water/swbno/advisory_timeline.json`: advisories grouped from those releases, from "issued" to "canceled", matched to map areas by date, with hours and person-hours under advisory. Each advisory lists the releases and areas it came from and flags any uncertain step.
 - `data/status-power.json`, `data/status-water.json`: when each source last succeeded or failed.
 
 ### How outage ends are measured
