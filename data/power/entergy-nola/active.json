@@ -4,13 +4,13 @@
   "392458": {
    "cause": "Investigating",
    "customer_hours_before_first_seen": 3.1,
-   "customer_hours_observed": 6.229722222222224,
+   "customer_hours_observed": 6.480833333333336,
    "customers": 1,
    "etr": "2026-11-11T16:00:00Z",
    "first_seen": "2026-11-11T00:28:41Z",
    "id": "392458",
    "kind": null,
-   "last_seen": "2026-11-11T06:42:28Z",
+   "last_seen": "2026-11-11T06:57:32Z",
    "lat": 30.02851,
    "lon": -90.01505,
    "max_gap_minutes": 118,
@@ -20,26 +20,6 @@
    "start_basis": "reported",
    "status": "In Progress",
    "zips": []
-  },
-  "392785": {
-   "cause": "Other - Unknown - Under Investigation",
-   "customer_hours_before_first_seen": 3.3,
-   "customer_hours_observed": 14.046666666666667,
-   "customers": 14,
-   "etr": "2026-11-11T08:30:00Z",
-   "first_seen": "2026-11-11T05:42:16Z",
-   "id": "392785",
-   "kind": null,
-   "last_seen": "2026-11-11T06:42:28Z",
-   "lat": 30.03362,
-   "lon": -89.98864,
-   "max_gap_minutes": 15,
-   "peak_customers": 14,
-   "places": [],
-   "start": "2026-11-11T05:27:59Z",
-   "start_basis": "reported",
-   "status": "First Responder has arrived",
-   "zips": []
   }
  },
  "logged_recent": {
@@ -48,6 +28,7 @@
   "392685": "2026-11-11T03:26:47Z",
   "392703": "2026-11-11T02:41:37Z",
   "392729": "2026-11-11T03:11:44Z",
-  "392745": "2026-11-11T04:27:03Z"
+  "392745": "2026-11-11T04:27:03Z",
+  "392785": "2026-11-11T06:57:32Z"
  }
 }
