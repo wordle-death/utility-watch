@@ -1,40 +1,16 @@
 {
  "empty_streak": 0,
  "events": {
-  "2600001522": {
-   "cause": "Not Found",
-   "customer_hours_before_first_seen": 6.8,
-   "customer_hours_observed": 29.51361111111111,
-   "customers": 11,
-   "etr": "2026-11-12T02:30:00Z",
-   "first_seen": "2026-11-11T23:38:23Z",
-   "id": "2600001522",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-12T02:19:22Z",
-   "lat": 43.58527268,
-   "lon": -116.74871141,
-   "max_gap_minutes": 86,
-   "peak_customers": 11,
-   "places": [
-    "CALDWELL"
-   ],
-   "start": "2026-11-11T23:01:19Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83607"
-   ]
-  },
   "2600001536": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 3.3,
-   "customer_hours_observed": 12.497222222222222,
+   "customer_hours_observed": 14.997222222222222,
    "customers": 10,
    "etr": "2026-11-12T03:30:00Z",
    "first_seen": "2026-11-12T01:04:23Z",
    "id": "2600001536",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-12T02:19:22Z",
+   "last_seen": "2026-11-12T02:34:22Z",
    "lat": 42.57726211,
    "lon": -114.44986578,
    "max_gap_minutes": 15,
@@ -76,6 +52,7 @@
   "2600001476": "2026-11-11T23:38:23Z",
   "2600001508": "2026-11-11T23:38:23Z",
   "2600001514": "2026-11-11T23:38:23Z",
+  "2600001522": "2026-11-12T02:34:22Z",
   "2600001533": "2026-11-12T02:19:22Z",
   "2600001537": "2026-11-12T02:04:27Z"
  }
