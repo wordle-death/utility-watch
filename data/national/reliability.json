@@ -1,5 +1,8 @@
 {
  "latest_year": 2025,
+ "latest_year_data_maturity": [
+  "final"
+ ],
  "national_by_year": [
   {
    "saidi_with_avg": 227.2,
@@ -98,11 +101,11 @@
    "year": 2024
   },
   {
-   "saidi_with_avg": 269.2,
-   "saidi_with_median": 177.76,
+   "saidi_with_avg": 268.4,
+   "saidi_with_median": 177.65,
    "saidi_without_avg": 125.3,
    "saidi_without_median": 103.34,
-   "utilities_ranked": 745,
+   "utilities_ranked": 744,
    "year": 2025
   }
  ],
@@ -365,10 +368,10 @@
     {
      "customers": 211670.0,
      "saidi_with": 208.9,
-     "saidi_with_national_avg": 269.2,
-     "saidi_with_national_median": 177.76,
+     "saidi_with_national_avg": 268.4,
+     "saidi_with_national_median": 177.65,
      "saidi_with_pct_of_peers_better": 56.8,
-     "saidi_with_pct_of_utilities_better": 57.6,
+     "saidi_with_pct_of_utilities_better": 57.7,
      "saidi_with_peer_count": 44,
      "saidi_with_peer_median": 183.53,
      "saidi_without": 174.4,
@@ -389,6 +392,7 @@
  "ranking_rule": "IEEE-standard reporters with at least 1000 customers",
  "source": "EIA Form 861 reliability data via PUDL (Catalyst Cooperative)",
  "source_url": "https://s3.us-west-2.amazonaws.com/pudl.catalyst.coop/nightly/core_eia861__yearly_reliability.parquet",
+ "unit": "One row per utility per state. A utility that serves several states is ranked once in each.",
  "utilities_latest_year": [
   {
    "customers": 325.0,
@@ -6413,18 +6417,6 @@
    "saifi_without": 2.23,
    "standard": "ieee_standard",
    "state": "KS"
-  },
-  {
-   "customers": 8535.0,
-   "entity_type": "Municipal",
-   "id": 12532,
-   "name": "City of Milan - (TN)",
-   "saidi_with": 12532.0,
-   "saidi_without": null,
-   "saifi_with": 1.2,
-   "saifi_without": null,
-   "standard": "ieee_standard",
-   "state": "TN"
   },
   {
    "customers": 6846.0,
