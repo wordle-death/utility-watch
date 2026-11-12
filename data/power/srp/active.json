@@ -1,6 +1,29 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "261121642": {
+   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
+   "customer_hours_before_first_seen": 0.1,
+   "customer_hours_observed": 0.0,
+   "customers": 2,
+   "etr": null,
+   "first_seen": "2026-11-12T14:19:25Z",
+   "id": "261121642",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-12T14:19:25Z",
+   "lat": 33.2608414175362,
+   "lon": -111.544177772968,
+   "max_gap_minutes": 0,
+   "peak_customers": 2,
+   "places": [
+    "N SUBURBAN  AVE TO N COYOTE  RD AND E PIMA  RD TO E AIRPORT  DR"
+   ],
+   "start": "2026-11-12T14:17:54Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  }
+ },
  "logged_recent": {
   "261121450": "2026-11-11T02:26:34Z",
   "261121466": "2026-11-11T03:11:44Z",
