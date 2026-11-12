@@ -1,16 +1,40 @@
 {
  "empty_streak": 0,
  "events": {
+  "2600001062": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 158.6,
+   "customer_hours_observed": 0.0,
+   "customers": 61,
+   "etr": "2026-11-12T21:00:00Z",
+   "first_seen": "2026-11-12T18:49:23Z",
+   "id": "2600001062",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-12T18:49:23Z",
+   "lat": 43.70978886,
+   "lon": -116.36941267,
+   "max_gap_minutes": 0,
+   "peak_customers": 61,
+   "places": [
+    "EAGLE"
+   ],
+   "start": "2026-11-12T16:13:22Z",
+   "start_basis": "reported",
+   "status": "Assigned",
+   "zips": [
+    "83616"
+   ]
+  },
   "2600001101": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 21.9,
-   "customer_hours_observed": 111.27472222222222,
+   "customer_hours_observed": 133.5,
    "customers": 89,
    "etr": "2026-11-12T21:00:00Z",
    "first_seen": "2026-11-12T17:19:23Z",
    "id": "2600001101",
    "kind": "PLANNED",
-   "last_seen": "2026-11-12T18:34:24Z",
+   "last_seen": "2026-11-12T18:49:23Z",
    "lat": 44.8934163,
    "lon": -116.09717349,
    "max_gap_minutes": 15,
@@ -28,13 +52,13 @@
   "2600001211": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 19.2,
-   "customer_hours_observed": 89.9875,
+   "customer_hours_observed": 101.225,
    "customers": 45,
    "etr": "2026-11-12T20:00:00Z",
    "first_seen": "2026-11-12T16:34:25Z",
    "id": "2600001211",
    "kind": "PLANNED",
-   "last_seen": "2026-11-12T18:34:24Z",
+   "last_seen": "2026-11-12T18:49:23Z",
    "lat": 43.65223968,
    "lon": -116.59064122,
    "max_gap_minutes": 15,
@@ -52,13 +76,13 @@
   "2600001320": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 16.9,
-   "customer_hours_observed": 131.98166666666668,
+   "customer_hours_observed": 148.46333333333337,
    "customers": 66,
    "etr": "2026-11-12T22:00:00Z",
    "first_seen": "2026-11-12T16:34:25Z",
    "id": "2600001320",
    "kind": "PLANNED",
-   "last_seen": "2026-11-12T18:34:24Z",
+   "last_seen": "2026-11-12T18:49:23Z",
    "lat": 42.86068318,
    "lon": -112.47726163,
    "max_gap_minutes": 15,
@@ -71,30 +95,6 @@
    "status": "Pending",
    "zips": [
     "83204"
-   ]
-  },
-  "2600001570": {
-   "cause": "Not Found",
-   "customer_hours_before_first_seen": 2.9,
-   "customer_hours_observed": 18.754166666666666,
-   "customers": 15,
-   "etr": "2026-11-12T19:00:00Z",
-   "first_seen": "2026-11-12T17:19:23Z",
-   "id": "2600001570",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-12T18:34:24Z",
-   "lat": 44.2544881,
-   "lon": -117.01578912,
-   "max_gap_minutes": 15,
-   "peak_customers": 15,
-   "places": [
-    "WEISER"
-   ],
-   "start": "2026-11-12T17:07:35Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83672"
    ]
   }
  },
@@ -133,6 +133,7 @@
   "2600001543": "2026-11-12T14:04:25Z",
   "2600001551": "2026-11-12T17:34:23Z",
   "2600001561": "2026-11-12T17:49:23Z",
+  "2600001570": "2026-11-12T18:49:23Z",
   "2600001571": "2026-11-12T17:49:23Z"
  }
 }
