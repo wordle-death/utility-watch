@@ -4,13 +4,13 @@
   "1542542": {
    "cause": null,
    "customer_hours_before_first_seen": 0.2,
-   "customer_hours_observed": 4.248888888888889,
+   "customer_hours_observed": 5.248888888888889,
    "customers": 4,
    "etr": null,
    "first_seen": "2026-11-12T01:34:23Z",
    "id": "1542542",
    "kind": null,
-   "last_seen": "2026-11-12T02:49:22Z",
+   "last_seen": "2026-11-12T03:04:22Z",
    "lat": 35.2956,
    "lon": -90.00716,
    "max_gap_minutes": 15,
@@ -18,7 +18,7 @@
    "places": [],
    "start": "2026-11-12T01:25:20Z",
    "start_basis": "reported",
-   "status": "Trouble Shooter is determining repairs required",
+   "status": "Waiting to be analyzed",
    "zips": []
   }
  },
