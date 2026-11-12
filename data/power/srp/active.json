@@ -1,29 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "261121691": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 2.7,
-   "customer_hours_observed": 80.75,
-   "customers": 11,
-   "etr": null,
-   "first_seen": "2026-11-12T17:34:23Z",
-   "id": "261121691",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-12T21:49:23Z",
-   "lat": 33.51769414286715,
-   "lon": -112.1366743988075,
-   "max_gap_minutes": 15,
-   "peak_customers": 19,
-   "places": [
-    "N 39TH  AVE TO N 31ST  AVE AND W BETHANY HOME  RD TO W CAMELBACK  RD"
-   ],
-   "start": "2026-11-12T17:25:57Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  }
- },
+ "events": {},
  "logged_recent": {
   "261121450": "2026-11-11T02:26:34Z",
   "261121466": "2026-11-11T03:11:44Z",
@@ -47,6 +24,7 @@
   "261121668": "2026-11-12T19:34:24Z",
   "261121680": "2026-11-12T17:34:23Z",
   "261121682": "2026-11-12T21:49:23Z",
+  "261121691": "2026-11-12T22:04:23Z",
   "261121692": "2026-11-12T19:04:26Z",
   "261121714": "2026-11-12T19:04:26Z",
   "261121718": "2026-11-12T20:49:23Z"
