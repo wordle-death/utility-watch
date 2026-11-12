@@ -1,35 +1,13 @@
 {
  "empty_streak": 0,
- "events": {
-  "261121594": {
-   "cause": "We are investigating the cause of the outage.",
-   "customer_hours_before_first_seen": 18.4,
-   "customer_hours_observed": 11.0,
-   "customers": 22,
-   "etr": null,
-   "first_seen": "2026-11-12T01:04:23Z",
-   "id": "261121594",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-12T01:34:23Z",
-   "lat": 33.520598180362654,
-   "lon": -112.20330197368651,
-   "max_gap_minutes": 15,
-   "peak_customers": 22,
-   "places": [
-    "N 71ST  AVE TO N 63RD  AVE AND W BETHANY HOME  RD TO W MISSOURI  AVE"
-   ],
-   "start": "2026-11-12T00:14:18Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  }
- },
+ "events": {},
  "logged_recent": {
   "261121450": "2026-11-11T02:26:34Z",
   "261121466": "2026-11-11T03:11:44Z",
   "261121509": "2026-11-11T17:28:53Z",
   "261121509#2": "2026-11-11T17:28:53Z",
   "261121528": "2026-11-11T05:42:16Z",
+  "261121594": "2026-11-12T01:49:23Z",
   "261121597": "2026-11-12T01:19:23Z"
  }
 }
