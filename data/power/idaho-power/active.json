@@ -4,13 +4,13 @@
   "2600001211": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 19.2,
-   "customer_hours_observed": 157.48749999999998,
+   "customer_hours_observed": 168.725,
    "customers": 45,
    "etr": "2026-11-12T20:00:00Z",
    "first_seen": "2026-11-12T16:34:25Z",
    "id": "2600001211",
    "kind": "PLANNED",
-   "last_seen": "2026-11-12T20:04:24Z",
+   "last_seen": "2026-11-12T20:19:23Z",
    "lat": 43.65223968,
    "lon": -116.59064122,
    "max_gap_minutes": 15,
@@ -28,13 +28,13 @@
   "2600001320": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 16.9,
-   "customer_hours_observed": 230.98166666666668,
+   "customer_hours_observed": 247.46333333333337,
    "customers": 66,
    "etr": "2026-11-12T22:00:00Z",
    "first_seen": "2026-11-12T16:34:25Z",
    "id": "2600001320",
    "kind": "PLANNED",
-   "last_seen": "2026-11-12T20:04:24Z",
+   "last_seen": "2026-11-12T20:19:23Z",
    "lat": 42.86068318,
    "lon": -112.47726163,
    "max_gap_minutes": 15,
@@ -49,40 +49,16 @@
     "83204"
    ]
   },
-  "2600001584": {
-   "cause": "Object In Line",
-   "customer_hours_before_first_seen": 4.4,
-   "customer_hours_observed": 19.50722222222222,
-   "customers": 26,
-   "etr": "2026-11-12T21:00:00Z",
-   "first_seen": "2026-11-12T19:19:23Z",
-   "id": "2600001584",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-12T20:04:24Z",
-   "lat": 43.50441604,
-   "lon": -116.43235212,
-   "max_gap_minutes": 15,
-   "peak_customers": 26,
-   "places": [
-    "KUNA"
-   ],
-   "start": "2026-11-12T19:09:08Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83634"
-   ]
-  },
   "2600001586": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 17.1,
-   "customer_hours_observed": 26.5,
+   "customer_hours_observed": 39.73527777777778,
    "customers": 53,
    "etr": "2026-11-12T21:30:00Z",
    "first_seen": "2026-11-12T19:34:24Z",
    "id": "2600001586",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-12T20:04:24Z",
+   "last_seen": "2026-11-12T20:19:23Z",
    "lat": 42.62621526,
    "lon": -114.75897909,
    "max_gap_minutes": 15,
@@ -136,6 +112,7 @@
   "2600001551": "2026-11-12T17:34:23Z",
   "2600001561": "2026-11-12T17:49:23Z",
   "2600001570": "2026-11-12T18:49:23Z",
-  "2600001571": "2026-11-12T17:49:23Z"
+  "2600001571": "2026-11-12T17:49:23Z",
+  "2600001584": "2026-11-12T20:19:23Z"
  }
 }
