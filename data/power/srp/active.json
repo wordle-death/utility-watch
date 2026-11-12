@@ -4,13 +4,13 @@
   "261121642": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 0.1,
-   "customer_hours_observed": 1.4994444444444444,
+   "customer_hours_observed": 1.9994444444444444,
    "customers": 2,
    "etr": null,
    "first_seen": "2026-11-12T14:19:25Z",
    "id": "261121642",
    "kind": "PLANNED",
-   "last_seen": "2026-11-12T15:04:24Z",
+   "last_seen": "2026-11-12T15:19:24Z",
    "lat": 33.2608414175362,
    "lon": -111.544177772968,
    "max_gap_minutes": 15,
@@ -23,24 +23,24 @@
    "status": null,
    "zips": []
   },
-  "261121650": {
+  "261121649": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 0.5,
+   "customer_hours_before_first_seen": 0.3,
    "customer_hours_observed": 0.0,
-   "customers": 8,
+   "customers": 2,
    "etr": null,
-   "first_seen": "2026-11-12T15:04:24Z",
-   "id": "261121650",
+   "first_seen": "2026-11-12T15:19:24Z",
+   "id": "261121649",
    "kind": "PLANNED",
-   "last_seen": "2026-11-12T15:04:24Z",
-   "lat": 33.4110718272755,
-   "lon": -111.80026519575449,
+   "last_seen": "2026-11-12T15:19:24Z",
+   "lat": 33.4024817238752,
+   "lon": -111.98362158620199,
    "max_gap_minutes": 0,
-   "peak_customers": 8,
+   "peak_customers": 2,
    "places": [
-    "S STAPLEY  DR TO N HARRIS  DR AND E MAIN  ST TO E BROADWAY  RD"
+    "S 44TH  PL TO S 48TH  ST AND E BROADWAY  RD TO E ROESER  RD"
    ],
-   "start": "2026-11-12T15:00:31Z",
+   "start": "2026-11-12T15:09:59Z",
    "start_basis": "reported",
    "status": null,
    "zips": []
@@ -48,21 +48,65 @@
   "261121651": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 0.0,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 0.25,
    "customers": 1,
    "etr": null,
    "first_seen": "2026-11-12T15:04:24Z",
    "id": "261121651",
    "kind": "PLANNED",
-   "last_seen": "2026-11-12T15:04:24Z",
+   "last_seen": "2026-11-12T15:19:24Z",
    "lat": 33.3901972540527,
    "lon": -111.433037533594,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "peak_customers": 1,
    "places": [
     "S EDGEMORE  RD TO S BLACKHAWK  RD AND NON-DEDICATED   TO E OBSIDIAN  RD"
    ],
    "start": "2026-11-12T15:03:03Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  },
+  "261121653": {
+   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
+   "customer_hours_before_first_seen": 0.0,
+   "customer_hours_observed": 0.0,
+   "customers": 1,
+   "etr": null,
+   "first_seen": "2026-11-12T15:19:24Z",
+   "id": "261121653",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-12T15:19:24Z",
+   "lat": 33.1891281296425,
+   "lon": -111.58216219129301,
+   "max_gap_minutes": 0,
+   "peak_customers": 1,
+   "places": [
+    "N GARY  RD TO N GANTZEL  RD AND W SKYLINE  DR TO W ROBERTS  RD"
+   ],
+   "start": "2026-11-12T15:18:30Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  },
+  "261121654": {
+   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
+   "customer_hours_before_first_seen": 0.1,
+   "customer_hours_observed": 0.0,
+   "customers": 4,
+   "etr": null,
+   "first_seen": "2026-11-12T15:19:24Z",
+   "id": "261121654",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-12T15:19:24Z",
+   "lat": 33.62038473932805,
+   "lon": -112.2072601537065,
+   "max_gap_minutes": 0,
+   "peak_customers": 4,
+   "places": [
+    "N 71ST  AVE TO N 67TH  AVE AND W GREENWAY  RD TO W ACOMA  DR"
+   ],
+   "start": "2026-11-12T15:17:40Z",
    "start_basis": "reported",
    "status": null,
    "zips": []
@@ -78,6 +122,7 @@
   "261121597": "2026-11-12T01:19:23Z",
   "261121604": "2026-11-12T07:49:23Z",
   "261121604#2": "2026-11-12T07:49:23Z",
-  "261121619": "2026-11-12T09:34:30Z"
+  "261121619": "2026-11-12T09:34:30Z",
+  "261121650": "2026-11-12T15:19:24Z"
  }
 }
