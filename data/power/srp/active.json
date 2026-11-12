@@ -1,6 +1,29 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "261121604": {
+   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
+   "customer_hours_before_first_seen": 0.3,
+   "customer_hours_observed": 0.0,
+   "customers": 3,
+   "etr": null,
+   "first_seen": "2026-11-12T02:19:22Z",
+   "id": "261121604",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-12T02:19:22Z",
+   "lat": 33.391146367278,
+   "lon": -111.927935706212,
+   "max_gap_minutes": 0,
+   "peak_customers": 3,
+   "places": [
+    "S COLLEGE  AVE TO S DORSEY  LN AND E ALAMEDA  DR TO E SUPERSTITION  FWY"
+   ],
+   "start": "2026-11-12T02:13:20Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  }
+ },
  "logged_recent": {
   "261121450": "2026-11-11T02:26:34Z",
   "261121466": "2026-11-11T03:11:44Z",
