@@ -253,6 +253,51 @@ class ReleaseTests(unittest.TestCase):
             self.assertEqual(union(["x", "y"]), (300, 120, False))
             self.assertEqual(union(["x", "old"]), (207, 83, True))  # no block list saved: summed and flagged
 
+    def test_issue_title_without_a_place_takes_it_from_the_lift(self):
+        advisories = sr.build_advisories([
+            rel(314, "2012-10-08T19:52:00Z", "SWB Precautionary Boil Water Advisory"),
+            rel(315, "2012-10-09T19:28:00Z", "Boil Water Advisory Cancelled for Eastbank of Orleans Parish"),
+        ])
+        counts = [{"key": "eb", "begin": "2025-01-24T06:00:00Z", "title": "BWA - East Bank of NO",
+                   "people": 333330, "housing_units": 170672, "method": "blocks_inside"}]
+        sr.attach_areas(advisories, counts)
+        self.assertEqual(advisories[0]["people"], 333330)
+        self.assertIn("place_taken_from_lift_release", advisories[0]["flags"])
+        totals = sr.yearly_totals(advisories)["2012"]
+        self.assertEqual((totals["from_own_map"], totals["from_named_area_lookup"]), (0, advisories[0]["person_hours"]))
+
+    def test_concurrent_advisories_are_flagged_and_final_remainder_lift_is_not(self):
+        advisories = sr.build_advisories([
+            rel(1, "2025-01-23T01:36:00Z", "Precautionary Boil Water Advisory Issued for Parts of New Orleans East and Venetian Isles"),
+            rel(2, "2025-01-26T18:59:00Z", "Precautionary Boil Water Advisory Issued for the East Bank of New Orleans"),
+            rel(3, "2025-01-27T22:36:00Z", "Precautionary Boil Water Advisory Canceled for Majority of East Bank of New Orleans; Boil Water Advisory Remains in place for Uptown"),
+            rel(4, "2025-01-28T20:40:00Z", "Precautionary Boil Water Advisories Lifted for Multiple Areas in New Orleans East and Venetian Isles"),
+            rel(5, "2025-01-29T20:40:00Z", "Precautionary Boil Water Advisory Lifted for Limited Portion of Uptown"),
+        ])
+        counts = [{"key": "ne", "begin": "2025-01-23T06:00:00Z", "title": "NO East", "people": 4000, "housing_units": 1, "method": "blocks_inside"},
+                  {"key": "eb", "begin": "2025-01-26T06:00:00Z", "title": "East Bank", "people": 333330, "housing_units": 1, "method": "blocks_inside"}]
+        sr.attach_areas(advisories, counts)
+        for advisory in advisories:
+            self.assertIn("concurrent_with_another_advisory_may_double_count", advisory["flags"])
+            self.assertNotIn("lift_names_a_different_place", advisory["flags"])
+        self.assertEqual(sr.yearly_totals(advisories)["2025"]["advisories_without_person_hours"], 0)
+
+    def test_expansions_and_repeat_lifts(self):
+        advisories = sr.build_advisories([
+            rel(1, "2024-08-13T01:42:00Z", "Expanded Precautionary Boil Water Advisory for parts of New Orleans East"),
+            rel(2, "2024-08-13T16:26:00Z", "EXPANDED - Testing in Progress: Precautionary Boil Water Advisory for parts of New Orleans East"),
+            rel(3, "2024-08-13T17:00:00Z", "Precautionary Boil Water Advisory Issued for Uptown"),
+            rel(4, "2024-08-14T15:52:00Z", "Boil Water Advisory Cancelled"),
+            rel(5, "2024-08-14T15:52:00Z", "Boil Water Advisory Cancelled"),
+        ])
+        east, uptown = advisories
+        self.assertEqual(sorted(east["flags"]), ["area_expanded_after_issue", "issue_release_missing", "no_lift_release_found"])
+        self.assertEqual(uptown["release_ids"], [3, 4, 5])  # the repeat does not close the other advisory
+        self.assertIsNone(east["lifted_at"])
+
+    def test_lift_for_part_of_a_named_area_is_partial(self):
+        self.assertEqual(sr.classify("Precautionary Boil Water Advisory Lifted for East Bank of New Orleans West of the Industrial Canal And Lower Ninth Ward"), "partial_lift")
+
     def test_areas_and_person_hours(self):
         advisories = sr.build_advisories([
             rel(1, "2026-10-22T13:02:00Z", "Precautionary Boil Water Advisory Issued for a portion of New Orleans East"),

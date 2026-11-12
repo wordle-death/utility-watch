@@ -41,7 +41,7 @@ ITEM = re.compile(
 STOPWORDS = set("""a an the for of in and to is are at on new orleans precautionary boil water advisory advisories
 bwa issued canceled cancelled lifted testing progress portion portions area areas neighborhood limited remains effect
 swbno update updated updates majority part parts all entire following no nola area only still place city parish
-board sewerage swb issues order called expanded reinstated scheduled customers""".split())
+board sewerage swb issues order called expanded reinstated scheduled customers very small large""".split())
 # Place names that share words ("East Bank" and "New Orleans East") become single tokens.
 PHRASES = [
     (r"east\s?bank", "eastbank"),
@@ -110,7 +110,7 @@ def collect(known, fetch=fetch_page, pause=1.0):
                 found[release["id"]] = release
             if not items or not new:
                 break
-            if page == MAX_PAGES:
+            if page == MAX_PAGES and search:
                 raise FeedError(f"press release list still had new items at page {MAX_PAGES}; history would be cut short")
             time.sleep(pause)
         if page > 1 or items:
@@ -123,7 +123,8 @@ def is_boil(release):
 
 
 LIFT_WORDS = re.compile(r"\b(cancel+ed|lifi?ted|lifts|lifi?ting|rescinded)\b", re.I)
-REMAINDER = re.compile(r"\b(remains?|still|stays?|majority|partial|extends?|extended)\b")
+# "Lifted for East Bank west of the Industrial Canal" also leaves part of the area under advisory.
+REMAINDER = re.compile(r"\b(remains?|still|stays?|majority|partial|extends?|extended|(west|east|north|south) of)\b")
 TESTING = re.compile(r"\b(testing|sampling)\b.*\b(progress|underway|begun|begins)\b")
 NOT_NEW = re.compile(r"\b(update[sd]?|remains?|still|stays?|continues|extends?|extended|chronicle|credit|council)\b")
 OPENED = re.compile(r"\b(issued|issues|expanded|reinstated|called)\b")
@@ -197,6 +198,12 @@ def build_advisories(releases, unattached=None):
             return max(scored, key=lambda s: (s[0], s[1])) if scored else (0, None, None)
 
         overlap, _, match = best(open_ones)
+        if (kind == "lifted" and last_lift and last_lift[0]["title"] == release["title"]
+                and when - parse_iso(last_lift[0]["published"]) <= timedelta(hours=1)):
+            last_lift[1]["release_ids"].append(release["id"])  # the same notice posted twice
+            continue
+        if kind != "issued" and match is not None and "expan" in release["title"].lower():
+            match["flags"].append("area_expanded_after_issue")
         if kind == "issued":
             smaller = min(len(tokens), len(match["area_tokens"])) if match else 0
             same_area = match and smaller and overlap / smaller >= 0.6
@@ -208,20 +215,25 @@ def build_advisories(releases, unattached=None):
                 continue
             advisory = {"issued_at": release["published"], "lifted_at": None, "title": release["title"],
                         "area_tokens": sorted(tokens), "release_ids": [release["id"]], "flags": []}
+            if _plain(release["title"]).startswith("expanded"):
+                # An expansion with no earlier advisory on record: the clock probably starts late.
+                advisory["flags"].append("issue_release_missing")
             advisories.append(advisory)
             open_ones.append(advisory)
         elif match is None:
             # An update or lift with no advisory on record. Lifts matter: an advisory is missing.
             if kind in ("lifted", "partial_lift"):
-                repeat = (last_lift and last_lift[0]["title"] == release["title"]
-                          and when - parse_iso(last_lift[0]["published"]) <= timedelta(hours=1))
-                if repeat:
-                    last_lift[1]["release_ids"].append(release["id"])  # the same notice posted twice
-                else:
-                    leave_out(release, kind, "no_open_advisory")
+                leave_out(release, kind, "no_open_advisory")
         else:
+            if kind in ("lifted", "partial_lift") and tokens and not match["area_tokens"]:
+                # The issue release named no place ("SWB Precautionary Boil Water Advisory"); the lift does.
+                match["area_tokens"] = sorted(tokens)
+                match["flags"].append("place_taken_from_lift_release")
+                overlap = len(tokens)
             if overlap == 0 and kind == "lifted" and tokens and match["area_tokens"]:
-                match["flags"].append("lift_names_a_different_place")
+                # After a partial lift, the final notice names the small remainder, not the advisory's area.
+                if "partial_lift_at" not in match:
+                    match["flags"].append("lift_names_a_different_place")
             elif overlap == 0 and len(open_ones) > 1:
                 match["flags"].append("release_matched_by_time_only")
             match["release_ids"].append(release["id"])
@@ -333,12 +345,38 @@ def attach_areas(advisories, counts, union=None):
             else:
                 advisory["flags"].append("no_map_area")
         advisory["upper_bound"] = any(r["method"] != "blocks_inside" for r in rows)
-        if advisory["people"] is not None and advisory["issued_at"] < "2015":
-            advisory["flags"].append("people_from_2020_census_for_earlier_year")
         known = advisory["people"] is not None and advisory["hours"] is not None
         advisory["person_hours"] = round(advisory["people"] * advisory["hours"]) if known else None
+    # Two advisories open at once can cover the same homes (New Orleans East inside an
+    # East Bank advisory). Overlap between advisories is not removed, so flag both.
+    timed = [a for a in advisories if a["people"] and a["hours"]]
+    for i, a in enumerate(timed):
+        a_end = a.get("partial_lift_at") or a["lifted_at"]
+        for b in timed[i + 1:]:
+            if b["issued_at"] < a_end and a["issued_at"] < (b.get("partial_lift_at") or b["lifted_at"]):
+                a["flags"].append("concurrent_with_another_advisory_may_double_count")
+                b["flags"].append("concurrent_with_another_advisory_may_double_count")
+    for advisory in advisories:
         advisory["flags"] = sorted(set(advisory["flags"]))
     return unmatched
+
+
+def yearly_totals(advisories):
+    """Person-hours by year issued, keeping measured areas apart from borrowed ones."""
+    by_year = {}
+    for advisory in advisories:
+        entry = by_year.setdefault(advisory["issued_at"][:4], {
+            "advisories": 0, "advisories_without_person_hours": 0, "person_hours": 0, "from_own_map": 0,
+            "from_named_area_lookup": 0, "from_advisories_with_an_upper_bound_area": 0})
+        entry["advisories"] += 1
+        if advisory["person_hours"] is None:
+            entry["advisories_without_person_hours"] += 1  # the year's total is incomplete
+            continue
+        entry["person_hours"] += advisory["person_hours"]
+        entry["from_own_map" if advisory["area_keys"] else "from_named_area_lookup"] += advisory["person_hours"]
+        if advisory["upper_bound"]:
+            entry["from_advisories_with_an_upper_bound_area"] += advisory["person_hours"]
+    return dict(sorted(by_year.items()))
 
 
 def block_union(base, counts):
@@ -396,22 +434,12 @@ def main(argv=None):
         raise FeedError("advisory_counts.json is missing or empty; run collectors.households first")
     unmatched = attach_areas(advisories, counts, block_union(base, counts))
     complete = [a for a in advisories if a["person_hours"] is not None]
-    by_year = {}
-    for advisory in complete:
-        year = advisory["issued_at"][:4]
-        entry = by_year.setdefault(year, {"advisories": 0, "person_hours": 0, "from_own_map": 0,
-                                          "from_named_area_lookup": 0, "of_which_upper_bound": 0})
-        entry["advisories"] += 1
-        entry["person_hours"] += advisory["person_hours"]
-        # Keep measured areas apart from areas borrowed from another advisory's drawing.
-        entry["from_own_map" if advisory["area_keys"] else "from_named_area_lookup"] += advisory["person_hours"]
-        if advisory["upper_bound"]:
-            entry["of_which_upper_bound"] += advisory["person_hours"]
+    by_year = yearly_totals(advisories)
     summary = {
         "new_releases": len(new), "boil_releases": sum(is_boil(r) for r in releases),
-        "advisories": len(advisories), "with_lift_time": sum(a["lifted_at"] is not None for a in advisories),
+        "advisories": len(advisories), "with_lift_time": sum(a["hours"] is not None for a in advisories),
         "with_map_area": sum(bool(a["area_keys"]) for a in advisories), "complete": len(complete),
-        "map_areas_unmatched": len(unmatched), "by_year": dict(sorted(by_year.items())),
+        "map_areas_unmatched": len(unmatched), "by_year": by_year,
         "releases_unattached": [u for u in unattached if u["reason"] != "archive_posted_in_bulk"],
         "releases_left_out_as_archive": sum(u["reason"] == "archive_posted_in_bulk" for u in unattached),
         "earliest": min((a["issued_at"] for a in advisories), default=None),
@@ -427,7 +455,7 @@ def main(argv=None):
                       "area (from_named_area_lookup); the reused East Bank drawing covers the whole East Bank, "
                       "which can be more than an advisory reached. Hours run from the issue release to the "
                       "first lift release. See flags on each advisory for uncertain steps.",
-            "map_areas_unmatched": unmatched, "releases_unattached": unattached, "by_year_complete_only": summary["by_year"], "advisories": advisories})
+            "map_areas_unmatched": unmatched, "releases_unattached": unattached, "by_year": by_year, "advisories": advisories})
     return 0
 
 

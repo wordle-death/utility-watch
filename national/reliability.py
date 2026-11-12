@@ -47,7 +47,7 @@ def tidy(raw):
     # Blank out values that cannot be outage minutes: more than a year, or the
     # utility's own ID number typed into the field (City of Milan, TN: 12532).
     for measure in ("saidi_with", "saidi_without"):
-        bad = (df[measure] > MINUTES_IN_YEAR) | ((df[measure] == df["utility_id_eia"]) & (df["utility_id_eia"] >= 1000))
+        bad = (df[measure] < 0) | (df[measure] > MINUTES_IN_YEAR) | ((df[measure] == df["utility_id_eia"]) & (df["utility_id_eia"] >= 1000))
         df.loc[bad, measure] = float("nan")
     df = df.dropna(subset=["saidi_with", "saidi_without"], how="all")
     df = df.sort_values("ieee", ascending=False).drop_duplicates(["utility_id_eia", "state", "year"])
