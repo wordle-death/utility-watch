@@ -4,13 +4,13 @@
   "261121642": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 0.1,
-   "customer_hours_observed": 0.9988888888888889,
+   "customer_hours_observed": 1.4994444444444444,
    "customers": 2,
    "etr": null,
    "first_seen": "2026-11-12T14:19:25Z",
    "id": "261121642",
    "kind": "PLANNED",
-   "last_seen": "2026-11-12T14:49:23Z",
+   "last_seen": "2026-11-12T15:04:24Z",
    "lat": 33.2608414175362,
    "lon": -111.544177772968,
    "max_gap_minutes": 15,
@@ -19,6 +19,50 @@
     "N SUBURBAN  AVE TO N COYOTE  RD AND E PIMA  RD TO E AIRPORT  DR"
    ],
    "start": "2026-11-12T14:17:54Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  },
+  "261121650": {
+   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
+   "customer_hours_before_first_seen": 0.5,
+   "customer_hours_observed": 0.0,
+   "customers": 8,
+   "etr": null,
+   "first_seen": "2026-11-12T15:04:24Z",
+   "id": "261121650",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-12T15:04:24Z",
+   "lat": 33.4110718272755,
+   "lon": -111.80026519575449,
+   "max_gap_minutes": 0,
+   "peak_customers": 8,
+   "places": [
+    "S STAPLEY  DR TO N HARRIS  DR AND E MAIN  ST TO E BROADWAY  RD"
+   ],
+   "start": "2026-11-12T15:00:31Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  },
+  "261121651": {
+   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
+   "customer_hours_before_first_seen": 0.0,
+   "customer_hours_observed": 0.0,
+   "customers": 1,
+   "etr": null,
+   "first_seen": "2026-11-12T15:04:24Z",
+   "id": "261121651",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-12T15:04:24Z",
+   "lat": 33.3901972540527,
+   "lon": -111.433037533594,
+   "max_gap_minutes": 0,
+   "peak_customers": 1,
+   "places": [
+    "S EDGEMORE  RD TO S BLACKHAWK  RD AND NON-DEDICATED   TO E OBSIDIAN  RD"
+   ],
+   "start": "2026-11-12T15:03:03Z",
    "start_basis": "reported",
    "status": null,
    "zips": []

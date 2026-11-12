@@ -2,25 +2,25 @@
  "empty_streak": 0,
  "events": {
   "2600001551": {
-   "cause": "Under Investigation",
+   "cause": "Vehicle Accident",
    "customer_hours_before_first_seen": 4.5,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 4.505,
    "customers": 18,
-   "etr": "2026-11-12T17:00:00Z",
+   "etr": "2026-11-12T19:00:00Z",
    "first_seen": "2026-11-12T14:49:23Z",
    "id": "2600001551",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-12T14:49:23Z",
+   "last_seen": "2026-11-12T15:04:24Z",
    "lat": 42.89142085,
    "lon": -112.90615067,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "peak_customers": 18,
    "places": [
     "ABERDEEN"
    ],
    "start": "2026-11-12T14:34:13Z",
    "start_basis": "reported",
-   "status": "On the Way",
+   "status": "On-site",
    "zips": [
     "83210"
    ]
