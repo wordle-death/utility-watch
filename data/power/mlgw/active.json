@@ -1,36 +1,16 @@
 {
  "empty_streak": 0,
  "events": {
-  "1542547": {
-   "cause": null,
-   "customer_hours_before_first_seen": 0.2,
-   "customer_hours_observed": 1.25,
-   "customers": 1,
-   "etr": null,
-   "first_seen": "2026-11-12T06:19:23Z",
-   "id": "1542547",
-   "kind": null,
-   "last_seen": "2026-11-12T07:34:23Z",
-   "lat": 35.09778,
-   "lon": -89.84215,
-   "max_gap_minutes": 15,
-   "peak_customers": 1,
-   "places": [],
-   "start": "2026-11-12T06:05:04Z",
-   "start_basis": "reported",
-   "status": "Customer Svc is working this single customer outage",
-   "zips": []
-  },
   "1542548": {
    "cause": null,
    "customer_hours_before_first_seen": 0.0,
-   "customer_hours_observed": 0.75,
+   "customer_hours_observed": 1.0,
    "customers": 1,
    "etr": null,
    "first_seen": "2026-11-12T06:49:23Z",
    "id": "1542548",
    "kind": null,
-   "last_seen": "2026-11-12T07:34:23Z",
+   "last_seen": "2026-11-12T07:49:23Z",
    "lat": 35.0364,
    "lon": -89.99904,
    "max_gap_minutes": 15,
@@ -75,6 +55,7 @@
   "1542542": "2026-11-12T03:19:23Z",
   "1542544": "2026-11-12T03:49:24Z",
   "1542545": "2026-11-12T06:49:23Z",
-  "1542546": "2026-11-12T07:34:23Z"
+  "1542546": "2026-11-12T07:34:23Z",
+  "1542547": "2026-11-12T07:49:23Z"
  }
 }
