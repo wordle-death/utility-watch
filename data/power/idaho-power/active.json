@@ -1,6 +1,31 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "2600001551": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 4.5,
+   "customer_hours_observed": 0.0,
+   "customers": 18,
+   "etr": "2026-11-12T17:00:00Z",
+   "first_seen": "2026-11-12T14:49:23Z",
+   "id": "2600001551",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-12T14:49:23Z",
+   "lat": 42.89142085,
+   "lon": -112.90615067,
+   "max_gap_minutes": 0,
+   "peak_customers": 18,
+   "places": [
+    "ABERDEEN"
+   ],
+   "start": "2026-11-12T14:34:13Z",
+   "start_basis": "reported",
+   "status": "On the Way",
+   "zips": [
+    "83210"
+   ]
+  }
+ },
  "logged_recent": {
   "2600000353": "2026-11-11T23:38:23Z",
   "2600000557": "2026-11-11T00:28:41Z",
