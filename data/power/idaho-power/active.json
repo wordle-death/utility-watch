@@ -1,16 +1,40 @@
 {
  "empty_streak": 0,
  "events": {
+  "2600001101": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 21.9,
+   "customer_hours_observed": 0.0,
+   "customers": 89,
+   "etr": "2026-11-12T21:00:00Z",
+   "first_seen": "2026-11-12T17:19:23Z",
+   "id": "2600001101",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-12T17:19:23Z",
+   "lat": 44.8934163,
+   "lon": -116.09717349,
+   "max_gap_minutes": 0,
+   "peak_customers": 89,
+   "places": [
+    "MCCALL"
+   ],
+   "start": "2026-11-12T17:04:38Z",
+   "start_basis": "reported",
+   "status": "Pending",
+   "zips": [
+    "83638"
+   ]
+  },
   "2600001211": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 19.2,
-   "customer_hours_observed": 22.475,
+   "customer_hours_observed": 33.725,
    "customers": 45,
    "etr": "2026-11-12T20:00:00Z",
    "first_seen": "2026-11-12T16:34:25Z",
    "id": "2600001211",
    "kind": "PLANNED",
-   "last_seen": "2026-11-12T17:04:23Z",
+   "last_seen": "2026-11-12T17:19:23Z",
    "lat": 43.65223968,
    "lon": -116.59064122,
    "max_gap_minutes": 15,
@@ -28,13 +52,13 @@
   "2600001320": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 16.9,
-   "customer_hours_observed": 32.96333333333334,
+   "customer_hours_observed": 49.46333333333334,
    "customers": 66,
    "etr": "2026-11-12T22:00:00Z",
    "first_seen": "2026-11-12T16:34:25Z",
    "id": "2600001320",
    "kind": "PLANNED",
-   "last_seen": "2026-11-12T17:04:23Z",
+   "last_seen": "2026-11-12T17:19:23Z",
    "lat": 42.86068318,
    "lon": -112.47726163,
    "max_gap_minutes": 15,
@@ -52,16 +76,16 @@
   "2600001417": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 9.7,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 6.25,
    "customers": 25,
    "etr": "2026-11-12T18:00:00Z",
    "first_seen": "2026-11-12T17:04:23Z",
    "id": "2600001417",
    "kind": "PLANNED",
-   "last_seen": "2026-11-12T17:04:23Z",
+   "last_seen": "2026-11-12T17:19:23Z",
    "lat": 42.6025147,
    "lon": -114.7617444,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "peak_customers": 25,
    "places": [
     "BUHL"
@@ -76,13 +100,13 @@
   "2600001551": {
    "cause": "Vehicle Accident",
    "customer_hours_before_first_seen": 4.5,
-   "customer_hours_observed": 40.49999999999999,
+   "customer_hours_observed": 44.99999999999999,
    "customers": 18,
    "etr": "2026-11-12T17:30:00Z",
    "first_seen": "2026-11-12T14:49:23Z",
    "id": "2600001551",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-12T17:04:23Z",
+   "last_seen": "2026-11-12T17:19:23Z",
    "lat": 42.89142085,
    "lon": -112.90615067,
    "max_gap_minutes": 15,
@@ -100,13 +124,13 @@
   "2600001561": {
    "cause": "Not Found",
    "customer_hours_before_first_seen": 10.6,
-   "customer_hours_observed": 25.99277777777778,
+   "customer_hours_observed": 32.492777777777775,
    "customers": 26,
    "etr": "2026-11-12T18:00:00Z",
    "first_seen": "2026-11-12T16:04:24Z",
    "id": "2600001561",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-12T17:04:23Z",
+   "last_seen": "2026-11-12T17:19:23Z",
    "lat": 43.55374381,
    "lon": -116.41619961,
    "max_gap_minutes": 15,
@@ -116,9 +140,33 @@
    ],
    "start": "2026-11-12T15:40:03Z",
    "start_basis": "reported",
-   "status": "On the Way",
+   "status": "On-site",
    "zips": [
     "83642"
+   ]
+  },
+  "2600001570": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 2.9,
+   "customer_hours_observed": 0.0,
+   "customers": 15,
+   "etr": "2026-11-12T20:30:00Z",
+   "first_seen": "2026-11-12T17:19:23Z",
+   "id": "2600001570",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-12T17:19:23Z",
+   "lat": 44.2544881,
+   "lon": -117.01578912,
+   "max_gap_minutes": 0,
+   "peak_customers": 15,
+   "places": [
+    "WEISER"
+   ],
+   "start": "2026-11-12T17:07:35Z",
+   "start_basis": "reported",
+   "status": "Pending",
+   "zips": [
+    "83672"
    ]
   }
  },
