@@ -1,16 +1,64 @@
 {
  "empty_streak": 0,
  "events": {
+  "2600001211": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 19.2,
+   "customer_hours_observed": 0.0,
+   "customers": 45,
+   "etr": "2026-11-12T20:00:00Z",
+   "first_seen": "2026-11-12T16:34:25Z",
+   "id": "2600001211",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-12T16:34:25Z",
+   "lat": 43.65223968,
+   "lon": -116.59064122,
+   "max_gap_minutes": 0,
+   "peak_customers": 45,
+   "places": [
+    "NAMPA"
+   ],
+   "start": "2026-11-12T16:08:45Z",
+   "start_basis": "reported",
+   "status": "Pending",
+   "zips": [
+    "83687"
+   ]
+  },
+  "2600001320": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 16.9,
+   "customer_hours_observed": 0.0,
+   "customers": 66,
+   "etr": "2026-11-12T22:00:00Z",
+   "first_seen": "2026-11-12T16:34:25Z",
+   "id": "2600001320",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-12T16:34:25Z",
+   "lat": 42.86068318,
+   "lon": -112.47726163,
+   "max_gap_minutes": 0,
+   "peak_customers": 66,
+   "places": [
+    "POCATELLO"
+   ],
+   "start": "2026-11-12T16:19:03Z",
+   "start_basis": "reported",
+   "status": "Pending",
+   "zips": [
+    "83204"
+   ]
+  },
   "2600001551": {
    "cause": "Vehicle Accident",
    "customer_hours_before_first_seen": 4.5,
-   "customer_hours_observed": 27.02,
+   "customer_hours_observed": 31.509999999999998,
    "customers": 18,
    "etr": "2026-11-12T19:00:00Z",
    "first_seen": "2026-11-12T14:49:23Z",
    "id": "2600001551",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-12T16:19:27Z",
+   "last_seen": "2026-11-12T16:34:25Z",
    "lat": 42.89142085,
    "lon": -112.90615067,
    "max_gap_minutes": 15,
@@ -28,13 +76,13 @@
   "2600001561": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 10.6,
-   "customer_hours_observed": 6.521666666666667,
+   "customer_hours_observed": 13.007222222222222,
    "customers": 26,
    "etr": "2026-11-12T17:30:00Z",
    "first_seen": "2026-11-12T16:04:24Z",
    "id": "2600001561",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-12T16:19:27Z",
+   "last_seen": "2026-11-12T16:34:25Z",
    "lat": 43.55374381,
    "lon": -116.41619961,
    "max_gap_minutes": 15,
