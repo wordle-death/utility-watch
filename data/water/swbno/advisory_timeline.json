@@ -2,38 +2,34 @@
  "advisories": [
   {
    "area_keys": [],
-   "area_tokens": [
-    "isles",
-    "venetian"
-   ],
+   "area_tokens": [],
    "flags": [
     "no_map_area"
    ],
-   "hours": 43.9,
+   "hours": 26.9,
    "housing_units": null,
-   "issued_at": "2009-05-18T20:13:00Z",
-   "lifted_at": "2009-05-20T16:08:00Z",
+   "issued_at": "2009-08-20T23:45:00Z",
+   "lifted_at": "2009-08-22T02:36:00Z",
    "people": null,
    "person_hours": null,
    "release_ids": [
-    22,
-    86,
-    87,
-    99,
-    106
+    134,
+    135,
+    137
    ],
-   "title": "Boil Water Advisory For Venetian Isles",
+   "title": "Boil Water Advisory",
    "upper_bound": false
   },
   {
-   "area_borrowed_from": "ef948cb3-6c42-4769-ac55-9ed466c12b92",
    "area_keys": [],
+   "area_reused_from": [
+    "ef948cb3-6c42-4769-ac55-9ed466c12b92"
+   ],
    "area_tokens": [
-    "eastbank",
-    "parish"
+    "eastbank"
    ],
    "flags": [
-    "area_estimated_from_similar_advisory"
+    "area_from_named_area_lookup"
    ],
    "hours": 37.0,
    "housing_units": 170672,
@@ -52,8 +48,7 @@
   {
    "area_keys": [],
    "area_tokens": [
-    "eastern",
-    "large"
+    "noeast"
    ],
    "flags": [
     "no_map_area"
@@ -73,19 +68,21 @@
   },
   {
    "area_keys": [],
+   "area_reused_from": [
+    "0c46e4c9-aebd-4639-89bb-6f887f6bdcaa"
+   ],
    "area_tokens": [
-    "isles",
     "venetian"
    ],
    "flags": [
-    "no_map_area"
+    "area_from_named_area_lookup"
    ],
    "hours": 68.2,
-   "housing_units": null,
+   "housing_units": 396,
    "issued_at": "2012-07-16T19:45:00Z",
    "lifted_at": "2012-07-19T15:56:00Z",
-   "people": null,
-   "person_hours": null,
+   "people": 757,
+   "person_hours": 51627,
    "release_ids": [
     297,
     298,
@@ -96,23 +93,21 @@
   },
   {
    "area_keys": [],
+   "area_reused_from": [
+    "0c46e4c9-aebd-4639-89bb-6f887f6bdcaa"
+   ],
    "area_tokens": [
-    "board",
-    "isles",
-    "issues",
-    "order",
-    "sewerage",
     "venetian"
    ],
    "flags": [
-    "no_map_area"
+    "area_from_named_area_lookup"
    ],
    "hours": 23.9,
-   "housing_units": null,
+   "housing_units": 396,
    "issued_at": "2012-09-01T00:07:00Z",
    "lifted_at": "2012-09-02T00:03:00Z",
-   "people": null,
-   "person_hours": null,
+   "people": 757,
+   "person_hours": 18092,
    "release_ids": [
     306,
     307
@@ -121,14 +116,40 @@
    "upper_bound": false
   },
   {
-   "area_borrowed_from": "ef948cb3-6c42-4769-ac55-9ed466c12b92",
    "area_keys": [],
+   "area_reused_from": [
+    "ef948cb3-6c42-4769-ac55-9ed466c12b92"
+   ],
    "area_tokens": [
-    "eastbank",
-    "parish"
+    "eastbank"
    ],
    "flags": [
-    "area_estimated_from_similar_advisory"
+    "area_from_named_area_lookup",
+    "place_taken_from_lift_release"
+   ],
+   "hours": 23.6,
+   "housing_units": 170672,
+   "issued_at": "2012-10-08T19:52:00Z",
+   "lifted_at": "2012-10-09T19:28:00Z",
+   "people": 333330,
+   "person_hours": 7866588,
+   "release_ids": [
+    314,
+    315
+   ],
+   "title": "SWB Precautionary Boil Water Advisory",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [],
+   "area_reused_from": [
+    "ef948cb3-6c42-4769-ac55-9ed466c12b92"
+   ],
+   "area_tokens": [
+    "eastbank"
+   ],
+   "flags": [
+    "area_from_named_area_lookup"
    ],
    "hours": 29.5,
    "housing_units": 170672,
@@ -139,7 +160,8 @@
    "release_ids": [
     340,
     341,
-    342
+    342,
+    343
    ],
    "title": "Boil Water Advisory Issued for All of East Bank of New Orleans Parish",
    "upper_bound": false
@@ -147,7 +169,6 @@
   {
    "area_keys": [],
    "area_tokens": [
-    "isles",
     "venetian"
    ],
    "flags": [
@@ -193,13 +214,15 @@
    "upper_bound": false
   },
   {
-   "area_borrowed_from": "ef948cb3-6c42-4769-ac55-9ed466c12b92",
    "area_keys": [],
+   "area_reused_from": [
+    "ef948cb3-6c42-4769-ac55-9ed466c12b92"
+   ],
    "area_tokens": [
     "eastbank"
    ],
    "flags": [
-    "area_estimated_from_similar_advisory"
+    "area_from_named_area_lookup"
    ],
    "hours": 31.5,
    "housing_units": 170672,
@@ -215,13 +238,15 @@
    "upper_bound": false
   },
   {
-   "area_borrowed_from": "ef948cb3-6c42-4769-ac55-9ed466c12b92",
    "area_keys": [],
+   "area_reused_from": [
+    "ef948cb3-6c42-4769-ac55-9ed466c12b92"
+   ],
    "area_tokens": [
     "eastbank"
    ],
    "flags": [
-    "area_estimated_from_similar_advisory"
+    "area_from_named_area_lookup"
    ],
    "hours": 20.9,
    "housing_units": 170672,
@@ -239,18 +264,21 @@
   },
   {
    "area_keys": [],
+   "area_reused_from": [
+    "701de6e3-6005-4efd-8ded-a089b34ee0f1"
+   ],
    "area_tokens": [
     "lower9"
    ],
    "flags": [
-    "no_map_area"
+    "area_from_named_area_lookup"
    ],
    "hours": 29.4,
-   "housing_units": null,
+   "housing_units": 4051,
    "issued_at": "2016-06-02T19:31:00Z",
    "lifted_at": "2016-06-04T00:53:00Z",
-   "people": null,
-   "person_hours": null,
+   "people": 8475,
+   "person_hours": 249165,
    "release_ids": [
     1138,
     1139,
@@ -261,20 +289,21 @@
   },
   {
    "area_keys": [],
+   "area_reused_from": [
+    "0c46e4c9-aebd-4639-89bb-6f887f6bdcaa"
+   ],
    "area_tokens": [
-    "isles",
-    "only",
     "venetian"
    ],
    "flags": [
-    "no_map_area"
+    "area_from_named_area_lookup"
    ],
    "hours": 50.4,
-   "housing_units": null,
+   "housing_units": 396,
    "issued_at": "2017-06-22T16:59:00Z",
    "lifted_at": "2017-06-24T19:23:00Z",
-   "people": null,
-   "person_hours": null,
+   "people": 757,
+   "person_hours": 38153,
    "release_ids": [
     1771,
     1774,
@@ -285,13 +314,15 @@
    "upper_bound": false
   },
   {
-   "area_borrowed_from": "ef948cb3-6c42-4769-ac55-9ed466c12b92",
    "area_keys": [],
+   "area_reused_from": [
+    "ef948cb3-6c42-4769-ac55-9ed466c12b92"
+   ],
    "area_tokens": [
     "eastbank"
    ],
    "flags": [
-    "area_estimated_from_similar_advisory"
+    "area_from_named_area_lookup"
    ],
    "hours": 25.1,
    "housing_units": 170672,
@@ -308,45 +339,95 @@
    "upper_bound": false
   },
   {
-   "area_borrowed_from": "de686a3a-cdbc-477c-8ffc-d639442d23f0",
    "area_keys": [],
    "area_tokens": [
-    "parish",
-    "place",
-    "still",
-    "westbank"
+    "noeast"
    ],
    "flags": [
-    "area_estimated_from_similar_advisory"
+    "no_map_area"
    ],
-   "hours": 12.6,
-   "housing_units": 23129,
-   "issued_at": "2018-01-25T00:08:00Z",
-   "lifted_at": "2018-01-25T12:41:00Z",
-   "people": 50600,
-   "person_hours": 637560,
+   "hours": 68.9,
+   "housing_units": null,
+   "issued_at": "2018-01-17T23:50:00Z",
+   "lifted_at": "2018-01-20T20:43:00Z",
+   "people": null,
+   "person_hours": null,
    "release_ids": [
-    2068,
-    2069
+    2052,
+    2056
    ],
-   "title": "Precautionary Boil Water Advisory Still in Place for West Bank of Orleans Parish",
+   "title": "Precautionary Boil-Water Advisory For New Orleans East",
    "upper_bound": false
   },
   {
    "area_keys": [],
+   "area_reused_from": [
+    "ef948cb3-6c42-4769-ac55-9ed466c12b92"
+   ],
    "area_tokens": [
-    "isles",
+    "eastbank"
+   ],
+   "flags": [
+    "area_from_named_area_lookup",
+    "remainder_after_partial_lift_not_counted"
+   ],
+   "hours": 33.2,
+   "housing_units": 170672,
+   "issued_at": "2018-01-18T16:51:00Z",
+   "lifted_at": null,
+   "partial_lift_at": "2018-01-20T02:02:00Z",
+   "people": 333330,
+   "person_hours": 11066556,
+   "release_ids": [
+    2054,
+    2055
+   ],
+   "title": "Precautionary Boil-Water Advisory For The Entire East Bank of New Orleans",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [],
+   "area_reused_from": [
+    "de686a3a-cdbc-477c-8ffc-d639442d23f0"
+   ],
+   "area_tokens": [
+    "westbank"
+   ],
+   "flags": [
+    "area_from_named_area_lookup"
+   ],
+   "hours": 40.1,
+   "housing_units": 23129,
+   "issued_at": "2018-01-23T20:35:00Z",
+   "lifted_at": "2018-01-25T12:41:00Z",
+   "people": 50600,
+   "person_hours": 2029060,
+   "release_ids": [
+    2061,
+    2063,
+    2068,
+    2069
+   ],
+   "title": "Precautionary Boil-Water Advisory For Westbank of Orleans Parish",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [],
+   "area_reused_from": [
+    "0c46e4c9-aebd-4639-89bb-6f887f6bdcaa"
+   ],
+   "area_tokens": [
     "venetian"
    ],
    "flags": [
-    "no_lift_release_found",
-    "no_map_area"
+    "area_from_named_area_lookup",
+    "no_lift_release_found"
    ],
    "hours": null,
-   "housing_units": null,
+   "housing_units": 396,
    "issued_at": "2018-05-22T19:19:00Z",
    "lifted_at": null,
-   "people": null,
+   "people": 757,
    "person_hours": null,
    "release_ids": [
     3265
@@ -355,13 +436,39 @@
    "upper_bound": false
   },
   {
-   "area_borrowed_from": "ef948cb3-6c42-4769-ac55-9ed466c12b92",
    "area_keys": [],
+   "area_reused_from": [
+    "0c46e4c9-aebd-4639-89bb-6f887f6bdcaa"
+   ],
+   "area_tokens": [
+    "venetian"
+   ],
+   "flags": [
+    "area_from_named_area_lookup",
+    "no_lift_release_found"
+   ],
+   "hours": null,
+   "housing_units": 396,
+   "issued_at": "2018-08-04T17:12:00Z",
+   "lifted_at": null,
+   "people": 757,
+   "person_hours": null,
+   "release_ids": [
+    3365
+   ],
+   "title": "Scheduled Precautionary Boil Water Advisory In Effect for Venetian Isles",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [],
+   "area_reused_from": [
+    "ef948cb3-6c42-4769-ac55-9ed466c12b92"
+   ],
    "area_tokens": [
     "eastbank"
    ],
    "flags": [
-    "area_estimated_from_similar_advisory"
+    "area_from_named_area_lookup"
    ],
    "hours": 50.1,
    "housing_units": 170672,
@@ -502,7 +609,6 @@
     "d038b88c-aa7e-4d16-a712-8723a8076892"
    ],
    "area_tokens": [
-    "called",
     "uptown"
    ],
    "flags": [],
@@ -525,7 +631,6 @@
     "48a81814-01da-446d-9401-b5d6926e1ef0"
    ],
    "area_tokens": [
-    "reinstated",
     "uptown"
    ],
    "flags": [],
@@ -589,12 +694,50 @@
   },
   {
    "area_keys": [
+    "cd1ec9a8-5f2d-41e6-8f2c-0140ab586b76"
+   ],
+   "area_tokens": [
+    "blocks",
+    "break",
+    "isolated",
+    "johnson",
+    "main",
+    "near",
+    "responding",
+    "several",
+    "south",
+    "street",
+    "universities",
+    "uptown"
+   ],
+   "flags": [
+    "area_expanded_after_issue"
+   ],
+   "hours": 67.8,
+   "housing_units": 1532,
+   "issued_at": "2019-12-06T18:44:00Z",
+   "lifted_at": "2019-12-09T14:34:00Z",
+   "people": 2747,
+   "person_hours": 186247,
+   "release_ids": [
+    3555,
+    3556,
+    3557,
+    3558
+   ],
+   "title": "SWBNO responding to water main break on South Johnson Street, Isolated precautionary boil water advisory for several blocks near universities Uptown",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
     "8c4710bb-0dde-41a7-b87a-5ca14af94214"
    ],
    "area_tokens": [
     "algiers"
    ],
-   "flags": [],
+   "flags": [
+    "lift_names_a_different_place"
+   ],
    "hours": 24.7,
    "housing_units": 23076,
    "issued_at": "2019-12-14T20:53:00Z",
@@ -633,6 +776,33 @@
   },
   {
    "area_keys": [
+    "17ffd2f6-16fc-4827-9dbe-13582364a9bd"
+   ],
+   "area_tokens": [
+    "alcee",
+    "de",
+    "est",
+    "fortier",
+    "village",
+    "willowbrook"
+   ],
+   "flags": [],
+   "hours": 25.4,
+   "housing_units": 3081,
+   "issued_at": "2020-06-29T15:35:00Z",
+   "lifted_at": "2020-06-30T17:01:00Z",
+   "people": 8869,
+   "person_hours": 225273,
+   "release_ids": [
+    3591,
+    3592,
+    3593
+   ],
+   "title": "Limited precautionary boil-water advisory for Village De L’est, Willowbrook and Alcee Fortier areas",
+   "upper_bound": false
+  },
+  {
+   "area_keys": [
     "b2b26fef-575f-48fe-8894-6b21f3f93a46"
    ],
    "area_tokens": [
@@ -661,7 +831,6 @@
    "area_tokens": [
     "9th",
     "lower9",
-    "small",
     "upper",
     "ward"
    ],
@@ -882,8 +1051,16 @@
     "950ff6b6-becb-4d44-a982-b2b6e88c4668",
     "c3578059-684f-43de-9cec-2277a8443b01"
    ],
-   "area_tokens": [],
-   "flags": [],
+   "area_tokens": [
+    "50",
+    "due",
+    "inch",
+    "main",
+    "repair"
+   ],
+   "flags": [
+    "place_taken_from_lift_release"
+   ],
    "hours": 44.4,
    "housing_units": 27516,
    "issued_at": "2022-02-22T17:10:00Z",
@@ -979,15 +1156,16 @@
    ],
    "flags": [],
    "hours": 43.9,
-   "housing_units": 1497,
+   "housing_units": 1106,
    "issued_at": "2022-08-01T19:34:00Z",
    "lifted_at": "2022-08-03T15:29:00Z",
-   "people": 4279,
-   "person_hours": 187848,
+   "people": 3075,
+   "person_hours": 134992,
    "release_ids": [
     4706,
     4707,
-    4708
+    4708,
+    4709
    ],
    "title": "Precautionary Boil Water Advisory Issued for parts of New Orleans Westbank",
    "upper_bound": true
@@ -1040,20 +1218,22 @@
     "0373ce7c-7d7c-47a8-808a-cc399177d271"
    ],
    "area_tokens": [
-    "uptown",
-    "very"
+    "uptown"
    ],
-   "flags": [],
-   "hours": 43.7,
-   "housing_units": 434,
+   "flags": [
+    "partial_lift_of_unmatched_place_not_applied"
+   ],
+   "hours": 62.0,
+   "housing_units": 372,
    "issued_at": "2023-04-10T02:12:00Z",
-   "lifted_at": "2023-04-11T21:54:00Z",
-   "people": 845,
-   "person_hours": 36926,
+   "lifted_at": "2023-04-12T16:14:00Z",
+   "people": 720,
+   "person_hours": 44640,
    "release_ids": [
     4734,
     4735,
-    4736
+    4736,
+    4737
    ],
    "title": "Precautionary Boil Water Advisory for Very Limited Portion of Uptown New Orleans",
    "upper_bound": true
@@ -1297,20 +1477,24 @@
   },
   {
    "area_keys": [],
+   "area_reused_from": [
+    "701de6e3-6005-4efd-8ded-a089b34ee0f1"
+   ],
    "area_tokens": [
     "lower9",
     "neighborhoods",
     "surrounding"
    ],
    "flags": [
-    "no_map_area"
+    "area_from_named_area_lookup",
+    "other_named_places_not_counted"
    ],
    "hours": 25.4,
-   "housing_units": null,
+   "housing_units": 4051,
    "issued_at": "2024-03-30T15:20:00Z",
    "lifted_at": "2024-03-31T16:41:00Z",
-   "people": null,
-   "person_hours": null,
+   "people": 8475,
+   "person_hours": 215265,
    "release_ids": [
     4850,
     4851,
@@ -1368,15 +1552,19 @@
    "upper_bound": false
   },
   {
-   "area_borrowed_from": "ef948cb3-6c42-4769-ac55-9ed466c12b92",
    "area_keys": [],
+   "area_reused_from": [
+    "ef948cb3-6c42-4769-ac55-9ed466c12b92"
+   ],
    "area_tokens": [
     "algiers",
     "eastbank",
     "point"
    ],
    "flags": [
-    "area_estimated_from_similar_advisory"
+    "area_from_named_area_lookup",
+    "other_named_places_not_counted",
+    "partial_lift_of_unmatched_place_not_applied"
    ],
    "hours": 47.1,
    "housing_units": 170672,
@@ -1400,13 +1588,14 @@
     "c02e6071-8dee-4b4e-a1aa-8885e66ca481"
    ],
    "area_tokens": [
-    "expanded",
     "island",
     "noeast",
     "oak",
     "subdivision"
    ],
-   "flags": [],
+   "flags": [
+    "issue_release_missing"
+   ],
    "hours": 38.2,
    "housing_units": 7878,
    "issued_at": "2024-08-13T01:42:00Z",
@@ -1542,7 +1731,6 @@
   {
    "area_keys": [],
    "area_tokens": [
-    "isles",
     "lower9",
     "multiple",
     "noeast",
@@ -1572,11 +1760,13 @@
     "847f3cd9-b2f0-4e6b-b78f-11dc01c7c829"
    ],
    "area_tokens": [
-    "isles",
     "noeast",
     "venetian"
    ],
-   "flags": [],
+   "flags": [
+    "concurrent_with_another_advisory_may_double_count",
+    "unusually_long_check_by_hand"
+   ],
    "hours": 139.1,
    "housing_units": 1849,
    "issued_at": "2025-01-23T01:36:00Z",
@@ -1599,6 +1789,7 @@
     "eastbank"
    ],
    "flags": [
+    "concurrent_with_another_advisory_may_double_count",
     "remainder_after_partial_lift_not_counted"
    ],
    "hours": 27.6,
@@ -1623,7 +1814,9 @@
    "area_tokens": [
     "noeast"
    ],
-   "flags": [],
+   "flags": [
+    "area_expanded_after_issue"
+   ],
    "hours": 29.1,
    "housing_units": 9536,
    "issued_at": "2025-03-19T14:58:00Z",
@@ -1672,12 +1865,12 @@
     "remainder_after_partial_lift_not_counted"
    ],
    "hours": 37.3,
-   "housing_units": 31775,
+   "housing_units": 31385,
    "issued_at": "2025-06-28T05:50:00Z",
    "lifted_at": "2025-06-30T19:22:00Z",
    "partial_lift_at": "2025-06-29T19:10:00Z",
-   "people": 60890,
-   "person_hours": 2271197,
+   "people": 60226,
+   "person_hours": 2246430,
    "release_ids": [
     4998,
     5002,
@@ -1720,7 +1913,6 @@
     "869ebe07-0a20-47b3-a79e-3af37252e33d"
    ],
    "area_tokens": [
-    "isles",
     "venetian"
    ],
    "flags": [],
@@ -1746,13 +1938,16 @@
    "area_tokens": [
     "noeast"
    ],
-   "flags": [],
-   "hours": 48.3,
+   "flags": [
+    "remainder_after_partial_lift_not_counted"
+   ],
+   "hours": 24.5,
    "housing_units": 5369,
    "issued_at": "2025-11-14T17:09:00Z",
    "lifted_at": "2025-11-16T17:25:00Z",
+   "partial_lift_at": "2025-11-15T17:41:00Z",
    "people": 13167,
-   "person_hours": 635966,
+   "person_hours": 322592,
    "release_ids": [
     5035,
     5036,
@@ -1811,10 +2006,11 @@
     "5218b091-af9e-4bc3-ae87-5d1a3473d747"
    ],
    "area_tokens": [
-    "large",
     "uptown"
    ],
-   "flags": [],
+   "flags": [
+    "area_expanded_after_issue"
+   ],
    "hours": 30.5,
    "housing_units": 59262,
    "issued_at": "2026-02-23T11:56:00Z",
@@ -1890,7 +2086,9 @@
    "area_tokens": [
     "noeast"
    ],
-   "flags": [],
+   "flags": [
+    "lift_names_a_different_place"
+   ],
    "hours": 25.4,
    "housing_units": 2661,
    "issued_at": "2026-05-19T14:50:00Z",
@@ -1962,11 +2160,11 @@
    ],
    "flags": [],
    "hours": 29.0,
-   "housing_units": 23205,
+   "housing_units": 23128,
    "issued_at": "2026-07-25T11:54:00Z",
    "lifted_at": "2026-07-26T16:52:00Z",
-   "people": 50788,
-   "person_hours": 1472852,
+   "people": 50577,
+   "person_hours": 1466733,
    "release_ids": [
     5105,
     5106,
@@ -1980,10 +2178,11 @@
     "1d0b7e63-c8a6-431f-b99e-e0da0c78abf6"
    ],
    "area_tokens": [
-    "isles",
     "venetian"
    ],
-   "flags": [],
+   "flags": [
+    "concurrent_with_another_advisory_may_double_count"
+   ],
    "hours": 72.3,
    "housing_units": 305,
    "issued_at": "2026-08-07T18:03:00Z",
@@ -2007,6 +2206,7 @@
    ],
    "flags": [
     "area_matched_by_date_only",
+    "concurrent_with_another_advisory_may_double_count",
     "remainder_after_partial_lift_not_counted"
    ],
    "hours": 63.6,
@@ -2095,67 +2295,234 @@
    "upper_bound": false
   }
  ],
- "by_year_complete_only": {
+ "by_year": {
+  "2009": {
+   "advisories": 1,
+   "advisories_without_person_hours": 1,
+   "from_advisories_with_an_upper_bound_area": 0,
+   "from_named_area_lookup": 0,
+   "from_own_map": 0,
+   "person_hours": 0
+  },
   "2010": {
    "advisories": 1,
+   "advisories_without_person_hours": 0,
+   "from_advisories_with_an_upper_bound_area": 0,
+   "from_named_area_lookup": 12333210,
+   "from_own_map": 0,
    "person_hours": 12333210
   },
+  "2012": {
+   "advisories": 4,
+   "advisories_without_person_hours": 1,
+   "from_advisories_with_an_upper_bound_area": 0,
+   "from_named_area_lookup": 7936307,
+   "from_own_map": 0,
+   "person_hours": 7936307
+  },
   "2013": {
-   "advisories": 1,
+   "advisories": 2,
+   "advisories_without_person_hours": 1,
+   "from_advisories_with_an_upper_bound_area": 0,
+   "from_named_area_lookup": 9833235,
+   "from_own_map": 0,
    "person_hours": 9833235
   },
   "2015": {
-   "advisories": 2,
+   "advisories": 3,
+   "advisories_without_person_hours": 1,
+   "from_advisories_with_an_upper_bound_area": 0,
+   "from_named_area_lookup": 17466492,
+   "from_own_map": 0,
    "person_hours": 17466492
   },
-  "2017": {
+  "2016": {
    "advisories": 1,
-   "person_hours": 8366583
+   "advisories_without_person_hours": 0,
+   "from_advisories_with_an_upper_bound_area": 0,
+   "from_named_area_lookup": 249165,
+   "from_own_map": 0,
+   "person_hours": 249165
+  },
+  "2017": {
+   "advisories": 2,
+   "advisories_without_person_hours": 0,
+   "from_advisories_with_an_upper_bound_area": 0,
+   "from_named_area_lookup": 8404736,
+   "from_own_map": 0,
+   "person_hours": 8404736
   },
   "2018": {
-   "advisories": 2,
-   "person_hours": 17337393
+   "advisories": 6,
+   "advisories_without_person_hours": 3,
+   "from_advisories_with_an_upper_bound_area": 0,
+   "from_named_area_lookup": 29795449,
+   "from_own_map": 0,
+   "person_hours": 29795449
   },
   "2019": {
-   "advisories": 10,
-   "person_hours": 11060945
+   "advisories": 11,
+   "advisories_without_person_hours": 0,
+   "from_advisories_with_an_upper_bound_area": 0,
+   "from_named_area_lookup": 0,
+   "from_own_map": 11247192,
+   "person_hours": 11247192
   },
   "2020": {
-   "advisories": 8,
-   "person_hours": 2642247
+   "advisories": 9,
+   "advisories_without_person_hours": 0,
+   "from_advisories_with_an_upper_bound_area": 0,
+   "from_named_area_lookup": 0,
+   "from_own_map": 2867520,
+   "person_hours": 2867520
   },
   "2021": {
    "advisories": 2,
+   "advisories_without_person_hours": 0,
+   "from_advisories_with_an_upper_bound_area": 0,
+   "from_named_area_lookup": 0,
+   "from_own_map": 3378385,
    "person_hours": 3378385
   },
   "2022": {
    "advisories": 7,
-   "person_hours": 4468081
+   "advisories_without_person_hours": 0,
+   "from_advisories_with_an_upper_bound_area": 134992,
+   "from_named_area_lookup": 0,
+   "from_own_map": 4415225,
+   "person_hours": 4415225
   },
   "2023": {
    "advisories": 10,
-   "person_hours": 1557863
+   "advisories_without_person_hours": 0,
+   "from_advisories_with_an_upper_bound_area": 153401,
+   "from_named_area_lookup": 0,
+   "from_own_map": 1565577,
+   "person_hours": 1565577
   },
   "2024": {
-   "advisories": 11,
-   "person_hours": 21293371
+   "advisories": 12,
+   "advisories_without_person_hours": 0,
+   "from_advisories_with_an_upper_bound_area": 0,
+   "from_named_area_lookup": 15915108,
+   "from_own_map": 5593528,
+   "person_hours": 21508636
   },
   "2025": {
-   "advisories": 9,
-   "person_hours": 13959844
+   "advisories": 10,
+   "advisories_without_person_hours": 1,
+   "from_advisories_with_an_upper_bound_area": 2926405,
+   "from_named_area_lookup": 0,
+   "from_own_map": 13621703,
+   "person_hours": 13621703
   },
   "2026": {
    "advisories": 13,
-   "person_hours": 20607899
+   "advisories_without_person_hours": 0,
+   "from_advisories_with_an_upper_bound_area": 1466733,
+   "from_named_area_lookup": 0,
+   "from_own_map": 20601780,
+   "person_hours": 20601780
   }
  },
  "map_areas_unmatched": [
-  "cd1ec9a8-5f2d-41e6-8f2c-0140ab586b76",
-  "17ffd2f6-16fc-4827-9dbe-13582364a9bd",
   "ba3b36de-c9c1-49d1-a547-22f496b62bd8",
   "1e9a5ade-667c-4ffa-9632-30ed3f3435b8",
   "37d0ab21-d2f8-4e7c-89a4-b9421cfaf87d",
   "f4b8853f-1f03-4036-950b-49a9a3c387e9"
  ],
- "method": "Advisories grouped from S&WB press releases (issued to canceled); map areas matched by date; people from 2020 Census blocks. See flags on each advisory for uncertain steps."
+ "method": "Advisories grouped from S&WB press releases (issued to canceled); map areas matched by date; people from 2020 Census blocks, for every year. Yearly totals separate advisories with their own map (from_own_map) from those that reuse S&WB's drawing of a whole named area (from_named_area_lookup); the reused East Bank drawing covers the whole East Bank, which can be more than an advisory reached. Hours run from the issue release to the first lift release. See flags on each advisory for uncertain steps.",
+ "releases_unattached": [
+  {
+   "id": 18,
+   "kind": "lifted",
+   "published": "2009-05-18T19:59:00Z",
+   "reason": "archive_posted_in_bulk",
+   "title": "Boil Water Advisory For Venetian Isles Is Lifted"
+  },
+  {
+   "id": 19,
+   "kind": "update",
+   "published": "2009-05-18T20:02:00Z",
+   "reason": "archive_posted_in_bulk",
+   "title": "Venetian Isles Remains Under Boil Water Advisory"
+  },
+  {
+   "id": 22,
+   "kind": "issued",
+   "published": "2009-05-18T20:13:00Z",
+   "reason": "archive_posted_in_bulk",
+   "title": "Boil Water Advisory For Venetian Isles"
+  },
+  {
+   "id": 86,
+   "kind": "lifted",
+   "published": "2009-05-20T14:50:00Z",
+   "reason": "archive_posted_in_bulk",
+   "title": "Lifiting Of Boil Water Advisory"
+  },
+  {
+   "id": 87,
+   "kind": "issued",
+   "published": "2009-05-20T14:53:00Z",
+   "reason": "archive_posted_in_bulk",
+   "title": "Boil Water Advisory"
+  },
+  {
+   "id": 99,
+   "kind": "update",
+   "published": "2009-05-20T15:35:00Z",
+   "reason": "archive_posted_in_bulk",
+   "title": "Drinking Water Update. All New Orlean Has Certified Water"
+  },
+  {
+   "id": 106,
+   "kind": "lifted",
+   "published": "2009-05-20T16:08:00Z",
+   "reason": "archive_posted_in_bulk",
+   "title": "Drinking Water Update Boil Water Advisory Lifted In Portion Orleans Parish Lower Ninth Ward"
+  },
+  {
+   "id": 107,
+   "kind": "lifted",
+   "published": "2009-05-20T16:18:00Z",
+   "reason": "archive_posted_in_bulk",
+   "title": "Drinking Water Update Boil Water Advisory Lifted In New Orleans East"
+  },
+  {
+   "id": 109,
+   "kind": "update",
+   "published": "2009-05-20T16:25:00Z",
+   "reason": "archive_posted_in_bulk",
+   "title": "Drinking Water Update Boil Water Advisory Stays in Place For New Orleans East"
+  },
+  {
+   "id": 110,
+   "kind": "lifted",
+   "published": "2009-05-20T16:29:00Z",
+   "reason": "archive_posted_in_bulk",
+   "title": "Drinking Water Update Boil Water Advisory Lifted In Portions Of East Bank New Orleans"
+  },
+  {
+   "id": 111,
+   "kind": "update",
+   "published": "2009-05-20T16:33:00Z",
+   "reason": "archive_posted_in_bulk",
+   "title": "Sewerage And Water Board Of New Orleans Water, Sewer, Drainage Update"
+  },
+  {
+   "id": 185,
+   "kind": "lifted",
+   "published": "2010-06-12T20:10:00Z",
+   "reason": "no_open_advisory",
+   "title": "Low Water Pressure in the east; Boil Water Advisory cancelled"
+  },
+  {
+   "id": 363,
+   "kind": "lifted",
+   "published": "2013-07-24T20:34:00Z",
+   "reason": "no_open_advisory",
+   "title": "Boil Water Advisory Lifted for Uptown Section of City"
+  }
+ ]
 }
