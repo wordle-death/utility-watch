@@ -26,3 +26,13 @@ jobs:
       - run: python -m national.reliability
       - name: Commit data
         run: scripts/commit_data.sh "national reliability"
+
+      # The Cloudflare Worker that starts the collectors on time uses a GitHub
+      # token that expires 2027-11-11. This fails the monthly run (one email)
+      # from October 2027 until the date below is moved after renewal.
+      - name: Remind to renew the scheduler token
+        run: |
+          if [ "$(date -u +%Y%m%d)" -ge 20271001 ]; then
+            echo "::error::The GitHub token in the Cloudflare Worker 'utility-watch-cron' expires 2027-11-11. Create a new fine-grained token (Actions: read and write), update the Worker secret GITHUB_TOKEN, then move the date in national.yml."
+            exit 1
+          fi
