@@ -49,5 +49,18 @@ class HouseholdTests(unittest.TestCase):
         self.assertEqual([r["objectid"] for r in rows], [1, 2])
 
 
+class BlockListTests(unittest.TestCase):
+    def test_small_area_keeps_its_block_list_and_old_rows_are_recounted(self):
+        calls = []
+        touching = lambda geometry: calls.append(1) or {"d"}
+        rows = households.build([feature(1, TINY)], BLOCKS, touching=touching)
+        self.assertEqual(rows[0]["block_geoids"], ["d"])
+        old = [{k: v for k, v in rows[0].items() if k != "block_geoids"}]
+        again = households.build([feature(1, TINY)], BLOCKS, previous=old, touching=touching)
+        self.assertEqual((again[0]["block_geoids"], len(calls)), (["d"], 2))
+        households.build([feature(1, TINY)], BLOCKS, previous=again, touching=touching)
+        self.assertEqual(len(calls), 2)  # a row that has its block list is reused
+
+
 if __name__ == "__main__":
     unittest.main()
