@@ -4,16 +4,16 @@
   "2600001543": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 12.7,
-   "customer_hours_observed": 5.011111111111111,
+   "customer_hours_observed": 10.016666666666666,
    "customers": 20,
    "etr": "2026-11-12T15:30:00Z",
    "first_seen": "2026-11-12T13:04:22Z",
    "id": "2600001543",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-12T13:19:24Z",
+   "last_seen": "2026-11-12T13:34:25Z",
    "lat": 44.85394174,
    "lon": -116.10739235,
-   "max_gap_minutes": 11,
+   "max_gap_minutes": 15,
    "peak_customers": 20,
    "places": [
     "MCCALL"
