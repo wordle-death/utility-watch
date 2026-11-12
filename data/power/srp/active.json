@@ -1,6 +1,29 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "261121619": {
+   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
+   "customer_hours_before_first_seen": 0.1,
+   "customer_hours_observed": 0.0,
+   "customers": 1,
+   "etr": null,
+   "first_seen": "2026-11-12T08:34:23Z",
+   "id": "261121619",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-12T08:34:23Z",
+   "lat": 33.4056591995529,
+   "lon": -111.681710390972,
+   "max_gap_minutes": 0,
+   "peak_customers": 1,
+   "places": [
+    "S POWER  RD TO S 72ND  ST AND E BROADWAY  RD TO E PUEBLO  AVE"
+   ],
+   "start": "2026-11-12T08:26:11Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  }
+ },
  "logged_recent": {
   "261121450": "2026-11-11T02:26:34Z",
   "261121466": "2026-11-11T03:11:44Z",
