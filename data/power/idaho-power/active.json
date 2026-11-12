@@ -1,31 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "2600001536": {
-   "cause": "Under Investigation",
-   "customer_hours_before_first_seen": 3.3,
-   "customer_hours_observed": 14.997222222222222,
-   "customers": 10,
-   "etr": "2026-11-12T03:30:00Z",
-   "first_seen": "2026-11-12T01:04:23Z",
-   "id": "2600001536",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-12T02:34:22Z",
-   "lat": 42.57726211,
-   "lon": -114.44986578,
-   "max_gap_minutes": 15,
-   "peak_customers": 10,
-   "places": [
-    "TWIN FALLS"
-   ],
-   "start": "2026-11-12T00:44:39Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83301"
-   ]
-  }
- },
+ "events": {},
  "logged_recent": {
   "2600000353": "2026-11-11T23:38:23Z",
   "2600000557": "2026-11-11T00:28:41Z",
@@ -54,6 +29,7 @@
   "2600001514": "2026-11-11T23:38:23Z",
   "2600001522": "2026-11-12T02:34:22Z",
   "2600001533": "2026-11-12T02:19:22Z",
+  "2600001536": "2026-11-12T02:49:22Z",
   "2600001537": "2026-11-12T02:04:27Z"
  }
 }
