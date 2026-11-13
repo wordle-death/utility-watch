@@ -4,16 +4,16 @@
   "2600001592": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 240.2,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 198.72055555555553,
    "customers": 794,
    "etr": "2026-11-13T09:00:00Z",
    "first_seen": "2026-11-13T06:19:22Z",
    "id": "2600001592",
    "kind": "PLANNED",
-   "last_seen": "2026-11-13T06:19:22Z",
+   "last_seen": "2026-11-13T06:34:23Z",
    "lat": 42.95272291,
    "lon": -114.96527573,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "peak_customers": 794,
    "places": [
     "BLISS",
@@ -34,23 +34,23 @@
   "2600001615": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 8.5,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 5.756388888888889,
    "customers": 23,
    "etr": "2026-11-13T08:00:00Z",
    "first_seen": "2026-11-13T06:19:22Z",
    "id": "2600001615",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-13T06:19:22Z",
+   "last_seen": "2026-11-13T06:34:23Z",
    "lat": 43.62377409,
    "lon": -116.54674137,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "peak_customers": 23,
    "places": [
     "NAMPA"
    ],
    "start": "2026-11-13T05:57:12Z",
    "start_basis": "reported",
-   "status": "Pending",
+   "status": "On-site",
    "zips": [
     "83687"
    ]
