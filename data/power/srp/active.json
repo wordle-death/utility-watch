@@ -1,24 +1,24 @@
 {
  "empty_streak": 0,
  "events": {
-  "261121921": {
+  "261121922": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 0.9,
-   "customer_hours_observed": 2.5027777777777778,
+   "customer_hours_before_first_seen": 2.4,
+   "customer_hours_observed": 0.0,
    "customers": 10,
    "etr": null,
-   "first_seen": "2026-11-13T21:34:23Z",
-   "id": "261121921",
+   "first_seen": "2026-11-13T22:04:24Z",
+   "id": "261121922",
    "kind": "PLANNED",
-   "last_seen": "2026-11-13T21:49:24Z",
-   "lat": 33.4078333388209,
-   "lon": -112.2828101019785,
-   "max_gap_minutes": 15,
+   "last_seen": "2026-11-13T22:04:24Z",
+   "lat": 33.4069897649995,
+   "lon": -112.282645193185,
+   "max_gap_minutes": 0,
    "peak_customers": 10,
    "places": [
     "S 107TH  AVE TO S 99TH  AVE AND W LOWER BUCKEYE  RD TO W ROESER  RD"
    ],
-   "start": "2026-11-13T21:28:42Z",
+   "start": "2026-11-13T21:49:53Z",
    "start_basis": "reported",
    "status": null,
    "zips": []
@@ -63,6 +63,7 @@
   "261121862": "2026-11-13T20:34:31Z",
   "261121872": "2026-11-13T18:19:24Z",
   "261121874": "2026-11-13T19:04:24Z",
-  "261121888": "2026-11-13T21:49:24Z"
+  "261121888": "2026-11-13T21:49:24Z",
+  "261121921": "2026-11-13T22:04:24Z"
  }
 }
