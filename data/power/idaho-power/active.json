@@ -4,13 +4,13 @@
   "2600000474": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 5.0,
-   "customer_hours_observed": 19.005277777777778,
+   "customer_hours_observed": 23.7975,
    "customers": 19,
    "etr": "2026-11-13T21:00:00Z",
    "first_seen": "2026-11-13T16:34:23Z",
    "id": "2600000474",
    "kind": "PLANNED",
-   "last_seen": "2026-11-13T17:34:24Z",
+   "last_seen": "2026-11-13T17:49:32Z",
    "lat": 43.49023244,
    "lon": -116.41109761,
    "max_gap_minutes": 15,
@@ -23,6 +23,30 @@
    "status": "On-site",
    "zips": [
     "83634"
+   ]
+  },
+  "2600001257": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 3.4,
+   "customer_hours_observed": 0.0,
+   "customers": 12,
+   "etr": "2026-11-13T20:00:00Z",
+   "first_seen": "2026-11-13T17:49:32Z",
+   "id": "2600001257",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-13T17:49:32Z",
+   "lat": 44.51968308,
+   "lon": -115.90701564,
+   "max_gap_minutes": 0,
+   "peak_customers": 12,
+   "places": [
+    "CASCADE"
+   ],
+   "start": "2026-11-13T17:32:46Z",
+   "start_basis": "reported",
+   "status": "Pending",
+   "zips": [
+    "83611"
    ]
   }
  },
