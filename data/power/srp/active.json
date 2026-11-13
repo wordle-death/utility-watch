@@ -2,15 +2,15 @@
  "empty_streak": 0,
  "events": {
   "261121888": {
-   "cause": "We are investigating the cause of the outage.",
+   "cause": "An underground power cable has failed. SRP crews are working to restore power.",
    "customer_hours_before_first_seen": 3.2,
-   "customer_hours_observed": 57.740833333333335,
+   "customer_hours_observed": 65.99083333333334,
    "customers": 33,
    "etr": null,
    "first_seen": "2026-11-13T19:19:24Z",
    "id": "261121888",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-13T21:04:23Z",
+   "last_seen": "2026-11-13T21:19:23Z",
    "lat": 33.5255962115459,
    "lon": -112.205811363516,
    "max_gap_minutes": 15,
