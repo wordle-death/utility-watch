@@ -4,16 +4,16 @@
   "261121769": {
    "cause": "We are investigating the cause of the outage.",
    "customer_hours_before_first_seen": 31.1,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 230.00527777777776,
    "customers": 919,
    "etr": null,
    "first_seen": "2026-11-13T00:34:22Z",
    "id": "261121769",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-13T00:34:22Z",
+   "last_seen": "2026-11-13T00:49:23Z",
    "lat": 33.368225018207696,
    "lon": -111.96117865916449,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "peak_customers": 919,
    "places": [
     "S 48TH  ST TO S KYRENE  RD AND W SUPERSTITION  FWY TO E MINERAL  RD"
