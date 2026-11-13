@@ -1,40 +1,16 @@
 {
  "empty_streak": 0,
  "events": {
-  "2600001651": {
-   "cause": "Object In Line",
-   "customer_hours_before_first_seen": 9.2,
-   "customer_hours_observed": 48.992222222222225,
-   "customers": 28,
-   "etr": "2026-11-13T21:00:00Z",
-   "first_seen": "2026-11-13T19:34:24Z",
-   "id": "2600001651",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-13T21:19:23Z",
-   "lat": 43.586951,
-   "lon": -116.59589052,
-   "max_gap_minutes": 15,
-   "peak_customers": 28,
-   "places": [
-    "NAMPA"
-   ],
-   "start": "2026-11-13T19:14:36Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83651"
-   ]
-  },
   "2600001657": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 4.7,
-   "customer_hours_observed": 11.964444444444444,
+   "customer_hours_observed": 15.964444444444444,
    "customers": 16,
    "etr": "2026-11-13T21:30:00Z",
    "first_seen": "2026-11-13T20:34:31Z",
    "id": "2600001657",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-13T21:19:23Z",
+   "last_seen": "2026-11-13T21:34:23Z",
    "lat": 43.63958747,
    "lon": -116.21016929,
    "max_gap_minutes": 15,
@@ -100,6 +76,7 @@
   "2600001615": "2026-11-13T06:49:24Z",
   "2600001617": "2026-11-13T09:34:23Z",
   "2600001630": "2026-11-13T17:04:25Z",
-  "2600001631": "2026-11-13T17:04:25Z"
+  "2600001631": "2026-11-13T17:04:25Z",
+  "2600001651": "2026-11-13T21:34:23Z"
  }
 }
