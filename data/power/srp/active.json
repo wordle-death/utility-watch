@@ -4,16 +4,16 @@
   "261121922": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 2.4,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 1.7722222222222221,
    "customers": 10,
    "etr": null,
    "first_seen": "2026-11-13T22:04:24Z",
    "id": "261121922",
    "kind": "PLANNED",
-   "last_seen": "2026-11-13T22:04:24Z",
+   "last_seen": "2026-11-13T22:15:02Z",
    "lat": 33.4069897649995,
    "lon": -112.282645193185,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 11,
    "peak_customers": 10,
    "places": [
     "S 107TH  AVE TO S 99TH  AVE AND W LOWER BUCKEYE  RD TO W ROESER  RD"
