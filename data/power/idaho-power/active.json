@@ -4,13 +4,13 @@
   "2600001424": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 62.8,
-   "customer_hours_observed": 522.5799999999999,
+   "customer_hours_observed": 579.9355555555555,
    "customers": 232,
    "etr": "2026-11-13T11:00:00Z",
    "first_seen": "2026-11-13T06:49:24Z",
    "id": "2600001424",
    "kind": "PLANNED",
-   "last_seen": "2026-11-13T09:04:33Z",
+   "last_seen": "2026-11-13T09:19:23Z",
    "lat": 42.9700911,
    "lon": -114.70560664,
    "max_gap_minutes": 15,
@@ -25,46 +25,16 @@
     "83330"
    ]
   },
-  "2600001592": {
-   "cause": "Under Investigation",
-   "customer_hours_before_first_seen": 240.2,
-   "customer_hours_observed": 2567.8955555555553,
-   "customers": 2176,
-   "etr": "2026-11-13T09:00:00Z",
-   "first_seen": "2026-11-13T06:19:22Z",
-   "id": "2600001592",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-13T09:04:33Z",
-   "lat": 42.95272291,
-   "lon": -114.96527573,
-   "max_gap_minutes": 15,
-   "peak_customers": 2176,
-   "places": [
-    "BLISS",
-    "GOODING",
-    "HAGERMAN",
-    "KING HILL"
-   ],
-   "start": "2026-11-13T06:01:13Z",
-   "start_basis": "reported",
-   "status": "Assigned",
-   "zips": [
-    "83314",
-    "83330",
-    "83332",
-    "83633"
-   ]
-  },
   "2600001617": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 15.2,
-   "customer_hours_observed": 67.575,
+   "customer_hours_observed": 74.99166666666667,
    "customers": 30,
    "etr": "2026-11-13T08:30:00Z",
    "first_seen": "2026-11-13T06:49:24Z",
    "id": "2600001617",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-13T09:04:33Z",
+   "last_seen": "2026-11-13T09:19:23Z",
    "lat": 43.62202708,
    "lon": -116.5403719,
    "max_gap_minutes": 15,
@@ -123,6 +93,7 @@
   "2600001571": "2026-11-12T17:49:23Z",
   "2600001584": "2026-11-12T20:19:23Z",
   "2600001586": "2026-11-12T22:19:23Z",
+  "2600001592": "2026-11-13T09:19:23Z",
   "2600001615": "2026-11-13T06:49:24Z"
  }
 }
