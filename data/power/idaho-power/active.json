@@ -4,13 +4,13 @@
   "2600001657": {
    "cause": "Safety Related",
    "customer_hours_before_first_seen": 4.7,
-   "customer_hours_observed": 39.959999999999994,
+   "customer_hours_observed": 43.97333333333333,
    "customers": 16,
    "etr": "2026-11-14T00:00:00Z",
    "first_seen": "2026-11-13T20:34:31Z",
    "id": "2600001657",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-13T23:04:22Z",
+   "last_seen": "2026-11-13T23:19:25Z",
    "lat": 43.63958747,
    "lon": -116.21016929,
    "max_gap_minutes": 15,
@@ -20,9 +20,33 @@
    ],
    "start": "2026-11-13T20:16:46Z",
    "start_basis": "reported",
-   "status": "On the Way",
+   "status": "On-site",
    "zips": [
     "83702"
+   ]
+  },
+  "2600001671": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 4.6,
+   "customer_hours_observed": 0.0,
+   "customers": 13,
+   "etr": "2026-11-14T00:30:00Z",
+   "first_seen": "2026-11-13T23:19:25Z",
+   "id": "2600001671",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-13T23:19:25Z",
+   "lat": 43.61490824,
+   "lon": -116.32140059,
+   "max_gap_minutes": 0,
+   "peak_customers": 13,
+   "places": [
+    "BOISE"
+   ],
+   "start": "2026-11-13T22:58:01Z",
+   "start_basis": "reported",
+   "status": "Pending",
+   "zips": [
+    "83713"
    ]
   }
  },
