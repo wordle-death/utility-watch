@@ -1,38 +1,16 @@
 {
  "empty_streak": 0,
  "events": {
-  "261121852": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 0.5,
-   "customer_hours_observed": 25.002777777777776,
-   "customers": 10,
-   "etr": null,
-   "first_seen": "2026-11-13T15:34:24Z",
-   "id": "261121852",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-13T18:04:25Z",
-   "lat": 33.409558861275656,
-   "lon": -111.796796991408,
-   "max_gap_minutes": 15,
-   "peak_customers": 10,
-   "places": [
-    "S STAPLEY  DR TO S GILBERT  RD AND E MAIN  ST TO E 8TH  AVE"
-   ],
-   "start": "2026-11-13T15:31:07Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
   "261121853": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 0.0,
-   "customer_hours_observed": 1.9980555555555555,
+   "customer_hours_observed": 2.247777777777778,
    "customers": 1,
    "etr": null,
    "first_seen": "2026-11-13T16:04:32Z",
    "id": "261121853",
    "kind": "PLANNED",
-   "last_seen": "2026-11-13T18:04:25Z",
+   "last_seen": "2026-11-13T18:19:24Z",
    "lat": 33.3793198918776,
    "lon": -112.098591762442,
    "max_gap_minutes": 15,
@@ -45,41 +23,19 @@
    "status": null,
    "zips": []
   },
-  "261121872": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 2.0,
-   "customer_hours_observed": 2.4805555555555556,
-   "customers": 10,
-   "etr": null,
-   "first_seen": "2026-11-13T17:49:32Z",
-   "id": "261121872",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-13T18:04:25Z",
-   "lat": 33.53007719307065,
-   "lon": -111.89937777963951,
-   "max_gap_minutes": 15,
-   "peak_customers": 10,
-   "places": [
-    "N HAYDEN  RD TO N PIMA  RD AND E INDIAN BEND  RD TO E MCDONALD  DR"
-   ],
-   "start": "2026-11-13T17:37:21Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
   "261121874": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 1.4,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 3.246388888888889,
    "customers": 13,
    "etr": null,
    "first_seen": "2026-11-13T18:04:25Z",
    "id": "261121874",
    "kind": "PLANNED",
-   "last_seen": "2026-11-13T18:04:25Z",
+   "last_seen": "2026-11-13T18:19:24Z",
    "lat": 33.5146919001519,
    "lon": -112.1842189164515,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "peak_customers": 13,
    "places": [
     "N 63RD  AVE TO N 55TH  AVE AND W BETHANY HOME  RD TO W CAMELBACK  RD"
@@ -123,6 +79,8 @@
   "261121843": "2026-11-13T15:49:24Z",
   "261121847": "2026-11-13T16:19:24Z",
   "261121850": "2026-11-13T15:34:24Z",
-  "261121854": "2026-11-13T17:34:24Z"
+  "261121852": "2026-11-13T18:19:24Z",
+  "261121854": "2026-11-13T17:34:24Z",
+  "261121872": "2026-11-13T18:19:24Z"
  }
 }
