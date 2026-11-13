@@ -4,13 +4,13 @@
   "2600001651": {
    "cause": "Object In Line",
    "customer_hours_before_first_seen": 9.2,
-   "customer_hours_observed": 21.0,
+   "customer_hours_observed": 28.054444444444446,
    "customers": 28,
    "etr": "2026-11-13T21:00:00Z",
    "first_seen": "2026-11-13T19:34:24Z",
    "id": "2600001651",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-13T20:19:24Z",
+   "last_seen": "2026-11-13T20:34:31Z",
    "lat": 43.586951,
    "lon": -116.59589052,
    "max_gap_minutes": 15,
@@ -23,6 +23,30 @@
    "status": "On-site",
    "zips": [
     "83651"
+   ]
+  },
+  "2600001657": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 4.7,
+   "customer_hours_observed": 0.0,
+   "customers": 16,
+   "etr": "2026-11-13T21:30:00Z",
+   "first_seen": "2026-11-13T20:34:31Z",
+   "id": "2600001657",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-13T20:34:31Z",
+   "lat": 43.63958747,
+   "lon": -116.21016929,
+   "max_gap_minutes": 0,
+   "peak_customers": 16,
+   "places": [
+    "BOISE"
+   ],
+   "start": "2026-11-13T20:16:46Z",
+   "start_basis": "reported",
+   "status": "Pending",
+   "zips": [
+    "83702"
    ]
   }
  },
