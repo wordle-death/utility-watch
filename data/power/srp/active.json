@@ -1,24 +1,24 @@
 {
  "empty_streak": 0,
  "events": {
-  "261121874": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 1.4,
-   "customer_hours_observed": 9.739166666666666,
-   "customers": 13,
+  "261121862": {
+   "cause": "A transformer has failed. SRP crews are working to restore power.",
+   "customer_hours_before_first_seen": 0.2,
+   "customer_hours_observed": 0.0,
+   "customers": 11,
    "etr": null,
-   "first_seen": "2026-11-13T18:04:25Z",
-   "id": "261121874",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-13T18:49:22Z",
-   "lat": 33.5146919001519,
-   "lon": -112.1842189164515,
-   "max_gap_minutes": 15,
-   "peak_customers": 13,
+   "first_seen": "2026-11-13T19:04:24Z",
+   "id": "261121862",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-13T19:04:24Z",
+   "lat": 33.368162589917446,
+   "lon": -111.9122244731685,
+   "max_gap_minutes": 0,
+   "peak_customers": 11,
    "places": [
-    "N 63RD  AVE TO N 55TH  AVE AND W BETHANY HOME  RD TO W CAMELBACK  RD"
+    "S LAKESHORE  DR TO S COUNTRY CLUB  WAY AND E BASELINE  RD TO E GUADALUPE  RD"
    ],
-   "start": "2026-11-13T17:58:03Z",
+   "start": "2026-11-13T19:03:31Z",
    "start_basis": "reported",
    "status": null,
    "zips": []
@@ -60,6 +60,7 @@
   "261121852": "2026-11-13T18:19:24Z",
   "261121853": "2026-11-13T18:49:22Z",
   "261121854": "2026-11-13T17:34:24Z",
-  "261121872": "2026-11-13T18:19:24Z"
+  "261121872": "2026-11-13T18:19:24Z",
+  "261121874": "2026-11-13T19:04:24Z"
  }
 }
