@@ -4,13 +4,13 @@
   "261121809": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 0.0,
-   "customer_hours_observed": 11.99916666666667,
+   "customer_hours_observed": 12.74916666666667,
    "customers": 3,
    "etr": null,
    "first_seen": "2026-11-13T13:19:25Z",
    "id": "261121809",
    "kind": "PLANNED",
-   "last_seen": "2026-11-13T17:19:24Z",
+   "last_seen": "2026-11-13T17:34:24Z",
    "lat": 33.4483957939604,
    "lon": -111.7229435269755,
    "max_gap_minutes": 15,
@@ -26,13 +26,13 @@
   "261121852": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 0.5,
-   "customer_hours_observed": 17.5,
+   "customer_hours_observed": 20.0,
    "customers": 10,
    "etr": null,
    "first_seen": "2026-11-13T15:34:24Z",
    "id": "261121852",
    "kind": "PLANNED",
-   "last_seen": "2026-11-13T17:19:24Z",
+   "last_seen": "2026-11-13T17:34:24Z",
    "lat": 33.409558861275656,
    "lon": -111.796796991408,
    "max_gap_minutes": 15,
@@ -48,13 +48,13 @@
   "261121853": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 0.0,
-   "customer_hours_observed": 1.2477777777777779,
+   "customer_hours_observed": 1.4977777777777779,
    "customers": 1,
    "etr": null,
    "first_seen": "2026-11-13T16:04:32Z",
    "id": "261121853",
    "kind": "PLANNED",
-   "last_seen": "2026-11-13T17:19:24Z",
+   "last_seen": "2026-11-13T17:34:24Z",
    "lat": 33.3793198918776,
    "lon": -112.098591762442,
    "max_gap_minutes": 15,
@@ -63,28 +63,6 @@
     "S 23RD  AVE TO S 15TH  AVE AND W VINEYARD  RD TO W SOUTH MOUNTAIN  AVE"
    ],
    "start": "2026-11-13T16:01:48Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
-  "261121854": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 1.2,
-   "customer_hours_observed": 5.0,
-   "customers": 5,
-   "etr": null,
-   "first_seen": "2026-11-13T16:19:24Z",
-   "id": "261121854",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-13T17:19:24Z",
-   "lat": 33.420513996547555,
-   "lon": -111.48659192844801,
-   "max_gap_minutes": 15,
-   "peak_customers": 5,
-   "places": [
-    "N MOUNTAIN VIEW  RD TO N BARKLEY  RD AND E TEPEE  ST TO E JUNCTION  DR"
-   ],
-   "start": "2026-11-13T16:05:19Z",
    "start_basis": "reported",
    "status": null,
    "zips": []
@@ -121,6 +99,7 @@
   "261121801": "2026-11-13T10:49:23Z",
   "261121843": "2026-11-13T15:49:24Z",
   "261121847": "2026-11-13T16:19:24Z",
-  "261121850": "2026-11-13T15:34:24Z"
+  "261121850": "2026-11-13T15:34:24Z",
+  "261121854": "2026-11-13T17:34:24Z"
  }
 }
