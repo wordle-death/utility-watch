@@ -1,41 +1,19 @@
 {
  "empty_streak": 0,
  "events": {
-  "261121888": {
-   "cause": "An underground power cable has failed. SRP crews are working to restore power.",
-   "customer_hours_before_first_seen": 3.2,
-   "customer_hours_observed": 74.24083333333334,
-   "customers": 33,
-   "etr": null,
-   "first_seen": "2026-11-13T19:19:24Z",
-   "id": "261121888",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-13T21:34:23Z",
-   "lat": 33.5255962115459,
-   "lon": -112.205811363516,
-   "max_gap_minutes": 15,
-   "peak_customers": 33,
-   "places": [
-    "N 71ST  AVE TO N 67TH  AVE AND W MARYLAND  AVE TO W MISSOURI  AVE"
-   ],
-   "start": "2026-11-13T19:13:36Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
   "261121921": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 0.9,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 2.5027777777777778,
    "customers": 10,
    "etr": null,
    "first_seen": "2026-11-13T21:34:23Z",
    "id": "261121921",
    "kind": "PLANNED",
-   "last_seen": "2026-11-13T21:34:23Z",
+   "last_seen": "2026-11-13T21:49:24Z",
    "lat": 33.4078333388209,
    "lon": -112.2828101019785,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "peak_customers": 10,
    "places": [
     "S 107TH  AVE TO S 99TH  AVE AND W LOWER BUCKEYE  RD TO W ROESER  RD"
@@ -84,6 +62,7 @@
   "261121854": "2026-11-13T17:34:24Z",
   "261121862": "2026-11-13T20:34:31Z",
   "261121872": "2026-11-13T18:19:24Z",
-  "261121874": "2026-11-13T19:04:24Z"
+  "261121874": "2026-11-13T19:04:24Z",
+  "261121888": "2026-11-13T21:49:24Z"
  }
 }
