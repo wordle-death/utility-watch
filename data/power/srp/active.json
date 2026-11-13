@@ -4,21 +4,43 @@
   "261121862": {
    "cause": "A transformer has failed. SRP crews are working to restore power.",
    "customer_hours_before_first_seen": 0.2,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 2.75,
    "customers": 11,
    "etr": null,
    "first_seen": "2026-11-13T19:04:24Z",
    "id": "261121862",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-13T19:04:24Z",
+   "last_seen": "2026-11-13T19:19:24Z",
    "lat": 33.368162589917446,
    "lon": -111.9122244731685,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "peak_customers": 11,
    "places": [
     "S LAKESHORE  DR TO S COUNTRY CLUB  WAY AND E BASELINE  RD TO E GUADALUPE  RD"
    ],
    "start": "2026-11-13T19:03:31Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  },
+  "261121888": {
+   "cause": "We are investigating the cause of the outage.",
+   "customer_hours_before_first_seen": 3.2,
+   "customer_hours_observed": 0.0,
+   "customers": 33,
+   "etr": null,
+   "first_seen": "2026-11-13T19:19:24Z",
+   "id": "261121888",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-13T19:19:24Z",
+   "lat": 33.5255962115459,
+   "lon": -112.205811363516,
+   "max_gap_minutes": 0,
+   "peak_customers": 33,
+   "places": [
+    "N 71ST  AVE TO N 67TH  AVE AND W MARYLAND  AVE TO W MISSOURI  AVE"
+   ],
+   "start": "2026-11-13T19:13:36Z",
    "start_basis": "reported",
    "status": null,
    "zips": []
