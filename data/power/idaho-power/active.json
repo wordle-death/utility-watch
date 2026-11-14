@@ -2,15 +2,15 @@
  "empty_streak": 0,
  "events": {
   "2600001671": {
-   "cause": "Under Investigation",
+   "cause": "Safety Related",
    "customer_hours_before_first_seen": 4.6,
-   "customer_hours_observed": 22.746388888888887,
+   "customer_hours_observed": 25.989166666666666,
    "customers": 13,
-   "etr": "2026-11-14T00:30:00Z",
+   "etr": "2026-11-14T02:30:00Z",
    "first_seen": "2026-11-13T23:19:25Z",
    "id": "2600001671",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-14T01:04:24Z",
+   "last_seen": "2026-11-14T01:19:22Z",
    "lat": 43.61490824,
    "lon": -116.32140059,
    "max_gap_minutes": 15,
@@ -20,7 +20,7 @@
    ],
    "start": "2026-11-13T22:58:01Z",
    "start_basis": "reported",
-   "status": "Assigned",
+   "status": "On the Way",
    "zips": [
     "83713"
    ]
