@@ -4,16 +4,16 @@
   "2600001741": {
    "cause": "Vehicle Accident",
    "customer_hours_before_first_seen": 286.4,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 133.2111111111111,
    "customers": 631,
    "etr": "2026-11-15T03:00:00Z",
    "first_seen": "2026-11-14T20:19:22Z",
    "id": "2600001741",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-14T20:19:22Z",
+   "last_seen": "2026-11-14T20:32:02Z",
    "lat": 42.89947174,
    "lon": -112.48029605,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 13,
    "peak_customers": 631,
    "places": [
     "POCATELLO"
