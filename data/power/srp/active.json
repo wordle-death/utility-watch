@@ -4,16 +4,16 @@
   "261121949": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 1.0,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 1.238888888888889,
    "customers": 5,
    "etr": null,
    "first_seen": "2026-11-14T04:34:32Z",
    "id": "261121949",
    "kind": "PLANNED",
-   "last_seen": "2026-11-14T04:34:32Z",
+   "last_seen": "2026-11-14T04:49:24Z",
    "lat": 33.386758999666995,
    "lon": -111.9273168923655,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "peak_customers": 5,
    "places": [
     "S COLLEGE  AVE TO S DORSEY  LN AND E SOUTHERN  AVE TO E BASELINE  RD"
