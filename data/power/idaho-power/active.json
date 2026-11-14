@@ -1,6 +1,31 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "2600001714": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 21.1,
+   "customer_hours_observed": 0.0,
+   "customers": 109,
+   "etr": "2026-11-14T23:00:00Z",
+   "first_seen": "2026-11-14T14:19:23Z",
+   "id": "2600001714",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-14T14:19:23Z",
+   "lat": 45.00163013,
+   "lon": -116.29662167,
+   "max_gap_minutes": 0,
+   "peak_customers": 109,
+   "places": [
+    "NEW MEADOWS"
+   ],
+   "start": "2026-11-14T14:07:45Z",
+   "start_basis": "reported",
+   "status": "Pending",
+   "zips": [
+    "83654"
+   ]
+  }
+ },
  "logged_recent": {
   "2600000353": "2026-11-11T23:38:23Z",
   "2600000462": "2026-11-12T18:34:24Z",
