@@ -4,13 +4,13 @@
   "261121980": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 0.0,
-   "customer_hours_observed": 9.249722222222223,
+   "customer_hours_observed": 9.500277777777779,
    "customers": 1,
    "etr": null,
    "first_seen": "2026-11-14T13:19:23Z",
    "id": "261121980",
    "kind": "PLANNED",
-   "last_seen": "2026-11-14T22:34:22Z",
+   "last_seen": "2026-11-14T22:49:24Z",
    "lat": 33.4022568733281,
    "lon": -111.958658902598,
    "max_gap_minutes": 15,
@@ -19,28 +19,6 @@
     "S MARICOPA  FWY TO S HARDY  DR AND W BROADWAY  RD TO W ALAMEDA  DR"
    ],
    "start": "2026-11-14T13:17:12Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
-  "261122025": {
-   "cause": "We are investigating the cause of the outage.",
-   "customer_hours_before_first_seen": 139.0,
-   "customer_hours_observed": 375.4941666666667,
-   "customers": 1507,
-   "etr": null,
-   "first_seen": "2026-11-14T22:19:25Z",
-   "id": "261122025",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-14T22:34:22Z",
-   "lat": 33.4085701568024,
-   "lon": -112.069920103583,
-   "max_gap_minutes": 15,
-   "peak_customers": 1507,
-   "places": [
-    "S 19TH  AVE TO S 16TH  ST AND E MARICOPA  FWY TO E SOUTHERN  AVE"
-   ],
-   "start": "2026-11-14T22:13:53Z",
    "start_basis": "reported",
    "status": null,
    "zips": []
@@ -96,6 +74,7 @@
   "261121991": "2026-11-14T21:04:23Z",
   "261121996": "2026-11-14T20:32:02Z",
   "261122002": "2026-11-14T19:04:22Z",
-  "261122014": "2026-11-14T20:19:22Z"
+  "261122014": "2026-11-14T20:19:22Z",
+  "261122025": "2026-11-14T22:49:24Z"
  }
 }
