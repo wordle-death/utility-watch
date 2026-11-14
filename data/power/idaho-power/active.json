@@ -4,13 +4,13 @@
   "2600001671": {
    "cause": "Safety Related",
    "customer_hours_before_first_seen": 4.6,
-   "customer_hours_observed": 29.239166666666666,
+   "customer_hours_observed": 32.492777777777775,
    "customers": 13,
    "etr": "2026-11-14T02:30:00Z",
    "first_seen": "2026-11-13T23:19:25Z",
    "id": "2600001671",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-14T01:34:22Z",
+   "last_seen": "2026-11-14T01:49:23Z",
    "lat": 43.61490824,
    "lon": -116.32140059,
    "max_gap_minutes": 15,
@@ -20,7 +20,7 @@
    ],
    "start": "2026-11-13T22:58:01Z",
    "start_basis": "reported",
-   "status": "On the Way",
+   "status": "On-site",
    "zips": [
     "83713"
    ]
@@ -28,16 +28,16 @@
   "2600001678": {
    "cause": "Equipment Issue",
    "customer_hours_before_first_seen": 20.0,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 4.254722222222222,
    "customers": 17,
    "etr": "2026-11-14T02:30:00Z",
    "first_seen": "2026-11-14T01:34:22Z",
    "id": "2600001678",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-14T01:34:22Z",
+   "last_seen": "2026-11-14T01:49:23Z",
    "lat": 42.44471847,
    "lon": -113.84547011,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "peak_customers": 17,
    "places": [
     "BURLEY"
