@@ -4,13 +4,13 @@
   "261121969": {
    "cause": "An underground power cable has failed. SRP crews are working to restore power.",
    "customer_hours_before_first_seen": 1.3,
-   "customer_hours_observed": 149.92499999999998,
+   "customer_hours_observed": 157.42499999999998,
    "customers": 30,
    "etr": null,
    "first_seen": "2026-11-14T08:04:32Z",
    "id": "261121969",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-14T13:04:23Z",
+   "last_seen": "2026-11-14T13:19:23Z",
    "lat": 33.49856964288655,
    "lon": -112.10367580166499,
    "max_gap_minutes": 15,
@@ -19,6 +19,28 @@
     "N 23RD  AVE TO N 19TH  AVE AND W CAMPBELL  AVE TO W INDIAN SCHOOL  RD"
    ],
    "start": "2026-11-14T08:01:51Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  },
+  "261121980": {
+   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
+   "customer_hours_before_first_seen": 0.0,
+   "customer_hours_observed": 0.0,
+   "customers": 1,
+   "etr": null,
+   "first_seen": "2026-11-14T13:19:23Z",
+   "id": "261121980",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-14T13:19:23Z",
+   "lat": 33.4022568733281,
+   "lon": -111.958658902598,
+   "max_gap_minutes": 0,
+   "peak_customers": 1,
+   "places": [
+    "S MARICOPA  FWY TO S HARDY  DR AND W BROADWAY  RD TO W ALAMEDA  DR"
+   ],
+   "start": "2026-11-14T13:17:12Z",
    "start_basis": "reported",
    "status": null,
    "zips": []
