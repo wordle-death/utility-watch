@@ -2,25 +2,25 @@
  "empty_streak": 0,
  "events": {
   "2600001682": {
-   "cause": "Under Investigation",
+   "cause": "Object In Line",
    "customer_hours_before_first_seen": 12.0,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 15.482777777777779,
    "customers": 62,
    "etr": "2026-11-14T08:30:00Z",
    "first_seen": "2026-11-14T02:49:23Z",
    "id": "2600001682",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-14T02:49:23Z",
+   "last_seen": "2026-11-14T03:04:22Z",
    "lat": 43.55174714,
    "lon": -116.57441477,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "peak_customers": 62,
    "places": [
     "NAMPA"
    ],
    "start": "2026-11-14T02:37:46Z",
    "start_basis": "reported",
-   "status": "Pending",
+   "status": "On the Way",
    "zips": [
     "83686"
    ]
