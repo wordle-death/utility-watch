@@ -1,55 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "2600001671": {
-   "cause": "Safety Related",
-   "customer_hours_before_first_seen": 4.6,
-   "customer_hours_observed": 35.742777777777775,
-   "customers": 13,
-   "etr": "2026-11-14T02:30:00Z",
-   "first_seen": "2026-11-13T23:19:25Z",
-   "id": "2600001671",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-14T02:04:23Z",
-   "lat": 43.61490824,
-   "lon": -116.32140059,
-   "max_gap_minutes": 15,
-   "peak_customers": 13,
-   "places": [
-    "BOISE"
-   ],
-   "start": "2026-11-13T22:58:01Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83713"
-   ]
-  },
-  "2600001678": {
-   "cause": "Equipment Issue",
-   "customer_hours_before_first_seen": 20.0,
-   "customer_hours_observed": 8.504722222222222,
-   "customers": 17,
-   "etr": "2026-11-14T02:30:00Z",
-   "first_seen": "2026-11-14T01:34:22Z",
-   "id": "2600001678",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-14T02:04:23Z",
-   "lat": 42.44471847,
-   "lon": -113.84547011,
-   "max_gap_minutes": 15,
-   "peak_customers": 17,
-   "places": [
-    "BURLEY"
-   ],
-   "start": "2026-11-14T00:23:37Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83318"
-   ]
-  }
- },
+ "events": {},
  "logged_recent": {
   "2600000353": "2026-11-11T23:38:23Z",
   "2600000462": "2026-11-12T18:34:24Z",
@@ -102,6 +53,8 @@
   "2600001630": "2026-11-13T17:04:25Z",
   "2600001631": "2026-11-13T17:04:25Z",
   "2600001651": "2026-11-13T21:34:23Z",
-  "2600001657": "2026-11-13T23:34:24Z"
+  "2600001657": "2026-11-13T23:34:24Z",
+  "2600001671": "2026-11-14T02:19:24Z",
+  "2600001678": "2026-11-14T02:19:24Z"
  }
 }

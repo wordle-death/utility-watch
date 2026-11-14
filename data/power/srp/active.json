@@ -1,29 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "261121946": {
-   "cause": "We are investigating the cause of the outage.",
-   "customer_hours_before_first_seen": 106.7,
-   "customer_hours_observed": 0.0,
-   "customers": 1298,
-   "etr": null,
-   "first_seen": "2026-11-14T02:04:23Z",
-   "id": "261121946",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-14T02:04:23Z",
-   "lat": 33.4884264945636,
-   "lon": -112.200280075577,
-   "max_gap_minutes": 0,
-   "peak_customers": 1298,
-   "places": [
-    "N 75TH  AVE TO N 59TH  AVE AND W CAMPBELL  AVE TO W ENCANTO  BLVD"
-   ],
-   "start": "2026-11-14T01:59:27Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  }
- },
+ "events": {},
  "logged_recent": {
   "261121450": "2026-11-11T02:26:34Z",
   "261121466": "2026-11-11T03:11:44Z",
@@ -65,6 +42,7 @@
   "261121874": "2026-11-13T19:04:24Z",
   "261121888": "2026-11-13T21:49:24Z",
   "261121921": "2026-11-13T22:04:24Z",
-  "261121922": "2026-11-13T22:49:24Z"
+  "261121922": "2026-11-13T22:49:24Z",
+  "261121946": "2026-11-14T02:19:24Z"
  }
 }
