@@ -4,13 +4,13 @@
   "2600001714": {
    "cause": "Object In Line",
    "customer_hours_before_first_seen": 21.1,
-   "customer_hours_observed": 448.3044444444444,
+   "customer_hours_observed": 497.6091666666666,
    "customers": 197,
    "etr": "2026-11-14T16:30:00Z",
    "first_seen": "2026-11-14T14:19:23Z",
    "id": "2600001714",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-14T16:49:23Z",
+   "last_seen": "2026-11-14T17:04:24Z",
    "lat": 45.00163013,
    "lon": -116.29662167,
    "max_gap_minutes": 15,
@@ -23,6 +23,30 @@
    "status": "On-site",
    "zips": [
     "83654"
+   ]
+  },
+  "2600001732": {
+   "cause": "Equipment Issue",
+   "customer_hours_before_first_seen": 39.2,
+   "customer_hours_observed": 0.0,
+   "customers": 121,
+   "etr": "2026-11-14T18:00:00Z",
+   "first_seen": "2026-11-14T17:04:24Z",
+   "id": "2600001732",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-14T17:04:24Z",
+   "lat": 43.58789588,
+   "lon": -116.26070793,
+   "max_gap_minutes": 0,
+   "peak_customers": 121,
+   "places": [
+    "BOISE"
+   ],
+   "start": "2026-11-14T16:44:58Z",
+   "start_basis": "reported",
+   "status": "Pending",
+   "zips": [
+    "83709"
    ]
   }
  },
