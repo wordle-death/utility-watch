@@ -1,6 +1,31 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "2600001741": {
+   "cause": "Vehicle Accident",
+   "customer_hours_before_first_seen": 286.4,
+   "customer_hours_observed": 0.0,
+   "customers": 631,
+   "etr": "2026-11-15T03:00:00Z",
+   "first_seen": "2026-11-14T20:19:22Z",
+   "id": "2600001741",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-14T20:19:22Z",
+   "lat": 42.89947174,
+   "lon": -112.48029605,
+   "max_gap_minutes": 0,
+   "peak_customers": 631,
+   "places": [
+    "POCATELLO"
+   ],
+   "start": "2026-11-14T19:52:08Z",
+   "start_basis": "reported",
+   "status": "On the Way",
+   "zips": [
+    "83201"
+   ]
+  }
+ },
  "logged_recent": {
   "2600000353": "2026-11-11T23:38:23Z",
   "2600000462": "2026-11-12T18:34:24Z",
