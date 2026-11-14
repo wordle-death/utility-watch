@@ -4,13 +4,13 @@
   "2600001741": {
    "cause": "Vehicle Accident",
    "customer_hours_before_first_seen": 286.4,
-   "customer_hours_observed": 631.1752777777778,
+   "customer_hours_observed": 789.6263888888889,
    "customers": 631,
    "etr": "2026-11-15T03:00:00Z",
    "first_seen": "2026-11-14T20:19:22Z",
    "id": "2600001741",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-14T21:19:23Z",
+   "last_seen": "2026-11-14T21:34:27Z",
    "lat": 42.89947174,
    "lon": -112.48029605,
    "max_gap_minutes": 15,
@@ -23,6 +23,30 @@
    "status": "On-site",
    "zips": [
     "83201"
+   ]
+  },
+  "2600001742": {
+   "cause": "Equipment Issue",
+   "customer_hours_before_first_seen": 22.9,
+   "customer_hours_observed": 0.0,
+   "customers": 15,
+   "etr": "2026-11-15T01:30:00Z",
+   "first_seen": "2026-11-14T21:34:27Z",
+   "id": "2600001742",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-14T21:34:27Z",
+   "lat": 43.65913261,
+   "lon": -116.28740131,
+   "max_gap_minutes": 0,
+   "peak_customers": 15,
+   "places": [
+    "GARDEN CITY"
+   ],
+   "start": "2026-11-14T20:02:45Z",
+   "start_basis": "reported",
+   "status": "On-site",
+   "zips": [
+    "83714"
    ]
   }
  },
