@@ -4,13 +4,13 @@
   "2600001694": {
    "cause": "Safety Related",
    "customer_hours_before_first_seen": 13.7,
-   "customer_hours_observed": 21.775555555555556,
+   "customer_hours_observed": 27.544722222222223,
    "customers": 23,
    "etr": "2026-11-14T12:00:00Z",
    "first_seen": "2026-11-14T10:04:23Z",
    "id": "2600001694",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-14T11:04:27Z",
+   "last_seen": "2026-11-14T11:19:30Z",
    "lat": 43.8482608,
    "lon": -116.73772554,
    "max_gap_minutes": 15,
@@ -25,50 +25,26 @@
     "83607"
    ]
   },
-  "2600001699": {
-   "cause": "Equipment Issue",
-   "customer_hours_before_first_seen": 239.0,
+  "2600001701": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 659.6,
    "customer_hours_observed": 0.0,
-   "customers": 222,
-   "etr": "2026-11-14T12:00:00Z",
-   "first_seen": "2026-11-14T11:04:27Z",
-   "id": "2600001699",
+   "customers": 497,
+   "etr": "2026-11-14T15:00:00Z",
+   "first_seen": "2026-11-14T11:19:30Z",
+   "id": "2600001701",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-14T11:04:27Z",
-   "lat": 43.48162034,
-   "lon": -116.4343277,
+   "last_seen": "2026-11-14T11:19:30Z",
+   "lat": 43.48192512,
+   "lon": -116.43458557,
    "max_gap_minutes": 0,
-   "peak_customers": 222,
+   "peak_customers": 497,
    "places": [
     "KUNA"
    ],
    "start": "2026-11-14T09:59:52Z",
    "start_basis": "reported",
    "status": "On-site",
-   "zips": [
-    "83634"
-   ]
-  },
-  "2600001709": {
-   "cause": "Under Investigation",
-   "customer_hours_before_first_seen": 2.8,
-   "customer_hours_observed": 0.0,
-   "customers": 10,
-   "etr": "2026-11-14T14:30:00Z",
-   "first_seen": "2026-11-14T11:04:27Z",
-   "id": "2600001709",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-14T11:04:27Z",
-   "lat": 43.4825631,
-   "lon": -116.43521197,
-   "max_gap_minutes": 0,
-   "peak_customers": 10,
-   "places": [
-    "KUNA"
-   ],
-   "start": "2026-11-14T10:47:26Z",
-   "start_basis": "reported",
-   "status": "Pending",
    "zips": [
     "83634"
    ]
@@ -132,10 +108,11 @@
   "2600001682": "2026-11-14T04:04:23Z",
   "2600001686": "2026-11-14T06:04:23Z",
   "2600001697": "2026-11-14T10:34:23Z",
-  "2600001699": "2026-11-14T10:49:23Z",
+  "2600001699": "2026-11-14T11:19:30Z",
   "2600001701": "2026-11-14T11:04:27Z",
   "2600001704": "2026-11-14T11:04:27Z",
   "2600001705": "2026-11-14T11:04:27Z",
-  "2600001707": "2026-11-14T11:04:27Z"
+  "2600001707": "2026-11-14T11:04:27Z",
+  "2600001709": "2026-11-14T11:19:30Z"
  }
 }
