@@ -4,23 +4,23 @@
   "2600001714": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 21.1,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 27.219722222222224,
    "customers": 109,
    "etr": "2026-11-14T23:00:00Z",
    "first_seen": "2026-11-14T14:19:23Z",
    "id": "2600001714",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-14T14:19:23Z",
+   "last_seen": "2026-11-14T14:34:22Z",
    "lat": 45.00163013,
    "lon": -116.29662167,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "peak_customers": 109,
    "places": [
     "NEW MEADOWS"
    ],
    "start": "2026-11-14T14:07:45Z",
    "start_basis": "reported",
-   "status": "Pending",
+   "status": "Assigned",
    "zips": [
     "83654"
    ]
