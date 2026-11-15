@@ -1,24 +1,24 @@
 {
  "empty_streak": 0,
  "events": {
-  "261122056": {
-   "cause": "An underground power cable has failed. SRP crews are working to restore power.",
-   "customer_hours_before_first_seen": 51.6,
-   "customer_hours_observed": 1256.5983333333336,
-   "customers": 3,
+  "261122062": {
+   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
+   "customer_hours_before_first_seen": 0.8,
+   "customer_hours_observed": 0.0,
+   "customers": 6,
    "etr": null,
-   "first_seen": "2026-11-15T08:19:21Z",
-   "id": "261122056",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-15T11:04:23Z",
-   "lat": 33.60257650576495,
-   "lon": -112.187038949502,
-   "max_gap_minutes": 15,
-   "peak_customers": 627,
+   "first_seen": "2026-11-15T11:19:22Z",
+   "id": "261122062",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-15T11:19:22Z",
+   "lat": 33.3012462744838,
+   "lon": -111.958435130355,
+   "max_gap_minutes": 0,
+   "peak_customers": 6,
    "places": [
-    "N 67TH  AVE TO N 55TH  AVE AND W THUNDERBIRD  RD TO W CHOLLA  ST"
+    "S 56TH  ST TO S KYRENE  RD AND W CHANDLER  BLVD TO W FRYE  RD"
    ],
-   "start": "2026-11-15T08:14:25Z",
+   "start": "2026-11-15T11:10:59Z",
    "start_basis": "reported",
    "status": null,
    "zips": []
@@ -78,6 +78,7 @@
   "261122014": "2026-11-14T20:19:22Z",
   "261122025": "2026-11-14T22:49:24Z",
   "261122053": "2026-11-15T09:49:22Z",
+  "261122056": "2026-11-15T11:19:22Z",
   "261122059": "2026-11-15T10:49:28Z"
  }
 }
