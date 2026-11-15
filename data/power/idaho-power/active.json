@@ -4,13 +4,13 @@
   "2600001769": {
    "cause": "Weather",
    "customer_hours_before_first_seen": 65.7,
-   "customer_hours_observed": 322.6791666666667,
+   "customer_hours_observed": 376.1902777777778,
    "customers": 215,
    "etr": "2026-11-15T19:30:00Z",
    "first_seen": "2026-11-15T18:04:22Z",
    "id": "2600001769",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-15T19:34:25Z",
+   "last_seen": "2026-11-15T19:49:21Z",
    "lat": 42.95085663,
    "lon": -114.30222589,
    "max_gap_minutes": 15,
@@ -25,6 +25,30 @@
    "zips": [
     "83324",
     "83352"
+   ]
+  },
+  "2600001771": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 4.7,
+   "customer_hours_observed": 0.0,
+   "customers": 13,
+   "etr": "2026-11-15T23:30:00Z",
+   "first_seen": "2026-11-15T19:49:21Z",
+   "id": "2600001771",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-15T19:49:21Z",
+   "lat": 43.63156457,
+   "lon": -116.21514559,
+   "max_gap_minutes": 0,
+   "peak_customers": 13,
+   "places": [
+    "BOISE"
+   ],
+   "start": "2026-11-15T19:27:48Z",
+   "start_basis": "reported",
+   "status": "Pending",
+   "zips": [
+    "83702"
    ]
   }
  },
