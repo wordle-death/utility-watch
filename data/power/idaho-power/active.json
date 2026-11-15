@@ -4,16 +4,16 @@
   "2600001769": {
    "cause": "Weather",
    "customer_hours_before_first_seen": 65.7,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 53.86944444444444,
    "customers": 215,
    "etr": "2026-11-15T19:30:00Z",
    "first_seen": "2026-11-15T18:04:22Z",
    "id": "2600001769",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-15T18:04:22Z",
+   "last_seen": "2026-11-15T18:19:24Z",
    "lat": 42.95085663,
    "lon": -114.30222589,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "peak_customers": 215,
    "places": [
     "DIETRICH",
@@ -21,7 +21,7 @@
    ],
    "start": "2026-11-15T17:46:02Z",
    "start_basis": "reported",
-   "status": "Assigned",
+   "status": "On the Way",
    "zips": [
     "83324",
     "83352"
