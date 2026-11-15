@@ -4,16 +4,16 @@
   "261122053": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 8.0,
-   "customer_hours_observed": 8.99,
+   "customer_hours_observed": 18.0,
    "customers": 36,
    "etr": null,
    "first_seen": "2026-11-15T06:34:23Z",
    "id": "261122053",
    "kind": "PLANNED",
-   "last_seen": "2026-11-15T06:49:22Z",
+   "last_seen": "2026-11-15T07:04:23Z",
    "lat": 33.5244056455024,
    "lon": -112.2026852582195,
-   "max_gap_minutes": 10,
+   "max_gap_minutes": 15,
    "peak_customers": 36,
    "places": [
     "N 71ST  AVE TO N 63RD  AVE AND W MARYLAND  AVE TO W MISSOURI  AVE"
