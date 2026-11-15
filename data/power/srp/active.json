@@ -4,13 +4,13 @@
   "261122053": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 8.0,
-   "customer_hours_observed": 54.010000000000005,
+   "customer_hours_observed": 62.980000000000004,
    "customers": 36,
    "etr": null,
    "first_seen": "2026-11-15T06:34:23Z",
    "id": "261122053",
    "kind": "PLANNED",
-   "last_seen": "2026-11-15T08:04:24Z",
+   "last_seen": "2026-11-15T08:19:21Z",
    "lat": 33.5244056455024,
    "lon": -112.2026852582195,
    "max_gap_minutes": 15,
@@ -19,6 +19,28 @@
     "N 71ST  AVE TO N 63RD  AVE AND W MARYLAND  AVE TO W MISSOURI  AVE"
    ],
    "start": "2026-11-15T06:20:59Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  },
+  "261122056": {
+   "cause": "We are investigating the cause of the outage.",
+   "customer_hours_before_first_seen": 51.6,
+   "customer_hours_observed": 0.0,
+   "customers": 627,
+   "etr": null,
+   "first_seen": "2026-11-15T08:19:21Z",
+   "id": "261122056",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-15T08:19:21Z",
+   "lat": 33.60257650576495,
+   "lon": -112.187038949502,
+   "max_gap_minutes": 0,
+   "peak_customers": 627,
+   "places": [
+    "N 67TH  AVE TO N 55TH  AVE AND W THUNDERBIRD  RD TO W CHOLLA  ST"
+   ],
+   "start": "2026-11-15T08:14:25Z",
    "start_basis": "reported",
    "status": null,
    "zips": []
