@@ -1,38 +1,16 @@
 {
  "empty_streak": 0,
  "events": {
-  "261122065": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 1.1,
-   "customer_hours_observed": 182.06666666666666,
-   "customers": 80,
-   "etr": null,
-   "first_seen": "2026-11-15T12:04:22Z",
-   "id": "261122065",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-15T14:20:55Z",
-   "lat": 33.535689708285105,
-   "lon": -112.1018245326745,
-   "max_gap_minutes": 15,
-   "peak_customers": 80,
-   "places": [
-    "N 23RD  AVE TO N 15TH  AVE AND W GLENDALE  AVE TO W MARYLAND  AVE"
-   ],
-   "start": "2026-11-15T12:03:32Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
   "261122069": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 3.9,
-   "customer_hours_observed": 44.98222222222223,
+   "customer_hours_observed": 58.016111111111115,
    "customers": 58,
    "etr": null,
    "first_seen": "2026-11-15T13:34:23Z",
    "id": "261122069",
    "kind": "PLANNED",
-   "last_seen": "2026-11-15T14:20:55Z",
+   "last_seen": "2026-11-15T14:34:24Z",
    "lat": 33.5293714389054,
    "lon": -112.13317739540099,
    "max_gap_minutes": 15,
@@ -48,13 +26,13 @@
   "261122069#2": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 33.0,
-   "customer_hours_observed": 15.933888888888887,
+   "customer_hours_observed": 28.967777777777776,
    "customers": 58,
    "etr": null,
    "first_seen": "2026-11-15T14:04:26Z",
    "id": "261122069#2",
    "kind": "PLANNED",
-   "last_seen": "2026-11-15T14:20:55Z",
+   "last_seen": "2026-11-15T14:34:24Z",
    "lat": 33.5293714389054,
    "lon": -112.13317739540099,
    "max_gap_minutes": 15,
@@ -70,16 +48,16 @@
   "261122072": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 1.1,
-   "customer_hours_observed": 0.155,
+   "customer_hours_observed": 1.5033333333333332,
    "customers": 6,
    "etr": null,
    "first_seen": "2026-11-15T14:19:22Z",
    "id": "261122072",
    "kind": "PLANNED",
-   "last_seen": "2026-11-15T14:20:55Z",
+   "last_seen": "2026-11-15T14:34:24Z",
    "lat": 33.40168576728905,
    "lon": -111.736106897048,
-   "max_gap_minutes": 2,
+   "max_gap_minutes": 13,
    "peak_customers": 6,
    "places": [
     "S 40TH  ST TO S ROANOKE   AND E BROADWAY  RD TO E SOUTHERN  AVE"
@@ -146,6 +124,7 @@
   "261122053": "2026-11-15T09:49:22Z",
   "261122056": "2026-11-15T11:19:22Z",
   "261122059": "2026-11-15T10:49:28Z",
-  "261122062": "2026-11-15T11:49:22Z"
+  "261122062": "2026-11-15T11:49:22Z",
+  "261122065": "2026-11-15T14:34:24Z"
  }
 }
