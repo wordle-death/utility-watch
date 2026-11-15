@@ -1,29 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "261121980": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 0.0,
-   "customer_hours_observed": 10.500277777777779,
-   "customers": 1,
-   "etr": null,
-   "first_seen": "2026-11-14T13:19:23Z",
-   "id": "261121980",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-14T23:49:24Z",
-   "lat": 33.4022568733281,
-   "lon": -111.958658902598,
-   "max_gap_minutes": 15,
-   "peak_customers": 1,
-   "places": [
-    "S MARICOPA  FWY TO S HARDY  DR AND W BROADWAY  RD TO W ALAMEDA  DR"
-   ],
-   "start": "2026-11-14T13:17:12Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  }
- },
+ "events": {},
  "logged_recent": {
   "261121450": "2026-11-11T02:26:34Z",
   "261121466": "2026-11-11T03:11:44Z",
@@ -70,6 +47,7 @@
   "261121949": "2026-11-14T10:49:23Z",
   "261121969": "2026-11-14T17:34:24Z",
   "261121969#2": "2026-11-14T17:19:23Z",
+  "261121980": "2026-11-15T00:04:24Z",
   "261121982": "2026-11-14T22:34:22Z",
   "261121991": "2026-11-14T21:04:23Z",
   "261121996": "2026-11-14T20:32:02Z",
