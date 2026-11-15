@@ -2,25 +2,25 @@
  "empty_streak": 0,
  "events": {
   "2600001773": {
-   "cause": "Under Investigation",
+   "cause": "Equipment Issue",
    "customer_hours_before_first_seen": 32.3,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 23.75,
    "customers": 95,
-   "etr": "2026-11-16T08:00:00Z",
+   "etr": "2026-11-16T22:30:00Z",
    "first_seen": "2026-11-15T21:34:22Z",
    "id": "2600001773",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-15T21:34:22Z",
+   "last_seen": "2026-11-15T21:49:22Z",
    "lat": 42.59656867,
    "lon": -114.48763625,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "peak_customers": 95,
    "places": [
     "TWIN FALLS"
    ],
    "start": "2026-11-15T21:13:57Z",
    "start_basis": "reported",
-   "status": "On the Way",
+   "status": "On-site",
    "zips": [
     "83301"
    ]
