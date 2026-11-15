@@ -2,15 +2,15 @@
  "empty_streak": 0,
  "events": {
   "2600001771": {
-   "cause": "Under Investigation",
+   "cause": "Safety Related",
    "customer_hours_before_first_seen": 4.7,
-   "customer_hours_observed": 6.510833333333333,
+   "customer_hours_observed": 9.75361111111111,
    "customers": 13,
    "etr": "2026-11-15T23:30:00Z",
    "first_seen": "2026-11-15T19:49:21Z",
    "id": "2600001771",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-15T20:19:24Z",
+   "last_seen": "2026-11-15T20:34:22Z",
    "lat": 43.63156457,
    "lon": -116.21514559,
    "max_gap_minutes": 15,
