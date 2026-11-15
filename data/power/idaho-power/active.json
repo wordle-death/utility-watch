@@ -1,39 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "2600001763": {
-   "cause": "Under Investigation",
-   "customer_hours_before_first_seen": 323.9,
-   "customer_hours_observed": 1269.0,
-   "customers": 1269,
-   "etr": "2026-11-16T00:00:00Z",
-   "first_seen": "2026-11-15T15:49:23Z",
-   "id": "2600001763",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-15T16:49:23Z",
-   "lat": 42.42512381,
-   "lon": -114.85696106,
-   "max_gap_minutes": 15,
-   "peak_customers": 1269,
-   "places": [
-    "BRUNEAU",
-    "BUHL",
-    "CASTLEFORD",
-    "ROGERSON",
-    "TWIN FALLS"
-   ],
-   "start": "2026-11-15T15:34:04Z",
-   "start_basis": "reported",
-   "status": "Assigned",
-   "zips": [
-    "83301",
-    "83302",
-    "83316",
-    "83321",
-    "83604"
-   ]
-  }
- },
+ "events": {},
  "logged_recent": {
   "2600000353": "2026-11-11T23:38:23Z",
   "2600000462": "2026-11-12T18:34:24Z",
@@ -104,6 +71,7 @@
   "2600001741": "2026-11-14T22:19:25Z",
   "2600001742": "2026-11-14T22:04:23Z",
   "2600001747": "2026-11-15T01:49:23Z",
-  "2600001761": "2026-11-15T16:49:23Z"
+  "2600001761": "2026-11-15T16:49:23Z",
+  "2600001763": "2026-11-15T17:04:22Z"
  }
 }
