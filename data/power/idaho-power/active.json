@@ -1,28 +1,28 @@
 {
  "empty_streak": 0,
  "events": {
-  "2600001771": {
-   "cause": "Safety Related",
-   "customer_hours_before_first_seen": 4.7,
-   "customer_hours_observed": 19.51083333333333,
-   "customers": 13,
-   "etr": "2026-11-15T23:30:00Z",
-   "first_seen": "2026-11-15T19:49:21Z",
-   "id": "2600001771",
+  "2600001773": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 32.3,
+   "customer_hours_observed": 0.0,
+   "customers": 95,
+   "etr": "2026-11-16T08:00:00Z",
+   "first_seen": "2026-11-15T21:34:22Z",
+   "id": "2600001773",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-15T21:19:24Z",
-   "lat": 43.63156457,
-   "lon": -116.21514559,
-   "max_gap_minutes": 15,
-   "peak_customers": 13,
+   "last_seen": "2026-11-15T21:34:22Z",
+   "lat": 42.59656867,
+   "lon": -114.48763625,
+   "max_gap_minutes": 0,
+   "peak_customers": 95,
    "places": [
-    "BOISE"
+    "TWIN FALLS"
    ],
-   "start": "2026-11-15T19:27:48Z",
+   "start": "2026-11-15T21:13:57Z",
    "start_basis": "reported",
-   "status": "On-site",
+   "status": "On the Way",
    "zips": [
-    "83702"
+    "83301"
    ]
   }
  },
@@ -98,6 +98,7 @@
   "2600001747": "2026-11-15T01:49:23Z",
   "2600001761": "2026-11-15T16:49:23Z",
   "2600001763": "2026-11-15T17:04:22Z",
-  "2600001769": "2026-11-15T19:55:04Z"
+  "2600001769": "2026-11-15T19:55:04Z",
+  "2600001771": "2026-11-15T21:34:22Z"
  }
 }
