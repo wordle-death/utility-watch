@@ -1,6 +1,29 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "261122065": {
+   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
+   "customer_hours_before_first_seen": 1.1,
+   "customer_hours_observed": 0.0,
+   "customers": 80,
+   "etr": null,
+   "first_seen": "2026-11-15T12:04:22Z",
+   "id": "261122065",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-15T12:04:22Z",
+   "lat": 33.535689708285105,
+   "lon": -112.1018245326745,
+   "max_gap_minutes": 0,
+   "peak_customers": 80,
+   "places": [
+    "N 23RD  AVE TO N 15TH  AVE AND W GLENDALE  AVE TO W MARYLAND  AVE"
+   ],
+   "start": "2026-11-15T12:03:32Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  }
+ },
  "logged_recent": {
   "261121450": "2026-11-11T02:26:34Z",
   "261121466": "2026-11-11T03:11:44Z",
