@@ -4,16 +4,16 @@
   "261122062": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 0.8,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 1.5,
    "customers": 6,
    "etr": null,
    "first_seen": "2026-11-15T11:19:22Z",
    "id": "261122062",
    "kind": "PLANNED",
-   "last_seen": "2026-11-15T11:19:22Z",
+   "last_seen": "2026-11-15T11:34:22Z",
    "lat": 33.3012462744838,
    "lon": -111.958435130355,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "peak_customers": 6,
    "places": [
     "S 56TH  ST TO S KYRENE  RD AND W CHANDLER  BLVD TO W FRYE  RD"
