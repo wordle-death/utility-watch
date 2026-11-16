@@ -1,6 +1,27 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "1543143": {
+   "cause": "Planned Construction",
+   "customer_hours_before_first_seen": 2.6,
+   "customer_hours_observed": 0.0,
+   "customers": 11,
+   "etr": null,
+   "first_seen": "2026-11-16T14:04:24Z",
+   "id": "1543143",
+   "kind": null,
+   "last_seen": "2026-11-16T14:04:24Z",
+   "lat": 35.0457,
+   "lon": -90.0827,
+   "max_gap_minutes": 0,
+   "peak_customers": 11,
+   "places": [],
+   "start": "2026-11-16T13:50:14Z",
+   "start_basis": "reported",
+   "status": "A crew is currently working on the problem",
+   "zips": []
+  }
+ },
  "logged_recent": {
   "1542442": "2026-11-11T03:11:44Z",
   "1542447": "2026-11-11T02:26:34Z",
