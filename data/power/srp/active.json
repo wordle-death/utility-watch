@@ -1,6 +1,29 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "261122145": {
+   "cause": "We are investigating the cause of the outage.",
+   "customer_hours_before_first_seen": 0.7,
+   "customer_hours_observed": 0.0,
+   "customers": 24,
+   "etr": null,
+   "first_seen": "2026-11-16T15:25:48Z",
+   "id": "261122145",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-16T15:25:48Z",
+   "lat": 33.41343450935625,
+   "lon": -111.7065901185945,
+   "max_gap_minutes": 0,
+   "peak_customers": 24,
+   "places": [
+    "S 56TH  ST TO S RECKER  RD AND E MAIN  ST TO E BROADWAY  RD"
+   ],
+   "start": "2026-11-16T15:24:06Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  }
+ },
  "logged_recent": {
   "261121450": "2026-11-11T02:26:34Z",
   "261121466": "2026-11-11T03:11:44Z",
