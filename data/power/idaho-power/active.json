@@ -4,62 +4,37 @@
   "2600001332": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 8.0,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 8.94,
    "customers": 36,
    "etr": "2026-11-16T19:00:00Z",
    "first_seen": "2026-11-16T16:19:30Z",
    "id": "2600001332",
    "kind": "PLANNED",
-   "last_seen": "2026-11-16T16:19:30Z",
+   "last_seen": "2026-11-16T16:34:24Z",
    "lat": 43.57983161,
    "lon": -116.18595161,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "peak_customers": 36,
    "places": [
     "BOISE"
    ],
    "start": "2026-11-16T16:06:06Z",
    "start_basis": "reported",
-   "status": "Pending",
-   "zips": [
-    "83706"
-   ]
-  },
-  "2600001800": {
-   "cause": "Vehicle Accident",
-   "customer_hours_before_first_seen": 388.5,
-   "customer_hours_observed": 3789.1033333333344,
-   "customers": 291,
-   "etr": "2026-11-16T17:00:00Z",
-   "first_seen": "2026-11-16T10:49:24Z",
-   "id": "2600001800",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T16:19:30Z",
-   "lat": 43.72549634,
-   "lon": -116.73939115,
-   "max_gap_minutes": 30,
-   "peak_customers": 1665,
-   "places": [
-    "CALDWELL"
-   ],
-   "start": "2026-11-16T10:35:24Z",
-   "start_basis": "reported",
    "status": "On-site",
    "zips": [
-    "83605",
-    "83607"
+    "83706"
    ]
   },
   "2600001814": {
    "cause": "Not Found",
    "customer_hours_before_first_seen": 4.5,
-   "customer_hours_observed": 16.022222222222222,
+   "customer_hours_observed": 19.995555555555555,
    "customers": 16,
    "etr": "2026-11-16T17:00:00Z",
    "first_seen": "2026-11-16T15:19:25Z",
    "id": "2600001814",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T16:19:30Z",
+   "last_seen": "2026-11-16T16:34:24Z",
    "lat": 43.62617976,
    "lon": -116.41022272,
    "max_gap_minutes": 24,
@@ -153,6 +128,7 @@
   "2600001776": "2026-11-16T11:04:24Z",
   "2600001779": "2026-11-16T05:49:23Z",
   "2600001798": "2026-11-16T06:19:23Z",
+  "2600001800": "2026-11-16T16:34:24Z",
   "2600001802": "2026-11-16T14:04:24Z",
   "2600001815": "2026-11-16T16:19:30Z"
  }
