@@ -4,13 +4,13 @@
   "2600001848": {
    "cause": "Weather",
    "customer_hours_before_first_seen": 2.0,
-   "customer_hours_observed": 17.48888888888889,
+   "customer_hours_observed": 19.98888888888889,
    "customers": 10,
    "etr": "2026-11-17T00:00:00Z",
    "first_seen": "2026-11-16T21:04:27Z",
    "id": "2600001848",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T22:49:23Z",
+   "last_seen": "2026-11-16T23:04:23Z",
    "lat": 43.87930854,
    "lon": -116.23634805,
    "max_gap_minutes": 15,
@@ -28,13 +28,13 @@
   "2600001855": {
    "cause": "Vehicle Accident",
    "customer_hours_before_first_seen": 71.4,
-   "customer_hours_observed": 183.79555555555555,
+   "customer_hours_observed": 229.79555555555555,
    "customers": 184,
    "etr": "2026-11-17T01:30:00Z",
    "first_seen": "2026-11-16T21:49:27Z",
    "id": "2600001855",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T22:49:23Z",
+   "last_seen": "2026-11-16T23:04:23Z",
    "lat": 43.97024874,
    "lon": -116.81672033,
    "max_gap_minutes": 15,
@@ -47,6 +47,30 @@
    "status": "On-site",
    "zips": [
     "83655"
+   ]
+  },
+  "2600001862": {
+   "cause": "Equipment Issue",
+   "customer_hours_before_first_seen": 3.9,
+   "customer_hours_observed": 0.0,
+   "customers": 14,
+   "etr": "2026-11-17T00:30:00Z",
+   "first_seen": "2026-11-16T23:04:23Z",
+   "id": "2600001862",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-16T23:04:23Z",
+   "lat": 42.85612409,
+   "lon": -112.43591549,
+   "max_gap_minutes": 0,
+   "peak_customers": 14,
+   "places": [
+    "POCATELLO"
+   ],
+   "start": "2026-11-16T22:47:39Z",
+   "start_basis": "reported",
+   "status": "On the Way",
+   "zips": [
+    "83201"
    ]
   }
  },
