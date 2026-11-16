@@ -2,18 +2,18 @@
  "empty_streak": 0,
  "events": {
   "2600001776": {
-   "cause": "Under Investigation",
+   "cause": "Vehicle Accident",
    "customer_hours_before_first_seen": 1593.8,
-   "customer_hours_observed": 149.62777777777777,
+   "customer_hours_observed": 170.12777777777777,
    "customers": 82,
    "etr": "2026-11-16T10:00:00Z",
    "first_seen": "2026-11-16T05:49:23Z",
    "id": "2600001776",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T06:04:23Z",
+   "last_seen": "2026-11-16T06:19:23Z",
    "lat": 43.67286298,
    "lon": -116.61126805,
-   "max_gap_minutes": 11,
+   "max_gap_minutes": 15,
    "peak_customers": 2195,
    "places": [
     "CALDWELL",
@@ -21,34 +21,10 @@
    ],
    "start": "2026-11-16T05:05:49Z",
    "start_basis": "reported",
-   "status": "Pending",
+   "status": "Assigned",
    "zips": [
     "83605",
     "83687"
-   ]
-  },
-  "2600001798": {
-   "cause": "Vehicle Accident",
-   "customer_hours_before_first_seen": 1404.6,
-   "customer_hours_observed": 399.1222222222222,
-   "customers": 2113,
-   "etr": "2026-11-16T11:00:00Z",
-   "first_seen": "2026-11-16T05:53:03Z",
-   "id": "2600001798",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T06:04:23Z",
-   "lat": 43.67237451,
-   "lon": -116.62737153,
-   "max_gap_minutes": 11,
-   "peak_customers": 2113,
-   "places": [
-    "CALDWELL"
-   ],
-   "start": "2026-11-16T05:13:10Z",
-   "start_basis": "reported",
-   "status": "Pending",
-   "zips": [
-    "83605"
    ]
   }
  },
@@ -127,6 +103,7 @@
   "2600001769": "2026-11-15T19:55:04Z",
   "2600001771": "2026-11-15T21:34:22Z",
   "2600001773": "2026-11-15T22:49:23Z",
-  "2600001779": "2026-11-16T05:49:23Z"
+  "2600001779": "2026-11-16T05:49:23Z",
+  "2600001798": "2026-11-16T06:19:23Z"
  }
 }
