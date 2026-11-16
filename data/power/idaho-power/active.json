@@ -4,13 +4,13 @@
   "2600001800": {
    "cause": "Vehicle Accident",
    "customer_hours_before_first_seen": 388.5,
-   "customer_hours_observed": 3643.1183333333342,
+   "customer_hours_observed": 3715.8683333333342,
    "customers": 291,
    "etr": "2026-11-16T17:00:00Z",
    "first_seen": "2026-11-16T10:49:24Z",
    "id": "2600001800",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T15:49:24Z",
+   "last_seen": "2026-11-16T16:04:24Z",
    "lat": 43.72549634,
    "lon": -116.73939115,
    "max_gap_minutes": 30,
@@ -29,13 +29,13 @@
   "2600001814": {
    "cause": "Not Found",
    "customer_hours_before_first_seen": 4.5,
-   "customer_hours_observed": 7.995555555555555,
+   "customer_hours_observed": 11.995555555555555,
    "customers": 16,
    "etr": "2026-11-16T17:00:00Z",
    "first_seen": "2026-11-16T15:19:25Z",
    "id": "2600001814",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T15:49:24Z",
+   "last_seen": "2026-11-16T16:04:24Z",
    "lat": 43.62617976,
    "lon": -116.41022272,
    "max_gap_minutes": 24,
@@ -45,7 +45,7 @@
    ],
    "start": "2026-11-16T15:02:41Z",
    "start_basis": "reported",
-   "status": "On the Way",
+   "status": "On-site",
    "zips": [
     "83646"
    ]
