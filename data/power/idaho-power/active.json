@@ -4,16 +4,16 @@
   "2600001800": {
    "cause": "Vehicle Accident",
    "customer_hours_before_first_seen": 388.5,
-   "customer_hours_observed": 2534.7055555555557,
+   "customer_hours_observed": 2837.2055555555557,
    "customers": 605,
    "etr": "2026-11-16T17:00:00Z",
    "first_seen": "2026-11-16T10:49:24Z",
    "id": "2600001800",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T12:49:24Z",
+   "last_seen": "2026-11-16T13:19:24Z",
    "lat": 43.72549634,
    "lon": -116.73939115,
-   "max_gap_minutes": 15,
+   "max_gap_minutes": 30,
    "peak_customers": 1665,
    "places": [
     "CALDWELL"
@@ -27,25 +27,25 @@
    ]
   },
   "2600001802": {
-   "cause": "Under Investigation",
+   "cause": "Weather",
    "customer_hours_before_first_seen": 8.1,
-   "customer_hours_observed": 3.7541666666666664,
+   "customer_hours_observed": 11.254166666666666,
    "customers": 15,
-   "etr": "2026-11-16T21:00:00Z",
+   "etr": "2026-11-16T14:00:00Z",
    "first_seen": "2026-11-16T12:34:23Z",
    "id": "2600001802",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T12:49:24Z",
+   "last_seen": "2026-11-16T13:19:24Z",
    "lat": 43.87727821,
    "lon": -116.67816191,
-   "max_gap_minutes": 15,
+   "max_gap_minutes": 30,
    "peak_customers": 15,
    "places": [
     "EMMETT"
    ],
    "start": "2026-11-16T12:02:07Z",
    "start_basis": "reported",
-   "status": "On the Way",
+   "status": "On-site",
    "zips": [
     "83617"
    ]
