@@ -1,24 +1,68 @@
 {
  "empty_streak": 0,
  "events": {
+  "261122143": {
+   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
+   "customer_hours_before_first_seen": 3.4,
+   "customer_hours_observed": 0.0,
+   "customers": 14,
+   "etr": null,
+   "first_seen": "2026-11-16T15:49:24Z",
+   "id": "261122143",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-16T15:49:24Z",
+   "lat": 33.4607002582809,
+   "lon": -111.64817920484751,
+   "max_gap_minutes": 0,
+   "peak_customers": 14,
+   "places": [
+    "N 80TH  ST TO N 88TH  ST AND E MCDOWELL  RD TO E MCKELLIPS  RD"
+   ],
+   "start": "2026-11-16T15:34:37Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  },
   "261122145": {
    "cause": "We are investigating the cause of the outage.",
    "customer_hours_before_first_seen": 0.7,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 9.44,
    "customers": 24,
    "etr": null,
    "first_seen": "2026-11-16T15:25:48Z",
    "id": "261122145",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T15:25:48Z",
+   "last_seen": "2026-11-16T15:49:24Z",
    "lat": 33.41343450935625,
    "lon": -111.7065901185945,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 24,
    "peak_customers": 24,
    "places": [
     "S 56TH  ST TO S RECKER  RD AND E MAIN  ST TO E BROADWAY  RD"
    ],
    "start": "2026-11-16T15:24:06Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  },
+  "261122151": {
+   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
+   "customer_hours_before_first_seen": 0.2,
+   "customer_hours_observed": 0.0,
+   "customers": 1,
+   "etr": null,
+   "first_seen": "2026-11-16T15:49:24Z",
+   "id": "261122151",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-16T15:49:24Z",
+   "lat": 33.3713693301692,
+   "lon": -111.431702604725,
+   "max_gap_minutes": 0,
+   "peak_customers": 1,
+   "places": [
+    "S EDGEMORE  RD TO S BLACKHAWK  RD AND E BASELINE  AVE TO E US HIGHWAY 60"
+   ],
+   "start": "2026-11-16T15:36:33Z",
    "start_basis": "reported",
    "status": null,
    "zips": []
