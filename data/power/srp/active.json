@@ -1,29 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "261122113": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 0.0,
-   "customer_hours_observed": 10.934166666666666,
-   "customers": 3,
-   "etr": null,
-   "first_seen": "2026-11-16T05:19:23Z",
-   "id": "261122113",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-16T08:58:04Z",
-   "lat": 33.4211807865559,
-   "lon": -111.864918776823,
-   "max_gap_minutes": 24,
-   "peak_customers": 3,
-   "places": [
-    "N DOBSON  RD TO N ALMA SCHOOL  RD AND W RIO SALADO  PKWY TO W MAIN  ST"
-   ],
-   "start": "2026-11-16T05:19:01Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  }
- },
+ "events": {},
  "logged_recent": {
   "261121450": "2026-11-11T02:26:34Z",
   "261121466": "2026-11-11T03:11:44Z",
@@ -87,6 +64,7 @@
   "261122072": "2026-11-15T19:19:22Z",
   "261122084": "2026-11-15T20:04:22Z",
   "261122090": "2026-11-15T23:49:23Z",
-  "261122105": "2026-11-16T02:34:22Z"
+  "261122105": "2026-11-16T02:34:22Z",
+  "261122113": "2026-11-16T09:04:23Z"
  }
 }
