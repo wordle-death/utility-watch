@@ -4,13 +4,13 @@
   "2600001800": {
    "cause": "Vehicle Accident",
    "customer_hours_before_first_seen": 388.5,
-   "customer_hours_observed": 3424.787500000001,
+   "customer_hours_observed": 3497.6991666666677,
    "customers": 291,
    "etr": "2026-11-16T17:00:00Z",
    "first_seen": "2026-11-16T10:49:24Z",
    "id": "2600001800",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T15:04:23Z",
+   "last_seen": "2026-11-16T15:19:25Z",
    "lat": 43.72549634,
    "lon": -116.73939115,
    "max_gap_minutes": 30,
@@ -24,6 +24,30 @@
    "zips": [
     "83605",
     "83607"
+   ]
+  },
+  "2600001814": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 4.5,
+   "customer_hours_observed": 0.0,
+   "customers": 16,
+   "etr": "2026-11-16T16:30:00Z",
+   "first_seen": "2026-11-16T15:19:25Z",
+   "id": "2600001814",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-16T15:19:25Z",
+   "lat": 43.62617976,
+   "lon": -116.41022272,
+   "max_gap_minutes": 0,
+   "peak_customers": 16,
+   "places": [
+    "MERIDIAN"
+   ],
+   "start": "2026-11-16T15:02:41Z",
+   "start_basis": "reported",
+   "status": "Pending",
+   "zips": [
+    "83646"
    ]
   }
  },
