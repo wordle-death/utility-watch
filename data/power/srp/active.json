@@ -4,16 +4,16 @@
   "261122240": {
    "cause": "An electrical safety hazard has been identified. SRP crews are working to restore power.",
    "customer_hours_before_first_seen": 0.0,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 2.0044444444444443,
    "customers": 8,
    "etr": null,
    "first_seen": "2026-11-16T22:04:22Z",
    "id": "261122240",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T22:04:22Z",
+   "last_seen": "2026-11-16T22:19:24Z",
    "lat": 33.3922177309372,
    "lon": -111.743615526783,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "peak_customers": 8,
    "places": [
     "S VAL VISTA  DR TO S GREENFIELD  RD AND E PUEBLO  AVE TO E SUPERSTITION  FWY"
