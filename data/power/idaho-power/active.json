@@ -4,13 +4,13 @@
   "2600001332": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 8.0,
-   "customer_hours_observed": 35.94,
+   "customer_hours_observed": 44.93,
    "customers": 36,
    "etr": "2026-11-16T19:00:00Z",
    "first_seen": "2026-11-16T16:19:30Z",
    "id": "2600001332",
    "kind": "PLANNED",
-   "last_seen": "2026-11-16T17:19:24Z",
+   "last_seen": "2026-11-16T17:34:23Z",
    "lat": 43.57983161,
    "lon": -116.18595161,
    "max_gap_minutes": 30,
@@ -28,13 +28,13 @@
   "2600001814": {
    "cause": "Not Found",
    "customer_hours_before_first_seen": 4.5,
-   "customer_hours_observed": 31.995555555555555,
+   "customer_hours_observed": 35.99111111111111,
    "customers": 16,
    "etr": "2026-11-16T20:00:00Z",
    "first_seen": "2026-11-16T15:19:25Z",
    "id": "2600001814",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T17:19:24Z",
+   "last_seen": "2026-11-16T17:34:23Z",
    "lat": 43.62617976,
    "lon": -116.41022272,
    "max_gap_minutes": 30,
@@ -44,33 +44,33 @@
    ],
    "start": "2026-11-16T15:02:41Z",
    "start_basis": "reported",
-   "status": "Assigned",
+   "status": "On the Way",
    "zips": [
     "83646"
    ]
   },
-  "2600001823": {
-   "cause": "Object In Line",
-   "customer_hours_before_first_seen": 19.5,
+  "2600001828": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 17.6,
    "customer_hours_observed": 0.0,
-   "customers": 34,
-   "etr": "2026-11-16T17:30:00Z",
-   "first_seen": "2026-11-16T17:19:24Z",
-   "id": "2600001823",
+   "customers": 62,
+   "etr": "2026-11-16T19:00:00Z",
+   "first_seen": "2026-11-16T17:34:23Z",
+   "id": "2600001828",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T17:19:24Z",
-   "lat": 43.708731,
-   "lon": -116.62569387,
+   "last_seen": "2026-11-16T17:34:23Z",
+   "lat": 43.51039825,
+   "lon": -116.60025579,
    "max_gap_minutes": 0,
-   "peak_customers": 34,
+   "peak_customers": 62,
    "places": [
-    "MIDDLETON"
+    "NAMPA"
    ],
-   "start": "2026-11-16T16:44:56Z",
+   "start": "2026-11-16T17:17:20Z",
    "start_basis": "reported",
-   "status": "On-site",
+   "status": "Assigned",
    "zips": [
-    "83644"
+    "83686"
    ]
   }
  },
@@ -154,6 +154,7 @@
   "2600001798": "2026-11-16T06:19:23Z",
   "2600001800": "2026-11-16T16:34:24Z",
   "2600001802": "2026-11-16T14:04:24Z",
-  "2600001815": "2026-11-16T16:19:30Z"
+  "2600001815": "2026-11-16T16:19:30Z",
+  "2600001823": "2026-11-16T17:34:23Z"
  }
 }
