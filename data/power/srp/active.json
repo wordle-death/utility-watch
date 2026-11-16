@@ -1,51 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "261122174": {
-   "cause": "Electrical equipment has been hit or damaged. SRP crews are working to restore power.",
-   "customer_hours_before_first_seen": 0.0,
-   "customer_hours_observed": 2.0008333333333335,
-   "customers": 1,
-   "etr": null,
-   "first_seen": "2026-11-16T19:04:24Z",
-   "id": "261122174",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T21:04:27Z",
-   "lat": 33.2214888748307,
-   "lon": -111.63428418172799,
-   "max_gap_minutes": 15,
-   "peak_customers": 1,
-   "places": [
-    "S 204TH  ST TO S ACHILLES  WAY AND E CLOUD  RD TO E RIGGS  RD"
-   ],
-   "start": "2026-11-16T19:03:21Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
-  "261122219": {
-   "cause": "We are investigating the cause of the outage.",
-   "customer_hours_before_first_seen": 2.6,
-   "customer_hours_observed": 32.51444444444444,
-   "customers": 5,
-   "etr": null,
-   "first_seen": "2026-11-16T19:49:25Z",
-   "id": "261122219",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T21:04:27Z",
-   "lat": 33.33196072476885,
-   "lon": -111.8659752334575,
-   "max_gap_minutes": 15,
-   "peak_customers": 26,
-   "places": [
-    "N DOBSON  RD TO N ALMA SCHOOL  RD AND W WARNER  RD TO W KNOX  RD"
-   ],
-   "start": "2026-11-16T19:43:20Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  }
- },
+ "events": {},
  "logged_recent": {
   "261121450": "2026-11-11T02:26:34Z",
   "261121466": "2026-11-11T03:11:44Z",
@@ -119,10 +74,12 @@
   "261122155": "2026-11-16T17:19:24Z",
   "261122159": "2026-11-16T18:19:24Z",
   "261122160": "2026-11-16T16:19:30Z",
+  "261122174": "2026-11-16T21:19:24Z",
   "261122178": "2026-11-16T21:04:27Z",
   "261122190": "2026-11-16T19:19:24Z",
   "261122192": "2026-11-16T19:04:24Z",
   "261122209": "2026-11-16T20:04:23Z",
-  "261122215": "2026-11-16T20:49:23Z"
+  "261122215": "2026-11-16T20:49:23Z",
+  "261122219": "2026-11-16T21:19:24Z"
  }
 }
