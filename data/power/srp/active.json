@@ -4,13 +4,13 @@
   "261122146": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 0.4,
-   "customer_hours_observed": 7.501388888888889,
+   "customer_hours_observed": 8.75138888888889,
    "customers": 5,
    "etr": null,
    "first_seen": "2026-11-16T17:34:23Z",
    "id": "261122146",
    "kind": "PLANNED",
-   "last_seen": "2026-11-16T19:04:24Z",
+   "last_seen": "2026-11-16T19:19:24Z",
    "lat": 33.4846542764037,
    "lon": -112.15286751626,
    "max_gap_minutes": 15,
@@ -26,16 +26,16 @@
   "261122174": {
    "cause": "Electrical equipment has been hit or damaged. SRP crews are working to restore power.",
    "customer_hours_before_first_seen": 0.0,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 0.25,
    "customers": 1,
    "etr": null,
    "first_seen": "2026-11-16T19:04:24Z",
    "id": "261122174",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T19:04:24Z",
+   "last_seen": "2026-11-16T19:19:24Z",
    "lat": 33.2214888748307,
    "lon": -111.63428418172799,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "peak_customers": 1,
    "places": [
     "S 204TH  ST TO S ACHILLES  WAY AND E CLOUD  RD TO E RIGGS  RD"
@@ -48,13 +48,13 @@
   "261122178": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 0.6,
-   "customer_hours_observed": 10.5,
+   "customer_hours_observed": 12.0,
    "customers": 6,
    "etr": null,
    "first_seen": "2026-11-16T17:19:24Z",
    "id": "261122178",
    "kind": "PLANNED",
-   "last_seen": "2026-11-16T19:04:24Z",
+   "last_seen": "2026-11-16T19:19:24Z",
    "lat": 33.29605371546995,
    "lon": -111.2990235963095,
    "max_gap_minutes": 15,
@@ -67,24 +67,24 @@
    "status": null,
    "zips": []
   },
-  "261122190": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 0.5,
-   "customer_hours_observed": 3.0,
-   "customers": 4,
+  "261122209": {
+   "cause": "We are investigating the cause of the outage.",
+   "customer_hours_before_first_seen": 3.3,
+   "customer_hours_observed": 0.0,
+   "customers": 23,
    "etr": null,
-   "first_seen": "2026-11-16T18:19:24Z",
-   "id": "261122190",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-16T19:04:24Z",
-   "lat": 33.395455456672195,
-   "lon": -111.7307393772895,
-   "max_gap_minutes": 15,
-   "peak_customers": 4,
+   "first_seen": "2026-11-16T19:19:24Z",
+   "id": "261122209",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-16T19:19:24Z",
+   "lat": 33.39556791251235,
+   "lon": -111.73158042869201,
+   "max_gap_minutes": 0,
+   "peak_customers": 23,
    "places": [
     "S GREENFIELD  RD TO S ROANOKE   AND E PUEBLO  AVE TO E SUPERSTITION  FWY"
    ],
-   "start": "2026-11-16T18:12:20Z",
+   "start": "2026-11-16T19:10:47Z",
    "start_basis": "reported",
    "status": null,
    "zips": []
@@ -162,6 +162,7 @@
   "261122155": "2026-11-16T17:19:24Z",
   "261122159": "2026-11-16T18:19:24Z",
   "261122160": "2026-11-16T16:19:30Z",
+  "261122190": "2026-11-16T19:19:24Z",
   "261122192": "2026-11-16T19:04:24Z"
  }
 }
