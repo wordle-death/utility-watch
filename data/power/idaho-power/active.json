@@ -2,15 +2,15 @@
  "empty_streak": 0,
  "events": {
   "2600001848": {
-   "cause": "Under Investigation",
+   "cause": "Weather",
    "customer_hours_before_first_seen": 2.0,
-   "customer_hours_observed": 15.011111111111113,
+   "customer_hours_observed": 17.48888888888889,
    "customers": 10,
    "etr": "2026-11-17T00:00:00Z",
    "first_seen": "2026-11-16T21:04:27Z",
    "id": "2600001848",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T22:34:31Z",
+   "last_seen": "2026-11-16T22:49:23Z",
    "lat": 43.87930854,
    "lon": -116.23634805,
    "max_gap_minutes": 15,
@@ -20,7 +20,7 @@
    ],
    "start": "2026-11-16T20:52:23Z",
    "start_basis": "reported",
-   "status": "Assigned",
+   "status": "On the Way",
    "zips": [
     "83629"
    ]
@@ -28,13 +28,13 @@
   "2600001855": {
    "cause": "Vehicle Accident",
    "customer_hours_before_first_seen": 71.4,
-   "customer_hours_observed": 138.20444444444445,
+   "customer_hours_observed": 183.79555555555555,
    "customers": 184,
    "etr": "2026-11-17T01:30:00Z",
    "first_seen": "2026-11-16T21:49:27Z",
    "id": "2600001855",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T22:34:31Z",
+   "last_seen": "2026-11-16T22:49:23Z",
    "lat": 43.97024874,
    "lon": -116.81672033,
    "max_gap_minutes": 15,
