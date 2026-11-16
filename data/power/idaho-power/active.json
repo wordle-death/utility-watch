@@ -4,13 +4,13 @@
   "2600001814": {
    "cause": "Not Found",
    "customer_hours_before_first_seen": 4.5,
-   "customer_hours_observed": 43.995555555555555,
+   "customer_hours_observed": 47.995555555555555,
    "customers": 16,
    "etr": "2026-11-16T20:00:00Z",
    "first_seen": "2026-11-16T15:19:25Z",
    "id": "2600001814",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T18:04:24Z",
+   "last_seen": "2026-11-16T18:19:24Z",
    "lat": 43.62617976,
    "lon": -116.41022272,
    "max_gap_minutes": 30,
@@ -20,7 +20,7 @@
    ],
    "start": "2026-11-16T15:02:41Z",
    "start_basis": "reported",
-   "status": "On the Way",
+   "status": "Assigned",
    "zips": [
     "83646"
    ]
@@ -28,13 +28,13 @@
   "2600001828": {
    "cause": "Object In Line",
    "customer_hours_before_first_seen": 17.6,
-   "customer_hours_observed": 31.017222222222223,
+   "customer_hours_observed": 46.51722222222222,
    "customers": 62,
    "etr": "2026-11-16T19:00:00Z",
    "first_seen": "2026-11-16T17:34:23Z",
    "id": "2600001828",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T18:04:24Z",
+   "last_seen": "2026-11-16T18:19:24Z",
    "lat": 43.51039825,
    "lon": -116.60025579,
    "max_gap_minutes": 15,
