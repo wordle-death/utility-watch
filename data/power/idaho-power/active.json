@@ -4,16 +4,16 @@
   "2600001776": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 1593.8,
-   "customer_hours_observed": 0.0,
-   "customers": 2195,
+   "customer_hours_observed": 134.13888888888889,
+   "customers": 82,
    "etr": "2026-11-16T10:00:00Z",
    "first_seen": "2026-11-16T05:49:23Z",
    "id": "2600001776",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T05:49:23Z",
+   "last_seen": "2026-11-16T05:53:03Z",
    "lat": 43.67286298,
    "lon": -116.61126805,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 4,
    "peak_customers": 2195,
    "places": [
     "CALDWELL",
@@ -25,6 +25,30 @@
    "zips": [
     "83605",
     "83687"
+   ]
+  },
+  "2600001798": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 1404.6,
+   "customer_hours_observed": 0.0,
+   "customers": 2113,
+   "etr": "2026-11-16T11:00:00Z",
+   "first_seen": "2026-11-16T05:53:03Z",
+   "id": "2600001798",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-16T05:53:03Z",
+   "lat": 43.67237451,
+   "lon": -116.62737153,
+   "max_gap_minutes": 0,
+   "peak_customers": 2113,
+   "places": [
+    "CALDWELL"
+   ],
+   "start": "2026-11-16T05:13:10Z",
+   "start_basis": "reported",
+   "status": "Pending",
+   "zips": [
+    "83605"
    ]
   }
  },
