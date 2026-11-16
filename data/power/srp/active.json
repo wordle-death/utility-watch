@@ -4,13 +4,13 @@
   "261122174": {
    "cause": "Electrical equipment has been hit or damaged. SRP crews are working to restore power.",
    "customer_hours_before_first_seen": 0.0,
-   "customer_hours_observed": 0.7502777777777778,
+   "customer_hours_observed": 0.9997222222222223,
    "customers": 1,
    "etr": null,
    "first_seen": "2026-11-16T19:04:24Z",
    "id": "261122174",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T19:49:25Z",
+   "last_seen": "2026-11-16T20:04:23Z",
    "lat": 33.2214888748307,
    "lon": -111.63428418172799,
    "max_gap_minutes": 15,
@@ -26,13 +26,13 @@
   "261122178": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 0.6,
-   "customer_hours_observed": 15.001666666666667,
+   "customer_hours_observed": 16.498333333333335,
    "customers": 6,
    "etr": null,
    "first_seen": "2026-11-16T17:19:24Z",
    "id": "261122178",
    "kind": "PLANNED",
-   "last_seen": "2026-11-16T19:49:25Z",
+   "last_seen": "2026-11-16T20:04:23Z",
    "lat": 33.29605371546995,
    "lon": -111.2990235963095,
    "max_gap_minutes": 15,
@@ -45,38 +45,16 @@
    "status": null,
    "zips": []
   },
-  "261122209": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 3.3,
-   "customer_hours_observed": 11.506388888888889,
-   "customers": 23,
-   "etr": null,
-   "first_seen": "2026-11-16T19:19:24Z",
-   "id": "261122209",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T19:49:25Z",
-   "lat": 33.39556791251235,
-   "lon": -111.73158042869201,
-   "max_gap_minutes": 15,
-   "peak_customers": 23,
-   "places": [
-    "S GREENFIELD  RD TO S ROANOKE   AND E PUEBLO  AVE TO E SUPERSTITION  FWY"
-   ],
-   "start": "2026-11-16T19:10:47Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
   "261122215": {
    "cause": "We are investigating the cause of the outage.",
    "customer_hours_before_first_seen": 1.0,
-   "customer_hours_observed": 4.259444444444444,
+   "customer_hours_observed": 8.5,
    "customers": 17,
    "etr": null,
    "first_seen": "2026-11-16T19:34:23Z",
    "id": "261122215",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T19:49:25Z",
+   "last_seen": "2026-11-16T20:04:23Z",
    "lat": 33.439796661640855,
    "lon": -111.83912592033599,
    "max_gap_minutes": 15,
@@ -92,16 +70,16 @@
   "261122219": {
    "cause": "We are investigating the cause of the outage.",
    "customer_hours_before_first_seen": 2.6,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 6.485555555555555,
    "customers": 26,
    "etr": null,
    "first_seen": "2026-11-16T19:49:25Z",
    "id": "261122219",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T19:49:25Z",
+   "last_seen": "2026-11-16T20:04:23Z",
    "lat": 33.33196072476885,
    "lon": -111.8659752334575,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "peak_customers": 26,
    "places": [
     "N DOBSON  RD TO N ALMA SCHOOL  RD AND W WARNER  RD TO W KNOX  RD"
@@ -186,6 +164,7 @@
   "261122159": "2026-11-16T18:19:24Z",
   "261122160": "2026-11-16T16:19:30Z",
   "261122190": "2026-11-16T19:19:24Z",
-  "261122192": "2026-11-16T19:04:24Z"
+  "261122192": "2026-11-16T19:04:24Z",
+  "261122209": "2026-11-16T20:04:23Z"
  }
 }
