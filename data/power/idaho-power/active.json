@@ -1,40 +1,16 @@
 {
  "empty_streak": 0,
  "events": {
-  "2600001332": {
-   "cause": "Under Investigation",
-   "customer_hours_before_first_seen": 8.0,
-   "customer_hours_observed": 54.04,
-   "customers": 36,
-   "etr": "2026-11-16T19:00:00Z",
-   "first_seen": "2026-11-16T16:19:30Z",
-   "id": "2600001332",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-16T17:49:34Z",
-   "lat": 43.57983161,
-   "lon": -116.18595161,
-   "max_gap_minutes": 30,
-   "peak_customers": 36,
-   "places": [
-    "BOISE"
-   ],
-   "start": "2026-11-16T16:06:06Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83706"
-   ]
-  },
   "2600001814": {
    "cause": "Not Found",
    "customer_hours_before_first_seen": 4.5,
-   "customer_hours_observed": 40.04,
+   "customer_hours_observed": 43.995555555555555,
    "customers": 16,
    "etr": "2026-11-16T20:00:00Z",
    "first_seen": "2026-11-16T15:19:25Z",
    "id": "2600001814",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T17:49:34Z",
+   "last_seen": "2026-11-16T18:04:24Z",
    "lat": 43.62617976,
    "lon": -116.41022272,
    "max_gap_minutes": 30,
@@ -52,13 +28,13 @@
   "2600001828": {
    "cause": "Object In Line",
    "customer_hours_before_first_seen": 17.6,
-   "customer_hours_observed": 15.689444444444444,
+   "customer_hours_observed": 31.017222222222223,
    "customers": 62,
    "etr": "2026-11-16T19:00:00Z",
    "first_seen": "2026-11-16T17:34:23Z",
    "id": "2600001828",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T17:49:34Z",
+   "last_seen": "2026-11-16T18:04:24Z",
    "lat": 43.51039825,
    "lon": -116.60025579,
    "max_gap_minutes": 15,
@@ -90,6 +66,7 @@
   "2600001257": "2026-11-13T19:49:32Z",
   "2600001320": "2026-11-12T21:49:23Z",
   "2600001323": "2026-11-11T23:38:23Z",
+  "2600001332": "2026-11-16T18:04:24Z",
   "2600001351": "2026-11-11T00:28:41Z",
   "2600001370": "2026-11-11T00:28:41Z",
   "2600001376": "2026-11-11T00:28:41Z",
