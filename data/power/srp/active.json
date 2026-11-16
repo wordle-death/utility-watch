@@ -4,13 +4,13 @@
   "261122143": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 3.4,
-   "customer_hours_observed": 3.5,
+   "customer_hours_observed": 7.023333333333333,
    "customers": 14,
    "etr": null,
    "first_seen": "2026-11-16T15:49:24Z",
    "id": "261122143",
    "kind": "PLANNED",
-   "last_seen": "2026-11-16T16:04:24Z",
+   "last_seen": "2026-11-16T16:19:30Z",
    "lat": 33.4607002582809,
    "lon": -111.64817920484751,
    "max_gap_minutes": 15,
@@ -26,13 +26,13 @@
   "261122145": {
    "cause": "We are investigating the cause of the outage.",
    "customer_hours_before_first_seen": 0.7,
-   "customer_hours_observed": 15.44,
+   "customer_hours_observed": 21.479999999999997,
    "customers": 24,
    "etr": null,
    "first_seen": "2026-11-16T15:25:48Z",
    "id": "261122145",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T16:04:24Z",
+   "last_seen": "2026-11-16T16:19:30Z",
    "lat": 33.41343450935625,
    "lon": -111.7065901185945,
    "max_gap_minutes": 24,
@@ -48,13 +48,13 @@
   "261122151": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 0.2,
-   "customer_hours_observed": 0.25,
+   "customer_hours_observed": 0.5016666666666667,
    "customers": 1,
    "etr": null,
    "first_seen": "2026-11-16T15:49:24Z",
    "id": "261122151",
    "kind": "PLANNED",
-   "last_seen": "2026-11-16T16:04:24Z",
+   "last_seen": "2026-11-16T16:19:30Z",
    "lat": 33.3713693301692,
    "lon": -111.431702604725,
    "max_gap_minutes": 15,
@@ -70,16 +70,16 @@
   "261122155": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 3.2,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 3.523333333333333,
    "customers": 14,
    "etr": null,
    "first_seen": "2026-11-16T16:04:24Z",
    "id": "261122155",
    "kind": "PLANNED",
-   "last_seen": "2026-11-16T16:04:24Z",
+   "last_seen": "2026-11-16T16:19:30Z",
    "lat": 33.397506670962855,
    "lon": -111.73280313517151,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "peak_customers": 14,
    "places": [
     "S GREENFIELD  RD TO S ROANOKE   AND E PUEBLO  AVE TO E SOUTHERN  AVE"
@@ -92,43 +92,21 @@
   "261122159": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 0.9,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 1.5099999999999998,
    "customers": 6,
    "etr": null,
    "first_seen": "2026-11-16T16:04:24Z",
    "id": "261122159",
    "kind": "PLANNED",
-   "last_seen": "2026-11-16T16:04:24Z",
+   "last_seen": "2026-11-16T16:19:30Z",
    "lat": 33.40556157570635,
    "lon": -111.521640904773,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "peak_customers": 6,
    "places": [
     "S TOMAHAWK  RD TO S GOLDFIELD  RD AND E BROADWAY  AVE TO E 16TH  AVE"
    ],
    "start": "2026-11-16T15:55:28Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
-  "261122160": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 0.1,
-   "customer_hours_observed": 0.0,
-   "customers": 3,
-   "etr": null,
-   "first_seen": "2026-11-16T16:04:24Z",
-   "id": "261122160",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-16T16:04:24Z",
-   "lat": 33.40646862774195,
-   "lon": -111.522421135546,
-   "max_gap_minutes": 0,
-   "peak_customers": 3,
-   "places": [
-    "S TOMAHAWK  RD TO S GOLDFIELD  RD AND E JUNCTION  ST TO E 16TH  AVE"
-   ],
-   "start": "2026-11-16T16:02:33Z",
    "start_basis": "reported",
    "status": null,
    "zips": []
@@ -198,6 +176,7 @@
   "261122084": "2026-11-15T20:04:22Z",
   "261122090": "2026-11-15T23:49:23Z",
   "261122105": "2026-11-16T02:34:22Z",
-  "261122113": "2026-11-16T09:04:23Z"
+  "261122113": "2026-11-16T09:04:23Z",
+  "261122160": "2026-11-16T16:19:30Z"
  }
 }
