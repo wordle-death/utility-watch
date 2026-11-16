@@ -4,13 +4,13 @@
   "2600001776": {
    "cause": "Vehicle Accident",
    "customer_hours_before_first_seen": 1593.8,
-   "customer_hours_observed": 334.15055555555557,
+   "customer_hours_observed": 354.81,
    "customers": 82,
    "etr": "2026-11-16T10:00:00Z",
    "first_seen": "2026-11-16T05:49:23Z",
    "id": "2600001776",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-16T08:19:24Z",
+   "last_seen": "2026-11-16T08:34:31Z",
    "lat": 43.67286298,
    "lon": -116.61126805,
    "max_gap_minutes": 15,
@@ -21,7 +21,7 @@
    ],
    "start": "2026-11-16T05:05:49Z",
    "start_basis": "reported",
-   "status": "Assigned",
+   "status": "On-site",
    "zips": [
     "83605",
     "83687"
