@@ -4,14 +4,14 @@
   "2600001963": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 191.5,
-   "customer_hours_observed": 276.3025,
+   "customer_hours_observed": 296.0086111111111,
    "customers": 79,
-   "etr": "2026-11-17T22:00:00Z",
+   "etr": "2026-11-18T01:00:00Z",
    "first_seen": "2026-11-17T18:49:35Z",
    "id": "2600001963",
    "in_progress_first_seen": "2026-11-17T18:49:35Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-17T22:19:26Z",
+   "last_seen": "2026-11-17T22:34:24Z",
    "lat": 43.784474,
    "lon": -114.57290574,
    "max_gap_minutes": 15,
@@ -24,50 +24,22 @@
    "planned": false,
    "start": "2026-11-17T16:24:09Z",
    "start_basis": "reported",
-   "status": "Assigned",
-   "zips": [
-    "83340"
-   ]
-  },
-  "2600001994": {
-   "cause": "Equipment Issue",
-   "customer_hours_before_first_seen": 7.7,
-   "customer_hours_observed": 59.51916666666666,
-   "customers": 16,
-   "etr": "2026-11-17T23:00:00Z",
-   "first_seen": "2026-11-17T20:34:23Z",
-   "id": "2600001994",
-   "in_progress_first_seen": "2026-11-17T20:34:23Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-17T22:19:26Z",
-   "lat": 43.01681832,
-   "lon": -112.9398183,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 37,
-   "pending": false,
-   "places": [
-    "ABERDEEN"
-   ],
-   "planned": false,
-   "start": "2026-11-17T20:21:49Z",
-   "start_basis": "reported",
    "status": "On-site",
    "zips": [
-    "83210"
+    "83340"
    ]
   },
   "2600001998": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 6.6,
-   "customer_hours_observed": 20.00888888888889,
+   "customer_hours_observed": 24.0,
    "customers": 16,
    "etr": "2026-11-18T00:30:00Z",
    "first_seen": "2026-11-17T21:04:24Z",
    "id": "2600001998",
    "in_progress_first_seen": "2026-11-17T21:04:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-17T22:19:26Z",
+   "last_seen": "2026-11-17T22:34:24Z",
    "lat": 44.66747461,
    "lon": -116.08937401,
    "max_gap_minutes": 15,
@@ -194,6 +166,7 @@
   "2600001928": "2026-11-17T16:19:25Z",
   "2600001930": "2026-11-17T18:34:30Z",
   "2600001944": "2026-11-17T18:49:35Z",
-  "2600001958": "2026-11-17T19:34:32Z"
+  "2600001958": "2026-11-17T19:34:32Z",
+  "2600001994": "2026-11-17T22:34:24Z"
  }
 }
