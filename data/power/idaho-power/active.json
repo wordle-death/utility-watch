@@ -4,16 +4,16 @@
   "2600001884": {
    "cause": "Weather",
    "customer_hours_before_first_seen": 41.9,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 7.5,
    "customers": 30,
    "etr": "2026-11-17T10:00:00Z",
    "first_seen": "2026-11-17T09:49:23Z",
    "id": "2600001884",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-17T09:49:23Z",
+   "last_seen": "2026-11-17T10:04:23Z",
    "lat": 42.82410414,
    "lon": -115.94342318,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "peak_customers": 30,
    "places": [
     "GRAND VIEW"
@@ -23,6 +23,30 @@
    "status": "On-site",
    "zips": [
     "83624"
+   ]
+  },
+  "2600001886": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 3.1,
+   "customer_hours_observed": 0.0,
+   "customers": 12,
+   "etr": "2026-11-17T13:30:00Z",
+   "first_seen": "2026-11-17T10:04:23Z",
+   "id": "2600001886",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-17T10:04:23Z",
+   "lat": 42.57143975,
+   "lon": -114.89618983,
+   "max_gap_minutes": 0,
+   "peak_customers": 12,
+   "places": [
+    "BUHL"
+   ],
+   "start": "2026-11-17T09:49:00Z",
+   "start_basis": "reported",
+   "status": "Pending",
+   "zips": [
+    "83316"
    ]
   }
  },
