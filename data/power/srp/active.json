@@ -1,38 +1,16 @@
 {
  "empty_streak": 0,
  "events": {
-  "261122262": {
-   "cause": "A transformer has failed. SRP crews are working to restore power.",
-   "customer_hours_before_first_seen": 0.3,
-   "customer_hours_observed": 25.499999999999996,
-   "customers": 6,
-   "etr": null,
-   "first_seen": "2026-11-17T02:49:24Z",
-   "id": "261122262",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-17T07:04:24Z",
-   "lat": 33.40022532085925,
-   "lon": -112.07071588616199,
-   "max_gap_minutes": 15,
-   "peak_customers": 6,
-   "places": [
-    "S CENTRAL  AVE TO S 7TH  ST AND E BROADWAY  RD TO E SOUTHERN  AVE"
-   ],
-   "start": "2026-11-17T02:46:12Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
   "261122276": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 0.2,
-   "customer_hours_observed": 3.9980555555555553,
+   "customer_hours_observed": 4.247777777777777,
    "customers": 1,
    "etr": null,
    "first_seen": "2026-11-17T03:04:31Z",
    "id": "261122276",
    "kind": "PLANNED",
-   "last_seen": "2026-11-17T07:04:24Z",
+   "last_seen": "2026-11-17T07:19:23Z",
    "lat": 33.3968915910345,
    "lon": -111.873861933411,
    "max_gap_minutes": 15,
@@ -126,6 +104,7 @@
   "261122209": "2026-11-16T20:04:23Z",
   "261122215": "2026-11-16T20:49:23Z",
   "261122219": "2026-11-16T21:19:24Z",
-  "261122240": "2026-11-16T23:48:28Z"
+  "261122240": "2026-11-16T23:48:28Z",
+  "261122262": "2026-11-17T07:19:23Z"
  }
 }
