@@ -4,14 +4,14 @@
   "261122388": {
    "cause": "An electrical safety hazard has been identified. SRP crews are working to restore power.",
    "customer_hours_before_first_seen": 2.6,
-   "customer_hours_observed": 9.74638888888889,
+   "customer_hours_observed": 13.00361111111111,
    "customers": 13,
    "etr": null,
    "first_seen": "2026-11-17T21:19:25Z",
    "id": "261122388",
    "in_progress_first_seen": "2026-11-17T21:19:25Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-17T22:04:24Z",
+   "last_seen": "2026-11-17T22:19:26Z",
    "lat": 33.473013177476,
    "lon": -110.83956963086149,
    "max_gap_minutes": 15,
@@ -23,32 +23,6 @@
    ],
    "planned": false,
    "start": "2026-11-17T21:07:35Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
-  "261122389": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 0.2,
-   "customer_hours_observed": 0.7497222222222222,
-   "customers": 1,
-   "etr": null,
-   "first_seen": "2026-11-17T21:19:25Z",
-   "id": "261122389",
-   "in_progress_first_seen": "2026-11-17T21:19:25Z",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-17T22:04:24Z",
-   "lat": 33.3348827639271,
-   "lon": -111.878711335302,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 1,
-   "pending": false,
-   "places": [
-    "N 92ND  ST TO N DOBSON  RD AND W MESQUITE  ST TO W CALLE DEL NORTE"
-   ],
-   "planned": true,
-   "start": "2026-11-17T21:09:55Z",
    "start_basis": "reported",
    "status": null,
    "zips": []
@@ -154,6 +128,7 @@
   "261122335": "2026-11-17T20:04:24Z",
   "261122348": "2026-11-17T21:04:24Z",
   "261122348#2": "2026-11-17T21:04:24Z",
-  "261122369": "2026-11-17T20:34:23Z"
+  "261122369": "2026-11-17T20:34:23Z",
+  "261122389": "2026-11-17T22:19:26Z"
  }
 }
