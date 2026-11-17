@@ -1,38 +1,16 @@
 {
  "empty_streak": 0,
  "events": {
-  "261122276": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 0.2,
-   "customer_hours_observed": 5.248055555555555,
-   "customers": 1,
-   "etr": null,
-   "first_seen": "2026-11-17T03:04:31Z",
-   "id": "261122276",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-17T08:19:24Z",
-   "lat": 33.3968915910345,
-   "lon": -111.873861933411,
-   "max_gap_minutes": 15,
-   "peak_customers": 1,
-   "places": [
-    "S EVERGREEN  RD TO S LONGMORE   AND W 8TH  AVE TO W SOUTHERN  AVE"
-   ],
-   "start": "2026-11-17T02:52:54Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
   "261122288": {
    "cause": "We are investigating the cause of the outage.",
    "customer_hours_before_first_seen": 11.0,
-   "customer_hours_observed": 13.014444444444443,
+   "customer_hours_observed": 26.04333333333333,
    "customers": 52,
    "etr": null,
    "first_seen": "2026-11-17T08:04:23Z",
    "id": "261122288",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-17T08:19:24Z",
+   "last_seen": "2026-11-17T08:34:26Z",
    "lat": 33.40382462695875,
    "lon": -111.785932557756,
    "max_gap_minutes": 15,
@@ -127,6 +105,7 @@
   "261122215": "2026-11-16T20:49:23Z",
   "261122219": "2026-11-16T21:19:24Z",
   "261122240": "2026-11-16T23:48:28Z",
-  "261122262": "2026-11-17T07:19:23Z"
+  "261122262": "2026-11-17T07:19:23Z",
+  "261122276": "2026-11-17T08:34:26Z"
  }
 }
