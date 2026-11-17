@@ -1,6 +1,47 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "1543239": {
+   "cause": null,
+   "customer_hours_before_first_seen": 5.0,
+   "customer_hours_observed": 0.0,
+   "customers": 25,
+   "etr": null,
+   "first_seen": "2026-11-17T09:04:34Z",
+   "id": "1543239",
+   "kind": null,
+   "last_seen": "2026-11-17T09:04:34Z",
+   "lat": 35.05257,
+   "lon": -89.79918,
+   "max_gap_minutes": 0,
+   "peak_customers": 25,
+   "places": [],
+   "start": "2026-11-17T08:52:29Z",
+   "start_basis": "reported",
+   "status": "Trouble Shooter is determining repairs required",
+   "zips": []
+  },
+  "1543240": {
+   "cause": null,
+   "customer_hours_before_first_seen": 0.0,
+   "customer_hours_observed": 0.0,
+   "customers": 4,
+   "etr": null,
+   "first_seen": "2026-11-17T09:04:34Z",
+   "id": "1543240",
+   "kind": null,
+   "last_seen": "2026-11-17T09:04:34Z",
+   "lat": 35.12612,
+   "lon": -89.9054,
+   "max_gap_minutes": 0,
+   "peak_customers": 4,
+   "places": [],
+   "start": "2026-11-17T09:03:53Z",
+   "start_basis": "reported",
+   "status": "Waiting to be analyzed",
+   "zips": []
+  }
+ },
  "logged_recent": {
   "1542442": "2026-11-11T03:11:44Z",
   "1542447": "2026-11-11T02:26:34Z",
