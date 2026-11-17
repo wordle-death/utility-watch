@@ -287,12 +287,12 @@ def named_areas(counts):
 def attach_areas(advisories, counts, union=None):
     """Match map areas to advisories by date and name, then add people-hours.
 
-    union(keys) returns (people, housing_units) for several areas without
+    union(keys) returns (people, housing_units[, summed, households]) for several areas without
     counting overlapping blocks twice; without it, areas are summed.
     """
     by_key = {row["key"]: row for row in counts}
     for advisory in advisories:
-        advisory.update(area_keys=[], people=None, housing_units=None, upper_bound=False)
+        advisory.update(area_keys=[], people=None, housing_units=None, households=None, upper_bound=False)
     unmatched = []
     for row in counts:
         if not row.get("begin"):
@@ -319,12 +319,14 @@ def attach_areas(advisories, counts, union=None):
     for advisory in advisories:
         rows = [by_key[key] for key in advisory["area_keys"]]
         if len(rows) > 1 and union:
-            advisory["people"], advisory["housing_units"], *summed = union(advisory["area_keys"])
-            if summed and summed[0]:
+            advisory["people"], advisory["housing_units"], *rest = union(advisory["area_keys"])
+            if rest and rest[0]:
                 advisory["flags"].append("small_areas_summed_may_overlap")
+            advisory["households"] = rest[1] if len(rest) > 1 else None
         elif rows:
             advisory["people"] = sum(r["people"] for r in rows)
             advisory["housing_units"] = sum(r["housing_units"] for r in rows)
+            advisory["households"] = _households(rows)
             if len(rows) > 1:
                 advisory["flags"].append("multiple_areas_summed_may_overlap")
         else:
@@ -333,10 +335,12 @@ def attach_areas(advisories, counts, union=None):
             reused = [named[t]["key"] for t in NAMED_AREAS if whole and t in advisory["area_tokens"] and t in named]
             if reused:
                 if len(reused) > 1 and union:
-                    advisory["people"], advisory["housing_units"] = union(reused)[:2]
+                    advisory["people"], advisory["housing_units"], *rest = union(reused)
+                    advisory["households"] = rest[1] if len(rest) > 1 else None
                 else:
                     advisory["people"] = sum(by_key[k]["people"] for k in reused)
                     advisory["housing_units"] = sum(by_key[k]["housing_units"] for k in reused)
+                    advisory["households"] = _households([by_key[k] for k in reused])
                 advisory["area_reused_from"] = reused
                 advisory["flags"].append("area_from_named_area_lookup")
                 other = set(advisory["area_tokens"]) - set(NAMED_AREAS)
@@ -347,6 +351,9 @@ def attach_areas(advisories, counts, union=None):
         advisory["upper_bound"] = any(r["method"] != "blocks_inside" for r in rows)
         known = advisory["people"] is not None and advisory["hours"] is not None
         advisory["person_hours"] = round(advisory["people"] * advisory["hours"]) if known else None
+        # Occupied households (2020 Census), blank until the Census key has filled them in.
+        advisory["household_hours"] = (round(advisory["households"] * advisory["hours"])
+                                       if known and advisory.get("households") is not None else None)
     # Two advisories open at once can cover the same homes (New Orleans East inside an
     # East Bank advisory). Overlap between advisories is not removed, so flag both.
     timed = [a for a in advisories if a["people"] and a["hours"]]
@@ -365,10 +372,17 @@ def yearly_totals(advisories):
     """Person-hours by year issued, keeping measured areas apart from borrowed ones."""
     by_year = {}
     for advisory in advisories:
-        entry = by_year.setdefault(advisory["issued_at"][:4], {
-            "advisories": 0, "advisories_without_person_hours": 0, "person_hours": 0, "from_own_map": 0,
+        # The year in New Orleans, so a New Year's Eve evening advisory stays in its own year.
+        year = str(parse_iso(advisory["issued_at"]).astimezone(LOCAL).year)
+        entry = by_year.setdefault(year, {
+            "advisories": 0, "advisories_without_person_hours": 0, "person_hours": 0, "household_hours": 0,
+            "advisories_without_household_hours": 0, "from_own_map": 0,
             "from_named_area_lookup": 0, "from_advisories_with_an_upper_bound_area": 0})
         entry["advisories"] += 1
+        if advisory.get("household_hours") is None:
+            entry["advisories_without_household_hours"] += 1
+        else:
+            entry["household_hours"] += advisory["household_hours"]
         if advisory["person_hours"] is None:
             entry["advisories_without_person_hours"] += 1  # the year's total is incomplete
             continue
@@ -376,7 +390,16 @@ def yearly_totals(advisories):
         entry["from_own_map" if advisory["area_keys"] else "from_named_area_lookup"] += advisory["person_hours"]
         if advisory["upper_bound"]:
             entry["from_advisories_with_an_upper_bound_area"] += advisory["person_hours"]
+    for entry in by_year.values():
+        if entry["advisories_without_household_hours"] == entry["advisories"]:
+            entry["household_hours"] = None  # no household counts at all, not zero
     return dict(sorted(by_year.items()))
+
+
+def _households(rows):
+    """Occupied households across map areas, or None if any area lacks the count."""
+    values = [r.get("occupied_households") for r in rows]
+    return sum(values) if values and all(v is not None for v in values) else None
 
 
 def block_union(base, counts):
@@ -391,8 +414,12 @@ def block_union(base, counts):
     by_geoid = {b["geoid"]: b for b in blocks}
 
     def union(keys):
-        """(people, housing units, True if some small areas had to be summed without removing overlap)."""
-        inside, people, units, summed = {}, 0, 0, False
+        """(people, housing units, summed, occupied households).
+
+        summed is True if some small areas had to be added without removing overlap.
+        Households are None when any block or area lacks the occupied count.
+        """
+        inside, people, units, summed, occupied = {}, 0, 0, False, 0
         for key in keys:
             row = by_key[key]
             if row["method"] != "blocks_inside":
@@ -402,6 +429,8 @@ def block_union(base, counts):
                 else:
                     people += row["people"]
                     units += row["housing_units"]
+                    occupied = None if occupied is None or row.get("occupied_households") is None \
+                        else occupied + row["occupied_households"]
                     summed = True
                 continue
             if not geometry.get(key):
@@ -411,8 +440,12 @@ def block_union(base, counts):
                 if (b["geoid"] not in inside and box[0] <= b["lon"] <= box[2] and box[1] <= b["lat"] <= box[3]
                         and households.contains(geometry[key], b["lon"], b["lat"])):
                     inside[b["geoid"]] = b
+        if occupied is not None and all(b.get("occupied") is not None for b in inside.values()):
+            occupied += sum(b["occupied"] for b in inside.values())
+        else:
+            occupied = None
         return (people + sum(b["people"] for b in inside.values()),
-                units + sum(b["units"] for b in inside.values()), summed)
+                units + sum(b["units"] for b in inside.values()), summed, occupied)
 
     return union
 

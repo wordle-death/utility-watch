@@ -55,3 +55,11 @@ python -m collectors.run water
 ## Scheduled runs
 
 `collect-power.yml` runs every 15 minutes and `collect-water.yml` hourly; each commits any changes to `main`. `tests.yml` runs the tests on every pull request and checks the live feeds on every branch push.
+
+## Timing of scheduled runs
+
+GitHub's own scheduler ran these jobs hours apart, so a Cloudflare Worker (`utility-watch-cron`, free plan) starts `collect-power` every 15 minutes and `collect-water` hourly through GitHub's API. GitHub's schedule stays on as a fallback. The Worker's GitHub token expires 2027-11-11; `national.yml` fails with a reminder from October 2027.
+
+## Site
+
+`site/` is the React, Vite and Tailwind front end. `npm run build` in `site/` copies the figures one city page needs from `data/` into `site/src/data/` and builds the page; `npm run build:preview` makes a single self-contained file for private previews. The site is not published yet.

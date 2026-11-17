@@ -250,8 +250,8 @@ class ReleaseTests(unittest.TestCase):
                 {"key": "old", "method": "blocks_touching_upper_bound", "people": 7, "housing_units": 3},
             ]
             union = sr.block_union(Path(tmp), counts)
-            self.assertEqual(union(["x", "y"]), (300, 120, False))
-            self.assertEqual(union(["x", "old"]), (207, 83, True))  # no block list saved: summed and flagged
+            self.assertEqual(union(["x", "y"]), (300, 120, False, None))  # blocks carry no occupied count
+            self.assertEqual(union(["x", "old"]), (207, 83, True, None))  # no block list saved: summed and flagged
 
     def test_issue_title_without_a_place_takes_it_from_the_lift(self):
         advisories = sr.build_advisories([
@@ -297,6 +297,41 @@ class ReleaseTests(unittest.TestCase):
 
     def test_lift_for_part_of_a_named_area_is_partial(self):
         self.assertEqual(sr.classify("Precautionary Boil Water Advisory Lifted for East Bank of New Orleans West of the Industrial Canal And Lower Ninth Ward"), "partial_lift")
+
+    def test_households_follow_people_and_stay_blank_when_unknown(self):
+        def advisory():
+            return sr.build_advisories([
+                rel(1, "2026-10-22T13:02:00Z", "Precautionary Boil Water Advisory Issued for a portion of New Orleans East"),
+                rel(2, "2026-10-23T18:02:00Z", "Precautionary Boil Water Advisory Canceled for New Orleans East"),
+            ])
+        area = {"key": "a", "begin": "2026-10-22T05:00:00Z", "title": "NO East", "people": 1000, "housing_units": 500,
+                "method": "blocks_inside"}
+        with_count = advisory()
+        sr.attach_areas(with_count, [dict(area, occupied_households=400)])
+        self.assertEqual((with_count[0]["households"], with_count[0]["household_hours"]), (400, 400 * 29))
+        without = advisory()
+        sr.attach_areas(without, [area])
+        self.assertEqual((without[0]["households"], without[0]["household_hours"]), (None, None))
+        totals = sr.yearly_totals(with_count + without)["2026"]
+        self.assertEqual((totals["household_hours"], totals["advisories_without_household_hours"]), (400 * 29, 1))
+        # A year with no household counts at all reports none, not zero; uncounted advisories are included.
+        other = advisory()
+        sr.attach_areas(other, [area])
+        blank = sr.yearly_totals(without + other)["2026"]
+        self.assertEqual((blank["household_hours"], blank["advisories_without_household_hours"]), (None, 2))
+        # Several areas: the union's fourth value is the household count.
+        several = advisory()
+        two = [dict(area, key=k, occupied_households=400) for k in ("a", "b")]
+        sr.attach_areas(several, two, union=lambda keys: (1500, 700, False, 650))
+        self.assertEqual((several[0]["people"], several[0]["households"]), (1500, 650))
+
+    def test_year_is_new_orleans_time(self):
+        late = sr.build_advisories([
+            rel(1, "2025-01-01T03:00:00Z", "Precautionary Boil Water Advisory Issued for Venetian Isles"),
+            rel(2, "2025-01-02T03:00:00Z", "Precautionary Boil Water Advisory Lifted for Venetian Isles"),
+        ])
+        sr.attach_areas(late, [])
+        self.assertEqual(list(sr.yearly_totals(late)), ["2024"])  # 9 p.m. on Dec 31 in New Orleans
 
     def test_areas_and_person_hours(self):
         advisories = sr.build_advisories([

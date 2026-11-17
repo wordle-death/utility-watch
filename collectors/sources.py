@@ -45,6 +45,10 @@ def parse_entergy(payload):
                 "cause": item.get("cause") or None,
                 "status": item.get("status"),
                 "kind": item.get("type"),
+                "planned": item.get("type") == "PLANNED_OUTAGE",
+                # Planned work is listed ahead of time as SCHEDULED; power is not off until it is IN PROGRESS.
+                "pending": item.get("type") == "PLANNED_OUTAGE"
+                and str(item.get("status") or "").strip().upper() == "SCHEDULED",
                 "lat": item.get("latitude"),
                 "lon": item.get("longitude"),
             }
@@ -73,6 +77,7 @@ def _idaho_item(item):
         "cause": first_key(item, "probableCauseCodeDisplayName", "cause"),
         "status": first_key(item, "energizationStatusDisplayName", "outageStatusDisplayName"),
         "kind": "PLANNED" if item.get("isPlannedOutage") else "UNPLANNED",
+        "planned": bool(item.get("isPlannedOutage")),
         "lat": first_key(item, "latitude", "lat"),
         "lon": first_key(item, "longitude", "lon", "lng"),
         "zips": item.get("outageZipNumbers") or [],
@@ -95,6 +100,7 @@ def parse_idaho_current(payload):
                 "cause": item.get("probableCause"),
                 "status": item.get("omsStatusDescription"),
                 "kind": "PLANNED" if item.get("isPlannedOutage") else "UNPLANNED",
+                "planned": bool(item.get("isPlannedOutage")),
                 "lat": item.get("latitude"),
                 "lon": item.get("longitude"),
                 "zips": [z.get("outageZipName") for z in item.get("outageZip") or [] if z.get("outageZipName")],
@@ -174,6 +180,7 @@ def parse_srp(payload):
                 "cause": item.get("outageProblem"),
                 "status": None,
                 "kind": "PLANNED" if item.get("isMaintenanceOutage") else "UNPLANNED",
+                "planned": bool(item.get("isMaintenanceOutage")),
                 "lat": lat,
                 "lon": lon,
                 "places": [item["crossRoadText"].strip()] if item.get("crossRoadText") else [],

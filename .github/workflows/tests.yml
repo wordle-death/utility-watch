@@ -40,3 +40,26 @@ jobs:
       - run: python -m collectors.swbno_releases --dry-run
       - run: pip install -q -r national/requirements.txt
       - run: python -m national.reliability --inspect
+      # Confirm the hosting credentials work, without deploying anything.
+      - name: Check Cloudflare credentials
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          python - <<'PY'
+          import json, os, urllib.request, urllib.error
+          token, account = os.environ.get("CLOUDFLARE_API_TOKEN"), os.environ.get("CLOUDFLARE_ACCOUNT_ID")
+          if not token or not account:
+              raise SystemExit("Cloudflare secrets are not set")
+          def get(path):
+              request = urllib.request.Request("https://api.cloudflare.com/client/v4" + path,
+                                               headers={"Authorization": "Bearer " + token})
+              try:
+                  return json.load(urllib.request.urlopen(request, timeout=30))
+              except urllib.error.HTTPError as exc:
+                  raise SystemExit(f"{path.split('/')[1]} check failed: HTTP {exc.code} {exc.read()[:200]!r}")
+          print("token status:", get("/user/tokens/verify")["result"]["status"])
+          scripts = get(f"/accounts/{account}/workers/scripts")["result"]
+          print("account reachable; Workers on it:", sorted(s["id"] for s in scripts))
+          PY
+

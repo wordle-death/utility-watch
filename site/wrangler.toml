@@ -1,0 +1,7 @@
+# Static site on Cloudflare Workers (free plan): the built pages in dist/ are served as-is.
+name = "utility-watch"
+compatibility_date = "2026-10-01"
+
+[assets]
+directory = "./dist"
+not_found_handling = "single-page-application"

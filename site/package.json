@@ -1,0 +1,22 @@
+{
+  "name": "utility-watch-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "snapshot": "node scripts/snapshot.mjs",
+    "dev": "npm run snapshot && vite",
+    "build": "npm run snapshot && vite build",
+    "build:preview": "npm run snapshot && SINGLE_FILE=1 vite build --outDir dist-preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.5",
+    "@vitejs/plugin-react": "^4.7.0",
+    "tailwindcss": "^4.3.5",
+    "vite": "^6.4.6",
+    "vite-plugin-singlefile": "^2.3.4"
+  }
+}

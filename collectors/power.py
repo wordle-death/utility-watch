@@ -19,6 +19,17 @@ Safeguards:
 - A snapshot that suddenly shows nothing while several outages were open is
   held for one run before anything is closed, so a feed hiccup does not close
   and later reopen every outage.
+
+Planned work: a feed may list maintenance before it begins (an event with
+"pending" set). Nothing is counted while it is pending. For work first seen
+pending, customer-hours and duration count only time in progress, with the
+switch between pending and in progress placed at the midpoint between runs,
+and a listing that vanishes without ever being seen in progress is logged
+with zero customer-hours. Work first seen already in progress is treated like
+any other outage, including hours estimated back to its listed start.
+Records saved before this rule existed are migrated on their next run; a
+migrated record that is still pending has its earlier hours set to zero and
+is flagged.
 """
 
 from collections import defaultdict
@@ -44,6 +55,7 @@ def _hours(later, earlier):
 def _new_record(event, now):
     start = event.get("start")
     customers = event.get("customers", 0)
+    pending = bool(event.get("pending"))
     return {
         "id": event["id"],
         "start": iso(start) or iso(now),
@@ -54,8 +66,15 @@ def _new_record(event, now):
         "peak_customers": customers,
         # Hours between the reported start and the first run that saw it,
         # at the first count seen. Kept apart from hours actually observed.
-        "customer_hours_before_first_seen": round(customers * _hours(now, start), 1) if start else 0.0,
+        "customer_hours_before_first_seen": round(customers * _hours(now, start), 1) if start and not pending else 0.0,
         "customer_hours_observed": 0.0,
+        "planned": event.get("planned"),  # True, False, or None when the feed does not say
+        "pending": pending,
+        # Listed in advance: duration is then the time in progress, not the time since first seen.
+        "opened_pending": pending,
+        **({"in_progress_hours": 0.0} if pending else {}),
+        # First run that saw the outage actually under way (for planned work listed in advance).
+        "in_progress_first_seen": None if pending else iso(now),
         "max_gap_minutes": 0,
         "cause": event.get("cause"),
         "status": event.get("status"),
@@ -68,12 +87,44 @@ def _new_record(event, now):
     }
 
 
+def _was_listed_in_advance(record):
+    """An older record whose last saved state was planned work not yet started (Entergy's SCHEDULED)."""
+    return (record.get("kind") == "PLANNED_OUTAGE"
+            and str(record.get("status") or "").strip().upper() == "SCHEDULED")
+
+
+def _migrate(record, planned, pending_now=False):
+    """Bring a record saved before planned work was tracked up to date.
+
+    Uses the state saved on the previous run. If the work was still only listed
+    then, the hours the older code added were not outage time: they are reset and
+    the record is treated as listed in advance from now on. The same applies when
+    the work is still only listed on this run.
+    """
+    record["migrated_from_older_record"] = True
+    record["planned"] = planned if planned is not None else (True if record.get("kind") == "PLANNED_OUTAGE" else None)
+    if _was_listed_in_advance(record) or pending_now:
+        record.update(planned=True, pending=True, opened_pending=True, in_progress_hours=0.0,
+                      in_progress_first_seen=None, customer_hours_observed=0.0, customer_hours_before_first_seen=0.0)
+    else:
+        record.update(pending=False, opened_pending=False)
+        if record["planned"]:
+            # Planned work already under way when saved: its hours may include time it was only scheduled.
+            record["hours_may_include_scheduled_time"] = True
+
+
 def _close(record, end, basis):
     record = dict(record)
     record["end"] = iso(end)
     record["end_basis"] = basis
     start = parse_iso(record["start"])
     record["duration_hours"] = round(_hours(end, start), 2) if start else None
+    if record.get("opened_pending"):
+        # Listed in advance: the listed start is the window's start, not when power went off.
+        record["in_progress_hours"] = round(record.get("in_progress_hours", 0.0), 2)
+        record["duration_hours"] = record["in_progress_hours"]
+    else:
+        record.pop("in_progress_hours", None)  # only meaningful for work listed in advance
     record["customer_hours_observed"] = round(record["customer_hours_observed"], 1)
     record["customer_hours"] = round(
         record["customer_hours_observed"] + record.get("customer_hours_before_first_seen", 0), 1
@@ -126,8 +177,23 @@ def update(source_key, events, now, restored=None):
             opened += 1
             continue
         last_seen = parse_iso(record["last_seen"])
-        record["customer_hours_observed"] += record["customers"] * _hours(now, last_seen)
-        record["max_gap_minutes"] = max(record["max_gap_minutes"], round(_hours(now, last_seen) * 60))
+        pending = bool(event.get("pending"))
+        if "pending" not in record and ("pending" in event or _was_listed_in_advance(record)):
+            _migrate(record, event.get("planned"), pending_now=pending)
+        gap = _hours(now, last_seen)
+        if record.get("opened_pending"):
+            # Listed in advance: count time in progress only, half the gap when the state changed between runs.
+            was = bool(record.get("pending"))
+            counted = gap if not was and not pending else 0.0 if was and pending else gap / 2
+            record["in_progress_hours"] = record.get("in_progress_hours", 0.0) + counted
+        else:
+            counted = gap  # every other outage counts as before
+        record["customer_hours_observed"] += record["customers"] * counted
+        record["max_gap_minutes"] = max(record["max_gap_minutes"], round(gap * 60))
+        if "in_progress_first_seen" in record and record["in_progress_first_seen"] is None and not pending:
+            record["in_progress_first_seen"] = iso(now)
+        if "pending" in record:
+            record["pending"] = pending
         customers = event.get("customers", 0)
         record.update(
             last_seen=iso(now),
@@ -140,6 +206,8 @@ def update(source_key, events, now, restored=None):
 
     for event_id in [i for i in active if i not in seen]:
         record = active.pop(event_id)
+        if "pending" not in record and _was_listed_in_advance(record):
+            _migrate(record, None)  # gone on the first run after the change, still only listed
         last_seen = parse_iso(record["last_seen"])
         reported = restored_by_id.get(event_id)
         if reported and reported.get("end"):
@@ -150,7 +218,11 @@ def update(source_key, events, now, restored=None):
             end, basis = last_seen + (now - last_seen) / 2, "midpoint_estimate"
             record["end_window"] = [record["last_seen"], iso(now)]
             record["max_gap_minutes"] = max(record["max_gap_minutes"], round(_hours(now, last_seen) * 60))
-        record["customer_hours_observed"] += record["customers"] * _hours(end, last_seen)
+        # Only work listed in advance skips the final stretch while it is pending; everything else counts as before.
+        if not record.get("opened_pending") or not record.get("pending"):
+            record["customer_hours_observed"] += record["customers"] * _hours(end, last_seen)
+            if record.get("opened_pending"):
+                record["in_progress_hours"] = record.get("in_progress_hours", 0.0) + _hours(end, last_seen)
         closed.append(_close(record, end, basis))
         logged_recent[event_id] = iso(now)
 
@@ -160,8 +232,9 @@ def update(source_key, events, now, restored=None):
         end = reported.get("end")
         if not end or end < cutoff or event_id in logged_recent or event_id in active:
             continue
-        record = _new_record(reported, now)
-        record.update(first_seen=None, last_seen=None, customer_hours_before_first_seen=0.0)
+        record = _new_record(dict(reported, pending=False), now)
+        record.update(first_seen=None, last_seen=None, customer_hours_before_first_seen=0.0,
+                      in_progress_first_seen=record["start"], opened_pending=False)
         closed_record = _close(record, end, "reported")
         # Never observed open: estimate from the reported duration instead.
         closed_record["customer_hours"] = round(reported.get("customers", 0) * (closed_record["duration_hours"] or 0), 1)
