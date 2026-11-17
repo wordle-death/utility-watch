@@ -108,6 +108,9 @@ def _migrate(record, planned, pending_now=False):
                       in_progress_first_seen=None, customer_hours_observed=0.0, customer_hours_before_first_seen=0.0)
     else:
         record.update(pending=False, opened_pending=False)
+        if record["planned"]:
+            # Planned work already under way when saved: its hours may include time it was only scheduled.
+            record["hours_may_include_scheduled_time"] = True
 
 
 def _close(record, end, basis):
@@ -215,7 +218,8 @@ def update(source_key, events, now, restored=None):
             end, basis = last_seen + (now - last_seen) / 2, "midpoint_estimate"
             record["end_window"] = [record["last_seen"], iso(now)]
             record["max_gap_minutes"] = max(record["max_gap_minutes"], round(_hours(now, last_seen) * 60))
-        if not record.get("pending"):
+        # Only work listed in advance skips the final stretch while it is pending; everything else counts as before.
+        if not record.get("opened_pending") or not record.get("pending"):
             record["customer_hours_observed"] += record["customers"] * _hours(end, last_seen)
             if record.get("opened_pending"):
                 record["in_progress_hours"] = record.get("in_progress_hours", 0.0) + _hours(end, last_seen)

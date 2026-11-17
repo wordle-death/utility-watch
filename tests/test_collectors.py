@@ -230,6 +230,23 @@ class PowerTests(TempData):
         self.assertNotIn("migrated_from_older_record", row)
         self.assertNotIn("in_progress_hours", row)
 
+    def test_work_seen_in_progress_then_pending_counts_as_before(self):
+        start, hour = T0 - timedelta(hours=5), timedelta(hours=1)
+        power.update("x", [dict(outage(2, 100, start), planned=True, pending=False)], T0)
+        power.update("x", [dict(outage(2, 100, start), planned=True, pending=True)], T0 + hour)
+        power.update("x", [], T0 + 2 * hour)
+        row = self.log("x")[0]
+        self.assertEqual((row["customer_hours"], row["duration_hours"]), (650.0, 6.5))
+
+    def test_older_planned_record_in_progress_is_flagged(self):
+        start = T0 - timedelta(hours=5)
+        power.update("x", [outage(3, 100, start)], T0)
+        self._older(3, "PLANNED_OUTAGE", "IN PROGRESS")
+        started = dict(outage(3, 100, start), planned=True, pending=False)
+        power.update("x", [started], T0 + timedelta(hours=1))
+        power.update("x", [], T0 + timedelta(hours=2))
+        self.assertTrue(self.log("x")[0]["hours_may_include_scheduled_time"])
+
     def test_entergy_scheduled_work_is_pending(self):
         base = {"id": 5, "startTime": 1793800800000, "numPeople": 14, "latitude": 30.0, "longitude": -90.0}
         scheduled, started, unplanned = sources.parse_entergy([

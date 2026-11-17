@@ -176,6 +176,8 @@ def build(features, blocks, previous=None, touching=touching_geoids):
         if reusable:
             counts = {k: old[k] for k in ("people", "housing_units", "occupied_households", "blocks", "method",
                                           "block_geoids", "occupied_rule") if k in old}
+            if not have_occupancy:
+                counts["occupied_households"] = None
         else:
             counts = count_inside(feature.get("geometry"), blocks)
             counts["method"] = "blocks_inside"

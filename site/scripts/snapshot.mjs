@@ -37,7 +37,7 @@ const active = Object.values(read(data("power", source, "active.json")).events |
 // those records lack in_progress_first_seen, and their hours are left out.
 const isPlanned = (e) => e.planned === true || e.kind === "PLANNED_OUTAGE";
 // Planned records logged by the older collector (no "pending" field) carry hours counted while only scheduled.
-const hoursTrusted = (e) => !isPlanned(e) || "pending" in e;
+const hoursTrusted = (e) => !isPlanned(e) || ("pending" in e && !e.hours_may_include_scheduled_time);
 // Planned work that vanished without ever being seen under way was never an outage.
 const neverStarted = (e) => (e.opened_pending === true && !(e.in_progress_hours > 0))
   || (isPlanned(e) && !("pending" in e) && String(e.status || "").toUpperCase() === "SCHEDULED");
