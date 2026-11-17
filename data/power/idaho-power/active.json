@@ -1,6 +1,115 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "2600001886": {
+   "cause": "Weather",
+   "customer_hours_before_first_seen": 3.1,
+   "customer_hours_observed": 541.4272222222222,
+   "customers": 144,
+   "etr": "2026-11-17T15:30:00Z",
+   "first_seen": "2026-11-17T10:04:23Z",
+   "id": "2600001886",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-17T13:49:31Z",
+   "lat": 42.57143975,
+   "lon": -114.89618983,
+   "max_gap_minutes": 15,
+   "peak_customers": 269,
+   "places": [
+    "BUHL"
+   ],
+   "start": "2026-11-17T09:49:00Z",
+   "start_basis": "reported",
+   "status": "On-site",
+   "zips": [
+    "83316"
+   ]
+  },
+  "2600001916": {
+   "cause": "Weather",
+   "customer_hours_before_first_seen": 554.3,
+   "customer_hours_observed": 3267.626666666667,
+   "customers": 2176,
+   "etr": "2026-11-17T15:00:00Z",
+   "first_seen": "2026-11-17T12:19:25Z",
+   "id": "2600001916",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-17T13:49:31Z",
+   "lat": 42.92124844,
+   "lon": -114.95270206,
+   "max_gap_minutes": 15,
+   "peak_customers": 2176,
+   "places": [
+    "BLISS",
+    "GOODING",
+    "HAGERMAN",
+    "KING HILL"
+   ],
+   "start": "2026-11-17T12:04:08Z",
+   "start_basis": "reported",
+   "status": "On-site",
+   "zips": [
+    "83314",
+    "83330",
+    "83332",
+    "83633"
+   ]
+  },
+  "2600001917": {
+   "cause": "Weather",
+   "customer_hours_before_first_seen": 203.6,
+   "customer_hours_observed": 1249.3866666666665,
+   "customers": 832,
+   "etr": "2026-11-17T14:00:00Z",
+   "first_seen": "2026-11-17T12:19:25Z",
+   "id": "2600001917",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-17T13:49:31Z",
+   "lat": 42.52184967,
+   "lon": -114.26791352,
+   "max_gap_minutes": 15,
+   "peak_customers": 832,
+   "places": [
+    "EDEN",
+    "HANSEN",
+    "KIMBERLY",
+    "MURTAUGH"
+   ],
+   "start": "2026-11-17T12:04:44Z",
+   "start_basis": "reported",
+   "status": "On-site",
+   "zips": [
+    "83325",
+    "83334",
+    "83341",
+    "83344"
+   ]
+  },
+  "2600001919": {
+   "cause": "Equipment Issue",
+   "customer_hours_before_first_seen": 2.2,
+   "customer_hours_observed": 2.771388888888889,
+   "customers": 268,
+   "etr": "2026-11-17T15:00:00Z",
+   "first_seen": "2026-11-17T13:34:24Z",
+   "id": "2600001919",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-17T13:49:31Z",
+   "lat": 43.66504079,
+   "lon": -116.62613131,
+   "max_gap_minutes": 15,
+   "peak_customers": 268,
+   "places": [
+    "CALDWELL"
+   ],
+   "start": "2026-11-17T13:22:27Z",
+   "start_basis": "reported",
+   "status": "Assigned",
+   "zips": [
+    "83605"
+   ]
+  }
+ },
  "logged_recent": {
   "2600000353": "2026-11-11T23:38:23Z",
   "2600000462": "2026-11-12T18:34:24Z",
@@ -89,6 +198,10 @@
   "2600001848": "2026-11-16T23:34:22Z",
   "2600001852": "2026-11-16T21:34:24Z",
   "2600001855": "2026-11-16T23:19:23Z",
-  "2600001862": "2026-11-16T23:48:28Z"
+  "2600001862": "2026-11-16T23:48:28Z",
+  "2600001881": "2026-11-17T08:34:26Z",
+  "2600001884": "2026-11-17T11:19:28Z",
+  "2600001888": "2026-11-17T12:49:31Z",
+  "2600001904": "2026-11-17T10:49:25Z"
  }
 }
