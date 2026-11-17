@@ -4,13 +4,13 @@
   "1543239": {
    "cause": null,
    "customer_hours_before_first_seen": 5.0,
-   "customer_hours_observed": 31.17361111111111,
+   "customer_hours_observed": 37.43055555555556,
    "customers": 25,
    "etr": null,
    "first_seen": "2026-11-17T09:04:34Z",
    "id": "1543239",
    "kind": null,
-   "last_seen": "2026-11-17T10:19:23Z",
+   "last_seen": "2026-11-17T10:34:24Z",
    "lat": 35.05257,
    "lon": -89.79918,
    "max_gap_minutes": 15,
@@ -18,7 +18,7 @@
    "places": [],
    "start": "2026-11-17T08:52:29Z",
    "start_basis": "reported",
-   "status": "Trouble Shooter is determining repairs required",
+   "status": "Waiting to be analyzed",
    "zips": []
   }
  },
