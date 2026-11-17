@@ -127,6 +127,55 @@ class PowerTests(TempData):
         self.assertEqual(row["end"], common.iso(T0 + timedelta(hours=1, minutes=30)))
         self.assertEqual(row["duration_hours"], 2.0)
 
+    def test_planned_work_counts_only_while_in_progress(self):
+        start, hour = T0 - timedelta(hours=3), timedelta(hours=1)
+        def planned(pending):
+            return dict(outage(7, 100, start), planned=True, pending=pending)
+        power.update("x", [planned(True)], T0)             # listed ahead of time
+        power.update("x", [planned(True)], T0 + hour)      # still only scheduled
+        power.update("x", [planned(False)], T0 + 2 * hour)  # crew has started
+        power.update("x", [planned(False)], T0 + 3 * hour)
+        power.update("x", [], T0 + 4 * hour)
+        row = self.log("x")[0]
+        # One observed hour in progress, plus half of the final gap; nothing while scheduled.
+        self.assertEqual((row["customer_hours_observed"], row["customer_hours"]), (150.0, 150.0))
+        self.assertEqual(row["customer_hours_before_first_seen"], 0.0)
+        self.assertEqual(row["in_progress_first_seen"], common.iso(T0 + 2 * hour))
+        self.assertEqual(row["duration_hours"], 1.5)
+        self.assertTrue(row["planned"])
+
+    def test_planned_work_never_seen_in_progress_counts_nothing(self):
+        start = T0 - timedelta(hours=3)
+        listing = dict(outage(8, 97, start), planned=True, pending=True)
+        power.update("x", [listing], T0)
+        power.update("x", [listing], T0 + timedelta(hours=10))
+        power.update("x", [], T0 + timedelta(hours=11))
+        row = self.log("x")[0]
+        self.assertEqual((row["customer_hours"], row["duration_hours"], row["in_progress_first_seen"]), (0.0, 0.0, None))
+
+    def test_entergy_scheduled_work_is_pending(self):
+        base = {"id": 5, "startTime": 1793800800000, "numPeople": 14, "latitude": 30.0, "longitude": -90.0}
+        scheduled, started, unplanned = sources.parse_entergy([
+            dict(base, type="PLANNED_OUTAGE", status="SCHEDULED"),
+            dict(base, id=6, type="PLANNED_OUTAGE", status="IN PROGRESS"),
+            dict(base, id=7, status="Outage Reported"),
+        ])
+        self.assertEqual((scheduled["planned"], scheduled["pending"]), (True, True))
+        self.assertEqual((started["planned"], started["pending"]), (True, False))
+        self.assertEqual((unplanned["planned"], unplanned["pending"]), (False, False))
+
+    def test_outage_open_before_this_change_keeps_counting(self):
+        # A record saved by the older collector has no "pending" field.
+        start = T0 - timedelta(minutes=30)
+        power.update("x", [outage(1, 100, start)], T0)
+        state = common.read_json(common.DATA / "power" / "x" / "active.json", {})
+        for key in ("pending", "planned", "in_progress_first_seen"):
+            state["events"]["1"].pop(key)
+        common.write_json(common.DATA / "power" / "x" / "active.json", state)
+        power.update("x", [outage(1, 100, start)], T0 + timedelta(hours=1))
+        power.update("x", [], T0 + timedelta(hours=2))
+        self.assertEqual(self.log("x")[0]["customer_hours"], 200.0)
+
     def test_future_planned_outage_is_ignored(self):
         summary = power.update("x", [outage(1, 50, T0 + timedelta(days=2))], T0)
         self.assertEqual(summary["active"], 0)

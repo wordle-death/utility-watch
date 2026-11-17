@@ -19,6 +19,11 @@ Safeguards:
 - A snapshot that suddenly shows nothing while several outages were open is
   held for one run before anything is closed, so a feed hiccup does not close
   and later reopen every outage.
+
+Planned work: a feed may list maintenance before it begins (an event with
+"pending" set). Nothing is counted while it is pending. Customer-hours start
+at the first run that sees the work in progress, and a listing that vanishes
+without ever being seen in progress is logged with zero customer-hours.
 """
 
 from collections import defaultdict
@@ -44,6 +49,7 @@ def _hours(later, earlier):
 def _new_record(event, now):
     start = event.get("start")
     customers = event.get("customers", 0)
+    pending = bool(event.get("pending"))
     return {
         "id": event["id"],
         "start": iso(start) or iso(now),
@@ -54,8 +60,12 @@ def _new_record(event, now):
         "peak_customers": customers,
         # Hours between the reported start and the first run that saw it,
         # at the first count seen. Kept apart from hours actually observed.
-        "customer_hours_before_first_seen": round(customers * _hours(now, start), 1) if start else 0.0,
+        "customer_hours_before_first_seen": round(customers * _hours(now, start), 1) if start and not pending else 0.0,
         "customer_hours_observed": 0.0,
+        "planned": event.get("planned"),  # True, False, or None when the feed does not say
+        "pending": pending,
+        # First run that saw the outage actually under way (for planned work listed in advance).
+        "in_progress_first_seen": None if pending else iso(now),
         "max_gap_minutes": 0,
         "cause": event.get("cause"),
         "status": event.get("status"),
@@ -74,6 +84,13 @@ def _close(record, end, basis):
     record["end_basis"] = basis
     start = parse_iso(record["start"])
     record["duration_hours"] = round(_hours(end, start), 2) if start else None
+    if "in_progress_first_seen" in record:
+        if record["in_progress_first_seen"] is None:
+            # Listed in advance and gone before any run saw it under way.
+            record["duration_hours"] = 0.0
+        elif record.get("planned") and record["in_progress_first_seen"] != record.get("first_seen"):
+            # Listed in advance: the listed start is the window's start, not when power went off.
+            record["duration_hours"] = round(_hours(end, parse_iso(record["in_progress_first_seen"])), 2)
     record["customer_hours_observed"] = round(record["customer_hours_observed"], 1)
     record["customer_hours"] = round(
         record["customer_hours_observed"] + record.get("customer_hours_before_first_seen", 0), 1
@@ -126,8 +143,14 @@ def update(source_key, events, now, restored=None):
             opened += 1
             continue
         last_seen = parse_iso(record["last_seen"])
-        record["customer_hours_observed"] += record["customers"] * _hours(now, last_seen)
+        pending = bool(event.get("pending"))
+        if not record.get("pending"):
+            record["customer_hours_observed"] += record["customers"] * _hours(now, last_seen)
         record["max_gap_minutes"] = max(record["max_gap_minutes"], round(_hours(now, last_seen) * 60))
+        if "in_progress_first_seen" in record and record["in_progress_first_seen"] is None and not pending:
+            record["in_progress_first_seen"] = iso(now)
+        if "pending" in record:
+            record["pending"] = pending
         customers = event.get("customers", 0)
         record.update(
             last_seen=iso(now),
@@ -150,7 +173,8 @@ def update(source_key, events, now, restored=None):
             end, basis = last_seen + (now - last_seen) / 2, "midpoint_estimate"
             record["end_window"] = [record["last_seen"], iso(now)]
             record["max_gap_minutes"] = max(record["max_gap_minutes"], round(_hours(now, last_seen) * 60))
-        record["customer_hours_observed"] += record["customers"] * _hours(end, last_seen)
+        if not record.get("pending"):
+            record["customer_hours_observed"] += record["customers"] * _hours(end, last_seen)
         closed.append(_close(record, end, basis))
         logged_recent[event_id] = iso(now)
 

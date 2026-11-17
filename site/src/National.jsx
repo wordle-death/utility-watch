@@ -17,11 +17,18 @@ const SORTS = {
 };
 const PAGE = 40;
 
+function ordinal(n) {
+  const tail = n % 100 >= 11 && n % 100 <= 13 ? "th" : ["th", "st", "nd", "rd"][n % 10] || "th";
+  return `${n}${tail}`;
+}
+
 function standing(u, measure) {
   const better = u[`better_${measure}`];
   if (u[measure] == null) return { text: "Not reported" };
   if (better == null) return { text: u.ieee ? "Too small to rank" : "Own method; not ranked" };
-  return { better, text: `${whole(better)}% did better` };
+  // Percentile where higher is better: the share of comparable utilities with as much or more outage time.
+  const percentile = Math.min(99, Math.max(1, Math.round(100 - better)));
+  return { better, text: ordinal(percentile) };
 }
 
 export default function National() {
@@ -104,7 +111,7 @@ export default function National() {
           <table>
             <thead>
               <tr><th>Utility</th><th>State</th><th>Type</th><th className="num">Customers</th>
-                <th className="num">Minutes, {data.latest_year}</th><th>Compared with other utilities</th></tr>
+                <th className="num">Minutes, {data.latest_year}</th><th>Reliability percentile</th></tr>
             </thead>
             <tbody>
               {rows.slice(0, shown).map((u) => {
@@ -119,10 +126,12 @@ export default function National() {
                     <td className="num">{whole(u.customers)}</td>
                     <td className="num">{u[measure] == null ? "–" : whole(u[measure])}</td>
                     <td style={{ minWidth: 190 }}>
-                      {s.better != null && (
-                        <div className="meter" aria-hidden="true"><i style={{ left: `${100 - s.better}%` }} /></div>
-                      )}
-                      <span className="small muted">{s.text}</span>
+                      {s.better != null ? (
+                        <div className="flex items-center gap-3">
+                          <span className="data" style={{ minWidth: "3.2em" }}>{s.text}</span>
+                          <div className="meter" style={{ flex: 1 }} aria-hidden="true"><i style={{ left: `${100 - s.better}%` }} /></div>
+                        </div>
+                      ) : <span className="small muted">{s.text}</span>}
                     </td>
                   </tr>
                 );
@@ -134,8 +143,8 @@ export default function National() {
         {rows.length > shown && (
           <div><button type="button" className="btn" onClick={() => setShown(shown + PAGE)}>Show {Math.min(PAGE, rows.length - shown)} more</button></div>
         )}
-        <p className="small muted">On the bar, further right is better: the marker shows the share of comparable utilities
-          with more outage time than this one.</p>
+        <p className="small muted">Higher is better. A utility in the 90th percentile had less outage time than 90% of
+          comparable utilities; one in the 10th had more than 90% of them.</p>
       </Section>
 
       <Section eyebrow="Method" title="How to read this">

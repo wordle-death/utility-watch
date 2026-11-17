@@ -135,16 +135,19 @@ const LINES = {
 
 function Power({ power, built }) {
   const [mode, setMode] = useState("without");
+  const [withPlanned, setWithPlanned] = useState(true);
   const latest = power.years[power.years.length - 1];
   const live = power.live;
   // A rolling week, so the totals mean the same thing whenever the page is read.
   const now = new Date(built).getTime();
   const days = Math.min(7, Math.max(1, Math.floor((now - new Date(live.collecting_since).getTime()) / 864e5)));
-  const recent = live.closed.filter((e) => e.end && now - new Date(e.end).getTime() <= days * 864e5);
+  const counted = (e) => withPlanned || !e.planned;
+  const recent = live.closed.filter((e) => counted(e) && e.end && now - new Date(e.end).getTime() <= days * 864e5);
+  const untrusted = recent.filter((e) => !e.hours_trusted).length;
   const recentHours = recent.reduce((sum, e) => sum + (e.customer_hours || 0), 0);
-  const open = [...live.active].sort((a, b) => (b.customers || 0) - (a.customers || 0));
-  const planned = open.filter((e) => e.kind === "PLANNED_OUTAGE");
-  const unplanned = open.filter((e) => e.kind !== "PLANNED_OUTAGE");
+  // Work that is listed but has not started is not an outage yet.
+  const open = live.active.filter((e) => counted(e) && !e.pending).sort((a, b) => (b.customers || 0) - (a.customers || 0));
+  const upcoming = live.active.filter((e) => e.pending);
   const customers = (list) => list.reduce((sum, e) => sum + (e.customers || 0), 0);
   const span = days === 7 ? "past 7 days" : days === 1 ? "past day" : `past ${days} days`;
   return (
@@ -194,13 +197,22 @@ function Power({ power, built }) {
         Entergy's outage map shows only what is out at this moment and keeps no history, so this project saves it every
         15 minutes.{days < 7 ? ` It has been saving for ${days} ${days === 1 ? "day" : "days"}; the weekly totals fill in once there is a full week.` : ""}
       </p>
+      <div className="seg" role="group" aria-label="Planned work" style={{ alignSelf: "flex-start" }}>
+        <button type="button" aria-pressed={withPlanned} onClick={() => setWithPlanned(true)}>Include planned work</button>
+        <button type="button" aria-pressed={!withPlanned} onClick={() => setWithPlanned(false)}>Unplanned only</button>
+      </div>
       <div className="grid gap-3 sm:grid-cols-3">
-        <Tile label="Customers in unplanned outages right now" figure={whole(customers(unplanned))}>
-          in {unplanned.length} {unplanned.length === 1 ? "outage" : "outages"}, as of {dayTime(live.last_success)} Central.
-          Planned work: {planned.length} listed, {whole(customers(planned))} customers
+        <Tile label="Customers without power right now" figure={whole(customers(open))}>
+          in {open.length} {open.length === 1 ? "outage" : "outages"}, as of {dayTime(live.last_success)} Central
+          {upcoming.length > 0 ? `. ${upcoming.length} planned jobs are listed but have not started` : ""}
         </Tile>
-        <Tile label={`Outages that ended, ${span}`} figure={whole(recent.length)}>planned work included</Tile>
-        <Tile label={`Customer-hours without power, ${span}`} figure={whole(recentHours)}>estimated from 15-minute snapshots</Tile>
+        <Tile label={`Outages that ended, ${span}`} figure={whole(recent.length)}>
+          {withPlanned ? "planned work included" : "planned work left out"}
+        </Tile>
+        <Tile label={`Customer-hours without power, ${span}`} figure={whole(recentHours)}>
+          estimated from 15-minute snapshots
+          {untrusted > 0 ? `; leaves out ${untrusted} planned jobs logged before planned work was timed properly` : ""}
+        </Tile>
       </div>
       {open.length > 0 && (
         <div className="panel scroll-x" style={{ padding: 0 }}>

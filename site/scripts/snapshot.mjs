@@ -33,9 +33,15 @@ const closed = existsSync(eventsDir)
       readFileSync(join(eventsDir, f), "utf8").split("\n").filter(Boolean).map((line) => JSON.parse(line)))
   : [];
 const active = Object.values(read(data("power", source, "active.json")).events || {});
+// Planned work logged before the collector learned to wait for "in progress" has inflated hours:
+// those records lack in_progress_first_seen, and their hours are left out.
+const isPlanned = (e) => e.planned === true || e.kind === "PLANNED_OUTAGE";
+const hoursTrusted = (e) => !isPlanned(e) || "in_progress_first_seen" in e;
 const slim = (e) => ({
+  planned: isPlanned(e), pending: e.pending === true || (isPlanned(e) && String(e.status || "").toUpperCase() === "SCHEDULED"),
+  hours_trusted: hoursTrusted(e),
   id: e.id, start: e.start, end: e.end || null, end_basis: e.end_basis || null,
-  customers: e.peak_customers ?? e.customers, customer_hours: e.customer_hours ?? null,
+  customers: e.peak_customers ?? e.customers, customer_hours: hoursTrusted(e) ? e.customer_hours ?? null : null,
   duration_hours: e.duration_hours ?? null, cause: e.cause, kind: e.kind, status: e.status,
   max_gap_minutes: e.max_gap_minutes, lat: e.lat, lon: e.lon,
 });
