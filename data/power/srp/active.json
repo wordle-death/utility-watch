@@ -1,29 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "261122297": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 0.1,
-   "customer_hours_observed": 0.5002777777777778,
-   "customers": 1,
-   "etr": null,
-   "first_seen": "2026-11-17T13:04:23Z",
-   "id": "261122297",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-17T13:34:24Z",
-   "lat": 33.28080833848,
-   "lon": -111.777216834664,
-   "max_gap_minutes": 15,
-   "peak_customers": 1,
-   "places": [
-    "S MUSTANG  DR TO S LINDSAY  RD AND E WILLIS  RD TO E GERMANN  RD"
-   ],
-   "start": "2026-11-17T12:57:16Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  }
- },
+ "events": {},
  "logged_recent": {
   "261121450": "2026-11-11T02:26:34Z",
   "261121466": "2026-11-11T03:11:44Z",
@@ -110,6 +87,7 @@
   "261122288": "2026-11-17T10:34:24Z",
   "261122290": "2026-11-17T13:04:23Z",
   "261122292": "2026-11-17T13:19:24Z",
-  "261122295": "2026-11-17T13:34:24Z"
+  "261122295": "2026-11-17T13:34:24Z",
+  "261122297": "2026-11-17T13:49:31Z"
  }
 }
