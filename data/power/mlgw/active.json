@@ -4,13 +4,13 @@
   "1543239": {
    "cause": null,
    "customer_hours_before_first_seen": 5.0,
-   "customer_hours_observed": 74.93055555555556,
+   "customer_hours_observed": 81.1875,
    "customers": 25,
    "etr": null,
    "first_seen": "2026-11-17T09:04:34Z",
    "id": "1543239",
    "kind": null,
-   "last_seen": "2026-11-17T12:04:24Z",
+   "last_seen": "2026-11-17T12:19:25Z",
    "lat": 35.05257,
    "lon": -89.79918,
    "max_gap_minutes": 15,
@@ -24,13 +24,13 @@
   "1543241": {
    "cause": null,
    "customer_hours_before_first_seen": 4.4,
-   "customer_hours_observed": 32.492777777777775,
+   "customer_hours_observed": 39.0,
    "customers": 26,
    "etr": null,
    "first_seen": "2026-11-17T10:49:25Z",
    "id": "1543241",
    "kind": null,
-   "last_seen": "2026-11-17T12:04:24Z",
+   "last_seen": "2026-11-17T12:19:25Z",
    "lat": 35.05321,
    "lon": -89.80128,
    "max_gap_minutes": 15,
@@ -41,24 +41,24 @@
    "status": "A crew is currently working on the problem",
    "zips": []
   },
-  "1543242": {
+  "1543243": {
    "cause": null,
-   "customer_hours_before_first_seen": 0.0,
-   "customer_hours_observed": 1.2497222222222222,
+   "customer_hours_before_first_seen": 0.2,
+   "customer_hours_observed": 0.0,
    "customers": 1,
    "etr": null,
-   "first_seen": "2026-11-17T10:49:25Z",
-   "id": "1543242",
+   "first_seen": "2026-11-17T12:19:25Z",
+   "id": "1543243",
    "kind": null,
-   "last_seen": "2026-11-17T12:04:24Z",
-   "lat": 35.27351,
-   "lon": -89.6925,
-   "max_gap_minutes": 15,
+   "last_seen": "2026-11-17T12:19:25Z",
+   "lat": 35.05115,
+   "lon": -90.00506,
+   "max_gap_minutes": 0,
    "peak_customers": 1,
    "places": [],
-   "start": "2026-11-17T10:48:47Z",
+   "start": "2026-11-17T12:08:51Z",
    "start_basis": "reported",
-   "status": "Customer Svc is working this single customer outage",
+   "status": "The extent of the outage has been determined",
    "zips": []
   }
  },
@@ -604,6 +604,7 @@
   "1543236": "2026-11-17T05:04:23Z",
   "1543237": "2026-11-17T07:04:24Z",
   "1543238": "2026-11-17T07:34:23Z",
-  "1543240": "2026-11-17T09:49:23Z"
+  "1543240": "2026-11-17T09:49:23Z",
+  "1543242": "2026-11-17T12:19:25Z"
  }
 }
