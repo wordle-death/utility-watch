@@ -372,22 +372,27 @@ def yearly_totals(advisories):
     """Person-hours by year issued, keeping measured areas apart from borrowed ones."""
     by_year = {}
     for advisory in advisories:
-        entry = by_year.setdefault(advisory["issued_at"][:4], {
+        # The year in New Orleans, so a New Year's Eve evening advisory stays in its own year.
+        year = str(parse_iso(advisory["issued_at"]).astimezone(LOCAL).year)
+        entry = by_year.setdefault(year, {
             "advisories": 0, "advisories_without_person_hours": 0, "person_hours": 0, "household_hours": 0,
             "advisories_without_household_hours": 0, "from_own_map": 0,
             "from_named_area_lookup": 0, "from_advisories_with_an_upper_bound_area": 0})
         entry["advisories"] += 1
-        if advisory["person_hours"] is None:
-            entry["advisories_without_person_hours"] += 1  # the year's total is incomplete
-            continue
-        entry["person_hours"] += advisory["person_hours"]
         if advisory.get("household_hours") is None:
             entry["advisories_without_household_hours"] += 1
         else:
             entry["household_hours"] += advisory["household_hours"]
+        if advisory["person_hours"] is None:
+            entry["advisories_without_person_hours"] += 1  # the year's total is incomplete
+            continue
+        entry["person_hours"] += advisory["person_hours"]
         entry["from_own_map" if advisory["area_keys"] else "from_named_area_lookup"] += advisory["person_hours"]
         if advisory["upper_bound"]:
             entry["from_advisories_with_an_upper_bound_area"] += advisory["person_hours"]
+    for entry in by_year.values():
+        if entry["advisories_without_household_hours"] == entry["advisories"]:
+            entry["household_hours"] = None  # no household counts at all, not zero
     return dict(sorted(by_year.items()))
 
 

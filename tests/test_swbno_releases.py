@@ -314,11 +314,24 @@ class ReleaseTests(unittest.TestCase):
         self.assertEqual((without[0]["households"], without[0]["household_hours"]), (None, None))
         totals = sr.yearly_totals(with_count + without)["2026"]
         self.assertEqual((totals["household_hours"], totals["advisories_without_household_hours"]), (400 * 29, 1))
+        # A year with no household counts at all reports none, not zero; uncounted advisories are included.
+        other = advisory()
+        sr.attach_areas(other, [area])
+        blank = sr.yearly_totals(without + other)["2026"]
+        self.assertEqual((blank["household_hours"], blank["advisories_without_household_hours"]), (None, 2))
         # Several areas: the union's fourth value is the household count.
         several = advisory()
         two = [dict(area, key=k, occupied_households=400) for k in ("a", "b")]
         sr.attach_areas(several, two, union=lambda keys: (1500, 700, False, 650))
         self.assertEqual((several[0]["people"], several[0]["households"]), (1500, 650))
+
+    def test_year_is_new_orleans_time(self):
+        late = sr.build_advisories([
+            rel(1, "2025-01-01T03:00:00Z", "Precautionary Boil Water Advisory Issued for Venetian Isles"),
+            rel(2, "2025-01-02T03:00:00Z", "Precautionary Boil Water Advisory Lifted for Venetian Isles"),
+        ])
+        sr.attach_areas(late, [])
+        self.assertEqual(list(sr.yearly_totals(late)), ["2024"])  # 9 p.m. on Dec 31 in New Orleans
 
     def test_areas_and_person_hours(self):
         advisories = sr.build_advisories([

@@ -143,8 +143,8 @@ export default function National() {
         {rows.length > shown && (
           <div><button type="button" className="btn" onClick={() => setShown(shown + PAGE)}>Show {Math.min(PAGE, rows.length - shown)} more</button></div>
         )}
-        <p className="small muted">Higher is better. A utility in the 90th percentile had less outage time than 90% of
-          comparable utilities; one in the 10th had more than 90% of them.</p>
+        <p className="small muted">Higher is better. A utility in the 90th percentile had as little outage time as, or
+          less than, about 90% of comparable utilities; one in the 10th had more than about 90% of them.</p>
       </Section>
 
       <Section eyebrow="Method" title="How to read this">

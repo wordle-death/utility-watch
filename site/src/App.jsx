@@ -18,6 +18,7 @@ function waterYears(byYear, builtAt) {
       year, advisories: e.advisories || 0, person_hours: e.person_hours || 0,
       from_own_map: e.from_own_map || 0, from_named_area_lookup: e.from_named_area_lookup || 0,
       incomplete: e.advisories_without_person_hours || 0, partial: year === thisYear,
+      upper: e.from_advisories_with_an_upper_bound_area || 0,
     });
   }
   return years;
@@ -139,10 +140,12 @@ function Power({ power, built }) {
   const latest = power.years[power.years.length - 1];
   const live = power.live;
   // A rolling week, so the totals mean the same thing whenever the page is read.
-  const now = new Date(built).getTime();
+  // Measured from the last successful snapshot, not from when the page was built.
+  const now = new Date(live.last_success || built).getTime();
   const days = Math.min(7, Math.max(1, Math.floor((now - new Date(live.collecting_since).getTime()) / 864e5)));
   const counted = (e) => withPlanned || !e.planned;
-  const recent = live.closed.filter((e) => counted(e) && e.end && now - new Date(e.end).getTime() <= days * 864e5);
+  const recent = live.closed.filter((e) => counted(e) && !e.never_started && e.end
+    && now - new Date(e.end).getTime() <= days * 864e5);
   const untrusted = recent.filter((e) => !e.hours_trusted).length;
   const recentHours = recent.reduce((sum, e) => sum + (e.customer_hours || 0), 0);
   // Work that is listed but has not started is not an outage yet.
@@ -207,11 +210,11 @@ function Power({ power, built }) {
           {upcoming.length > 0 ? `. ${upcoming.length} planned jobs are listed but have not started` : ""}
         </Tile>
         <Tile label={`Outages that ended, ${span}`} figure={whole(recent.length)}>
-          {withPlanned ? "planned work included" : "planned work left out"}
+          {withPlanned ? "planned work included" : "planned work left out"}; listings that never started are not counted
         </Tile>
-        <Tile label={`Customer-hours without power, ${span}`} figure={whole(recentHours)}>
-          estimated from 15-minute snapshots
-          {untrusted > 0 ? `; leaves out ${untrusted} planned jobs logged before planned work was timed properly` : ""}
+        <Tile label={`Customer-hours without power, outages that ended in the ${span}`} figure={whole(recentHours)}>
+          estimated from 15-minute snapshots, each outage's full length
+          {untrusted > 0 ? `. Leaves out ${untrusted} planned ${untrusted === 1 ? "job" : "jobs"} logged before planned work was timed properly` : ""}
         </Tile>
       </div>
       {open.length > 0 && (
@@ -242,6 +245,8 @@ function NewOrleans() {
   // Both rows use the last full year the power data covers, so water and power are on the same footing.
   const waterYear = years.find((y) => y.year === latest.year) || current;
   const powerHours = (latest.saidi_with * latest.customers) / 60;
+  // Say how many of the year's advisories are in the total when some could not be counted.
+  const counted = (y) => (y.incomplete ? ` ${y.advisories - y.incomplete} of ${y.advisories} advisories counted.` : "");
   const borrowedShare = Math.round((years.reduce((sum, y) => sum + y.from_named_area_lookup, 0)
     / years.reduce((sum, y) => sum + y.person_hours, 0)) * 100);
   return (
@@ -251,14 +256,14 @@ function NewOrleans() {
           <span className="eyebrow">Utility Watch · {city.city}</span>
           <h1>How often New Orleans loses power and safe water</h1>
           <p className="muted">Built from public records: the water board's own notices and maps, the power company's
-            federal filings and live outage map, and the Census. Data as of {dayTime(city.built_at)} Central.</p>
+            federal filings and live outage map, and the Census. Outage map as of {dayTime(city.power.live.last_success || city.built_at)} Central.</p>
         </div>
         <div className="flex flex-col gap-2">
           <span className="eyebrow">For the average resident, {latest.year}</span>
           <div className="grid gap-3 sm:grid-cols-3">
             <Tile label="Hours under a boil-water advisory, per resident" figure={whole(waterYear.person_hours / city.residents)}>
-              an average: some neighborhoods had none, others several days. {current.year} so far:{" "}
-              {whole(current.person_hours / city.residents)}
+              estimated average: some neighborhoods had none, others several days.{counted(waterYear)}{" "}
+              {current.year} so far: {whole(current.person_hours / city.residents)}
             </Tile>
             <Tile label="Minutes without power, per customer" figure={whole(latest.saidi_with)}>
               storms included; U.S. average {whole(latest.saidi_with_national_avg)}. Without major storms:{" "}
@@ -271,11 +276,13 @@ function NewOrleans() {
           <span className="eyebrow">For the whole city, {latest.year}</span>
           <div className="grid gap-3 sm:grid-cols-3">
             <Tile label="Hours residents spent under a boil-water advisory" figure={`${millions(waterYear.person_hours)}`}>
-              people in each advisory area × the hours it lasted, across {waterYear.advisories} advisories.{" "}
+              estimated: people in each advisory area × the hours it lasted.{counted(waterYear)}
+              {waterYear.upper ? ` ${millions(waterYear.upper)} comes from advisories that include a very small area, counted generously.` : ""}{" "}
               {current.year} so far: {millions(current.person_hours)}
             </Tile>
             <Tile label="Hours customers spent without power" figure={whole(Math.round(powerHours / 1000) * 1000)}>
-              minutes per customer × {whole(latest.customers)} customers, storms included
+              estimated from Entergy's federal filing: minutes per customer × {whole(latest.customers)} customers,
+              storms included
             </Tile>
             <Tile label="Cost to the city" figure="Not yet">method under review</Tile>
           </div>

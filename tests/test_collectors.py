@@ -137,11 +137,11 @@ class PowerTests(TempData):
         power.update("x", [planned(False)], T0 + 3 * hour)
         power.update("x", [], T0 + 4 * hour)
         row = self.log("x")[0]
-        # One observed hour in progress, plus half of the final gap; nothing while scheduled.
-        self.assertEqual((row["customer_hours_observed"], row["customer_hours"]), (150.0, 150.0))
+        # Half of the gap when it started, one observed hour, half of the final gap; nothing while scheduled.
+        self.assertEqual((row["customer_hours_observed"], row["customer_hours"]), (200.0, 200.0))
         self.assertEqual(row["customer_hours_before_first_seen"], 0.0)
         self.assertEqual(row["in_progress_first_seen"], common.iso(T0 + 2 * hour))
-        self.assertEqual(row["duration_hours"], 1.5)
+        self.assertEqual(row["duration_hours"], 2.0)
         self.assertTrue(row["planned"])
 
     def test_planned_work_never_seen_in_progress_counts_nothing(self):
@@ -152,6 +152,41 @@ class PowerTests(TempData):
         power.update("x", [], T0 + timedelta(hours=11))
         row = self.log("x")[0]
         self.assertEqual((row["customer_hours"], row["duration_hours"], row["in_progress_first_seen"]), (0.0, 0.0, None))
+
+    def test_planned_work_paused_again_counts_only_time_in_progress(self):
+        start, hour = T0 - timedelta(hours=3), timedelta(hours=1)
+        def planned(pending):
+            return dict(outage(9, 100, start), planned=True, pending=pending)
+        for h, pending in [(0, True), (1, False), (2, False), (3, True), (4, True)]:
+            power.update("x", [planned(pending)], T0 + h * hour)
+        power.update("x", [], T0 + 5 * hour)
+        row = self.log("x")[0]
+        # Half an hour, one hour, half an hour in progress: the duration matches the hours.
+        self.assertEqual((row["customer_hours"], row["duration_hours"]), (200.0, 2.0))
+
+    def test_restored_only_planned_outage_keeps_its_length(self):
+        # Idaho Power reports some outages only once restored; planned ones must not count as zero.
+        reported = dict(outage(3, 100, T0 - timedelta(hours=3)), planned=True, end=T0 - timedelta(hours=1))
+        power.update("x", [], T0, restored=[reported])
+        row = self.log("x")[0]
+        self.assertEqual((row["duration_hours"], row["customer_hours"]), (2.0, 200.0))
+        self.assertIsNone(row["in_progress_first_seen"])
+
+    def test_older_record_for_scheduled_work_is_reset(self):
+        start = T0 - timedelta(hours=3)
+        power.update("x", [outage(4, 100, start)], T0)  # saved by the older collector
+        path = common.DATA / "power" / "x" / "active.json"
+        state = common.read_json(path, {})
+        for key in ("pending", "planned", "in_progress_first_seen", "opened_pending", "in_progress_hours"):
+            state["events"]["4"].pop(key)
+        common.write_json(path, state)
+        listing = dict(outage(4, 100, start), planned=True, pending=True)
+        power.update("x", [listing], T0 + timedelta(hours=2))
+        power.update("x", [listing], T0 + timedelta(hours=3))
+        power.update("x", [], T0 + timedelta(hours=4))
+        row = self.log("x")[0]
+        self.assertEqual((row["customer_hours"], row["duration_hours"], row["planned"]), (0.0, 0.0, True))
+        self.assertTrue(row["migrated_from_older_record"])
 
     def test_entergy_scheduled_work_is_pending(self):
         base = {"id": 5, "startTime": 1793800800000, "numPeople": 14, "latitude": 30.0, "longitude": -90.0}
@@ -169,7 +204,7 @@ class PowerTests(TempData):
         start = T0 - timedelta(minutes=30)
         power.update("x", [outage(1, 100, start)], T0)
         state = common.read_json(common.DATA / "power" / "x" / "active.json", {})
-        for key in ("pending", "planned", "in_progress_first_seen"):
+        for key in ("pending", "planned", "in_progress_first_seen", "opened_pending", "in_progress_hours"):
             state["events"]["1"].pop(key)
         common.write_json(common.DATA / "power" / "x" / "active.json", state)
         power.update("x", [outage(1, 100, start)], T0 + timedelta(hours=1))

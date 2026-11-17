@@ -122,12 +122,18 @@ def bbox(geometry):
 def count_inside(geometry, blocks):
     box = bbox(geometry)
     people = units = occupied = n = 0
+    missing = False
     if box:
         for b in blocks:
             if box[0] <= b["lon"] <= box[2] and box[1] <= b["lat"] <= box[3] and contains(geometry, b["lon"], b["lat"]):
-                people += b["people"]; units += b["units"]; occupied += b["occupied"] or 0; n += 1
-    known = any(b["occupied"] is not None for b in blocks)
-    return {"people": people, "housing_units": units, "occupied_households": occupied if known else None, "blocks": n}
+                people += b["people"]; units += b["units"]; n += 1
+                if b["occupied"] is None:
+                    missing = True
+                else:
+                    occupied += b["occupied"]
+    # Blank rather than a partial sum when any counted block lacks the occupied count.
+    return {"people": people, "housing_units": units, "occupied_households": None if missing else occupied,
+            "blocks": n, "occupied_rule": "all_blocks"}
 
 
 def touching_geoids(geometry):
@@ -162,18 +168,20 @@ def build(features, blocks, previous=None, touching=touching_geoids):
         reusable = (old and old.get("geometry_hash") == fingerprint
                     and (old.get("occupied_households") is not None or not have_occupancy)
                     # Upper-bound rows saved before block lists were kept are counted again.
-                    and (old.get("method") == "blocks_inside" or "block_geoids" in old))
+                    and (old.get("method") == "blocks_inside" or "block_geoids" in old)
+                    # Rows that may hold a partial household sum are counted again.
+                    and old.get("occupied_rule") == "all_blocks")
         if reusable:
             counts = {k: old[k] for k in ("people", "housing_units", "occupied_households", "blocks", "method",
-                                          "block_geoids") if k in old}
+                                          "block_geoids", "occupied_rule") if k in old}
         else:
             counts = count_inside(feature.get("geometry"), blocks)
             counts["method"] = "blocks_inside"
             if counts["people"] < SMALL_AREA_PEOPLE and feature.get("geometry"):
                 hit = [by_geoid[g] for g in touching(feature["geometry"]) if g in by_geoid]
                 counts = {"people": sum(b["people"] for b in hit), "housing_units": sum(b["units"] for b in hit),
-                          "occupied_households": sum(b["occupied"] or 0 for b in hit)
-                          if any(b["occupied"] is not None for b in blocks) else None, "blocks": len(hit),
+                          "occupied_households": None if any(b["occupied"] is None for b in hit)
+                          else sum(b["occupied"] for b in hit), "blocks": len(hit), "occupied_rule": "all_blocks",
                           "method": "blocks_touching_upper_bound",
                           # Kept so areas that share blocks are not counted twice when combined.
                           "block_geoids": sorted(b["geoid"] for b in hit)}

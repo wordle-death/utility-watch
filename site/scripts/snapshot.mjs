@@ -37,11 +37,15 @@ const active = Object.values(read(data("power", source, "active.json")).events |
 // those records lack in_progress_first_seen, and their hours are left out.
 const isPlanned = (e) => e.planned === true || e.kind === "PLANNED_OUTAGE";
 const hoursTrusted = (e) => !isPlanned(e) || "in_progress_first_seen" in e;
+// Planned work that vanished without ever being seen under way was never an outage.
+const neverStarted = (e) => ("in_progress_first_seen" in e && e.in_progress_first_seen === null)
+  || (isPlanned(e) && !("in_progress_first_seen" in e) && String(e.status || "").toUpperCase() === "SCHEDULED");
 const slim = (e) => ({
+  never_started: neverStarted(e),
   planned: isPlanned(e), pending: e.pending === true || (isPlanned(e) && String(e.status || "").toUpperCase() === "SCHEDULED"),
   hours_trusted: hoursTrusted(e),
   id: e.id, start: e.start, end: e.end || null, end_basis: e.end_basis || null,
-  customers: e.peak_customers ?? e.customers, customer_hours: hoursTrusted(e) ? e.customer_hours ?? null : null,
+  customers: e.customers ?? null, peak_customers: e.peak_customers ?? e.customers ?? null, customer_hours: hoursTrusted(e) ? e.customer_hours ?? null : null,
   duration_hours: e.duration_hours ?? null, cause: e.cause, kind: e.kind, status: e.status,
   max_gap_minutes: e.max_gap_minutes, lat: e.lat, lon: e.lon,
 });
@@ -79,7 +83,9 @@ const out = {
 };
 // National lookup: every utility's latest year, with its standing among comparable utilities.
 // The comparison pool follows national/reliability.py: IEEE-method reporters with at least 1,000 customers.
-const comparable = (u, measure) => u.standard === "ieee_standard" && u.customers >= 1000 && u[measure] != null && u[measure] >= 0;
+// Same test as national/reliability.py, which treats any standard naming IEEE as comparable.
+const isIeee = (u) => String(u.standard || "").includes("ieee");
+const comparable = (u, measure) => isIeee(u) && u.customers >= 1000 && u[measure] != null && u[measure] >= 0;
 const shareBetter = (u, measure) => {
   if (!comparable(u, measure)) return null;
   const pool = national.utilities_latest_year.filter((v) => comparable(v, measure));
@@ -93,7 +99,7 @@ const nationalOut = {
   by_year: national.national_by_year,
   utilities: national.utilities_latest_year.map((u) => ({
     id: u.id, name: u.name, state: u.state, type: u.entity_type, customers: u.customers,
-    with: u.saidi_with, without: u.saidi_without, ieee: u.standard === "ieee_standard",
+    with: u.saidi_with, without: u.saidi_without, ieee: isIeee(u),
     better_with: shareBetter(u, "saidi_with"), better_without: shareBetter(u, "saidi_without"),
   })),
 };

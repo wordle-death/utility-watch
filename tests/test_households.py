@@ -49,6 +49,16 @@ class HouseholdTests(unittest.TestCase):
         self.assertEqual([r["objectid"] for r in rows], [1, 2])
 
 
+class OccupiedTests(unittest.TestCase):
+    def test_household_count_is_blank_if_any_block_lacks_it(self):
+        blocks = [dict(b) for b in BLOCKS]
+        self.assertEqual(households.count_inside(SQUARE, blocks)["occupied_households"], 80)  # blocks a and b
+        blocks[0]["occupied"] = None  # block a, inside the square
+        self.assertIsNone(households.count_inside(SQUARE, blocks)["occupied_households"])
+        blocks[0]["occupied"], blocks[2]["occupied"] = 40, None  # block c, outside the square
+        self.assertEqual(households.count_inside(SQUARE, blocks)["occupied_households"], 80)
+
+
 class BlockListTests(unittest.TestCase):
     def test_small_area_keeps_its_block_list_and_old_rows_are_recounted(self):
         calls = []
