@@ -1,6 +1,29 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "261122262": {
+   "cause": "A transformer has failed. SRP crews are working to restore power.",
+   "customer_hours_before_first_seen": 0.3,
+   "customer_hours_observed": 0.0,
+   "customers": 6,
+   "etr": null,
+   "first_seen": "2026-11-17T02:49:24Z",
+   "id": "261122262",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-17T02:49:24Z",
+   "lat": 33.40022532085925,
+   "lon": -112.07071588616199,
+   "max_gap_minutes": 0,
+   "peak_customers": 6,
+   "places": [
+    "S CENTRAL  AVE TO S 7TH  ST AND E BROADWAY  RD TO E SOUTHERN  AVE"
+   ],
+   "start": "2026-11-17T02:46:12Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  }
+ },
  "logged_recent": {
   "261121450": "2026-11-11T02:26:34Z",
   "261121466": "2026-11-11T03:11:44Z",
