@@ -19,6 +19,10 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Start from the newest data, not the commit the run was queued on, so a run
+          # that waited behind another does not collide with that run's commit.
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
