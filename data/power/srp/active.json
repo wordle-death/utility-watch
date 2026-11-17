@@ -1,38 +1,16 @@
 {
  "empty_streak": 0,
  "events": {
-  "261122295": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 0.9,
-   "customer_hours_observed": 1.5016666666666665,
-   "customers": 6,
-   "etr": null,
-   "first_seen": "2026-11-17T13:04:23Z",
-   "id": "261122295",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-17T13:19:24Z",
-   "lat": 33.4777995230772,
-   "lon": -112.135451681421,
-   "max_gap_minutes": 15,
-   "peak_customers": 6,
-   "places": [
-    "N 39TH  AVE TO N 31ST  AVE AND W THOMAS  RD TO W ENCANTO  BLVD"
-   ],
-   "start": "2026-11-17T12:55:17Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
   "261122297": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 0.1,
-   "customer_hours_observed": 0.25027777777777777,
+   "customer_hours_observed": 0.5002777777777778,
    "customers": 1,
    "etr": null,
    "first_seen": "2026-11-17T13:04:23Z",
    "id": "261122297",
    "kind": "PLANNED",
-   "last_seen": "2026-11-17T13:19:24Z",
+   "last_seen": "2026-11-17T13:34:24Z",
    "lat": 33.28080833848,
    "lon": -111.777216834664,
    "max_gap_minutes": 15,
@@ -131,6 +109,7 @@
   "261122276": "2026-11-17T08:34:26Z",
   "261122288": "2026-11-17T10:34:24Z",
   "261122290": "2026-11-17T13:04:23Z",
-  "261122292": "2026-11-17T13:19:24Z"
+  "261122292": "2026-11-17T13:19:24Z",
+  "261122295": "2026-11-17T13:34:24Z"
  }
 }
