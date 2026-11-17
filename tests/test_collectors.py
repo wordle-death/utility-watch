@@ -170,7 +170,7 @@ class PowerTests(TempData):
         power.update("x", [], T0, restored=[reported])
         row = self.log("x")[0]
         self.assertEqual((row["duration_hours"], row["customer_hours"]), (2.0, 200.0))
-        self.assertIsNone(row["in_progress_first_seen"])
+        self.assertEqual(row["in_progress_first_seen"], row["start"])  # it did start; not a never-started listing
 
     def test_older_record_for_scheduled_work_is_reset(self):
         start = T0 - timedelta(hours=3)
@@ -178,7 +178,7 @@ class PowerTests(TempData):
         path = common.DATA / "power" / "x" / "active.json"
         state = common.read_json(path, {})
         for key in ("pending", "planned", "in_progress_first_seen", "opened_pending", "in_progress_hours"):
-            state["events"]["4"].pop(key)
+            state["events"]["4"].pop(key, None)
         common.write_json(path, state)
         listing = dict(outage(4, 100, start), planned=True, pending=True)
         power.update("x", [listing], T0 + timedelta(hours=2))
@@ -187,6 +187,48 @@ class PowerTests(TempData):
         row = self.log("x")[0]
         self.assertEqual((row["customer_hours"], row["duration_hours"], row["planned"]), (0.0, 0.0, True))
         self.assertTrue(row["migrated_from_older_record"])
+
+    def _older(self, event_id, kind, status):
+        """Save an outage the way the older collector did: no planned-work fields."""
+        path = common.DATA / "power" / "x" / "active.json"
+        state = common.read_json(path, {})
+        record = state["events"][str(event_id)]
+        for key in ("pending", "planned", "in_progress_first_seen", "opened_pending", "in_progress_hours"):
+            record.pop(key, None)
+        record.update(kind=kind, status=status)
+        common.write_json(path, state)
+
+    def test_older_scheduled_record_that_starts_drops_its_scheduled_hours(self):
+        start = T0 - timedelta(hours=30)
+        power.update("x", [outage(5, 100, start)], T0)
+        power.update("x", [outage(5, 100, start)], T0 + timedelta(hours=10))  # older code piled up hours
+        self._older(5, "PLANNED_OUTAGE", "SCHEDULED")
+        started = dict(outage(5, 100, start), planned=True, pending=False, kind="PLANNED_OUTAGE", status="IN PROGRESS")
+        power.update("x", [started], T0 + timedelta(hours=11))
+        power.update("x", [], T0 + timedelta(hours=12))
+        row = self.log("x")[0]
+        # Half the hour it started in, half the final hour: one hour in progress.
+        self.assertEqual((row["customer_hours"], row["duration_hours"]), (100.0, 1.0))
+        self.assertTrue(row["migrated_from_older_record"])
+
+    def test_older_scheduled_record_gone_on_first_run_counts_nothing(self):
+        start = T0 - timedelta(hours=30)
+        power.update("x", [outage(6, 100, start)], T0)
+        self._older(6, "PLANNED_OUTAGE", "SCHEDULED")
+        power.update("x", [], T0 + timedelta(hours=1))
+        row = self.log("x")[0]
+        self.assertEqual((row["customer_hours"], row["duration_hours"], row["planned"]), (0.0, 0.0, True))
+
+    def test_feeds_without_planned_status_are_unchanged(self):
+        start = T0 - timedelta(minutes=30)
+        power.update("x", [outage(1, 100, start)], T0)
+        self._older(1, None, "Waiting for an available crew")  # MLGW-style record
+        power.update("x", [outage(1, 100, start)], T0 + timedelta(hours=1))
+        power.update("x", [], T0 + timedelta(hours=2))
+        row = self.log("x")[0]
+        self.assertEqual((row["customer_hours"], row["duration_hours"]), (200.0, 2.0))
+        self.assertNotIn("migrated_from_older_record", row)
+        self.assertNotIn("in_progress_hours", row)
 
     def test_entergy_scheduled_work_is_pending(self):
         base = {"id": 5, "startTime": 1793800800000, "numPeople": 14, "latitude": 30.0, "longitude": -90.0}
@@ -205,7 +247,7 @@ class PowerTests(TempData):
         power.update("x", [outage(1, 100, start)], T0)
         state = common.read_json(common.DATA / "power" / "x" / "active.json", {})
         for key in ("pending", "planned", "in_progress_first_seen", "opened_pending", "in_progress_hours"):
-            state["events"]["1"].pop(key)
+            state["events"]["1"].pop(key, None)
         common.write_json(common.DATA / "power" / "x" / "active.json", state)
         power.update("x", [outage(1, 100, start)], T0 + timedelta(hours=1))
         power.update("x", [], T0 + timedelta(hours=2))

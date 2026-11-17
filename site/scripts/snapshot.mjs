@@ -36,10 +36,11 @@ const active = Object.values(read(data("power", source, "active.json")).events |
 // Planned work logged before the collector learned to wait for "in progress" has inflated hours:
 // those records lack in_progress_first_seen, and their hours are left out.
 const isPlanned = (e) => e.planned === true || e.kind === "PLANNED_OUTAGE";
-const hoursTrusted = (e) => !isPlanned(e) || "in_progress_first_seen" in e;
+// Planned records logged by the older collector (no "pending" field) carry hours counted while only scheduled.
+const hoursTrusted = (e) => !isPlanned(e) || "pending" in e;
 // Planned work that vanished without ever being seen under way was never an outage.
-const neverStarted = (e) => ("in_progress_first_seen" in e && e.in_progress_first_seen === null)
-  || (isPlanned(e) && !("in_progress_first_seen" in e) && String(e.status || "").toUpperCase() === "SCHEDULED");
+const neverStarted = (e) => (e.opened_pending === true && !(e.in_progress_hours > 0))
+  || (isPlanned(e) && !("pending" in e) && String(e.status || "").toUpperCase() === "SCHEDULED");
 const slim = (e) => ({
   never_started: neverStarted(e),
   planned: isPlanned(e), pending: e.pending === true || (isPlanned(e) && String(e.status || "").toUpperCase() === "SCHEDULED"),
@@ -75,7 +76,9 @@ const out = {
     years: national.profiles["13478-LA"].years,
     live: {
       collecting_since: firstSeen,
-      last_success: powerStatus?.sources?.[source]?.last_success ?? powerStatus?.[source]?.last_success ?? null,
+      // The newest snapshot actually saved; the status file is refreshed only hourly.
+      last_success: active.map((e) => e.last_seen).filter(Boolean).sort().pop()
+        ?? powerStatus?.[source]?.last_success ?? null,
       closed: closed.map(slim),
       active: active.map(slim),
     },

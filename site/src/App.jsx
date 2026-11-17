@@ -10,7 +10,7 @@ import { FLAGS, day, dayTime, millions, short, whole } from "./format.js";
 const FIRST_YEAR = 2010; // the one 2009 advisory on record has no map and no count
 
 function waterYears(byYear, builtAt) {
-  const thisYear = new Date(builtAt).getUTCFullYear();
+  const thisYear = Number(new Date(builtAt).toLocaleString("en-US", { timeZone: "America/Chicago", year: "numeric" }));
   const years = [];
   for (let year = FIRST_YEAR; year <= thisYear; year++) {
     const e = byYear[year] || {};

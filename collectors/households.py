@@ -131,8 +131,10 @@ def count_inside(geometry, blocks):
                     missing = True
                 else:
                     occupied += b["occupied"]
-    # Blank rather than a partial sum when any counted block lacks the occupied count.
-    return {"people": people, "housing_units": units, "occupied_households": None if missing else occupied,
+    # Blank rather than a partial sum when any counted block lacks the occupied count,
+    # and blank when the block table has no occupied counts at all (no Census key yet).
+    known = any(b["occupied"] is not None for b in blocks)
+    return {"people": people, "housing_units": units, "occupied_households": None if missing or not known else occupied,
             "blocks": n, "occupied_rule": "all_blocks"}
 
 
@@ -180,7 +182,7 @@ def build(features, blocks, previous=None, touching=touching_geoids):
             if counts["people"] < SMALL_AREA_PEOPLE and feature.get("geometry"):
                 hit = [by_geoid[g] for g in touching(feature["geometry"]) if g in by_geoid]
                 counts = {"people": sum(b["people"] for b in hit), "housing_units": sum(b["units"] for b in hit),
-                          "occupied_households": None if any(b["occupied"] is None for b in hit)
+                          "occupied_households": None if not have_occupancy or any(b["occupied"] is None for b in hit)
                           else sum(b["occupied"] for b in hit), "blocks": len(hit), "occupied_rule": "all_blocks",
                           "method": "blocks_touching_upper_bound",
                           # Kept so areas that share blocks are not counted twice when combined.
@@ -211,7 +213,8 @@ def main(argv=None):
     summary = {
         "advisories": len(rows),
         "parish_people": sum(b["people"] for b in blocks),
-        "parish_occupied_households": sum(b["occupied"] or 0 for b in blocks),
+        "parish_occupied_households": None if any(b["occupied"] is None for b in blocks)
+        else sum(b["occupied"] for b in blocks),
         "upper_bound_rows": sum(r["method"] != "blocks_inside" for r in rows),
         "zero_rows": sum(r["people"] == 0 for r in rows),
         "largest": max(rows, key=lambda r: r["people"], default=None),
