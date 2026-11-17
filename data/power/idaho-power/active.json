@@ -1,6 +1,31 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "2600001884": {
+   "cause": "Weather",
+   "customer_hours_before_first_seen": 41.9,
+   "customer_hours_observed": 0.0,
+   "customers": 30,
+   "etr": "2026-11-17T10:00:00Z",
+   "first_seen": "2026-11-17T09:49:23Z",
+   "id": "2600001884",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-17T09:49:23Z",
+   "lat": 42.82410414,
+   "lon": -115.94342318,
+   "max_gap_minutes": 0,
+   "peak_customers": 30,
+   "places": [
+    "GRAND VIEW"
+   ],
+   "start": "2026-11-17T08:25:33Z",
+   "start_basis": "reported",
+   "status": "On-site",
+   "zips": [
+    "83624"
+   ]
+  }
+ },
  "logged_recent": {
   "2600000353": "2026-11-11T23:38:23Z",
   "2600000462": "2026-11-12T18:34:24Z",
