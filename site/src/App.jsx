@@ -1,5 +1,9 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
+import National from "./National.jsx";
 import city from "./data/new-orleans.json";
+import nationalData from "./data/national.json";
+
+const nationalCount = nationalData.utilities.length;
 import { YearBars, MinutesLines } from "./charts.jsx";
 import { FLAGS, day, dayTime, millions, short, whole } from "./format.js";
 
@@ -26,7 +30,7 @@ function place(title) {
   return cleaned ? cleaned[0].toUpperCase() + cleaned.slice(1) : "Place not named in the notice";
 }
 
-function Section({ eyebrow, title, children }) {
+export function Section({ eyebrow, title, children }) {
   return (
     <section className="flex flex-col gap-4">
       <div className="flex flex-col gap-1">
@@ -38,7 +42,7 @@ function Section({ eyebrow, title, children }) {
   );
 }
 
-function Tile({ label, figure, children }) {
+export function Tile({ label, figure, children }) {
   return (
     <div className="panel flex flex-col gap-1">
       <span className="small muted">{label}</span>
@@ -54,33 +58,22 @@ function Water({ water, years }) {
   const rows = useMemo(() => water.advisories
     .filter((a) => year === "all" || a.issued_at.startsWith(year))
     .sort((a, b) => (a.issued_at < b.issued_at ? 1 : -1)), [water, year]);
-  const total = years.reduce((sum, y) => sum + y.person_hours, 0);
-  const borrowed = years.reduce((sum, y) => sum + y.from_named_area_lookup, 0);
   return (
     <Section eyebrow="Water" title="Boil-water advisories">
       <p className="muted">
-        Each bar is the number of people under a boil-water advisory multiplied by the hours it lasted, added up for
-        the year. One million person-hours is about 42,000 people without safe tap water for a full day.
+        Each bar adds up the hours every affected resident spent under a boil-water advisory that year: the number of
+        people in each advisory area multiplied by the hours it lasted. One million hours is about 42,000 people
+        without safe tap water for a full day.
       </p>
       <div className="panel flex flex-col gap-3">
-        <div className="flex flex-wrap items-baseline justify-between gap-2">
-          <h3>Person-hours under advisory, by year issued</h3>
-          <div className="legend">
-            <span><i style={{ background: "var(--series-1)" }} />Area from the advisory's own map</span>
-            <span><i style={{ background: "var(--series-2)" }} />Area borrowed from a named-area drawing</span>
-          </div>
-        </div>
+        <h3>Hours residents spent without safe tap water, by year</h3>
         <YearBars years={years} />
         <p className="small muted">
           † At least one advisory that year could not be counted, so the bar is too low. {years[years.length - 1].year} is
           the year so far. Estimated: hours come from the Sewerage &amp; Water Board's notices, people from the 2020 Census
-          for every year.
+          for every year. Figures before 2019 are rougher: the board published no maps then, so they use its later
+          drawings of whole areas such as the East Bank.
         </p>
-      </div>
-      <div className="note">
-        {Math.round((borrowed / total) * 100)}% of the total, and everything before 2019, uses a borrowed area: the
-        board published no map for those advisories, so the count uses its drawing of the whole East Bank, West Bank,
-        Lower 9th Ward or Venetian Isles. The East Bank drawing likely overstates some of them.
       </div>
 
       <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
@@ -97,7 +90,7 @@ function Water({ water, years }) {
         <table>
           <thead>
             <tr><th>Issued</th><th>Where</th><th className="num">Hours</th><th className="num">People</th>
-              <th className="num">Person-hours</th><th>Caveats</th><th>Source</th></tr>
+              <th className="num">People × hours</th><th>Caveats</th><th>Source</th></tr>
           </thead>
           <tbody>
             {rows.map((a) => (
@@ -140,19 +133,29 @@ const LINES = {
   ],
 };
 
-function Power({ power }) {
+function Power({ power, built }) {
   const [mode, setMode] = useState("without");
   const latest = power.years[power.years.length - 1];
   const live = power.live;
-  const closedHours = live.closed.reduce((sum, e) => sum + (e.customer_hours || 0), 0);
+  // A rolling week, so the totals mean the same thing whenever the page is read.
+  const now = new Date(built).getTime();
+  const days = Math.min(7, Math.max(1, Math.floor((now - new Date(live.collecting_since).getTime()) / 864e5)));
+  const recent = live.closed.filter((e) => e.end && now - new Date(e.end).getTime() <= days * 864e5);
+  const recentHours = recent.reduce((sum, e) => sum + (e.customer_hours || 0), 0);
   const open = [...live.active].sort((a, b) => (b.customers || 0) - (a.customers || 0));
+  const planned = open.filter((e) => e.kind === "PLANNED_OUTAGE");
+  const unplanned = open.filter((e) => e.kind !== "PLANNED_OUTAGE");
+  const customers = (list) => list.reduce((sum, e) => sum + (e.customers || 0), 0);
+  const span = days === 7 ? "past 7 days" : days === 1 ? "past day" : `past ${days} days`;
   return (
     <Section eyebrow="Power" title="Outage time compared with the rest of the country">
       <p className="muted">
         Utilities report to the federal government how many minutes the average customer went without power each year.
-        In {latest.year}, {power.utility} customers lost {whole(latest.saidi_without)} minutes outside of major storms,
-        against a national average of {whole(latest.saidi_without_national_avg)}. {whole(latest.saidi_without_pct_of_utilities_better)}%
-        of comparable utilities did better.
+        In {latest.year}, {power.utility} customers lost {whole(latest.saidi_with)} minutes counting every outage,
+        against a national average of {whole(latest.saidi_with_national_avg)}. Leaving out major storms, it was{" "}
+        {whole(latest.saidi_without)} minutes against {whole(latest.saidi_without_national_avg)}, and{" "}
+        {whole(latest.saidi_without_pct_of_utilities_better)}% of comparable utilities did better. Both views matter:
+        storms are when outages hurt most, and the no-storm figure shows how the grid holds up on an ordinary day.
       </p>
       <div className="panel flex flex-col gap-3">
         <div className="flex flex-wrap items-center justify-between gap-3">
@@ -186,15 +189,18 @@ function Power({ power }) {
         </details>
       </div>
 
-      <h3 className="pt-2">Outages since collection began</h3>
+      <h3 className="pt-2">Outages right now and this week</h3>
       <p className="muted">
-        Entergy's outage map keeps no history, so this project saves it every 15 minutes. Collection began{" "}
-        {day(live.collecting_since)}. For the first day it sometimes ran hours apart, so short outages in that window were missed.
+        Entergy's outage map shows only what is out at this moment and keeps no history, so this project saves it every
+        15 minutes.{days < 7 ? ` It has been saving for ${days} ${days === 1 ? "day" : "days"}; the weekly totals fill in once there is a full week.` : ""}
       </p>
       <div className="grid gap-3 sm:grid-cols-3">
-        <Tile label="Outages recorded and ended" figure={whole(live.closed.length)}>since {day(live.collecting_since)}</Tile>
-        <Tile label="Customer-hours without power" figure={whole(closedHours)}>estimated from 15-minute snapshots</Tile>
-        <Tile label="Open right now" figure={whole(open.length)}>as of {dayTime(live.last_success)} Central</Tile>
+        <Tile label="Customers in unplanned outages right now" figure={whole(customers(unplanned))}>
+          in {unplanned.length} {unplanned.length === 1 ? "outage" : "outages"}, as of {dayTime(live.last_success)} Central.
+          Planned work: {planned.length} listed, {whole(customers(planned))} customers
+        </Tile>
+        <Tile label={`Outages that ended, ${span}`} figure={whole(recent.length)}>planned work included</Tile>
+        <Tile label={`Customer-hours without power, ${span}`} figure={whole(recentHours)}>estimated from 15-minute snapshots</Tile>
       </div>
       {open.length > 0 && (
         <div className="panel scroll-x" style={{ padding: 0 }}>
@@ -217,41 +223,64 @@ function Power({ power }) {
   );
 }
 
-export default function App() {
+function NewOrleans() {
   const years = useMemo(() => waterYears(city.water.by_year, city.built_at), []);
   const current = years[years.length - 1];
   const latest = city.power.years[city.power.years.length - 1];
+  // Both rows use the last full year the power data covers, so water and power are on the same footing.
+  const waterYear = years.find((y) => y.year === latest.year) || current;
+  const powerHours = (latest.saidi_with * latest.customers) / 60;
+  const borrowedShare = Math.round((years.reduce((sum, y) => sum + y.from_named_area_lookup, 0)
+    / years.reduce((sum, y) => sum + y.person_hours, 0)) * 100);
   return (
     <main className="wrap flex flex-col gap-12">
       <header className="flex flex-col gap-4">
-        <div className="note">Private preview. Not published. Figures are estimates still under review.</div>
         <div className="flex flex-col gap-2">
           <span className="eyebrow">Utility Watch · {city.city}</span>
           <h1>How often New Orleans loses power and safe water</h1>
           <p className="muted">Built from public records: the water board's own notices and maps, the power company's
             federal filings and live outage map, and the Census. Data as of {dayTime(city.built_at)} Central.</p>
         </div>
-        <div className="grid gap-3 sm:grid-cols-3">
-          <Tile label={`Boil-water advisories, ${current.year} so far`} figure={current.advisories}>
-            issued by the Sewerage &amp; Water Board
-          </Tile>
-          <Tile label={`Person-hours under advisory, ${current.year} so far`} figure={millions(current.person_hours)}>
-            estimate: people in the advisory area × hours
-          </Tile>
-          <Tile label={`Power outage minutes per customer, ${latest.year}`} figure={whole(latest.saidi_without)}>
-            U.S. average {whole(latest.saidi_without_national_avg)}, major storms excluded
-          </Tile>
+        <div className="flex flex-col gap-2">
+          <span className="eyebrow">For the average resident, {latest.year}</span>
+          <div className="grid gap-3 sm:grid-cols-3">
+            <Tile label="Hours under a boil-water advisory, per resident" figure={whole(waterYear.person_hours / city.residents)}>
+              an average: some neighborhoods had none, others several days. {current.year} so far:{" "}
+              {whole(current.person_hours / city.residents)}
+            </Tile>
+            <Tile label="Minutes without power, per customer" figure={whole(latest.saidi_with)}>
+              storms included; U.S. average {whole(latest.saidi_with_national_avg)}. Without major storms:{" "}
+              {whole(latest.saidi_without)}, U.S. average {whole(latest.saidi_without_national_avg)}
+            </Tile>
+            <Tile label="Cost per household" figure="Not yet">method under review</Tile>
+          </div>
+        </div>
+        <div className="flex flex-col gap-2">
+          <span className="eyebrow">For the whole city, {latest.year}</span>
+          <div className="grid gap-3 sm:grid-cols-3">
+            <Tile label="Hours residents spent under a boil-water advisory" figure={`${millions(waterYear.person_hours)}`}>
+              people in each advisory area × the hours it lasted, across {waterYear.advisories} advisories.{" "}
+              {current.year} so far: {millions(current.person_hours)}
+            </Tile>
+            <Tile label="Hours customers spent without power" figure={whole(Math.round(powerHours / 1000) * 1000)}>
+              minutes per customer × {whole(latest.customers)} customers, storms included
+            </Tile>
+            <Tile label="Cost to the city" figure="Not yet">method under review</Tile>
+          </div>
         </div>
       </header>
 
       <Water water={city.water} years={years} />
       <hr className="rule" />
-      <Power power={city.power} />
+      <Power power={city.power} built={city.built_at} />
       <hr className="rule" />
 
       <Section eyebrow="Cost" title="What this costs households">
         <p className="muted">Not estimated yet. The method for putting a dollar range on a boil-water advisory and on an
           hour without power is still being worked out, and no figure will appear here until it has been reviewed.</p>
+        <p className="muted">School and daycare closures during boil-water advisories are part of that cost: a closed
+          school means lost wages and lost work for families well beyond the price of bottled water. Closures are not
+          collected yet.</p>
       </Section>
       <hr className="rule" />
 
@@ -263,6 +292,9 @@ export default function App() {
             count every block they touch and are shown with "≤".</li>
           <li><b>Power comparison</b> uses {city.power.source}. Rankings include {city.power.ranking_rule.replace(/^IEEE-standard reporters/, "utilities that report under the IEEE standard")};
             {" "}{city.power.latest_year} data is {(city.power.latest_year_data_maturity || []).join(", ") || "unlabeled"}.</li>
+          <li><b>Advisories without a map</b>, including every one before 2019, use the board's drawing of the whole
+            named area (East Bank, West Bank, Lower 9th Ward or Venetian Isles). That is {borrowedShare}% of all
+            the resident-hours shown, and the East Bank drawing likely overstates some of them.</li>
           <li><b>Live outages</b> are closed at the midpoint between the last snapshot that showed them and the first that
             did not.</li>
         </ul>
@@ -275,5 +307,66 @@ export default function App() {
         </p>
       </Section>
     </main>
+  );
+}
+
+
+function Home() {
+  return (
+    <main className="wrap flex flex-col gap-8">
+      <header className="flex flex-col gap-2">
+        <span className="eyebrow">Utility Watch</span>
+        <h1>How often the power and safe water go out, and for how long</h1>
+        <p className="muted">Utilities publish outage maps that forget yesterday and notices that are hard to add up.
+          This site keeps the record and puts numbers on it, using public data only.</p>
+      </header>
+      <div className="grid gap-3 sm:grid-cols-2">
+        <a className="panel flex flex-col gap-1" href="#new-orleans" style={{ textDecoration: "none", color: "inherit" }}>
+          <span className="eyebrow">City page</span>
+          <h3>New Orleans</h3>
+          <span className="small muted">Every boil-water advisory since 2010, power outage time against the nation,
+            and outages as they happen.</span>
+          <span className="small" style={{ color: "var(--accent)" }}>Open the New Orleans page →</span>
+        </a>
+        <a className="panel flex flex-col gap-1" href="#national" style={{ textDecoration: "none", color: "inherit" }}>
+          <span className="eyebrow">National</span>
+          <h3>Look up your power company</h3>
+          <span className="small muted">Outage minutes per customer for {whole(nationalCount)} U.S. utilities, and how each
+            compares with the rest.</span>
+          <span className="small" style={{ color: "var(--accent)" }}>Open the national comparison →</span>
+        </a>
+      </div>
+      <p className="small muted">More cities, a water comparison and cost estimates are in the works.</p>
+    </main>
+  );
+}
+
+const ROUTES = { "": Home, "new-orleans": NewOrleans, national: National };
+
+export default function App() {
+  const read = () => window.location.hash.replace(/^#/, "");
+  const [route, setRoute] = useState(read);
+  useEffect(() => {
+    const onChange = () => { setRoute(read()); window.scrollTo(0, 0); };
+    window.addEventListener("hashchange", onChange);
+    return () => window.removeEventListener("hashchange", onChange);
+  }, []);
+  const Page = ROUTES[route] || Home;
+  const link = (name, label) => (
+    <a href={`#${name}`} aria-current={route === name ? "page" : undefined}>{label}</a>
+  );
+  return (
+    <>
+      <nav className="topnav">
+        <div className="topnav-inner">
+          <a href="#" className="brand">Utility Watch</a>
+          <div className="flex gap-4">{link("new-orleans", "New Orleans")}{link("national", "National")}</div>
+        </div>
+      </nav>
+      <div className="wrap" style={{ paddingBlock: "14px 0" }}>
+        <div className="note">Private preview. Not published. Figures are estimates still under review.</div>
+      </div>
+      <Page />
+    </>
   );
 }

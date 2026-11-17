@@ -31,7 +31,7 @@ function Tip({ x, width, children }) {
   return <div className="tip" style={{ left, top: 6 }}>{children}</div>;
 }
 
-/** Person-hours under advisory per year, split by how the area was measured. */
+/** Person-hours under advisory per year. */
 export function YearBars({ years }) {
   const [ref, width] = useWidth();
   const [hover, setHover] = useState(null);
@@ -44,7 +44,7 @@ export function YearBars({ years }) {
   const sparse = band < 34;
   return (
     <div ref={ref} style={{ position: "relative" }} onMouseLeave={() => setHover(null)}>
-      <svg width={width} height={height} role="img" aria-label="Person-hours under boil-water advisory by year">
+      <svg width={width} height={height} role="img" aria-label="Hours residents spent under boil-water advisory by year">
         {ticks.map((t) => (
           <g key={t}>
             <line x1={m.left} x2={width - m.right} y1={y(t)} y2={y(t)} stroke={t ? "var(--line)" : "var(--axis)"} />
@@ -53,13 +53,10 @@ export function YearBars({ years }) {
         ))}
         {years.map((d, i) => {
           const cx = m.left + band * i + band / 2, x = cx - bar / 2;
-          const own = d.from_own_map, borrowed = d.from_named_area_lookup;
-          const hOwn = (own / top) * innerH, hBor = (borrowed / top) * innerH;
-          const gap = own && borrowed ? 2 : 0;
+          const h = (d.person_hours / top) * innerH;
           return (
             <g key={d.year} opacity={hover == null || hover === i ? 1 : 0.55}>
-              {own > 0 && <path d={barPath(x, y(0) - hOwn, bar, hOwn, borrowed ? 0 : 4)} fill="var(--series-1)" />}
-              {borrowed > 0 && <path d={barPath(x, y(0) - hOwn - gap - hBor, bar, hBor, 4)} fill="var(--series-2)" />}
+              {h > 0 && <path d={barPath(x, y(0) - h, bar, h, 4)} fill="var(--series-1)" />}
               {(!sparse || i % 2 === 0) && (
                 <text x={cx} y={height - 22} textAnchor="middle" fontSize="11" fill="var(--ink-2)">
                   {sparse ? `’${String(d.year).slice(2)}` : d.year}
@@ -76,9 +73,7 @@ export function YearBars({ years }) {
         <Tip x={m.left + band * hover + band / 2} width={width}>
           <b>{years[hover].year}{years[hover].partial ? " (so far)" : ""}</b>
           <div className="row"><span>Advisories</span><span className="data">{years[hover].advisories}</span></div>
-          <div className="row"><span>Person-hours</span><span className="data">{short(years[hover].person_hours)}</span></div>
-          <div className="row"><span>From own map</span><span className="data">{short(years[hover].from_own_map)}</span></div>
-          <div className="row"><span>From named area</span><span className="data">{short(years[hover].from_named_area_lookup)}</span></div>
+          <div className="row"><span>Resident-hours</span><span className="data">{short(years[hover].person_hours)}</span></div>
           {years[hover].incomplete > 0 && <div className="muted">† {years[hover].incomplete} not counted</div>}
         </Tip>
       )}
