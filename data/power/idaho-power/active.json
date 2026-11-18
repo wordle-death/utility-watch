@@ -4,14 +4,14 @@
   "2600001673": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 36.8,
-   "customer_hours_observed": 120.95333333333335,
+   "customer_hours_observed": 145.86833333333334,
    "customers": 99,
    "etr": "2026-11-18T19:00:00Z",
    "first_seen": "2026-11-18T16:34:36Z",
    "id": "2600001673",
    "in_progress_first_seen": "2026-11-18T16:34:36Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-18T17:49:24Z",
+   "last_seen": "2026-11-18T18:04:30Z",
    "lat": 43.62852331,
    "lon": -116.40870612,
    "max_gap_minutes": 15,
@@ -29,45 +29,17 @@
     "83646"
    ]
   },
-  "2600002059": {
-   "cause": "Object In Line",
-   "customer_hours_before_first_seen": 16.1,
-   "customer_hours_observed": 3.25,
-   "customers": 13,
-   "etr": "2026-11-18T18:30:00Z",
-   "first_seen": "2026-11-18T17:34:24Z",
-   "id": "2600002059",
-   "in_progress_first_seen": "2026-11-18T17:34:24Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-18T17:49:24Z",
-   "lat": 42.6487932,
-   "lon": -114.48174656,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 13,
-   "pending": false,
-   "places": [
-    "JEROME"
-   ],
-   "planned": false,
-   "start": "2026-11-18T16:19:57Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83338"
-   ]
-  },
   "2600002065": {
    "cause": "Equipment Issue",
    "customer_hours_before_first_seen": 17.7,
-   "customer_hours_observed": 27.75,
+   "customer_hours_observed": 37.06166666666667,
    "customers": 37,
    "etr": "2026-11-18T19:00:00Z",
    "first_seen": "2026-11-18T17:04:24Z",
    "id": "2600002065",
    "in_progress_first_seen": "2026-11-18T17:04:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-18T17:49:24Z",
+   "last_seen": "2026-11-18T18:04:30Z",
    "lat": 43.47308676,
    "lon": -116.48089167,
    "max_gap_minutes": 15,
@@ -88,14 +60,14 @@
   "2600002069": {
    "cause": "Equipment Issue",
    "customer_hours_before_first_seen": 3.1,
-   "customer_hours_observed": 8.25,
+   "customer_hours_observed": 11.018333333333333,
    "customers": 11,
    "etr": "2026-11-18T18:30:00Z",
    "first_seen": "2026-11-18T17:04:24Z",
    "id": "2600002069",
    "in_progress_first_seen": "2026-11-18T17:04:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-18T17:49:24Z",
+   "last_seen": "2026-11-18T18:04:30Z",
    "lat": 43.65645925,
    "lon": -116.68755151,
    "max_gap_minutes": 15,
@@ -218,6 +190,7 @@
   "2600002040": "2026-11-18T04:49:22Z",
   "2600002041": "2026-11-18T07:19:23Z",
   "2600002046": "2026-11-18T08:19:24Z",
+  "2600002059": "2026-11-18T18:04:30Z",
   "2600002060": "2026-11-18T17:19:31Z"
  }
 }
