@@ -4,14 +4,14 @@
   "2600002041": {
    "cause": "Weather",
    "customer_hours_before_first_seen": 11.3,
-   "customer_hours_observed": 21.01,
+   "customer_hours_observed": 24.033333333333335,
    "customers": 12,
    "etr": "2026-11-19T07:00:00Z",
    "first_seen": "2026-11-18T05:04:22Z",
    "id": "2600002041",
    "in_progress_first_seen": "2026-11-18T05:04:22Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-18T06:49:25Z",
+   "last_seen": "2026-11-18T07:04:32Z",
    "lat": 44.68033161,
    "lon": -115.96667793,
    "max_gap_minutes": 15,
@@ -25,7 +25,7 @@
    "planned": false,
    "start": "2026-11-18T04:07:42Z",
    "start_basis": "reported",
-   "status": "On the Way",
+   "status": "On-site",
    "zips": [
     "83615",
     "83638"
