@@ -1,10 +1,13 @@
 name: deploy-site
 
 # Builds the site from the latest data on main and publishes it to Cloudflare.
-# Manual only for now: publishing gives the site a public address, which the
-# owner approves before the first run. An hourly schedule is added after that.
+# Runs after each hourly water collection (started on time by the Cloudflare
+# scheduler), and by hand.
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows: [collect-water]
+    types: [completed]
 
 permissions:
   contents: read
@@ -15,6 +18,8 @@ concurrency:
 
 jobs:
   deploy:
+    # Skip runs set off by a cancelled collection; a failed one still republishes what is on main.
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion != 'cancelled'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     defaults:
@@ -30,7 +35,19 @@ jobs:
           cache: npm
           cache-dependency-path: site/package-lock.json
       - run: npm ci
+      - name: Find the public address
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          sub=$(curl -fsS -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/workers/subdomain" \
+            | python3 -c 'import json,sys; print(json.load(sys.stdin)["result"]["subdomain"] or sys.exit("no workers.dev subdomain"))')
+          echo "SITE_URL=https://utility-watch.$sub.workers.dev" >> "$GITHUB_ENV"
       - run: npm run build
+        env:
+          # Cloudflare Web Analytics site token; public by design (it appears in the page).
+          CF_BEACON: ${{ vars.CF_BEACON }}
       - name: Publish to Cloudflare
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}

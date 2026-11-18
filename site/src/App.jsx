@@ -343,7 +343,7 @@ function Home() {
         <a className="panel flex flex-col gap-1" href="#new-orleans" style={{ textDecoration: "none", color: "inherit" }}>
           <span className="eyebrow">City page</span>
           <h3>New Orleans</h3>
-          <span className="small muted">Every boil-water advisory since 2010, power outage time against the nation,
+          <span className="small muted">Every boil-water advisory the water board has published, power outage time against the nation,
             and outages as they happen.</span>
           <span className="small" style={{ color: "var(--accent)" }}>Open the New Orleans page →</span>
         </a>
@@ -361,6 +361,58 @@ function Home() {
 }
 
 const ROUTES = { "": Home, "new-orleans": NewOrleans, national: National };
+const PAGE_NAMES = { "": "Home", "new-orleans": "New Orleans", national: "National" };
+// Collection runs every 15 minutes (power) and hourly (water), but the saved "last success" time is only
+// refreshed about hourly and the page is rebuilt hourly, so a healthy page can show times two hours old.
+const STALE_HOURS = 6;
+
+function hoursSince(iso) {
+  return iso ? (Date.now() - new Date(iso).getTime()) / 36e5 : Infinity;
+}
+
+/** Warn when the copy of the data on this page has stopped updating. */
+function Stale() {
+  const late = [
+    ["live power outage map", city.freshness.power],
+    ["boil-water advisory map", city.freshness.water],
+  ].filter(([, when]) => hoursSince(when) > STALE_HOURS);
+  if (!late.length) return null;
+  const oldest = Math.max(...late.map(([, when]) => hoursSince(when)));
+  const age = oldest === Infinity ? "an unknown time" : oldest >= 48 ? `${Math.floor(oldest / 24)} days` : `${Math.floor(oldest)} hours`;
+  return (
+    <div className="wrap" style={{ paddingBlock: "14px 0" }}>
+      <div className="note" role="status">
+        Our copy of the {late.map(([name]) => name).join(" and ")} was last updated {age} ago, so "right now"
+        figures may be out of date. Collection may have paused; it catches up when it resumes.
+      </div>
+    </div>
+  );
+}
+
+const REPO = "https://github.com/wordle-death/utility-watch";
+
+function Footer({ route }) {
+  const report = `${REPO}/issues/new?template=correction.yml&page=${encodeURIComponent(PAGE_NAMES[route] ?? "Home")}`;
+  return (
+    <footer className="wrap" style={{ paddingBlock: "0 40px" }}>
+      <hr className="rule" />
+      <div className="flex flex-col gap-2 small muted" style={{ paddingTop: 18 }}>
+        <p>
+          Spot something wrong? <a href={report} target="_blank" rel="noreferrer">Report a correction</a>. Reports go to
+          the project's public issue list on GitHub, which needs a free GitHub account.
+        </p>
+        <p>
+          Figures marked "estimated" combine public records with our own method, described on each page; the rest are
+          as the source reported them.
+        </p>
+        <p>
+          Utility Watch is an independent project built from public records. It is not affiliated with any utility or
+          government agency. <a href={REPO} target="_blank" rel="noreferrer">Code and data</a> are open.
+        </p>
+      </div>
+    </footer>
+  );
+}
 
 export default function App() {
   const read = () => window.location.hash.replace(/^#/, "");
@@ -382,10 +434,14 @@ export default function App() {
           <div className="flex gap-4">{link("new-orleans", "New Orleans")}{link("national", "National")}</div>
         </div>
       </nav>
-      <div className="wrap" style={{ paddingBlock: "14px 0" }}>
-        <div className="note">Private preview. Not published. Figures are estimates still under review.</div>
-      </div>
-      <Page />
+      {import.meta.env.VITE_PREVIEW === "1" && (
+        <div className="wrap" style={{ paddingBlock: "14px 0" }}>
+          <div className="note">Private preview. Not published. Figures are estimates still under review.</div>
+        </div>
+      )}
+      {route === "new-orleans" && <Stale />}
+      <Page route={route} />
+      <Footer route={route} />
     </>
   );
 }
