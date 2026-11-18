@@ -4,14 +4,14 @@
   "2600001530": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 12.4,
-   "customer_hours_observed": 35.23694444444445,
+   "customer_hours_observed": 46.98694444444445,
    "customers": 47,
    "etr": "2026-11-18T20:00:00Z",
    "first_seen": "2026-11-18T18:19:25Z",
    "id": "2600001530",
    "in_progress_first_seen": "2026-11-18T18:19:25Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-18T19:04:24Z",
+   "last_seen": "2026-11-18T19:19:24Z",
    "lat": 44.52615093,
    "lon": -118.21717285,
    "max_gap_minutes": 15,
@@ -32,14 +32,14 @@
   "2600001673": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 36.8,
-   "customer_hours_observed": 244.70333333333335,
+   "customer_hours_observed": 269.4533333333334,
    "customers": 99,
    "etr": "2026-11-18T19:00:00Z",
    "first_seen": "2026-11-18T16:34:36Z",
    "id": "2600001673",
    "in_progress_first_seen": "2026-11-18T16:34:36Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-18T19:04:24Z",
+   "last_seen": "2026-11-18T19:19:24Z",
    "lat": 43.62852331,
    "lon": -116.40870612,
    "max_gap_minutes": 15,
@@ -60,17 +60,17 @@
   "2600001845": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 30.6,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 22.5,
    "customers": 90,
    "etr": "2026-11-18T22:00:00Z",
    "first_seen": "2026-11-18T19:04:24Z",
    "id": "2600001845",
    "in_progress_first_seen": "2026-11-18T19:04:24Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-18T19:04:24Z",
+   "last_seen": "2026-11-18T19:19:24Z",
    "lat": 43.79013844,
    "lon": -114.52156715,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "opened_pending": false,
    "peak_customers": 90,
    "pending": false,
@@ -85,45 +85,17 @@
     "83340"
    ]
   },
-  "2600002069": {
-   "cause": "Equipment Issue",
-   "customer_hours_before_first_seen": 3.1,
-   "customer_hours_observed": 22.0,
-   "customers": 11,
-   "etr": "2026-11-18T19:30:00Z",
-   "first_seen": "2026-11-18T17:04:24Z",
-   "id": "2600002069",
-   "in_progress_first_seen": "2026-11-18T17:04:24Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-18T19:04:24Z",
-   "lat": 43.65645925,
-   "lon": -116.68755151,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 11,
-   "pending": false,
-   "places": [
-    "CALDWELL"
-   ],
-   "planned": false,
-   "start": "2026-11-18T16:47:26Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83605"
-   ]
-  },
   "2600002076": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 20.4,
-   "customer_hours_observed": 74.73888888888888,
+   "customer_hours_observed": 84.73888888888888,
    "customers": 40,
    "etr": "2026-11-18T20:00:00Z",
    "first_seen": "2026-11-18T18:19:25Z",
    "id": "2600002076",
    "in_progress_first_seen": "2026-11-18T18:19:25Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-18T19:04:24Z",
+   "last_seen": "2026-11-18T19:19:24Z",
    "lat": 43.58458371,
    "lon": -116.21289156,
    "max_gap_minutes": 15,
@@ -136,7 +108,7 @@
    "planned": false,
    "start": "2026-11-18T17:48:48Z",
    "start_basis": "reported",
-   "status": "Pending",
+   "status": "Assigned",
    "zips": [
     "83705"
    ]
@@ -248,6 +220,7 @@
   "2600002046": "2026-11-18T08:19:24Z",
   "2600002059": "2026-11-18T18:04:30Z",
   "2600002060": "2026-11-18T17:19:31Z",
-  "2600002065": "2026-11-18T18:19:25Z"
+  "2600002065": "2026-11-18T18:19:25Z",
+  "2600002069": "2026-11-18T19:19:24Z"
  }
 }
