@@ -1,6 +1,33 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "261122448": {
+   "cause": "We are investigating the cause of the outage.",
+   "customer_hours_before_first_seen": 4.7,
+   "customer_hours_observed": 0.0,
+   "customers": 49,
+   "etr": null,
+   "first_seen": "2026-11-18T14:19:25Z",
+   "id": "261122448",
+   "in_progress_first_seen": "2026-11-18T14:19:25Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-18T14:19:25Z",
+   "lat": 33.3106814182833,
+   "lon": -111.866450471465,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 49,
+   "pending": false,
+   "places": [
+    "N DOBSON  RD TO N ALMA SCHOOL  RD AND W RAY  RD TO W CHANDLER  BLVD"
+   ],
+   "planned": false,
+   "start": "2026-11-18T14:13:37Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  }
+ },
  "logged_recent": {
   "261121509": "2026-11-11T17:28:53Z",
   "261121509#2": "2026-11-11T17:28:53Z",
