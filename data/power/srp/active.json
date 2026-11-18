@@ -1,6 +1,33 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "261122591": {
+   "cause": "We are investigating the cause of the outage.",
+   "customer_hours_before_first_seen": 98.2,
+   "customer_hours_observed": 0.0,
+   "customers": 1376,
+   "etr": null,
+   "first_seen": "2026-11-18T23:49:24Z",
+   "id": "261122591",
+   "in_progress_first_seen": "2026-11-18T23:49:24Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-18T23:49:24Z",
+   "lat": 33.47881959802365,
+   "lon": -112.1635730917005,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 1376,
+   "pending": false,
+   "places": [
+    "N 55TH  AVE TO N 43RD  AVE AND W INDIAN SCHOOL  RD TO W MCDOWELL  RD"
+   ],
+   "planned": false,
+   "start": "2026-11-18T23:45:07Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  }
+ },
  "logged_recent": {
   "261121594": "2026-11-12T01:49:23Z",
   "261121597": "2026-11-12T01:19:23Z",
