@@ -18,6 +18,12 @@ jobs:
           python-version: "3.12"
       - run: pip install -q -r national/requirements.txt
       - run: python -m unittest discover -s tests -t . -v
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Build the site
+        working-directory: site
+        run: npm ci && npm run build
 
   # Fetch every live feed without writing anything, to confirm each one
   # is reachable from GitHub and parses. Only runs on branches, not main.

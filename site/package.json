@@ -6,7 +6,7 @@
     "snapshot": "node scripts/snapshot.mjs",
     "dev": "npm run snapshot && vite",
     "build": "npm run snapshot && vite build",
-    "build:preview": "npm run snapshot && SINGLE_FILE=1 vite build --outDir dist-preview"
+    "build:preview": "npm run snapshot && SINGLE_FILE=1 VITE_PREVIEW=1 vite build --outDir dist-preview"
   },
   "dependencies": {
     "react": "^18.3.1",

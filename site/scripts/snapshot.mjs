@@ -12,6 +12,7 @@ const read = (path) => JSON.parse(readFileSync(path, "utf8"));
 const timeline = read(data("water", "swbno", "advisory_timeline.json"));
 const national = read(data("national", "reliability.json"));
 const powerStatus = read(data("status-power.json"));
+const waterStatus = read(data("status-water.json"));
 
 const advisories = timeline.advisories.map((a) => ({
   issued_at: a.issued_at,
@@ -55,7 +56,14 @@ const firstSeen = [...closed, ...active].map((e) => e.first_seen).filter(Boolean
 // Residents of the parish, for per-resident averages: the same 2020 Census blocks the advisory counts use.
 const residents = read(data("census", "blocks-22071.json")).blocks.reduce((sum, b) => sum + b.people, 0);
 
+// When each feed last succeeded, so the page can warn a visitor when collection has stopped.
+const freshness = {
+  power: active.map((e) => e.last_seen).filter(Boolean).sort().pop() ?? powerStatus?.[source]?.last_success ?? null,
+  water: waterStatus?.swbno?.last_success ?? null,
+};
+
 const out = {
+  freshness,
   built_at: new Date().toISOString(),
   city: "New Orleans",
   residents,

@@ -1,0 +1,29 @@
+name: Report a correction
+description: A number, date or place on Utility Watch looks wrong or is missing.
+title: "Correction: "
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for checking our work. Every report is read. Please don't include anything private, such as your address or account number.
+  - type: input
+    id: page
+    attributes:
+      label: Which page?
+      placeholder: New Orleans, National, or the page's link
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What looks wrong?
+      description: The figure, date or place, as it appears on the page.
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: What should it be, and how do you know?
+      description: A link to a notice, news story or official record helps most. First-hand knowledge is welcome too; say so.
+    validations:
+      required: true

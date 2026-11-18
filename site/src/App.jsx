@@ -361,6 +361,52 @@ function Home() {
 }
 
 const ROUTES = { "": Home, "new-orleans": NewOrleans, national: National };
+const PAGE_NAMES = { "": "Home", "new-orleans": "New Orleans", national: "National" };
+const STALE_HOURS = 3; // collection runs every 15 minutes (power) and hourly (water)
+
+function hoursSince(iso) {
+  return iso ? (Date.now() - new Date(iso).getTime()) / 36e5 : Infinity;
+}
+
+/** Warn when the copy of the data on this page has stopped updating. */
+function Stale() {
+  const late = [
+    ["power outage", city.freshness.power],
+    ["boil-water", city.freshness.water],
+  ].filter(([, when]) => hoursSince(when) > STALE_HOURS);
+  if (!late.length) return null;
+  const oldest = Math.max(...late.map(([, when]) => hoursSince(when)));
+  const age = oldest === Infinity ? "an unknown time" : oldest >= 48 ? `${Math.floor(oldest / 24)} days` : `${Math.floor(oldest)} hours`;
+  return (
+    <div className="wrap" style={{ paddingBlock: "14px 0" }}>
+      <div className="note" role="status">
+        The {late.map(([name]) => name).join(" and ")} data on this page was last updated {age} ago, so "right now"
+        figures may be out of date. Collection may have paused; it catches up when it resumes.
+      </div>
+    </div>
+  );
+}
+
+const REPO = "https://github.com/wordle-death/utility-watch";
+
+function Footer({ route }) {
+  const report = `${REPO}/issues/new?template=correction.yml&page=${encodeURIComponent(PAGE_NAMES[route] || route)}`;
+  return (
+    <footer className="wrap" style={{ paddingBlock: "0 40px" }}>
+      <hr className="rule" />
+      <div className="flex flex-col gap-2 small muted" style={{ paddingTop: 18 }}>
+        <p>
+          Spot something wrong? <a href={report} target="_blank" rel="noreferrer">Report a correction</a>. Reports go to
+          the project's public issue list on GitHub, which needs a free GitHub account.
+        </p>
+        <p>
+          Utility Watch is an independent project built from public records. It is not affiliated with any utility or
+          government agency. <a href={REPO} target="_blank" rel="noreferrer">Code and data</a> are open.
+        </p>
+      </div>
+    </footer>
+  );
+}
 
 export default function App() {
   const read = () => window.location.hash.replace(/^#/, "");
@@ -382,10 +428,14 @@ export default function App() {
           <div className="flex gap-4">{link("new-orleans", "New Orleans")}{link("national", "National")}</div>
         </div>
       </nav>
-      <div className="wrap" style={{ paddingBlock: "14px 0" }}>
-        <div className="note">Private preview. Not published. Figures are estimates still under review.</div>
-      </div>
-      <Page />
+      {import.meta.env.VITE_PREVIEW && (
+        <div className="wrap" style={{ paddingBlock: "14px 0" }}>
+          <div className="note">Private preview. Not published. Figures are estimates still under review.</div>
+        </div>
+      )}
+      <Stale />
+      <Page route={route} />
+      <Footer route={route} />
     </>
   );
 }
