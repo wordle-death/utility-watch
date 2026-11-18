@@ -1,28 +1,28 @@
 {
  "empty_streak": 0,
  "events": {
-  "261122438": {
+  "261122440": {
    "cause": "We are investigating the cause of the outage.",
-   "customer_hours_before_first_seen": 1.0,
-   "customer_hours_observed": 7.0,
-   "customers": 7,
+   "customer_hours_before_first_seen": 5.8,
+   "customer_hours_observed": 0.0,
+   "customers": 25,
    "etr": null,
-   "first_seen": "2026-11-18T10:49:24Z",
-   "id": "261122438",
-   "in_progress_first_seen": "2026-11-18T10:49:24Z",
+   "first_seen": "2026-11-18T12:04:25Z",
+   "id": "261122440",
+   "in_progress_first_seen": "2026-11-18T12:04:25Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-18T11:49:24Z",
-   "lat": 33.39442790676155,
-   "lon": -111.6057321667605,
-   "max_gap_minutes": 15,
+   "last_seen": "2026-11-18T12:04:25Z",
+   "lat": 33.39769912654915,
+   "lon": -111.8751420933445,
+   "max_gap_minutes": 0,
    "opened_pending": false,
-   "peak_customers": 7,
+   "peak_customers": 25,
    "pending": false,
    "places": [
-    "S CRISMON  RD TO S SIGNAL BUTTE  RD AND E PUEBLO  AVE TO E SUPERSTITION  FWY"
+    "S EVERGREEN  RD TO S LONGMORE   AND W 8TH  AVE TO W SOUTHERN  AVE"
    ],
    "planned": false,
-   "start": "2026-11-18T10:40:33Z",
+   "start": "2026-11-18T11:50:26Z",
    "start_basis": "reported",
    "status": null,
    "zips": []
@@ -134,6 +134,7 @@
   "261122422": "2026-11-18T04:34:30Z",
   "261122424": "2026-11-18T08:19:24Z",
   "261122427": "2026-11-18T08:04:24Z",
-  "261122431": "2026-11-18T11:19:22Z"
+  "261122431": "2026-11-18T11:19:22Z",
+  "261122438": "2026-11-18T12:04:25Z"
  }
 }
