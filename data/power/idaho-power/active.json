@@ -4,14 +4,14 @@
   "2600001677": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 22.2,
-   "customer_hours_observed": 27.43888888888889,
+   "customer_hours_observed": 37.36944444444445,
    "customers": 55,
    "etr": "2026-11-19T00:00:00Z",
    "first_seen": "2026-11-18T20:34:29Z",
    "id": "2600001677",
    "in_progress_first_seen": "2026-11-18T20:34:29Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-18T21:04:25Z",
+   "last_seen": "2026-11-18T21:15:15Z",
    "lat": 43.62919203,
    "lon": -116.4111907,
    "max_gap_minutes": 15,
@@ -32,14 +32,14 @@
   "2600001845": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 30.6,
-   "customer_hours_observed": 180.025,
+   "customer_hours_observed": 196.275,
    "customers": 90,
    "etr": "2026-11-18T22:00:00Z",
    "first_seen": "2026-11-18T19:04:24Z",
    "id": "2600001845",
    "in_progress_first_seen": "2026-11-18T19:04:24Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-18T21:04:25Z",
+   "last_seen": "2026-11-18T21:15:15Z",
    "lat": 43.79013844,
    "lon": -114.52156715,
    "max_gap_minutes": 15,
@@ -60,14 +60,14 @@
   "2600002087": {
    "cause": "Object In Line",
    "customer_hours_before_first_seen": 6.0,
-   "customer_hours_observed": 19.93888888888889,
+   "customer_hours_observed": 23.55,
    "customers": 20,
    "etr": "2026-11-18T21:30:00Z",
    "first_seen": "2026-11-18T20:04:36Z",
    "id": "2600002087",
    "in_progress_first_seen": "2026-11-18T20:04:36Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-18T21:04:25Z",
+   "last_seen": "2026-11-18T21:15:15Z",
    "lat": 43.62770285,
    "lon": -116.27728724,
    "max_gap_minutes": 15,
@@ -83,6 +83,37 @@
    "status": "On the Way",
    "zips": [
     "83704"
+   ]
+  },
+  "2600002096": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 430.8,
+   "customer_hours_observed": 0.0,
+   "customers": 1264,
+   "etr": "2026-11-18T23:00:00Z",
+   "first_seen": "2026-11-18T21:15:15Z",
+   "id": "2600002096",
+   "in_progress_first_seen": "2026-11-18T21:15:15Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-18T21:15:15Z",
+   "lat": 43.63471625,
+   "lon": -116.47329064,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 1264,
+   "pending": false,
+   "places": [
+    "MERIDIAN",
+    "NAMPA"
+   ],
+   "planned": false,
+   "start": "2026-11-18T20:54:48Z",
+   "start_basis": "reported",
+   "status": "Assigned",
+   "zips": [
+    "83642",
+    "83646",
+    "83687"
    ]
   }
  },
