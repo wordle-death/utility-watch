@@ -18,6 +18,8 @@ concurrency:
 
 jobs:
   deploy:
+    # Skip runs set off by a cancelled collection; a failed one still republishes what is on main.
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion != 'cancelled'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     defaults:
@@ -40,7 +42,7 @@ jobs:
         run: |
           sub=$(curl -fsS -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
             "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/workers/subdomain" \
-            | python3 -c 'import json,sys; print(json.load(sys.stdin)["result"]["subdomain"])')
+            | python3 -c 'import json,sys; print(json.load(sys.stdin)["result"]["subdomain"] or sys.exit("no workers.dev subdomain"))')
           echo "SITE_URL=https://utility-watch.$sub.workers.dev" >> "$GITHUB_ENV"
       - run: npm run build
         env:
