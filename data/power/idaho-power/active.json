@@ -1,34 +1,32 @@
 {
  "empty_streak": 0,
  "events": {
-  "2600002041": {
-   "cause": "Weather",
-   "customer_hours_before_first_seen": 11.3,
-   "customer_hours_observed": 24.033333333333335,
-   "customers": 12,
-   "etr": "2026-11-19T07:00:00Z",
-   "first_seen": "2026-11-18T05:04:22Z",
-   "id": "2600002041",
-   "in_progress_first_seen": "2026-11-18T05:04:22Z",
+  "2600002046": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 1.8,
+   "customer_hours_observed": 0.0,
+   "customers": 10,
+   "etr": "2026-11-18T09:30:00Z",
+   "first_seen": "2026-11-18T07:19:23Z",
+   "id": "2600002046",
+   "in_progress_first_seen": "2026-11-18T07:19:23Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-18T07:04:32Z",
-   "lat": 44.68033161,
-   "lon": -115.96667793,
-   "max_gap_minutes": 15,
+   "last_seen": "2026-11-18T07:19:23Z",
+   "lat": 42.92737393,
+   "lon": -112.48296805,
+   "max_gap_minutes": 0,
    "opened_pending": false,
-   "peak_customers": 12,
+   "peak_customers": 10,
    "pending": false,
    "places": [
-    "DONNELLY",
-    "MCCALL"
+    "POCATELLO"
    ],
    "planned": false,
-   "start": "2026-11-18T04:07:42Z",
+   "start": "2026-11-18T07:08:19Z",
    "start_basis": "reported",
-   "status": "On-site",
+   "status": "Pending",
    "zips": [
-    "83615",
-    "83638"
+    "83202"
    ]
   }
  },
@@ -131,6 +129,7 @@
   "2600001998": "2026-11-18T00:34:23Z",
   "2600002021": "2026-11-18T01:19:32Z",
   "2600002026": "2026-11-18T04:04:24Z",
-  "2600002040": "2026-11-18T04:49:22Z"
+  "2600002040": "2026-11-18T04:49:22Z",
+  "2600002041": "2026-11-18T07:19:23Z"
  }
 }
