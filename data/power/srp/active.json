@@ -4,14 +4,14 @@
   "261122424": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 0.0,
-   "customer_hours_observed": 3.7536111111111112,
+   "customer_hours_observed": 4.0,
    "customers": 1,
    "etr": null,
    "first_seen": "2026-11-18T04:04:24Z",
    "id": "261122424",
    "in_progress_first_seen": "2026-11-18T04:04:24Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-18T07:49:37Z",
+   "last_seen": "2026-11-18T08:04:24Z",
    "lat": 33.483358288646,
    "lon": -111.753287298545,
    "max_gap_minutes": 15,
@@ -27,43 +27,17 @@
    "status": null,
    "zips": []
   },
-  "261122427": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 0.1,
-   "customer_hours_observed": 3.5036111111111112,
-   "customers": 1,
-   "etr": null,
-   "first_seen": "2026-11-18T04:19:24Z",
-   "id": "261122427",
-   "in_progress_first_seen": "2026-11-18T04:19:24Z",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-18T07:49:37Z",
-   "lat": 33.4661010153204,
-   "lon": -111.92093749587801,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 1,
-   "pending": false,
-   "places": [
-    "N SCOTTSDALE  RD TO N 76TH  ST AND E OAK  ST TO E ROOSEVELT  ST"
-   ],
-   "planned": true,
-   "start": "2026-11-18T04:15:40Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
   "261122431": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 0.2,
-   "customer_hours_observed": 2.754166666666667,
+   "customer_hours_observed": 3.0005555555555556,
    "customers": 1,
    "etr": null,
    "first_seen": "2026-11-18T05:04:22Z",
    "id": "261122431",
    "in_progress_first_seen": "2026-11-18T05:04:22Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-18T07:49:37Z",
+   "last_seen": "2026-11-18T08:04:24Z",
    "lat": 33.300580498294096,
    "lon": -111.898159955011,
    "max_gap_minutes": 15,
@@ -183,6 +157,7 @@
   "261122413": "2026-11-18T05:04:22Z",
   "261122414": "2026-11-18T02:34:23Z",
   "261122416": "2026-11-18T04:04:24Z",
-  "261122422": "2026-11-18T04:34:30Z"
+  "261122422": "2026-11-18T04:34:30Z",
+  "261122427": "2026-11-18T08:04:24Z"
  }
 }
