@@ -4,14 +4,14 @@
   "2600002046": {
    "cause": "Equipment Issue",
    "customer_hours_before_first_seen": 1.8,
-   "customer_hours_observed": 2.5055555555555555,
+   "customer_hours_observed": 5.03888888888889,
    "customers": 10,
    "etr": "2026-11-18T08:30:00Z",
    "first_seen": "2026-11-18T07:19:23Z",
    "id": "2600002046",
    "in_progress_first_seen": "2026-11-18T07:19:23Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-18T07:34:25Z",
+   "last_seen": "2026-11-18T07:49:37Z",
    "lat": 42.92737393,
    "lon": -112.48296805,
    "max_gap_minutes": 15,
@@ -24,7 +24,7 @@
    "planned": false,
    "start": "2026-11-18T07:08:19Z",
    "start_basis": "reported",
-   "status": "On the Way",
+   "status": "On-site",
    "zips": [
     "83202"
    ]
