@@ -1,35 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "2600002046": {
-   "cause": "Equipment Issue",
-   "customer_hours_before_first_seen": 1.8,
-   "customer_hours_observed": 7.502777777777778,
-   "customers": 10,
-   "etr": "2026-11-18T08:30:00Z",
-   "first_seen": "2026-11-18T07:19:23Z",
-   "id": "2600002046",
-   "in_progress_first_seen": "2026-11-18T07:19:23Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-18T08:04:24Z",
-   "lat": 42.92737393,
-   "lon": -112.48296805,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 10,
-   "pending": false,
-   "places": [
-    "POCATELLO"
-   ],
-   "planned": false,
-   "start": "2026-11-18T07:08:19Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83202"
-   ]
-  }
- },
+ "events": {},
  "logged_recent": {
   "2600000277": "2026-11-17T20:04:24Z",
   "2600000353": "2026-11-11T23:38:23Z",
@@ -130,6 +101,7 @@
   "2600002021": "2026-11-18T01:19:32Z",
   "2600002026": "2026-11-18T04:04:24Z",
   "2600002040": "2026-11-18T04:49:22Z",
-  "2600002041": "2026-11-18T07:19:23Z"
+  "2600002041": "2026-11-18T07:19:23Z",
+  "2600002046": "2026-11-18T08:19:24Z"
  }
 }
