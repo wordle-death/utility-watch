@@ -1,33 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "261122450": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 0.4,
-   "customer_hours_observed": 60.53361111111112,
-   "customers": 11,
-   "etr": null,
-   "first_seen": "2026-11-18T14:34:25Z",
-   "id": "261122450",
-   "in_progress_first_seen": "2026-11-18T14:34:25Z",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-18T20:04:36Z",
-   "lat": 33.506763669384355,
-   "lon": -111.904812783699,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 11,
-   "pending": false,
-   "places": [
-    "N HAYDEN  RD TO N GRANITE REEF  RD AND E JACKRABBIT  RD TO E CAMELBACK  RD"
-   ],
-   "planned": true,
-   "start": "2026-11-18T14:32:10Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  }
- },
+ "events": {},
  "logged_recent": {
   "261121594": "2026-11-12T01:49:23Z",
   "261121597": "2026-11-12T01:19:23Z",
@@ -137,6 +110,7 @@
   "261122440": "2026-11-18T13:19:23Z",
   "261122448": "2026-11-18T16:34:36Z",
   "261122448#2": "2026-11-18T16:34:36Z",
+  "261122450": "2026-11-18T20:19:23Z",
   "261122458": "2026-11-18T17:19:31Z",
   "261122466": "2026-11-18T17:34:24Z",
   "261122468": "2026-11-18T19:19:24Z",
