@@ -4,14 +4,14 @@
   "2600002117": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 26.0,
-   "customer_hours_observed": 395.9816666666666,
+   "customer_hours_observed": 412.60999999999996,
    "customers": 66,
    "etr": "2026-11-19T06:30:00Z",
    "first_seen": "2026-11-19T05:19:30Z",
    "id": "2600002117",
    "in_progress_first_seen": "2026-11-19T05:19:30Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-19T11:19:29Z",
+   "last_seen": "2026-11-19T11:34:36Z",
    "lat": 43.64455287,
    "lon": -116.24761333,
    "max_gap_minutes": 15,
@@ -32,14 +32,14 @@
   "2600002121": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 48.2,
-   "customer_hours_observed": 58.080555555555556,
+   "customer_hours_observed": 72.69333333333333,
    "customers": 58,
    "etr": "2026-11-19T11:00:00Z",
    "first_seen": "2026-11-19T10:19:24Z",
    "id": "2600002121",
    "in_progress_first_seen": "2026-11-19T10:19:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-19T11:19:29Z",
+   "last_seen": "2026-11-19T11:34:36Z",
    "lat": 43.92080204,
    "lon": -115.95748751,
    "max_gap_minutes": 15,
@@ -52,7 +52,7 @@
    "planned": false,
    "start": "2026-11-19T09:29:33Z",
    "start_basis": "reported",
-   "status": "On the Way",
+   "status": "Assigned",
    "zips": [
     "83631"
    ]
@@ -60,17 +60,17 @@
   "2600002127": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 10.1,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 6.046666666666667,
    "customers": 24,
    "etr": "2026-11-19T12:30:00Z",
    "first_seen": "2026-11-19T11:19:29Z",
    "id": "2600002127",
    "in_progress_first_seen": "2026-11-19T11:19:29Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-19T11:19:29Z",
+   "last_seen": "2026-11-19T11:34:36Z",
    "lat": 43.67791138,
    "lon": -116.01079649,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "opened_pending": false,
    "peak_customers": 24,
    "pending": false,
@@ -80,7 +80,7 @@
    "planned": false,
    "start": "2026-11-19T10:54:12Z",
    "start_basis": "reported",
-   "status": "Pending",
+   "status": "Assigned",
    "zips": [
     "83716"
    ]
