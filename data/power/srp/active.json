@@ -1,33 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "261122729": {
-   "cause": "We are investigating the cause of the outage.",
-   "customer_hours_before_first_seen": 0.2,
-   "customer_hours_observed": 60.0,
-   "customers": 30,
-   "etr": null,
-   "first_seen": "2026-11-19T19:04:24Z",
-   "id": "261122729",
-   "in_progress_first_seen": "2026-11-19T19:04:24Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-19T21:04:24Z",
-   "lat": 33.5019513827352,
-   "lon": -111.994641941416,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 30,
-   "pending": false,
-   "places": [
-    "N 36TH  ST TO N 44TH  ST AND E CAMELBACK  RD TO E INDIAN SCHOOL  RD"
-   ],
-   "planned": false,
-   "start": "2026-11-19T19:03:54Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  }
- },
+ "events": {},
  "logged_recent": {
   "261121682": "2026-11-12T21:49:23Z",
   "261121691": "2026-11-12T22:04:23Z",
@@ -140,6 +113,7 @@
   "261122702": "2026-11-19T19:04:24Z",
   "261122707": "2026-11-19T19:19:23Z",
   "261122712": "2026-11-19T18:34:24Z",
+  "261122729": "2026-11-19T21:19:24Z",
   "261122730": "2026-11-19T20:04:22Z",
   "261122747": "2026-11-19T20:49:30Z"
  }
