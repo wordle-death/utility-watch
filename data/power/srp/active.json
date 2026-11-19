@@ -1,6 +1,33 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "261122753": {
+   "cause": "We are investigating the cause of the outage.",
+   "customer_hours_before_first_seen": 3.2,
+   "customer_hours_observed": 0.0,
+   "customers": 25,
+   "etr": null,
+   "first_seen": "2026-11-19T21:49:23Z",
+   "id": "261122753",
+   "in_progress_first_seen": "2026-11-19T21:49:23Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-19T21:49:23Z",
+   "lat": 33.43782363267425,
+   "lon": -111.823302367971,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 25,
+   "pending": false,
+   "places": [
+    "N CENTER  ST TO N HORNE   AND E MCLELLAN  RD TO E BROWN  RD"
+   ],
+   "planned": false,
+   "start": "2026-11-19T21:41:43Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  }
+ },
  "logged_recent": {
   "261121682": "2026-11-12T21:49:23Z",
   "261121691": "2026-11-12T22:04:23Z",

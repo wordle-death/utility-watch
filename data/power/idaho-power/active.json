@@ -1,45 +1,17 @@
 {
  "empty_streak": 0,
  "events": {
-  "2600001639": {
-   "cause": "Under Investigation",
-   "customer_hours_before_first_seen": 7.0,
-   "customer_hours_observed": 50.99527777777778,
-   "customers": 17,
-   "etr": "2026-11-19T22:00:00Z",
-   "first_seen": "2026-11-19T18:34:24Z",
-   "id": "2600001639",
-   "in_progress_first_seen": "2026-11-19T18:34:24Z",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-19T21:34:23Z",
-   "lat": 44.65797052,
-   "lon": -116.0882014,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 17,
-   "pending": false,
-   "places": [
-    "DONNELLY"
-   ],
-   "planned": true,
-   "start": "2026-11-19T18:09:39Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83615"
-   ]
-  },
   "2600002154": {
    "cause": "Weather",
    "customer_hours_before_first_seen": 14.8,
-   "customer_hours_observed": 113.99333333333333,
+   "customer_hours_observed": 119.99333333333333,
    "customers": 24,
    "etr": "2026-11-19T22:30:00Z",
    "first_seen": "2026-11-19T16:49:24Z",
    "id": "2600002154",
    "in_progress_first_seen": "2026-11-19T16:49:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-19T21:34:23Z",
+   "last_seen": "2026-11-19T21:49:23Z",
    "lat": 43.67791138,
    "lon": -116.01079649,
    "max_gap_minutes": 15,
@@ -52,7 +24,7 @@
    "planned": false,
    "start": "2026-11-19T16:12:27Z",
    "start_basis": "reported",
-   "status": "Assigned",
+   "status": "Pending",
    "zips": [
     "83716"
    ]
@@ -60,14 +32,14 @@
   "2600002196": {
    "cause": "Weather",
    "customer_hours_before_first_seen": 31.5,
-   "customer_hours_observed": 22.5,
+   "customer_hours_observed": 27.0,
    "customers": 18,
    "etr": "2026-11-19T23:30:00Z",
    "first_seen": "2026-11-19T20:19:23Z",
    "id": "2600002196",
    "in_progress_first_seen": "2026-11-19T20:19:23Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-19T21:34:23Z",
+   "last_seen": "2026-11-19T21:49:23Z",
    "lat": 43.7476308,
    "lon": -115.90418099,
    "max_gap_minutes": 15,
@@ -110,6 +82,7 @@
   "2600001617": "2026-11-13T09:34:23Z",
   "2600001630": "2026-11-13T17:04:25Z",
   "2600001631": "2026-11-13T17:04:25Z",
+  "2600001639": "2026-11-19T21:49:23Z",
   "2600001651": "2026-11-13T21:34:23Z",
   "2600001657": "2026-11-13T23:34:24Z",
   "2600001661": "2026-11-18T16:49:24Z",
