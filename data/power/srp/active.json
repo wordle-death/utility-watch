@@ -1,6 +1,33 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "261122825": {
+   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
+   "customer_hours_before_first_seen": 3.4,
+   "customer_hours_observed": 0.0,
+   "customers": 63,
+   "etr": null,
+   "first_seen": "2026-11-19T22:49:23Z",
+   "id": "261122825",
+   "in_progress_first_seen": "2026-11-19T22:49:23Z",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-19T22:49:23Z",
+   "lat": 33.4734860511321,
+   "lon": -112.00990500191949,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 63,
+   "pending": false,
+   "places": [
+    "N 28TH  ST TO N 36TH  ST AND E THOMAS  RD TO E MCDOWELL  RD"
+   ],
+   "planned": true,
+   "start": "2026-11-19T22:46:06Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  }
+ },
  "logged_recent": {
   "261121769": "2026-11-13T01:19:24Z",
   "261121801": "2026-11-13T10:49:23Z",
