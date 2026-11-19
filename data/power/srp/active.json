@@ -1,28 +1,28 @@
 {
  "empty_streak": 0,
  "events": {
-  "261122591": {
+  "261122597": {
    "cause": "We are investigating the cause of the outage.",
-   "customer_hours_before_first_seen": 98.2,
+   "customer_hours_before_first_seen": 62.5,
    "customer_hours_observed": 0.0,
-   "customers": 1376,
+   "customers": 919,
    "etr": null,
-   "first_seen": "2026-11-18T23:49:24Z",
-   "id": "261122591",
-   "in_progress_first_seen": "2026-11-18T23:49:24Z",
+   "first_seen": "2026-11-19T00:04:23Z",
+   "id": "261122597",
+   "in_progress_first_seen": "2026-11-19T00:04:23Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-18T23:49:24Z",
-   "lat": 33.47881959802365,
-   "lon": -112.1635730917005,
+   "last_seen": "2026-11-19T00:04:23Z",
+   "lat": 33.368225018207696,
+   "lon": -111.96117865916449,
    "max_gap_minutes": 0,
    "opened_pending": false,
-   "peak_customers": 1376,
+   "peak_customers": 919,
    "pending": false,
    "places": [
-    "N 55TH  AVE TO N 43RD  AVE AND W INDIAN SCHOOL  RD TO W MCDOWELL  RD"
+    "S 48TH  ST TO S KYRENE  RD AND W SUPERSTITION  FWY TO E MINERAL  RD"
    ],
    "planned": false,
-   "start": "2026-11-18T23:45:07Z",
+   "start": "2026-11-19T00:00:18Z",
    "start_basis": "reported",
    "status": null,
    "zips": []
@@ -145,6 +145,7 @@
   "261122476": "2026-11-18T19:34:22Z",
   "261122477": "2026-11-18T19:19:24Z",
   "261122490": "2026-11-18T17:49:24Z",
-  "261122513": "2026-11-18T18:04:30Z"
+  "261122513": "2026-11-18T18:04:30Z",
+  "261122591": "2026-11-19T00:04:23Z"
  }
 }
