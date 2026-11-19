@@ -4,14 +4,14 @@
   "2600002196": {
    "cause": "Weather",
    "customer_hours_before_first_seen": 31.5,
-   "customer_hours_observed": 54.01,
+   "customer_hours_observed": 58.5,
    "customers": 18,
    "etr": "2026-11-19T23:30:00Z",
    "first_seen": "2026-11-19T20:19:23Z",
    "id": "2600002196",
    "in_progress_first_seen": "2026-11-19T20:19:23Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-19T23:19:25Z",
+   "last_seen": "2026-11-19T23:34:23Z",
    "lat": 43.7476308,
    "lon": -115.90418099,
    "max_gap_minutes": 15,
@@ -32,14 +32,14 @@
   "2600002237": {
    "cause": "Weather",
    "customer_hours_before_first_seen": 17.8,
-   "customer_hours_observed": 38.76722222222222,
+   "customer_hours_observed": 46.5,
    "customers": 31,
    "etr": null,
    "first_seen": "2026-11-19T22:04:23Z",
    "id": "2600002237",
    "in_progress_first_seen": "2026-11-19T22:04:23Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-19T23:19:25Z",
+   "last_seen": "2026-11-19T23:34:23Z",
    "lat": 43.75921652,
    "lon": -115.99875211,
    "max_gap_minutes": 15,
@@ -60,14 +60,14 @@
   "2600002239": {
    "cause": "Not Found",
    "customer_hours_before_first_seen": 31.0,
-   "customer_hours_observed": 78.0,
+   "customer_hours_observed": 97.45666666666666,
    "customers": 78,
    "etr": "2026-11-20T00:00:00Z",
    "first_seen": "2026-11-19T22:19:25Z",
    "id": "2600002239",
    "in_progress_first_seen": "2026-11-19T22:19:25Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-19T23:19:25Z",
+   "last_seen": "2026-11-19T23:34:23Z",
    "lat": 43.63051382,
    "lon": -116.22508788,
    "max_gap_minutes": 15,
@@ -88,14 +88,14 @@
   "2600002243": {
    "cause": "Third-Party Damage",
    "customer_hours_before_first_seen": 4.0,
-   "customer_hours_observed": 7.502777777777778,
+   "customer_hours_observed": 9.997222222222224,
    "customers": 10,
    "etr": "2026-11-20T00:30:00Z",
    "first_seen": "2026-11-19T22:34:24Z",
    "id": "2600002243",
    "in_progress_first_seen": "2026-11-19T22:34:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-19T23:19:25Z",
+   "last_seen": "2026-11-19T23:34:23Z",
    "lat": 43.60286153,
    "lon": -116.29300831,
    "max_gap_minutes": 15,
@@ -111,36 +111,6 @@
    "status": "On-site",
    "zips": [
     "83709"
-   ]
-  },
-  "2600002250": {
-   "cause": "Under Investigation",
-   "customer_hours_before_first_seen": 8.4,
-   "customer_hours_observed": 9.260277777777777,
-   "customers": 37,
-   "etr": "2026-11-20T02:00:00Z",
-   "first_seen": "2026-11-19T23:04:24Z",
-   "id": "2600002250",
-   "in_progress_first_seen": "2026-11-19T23:04:24Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-19T23:19:25Z",
-   "lat": 44.19331417,
-   "lon": -117.48505922,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 37,
-   "pending": false,
-   "places": [
-    "JAMIESON",
-    "VALE"
-   ],
-   "planned": false,
-   "start": "2026-11-19T22:50:44Z",
-   "start_basis": "reported",
-   "status": "Pending",
-   "zips": [
-    "97909",
-    "97918"
    ]
   }
  },
@@ -261,6 +231,7 @@
   "2600002218": "2026-11-19T21:34:23Z",
   "2600002220": "2026-11-19T21:19:24Z",
   "2600002227": "2026-11-19T20:34:24Z",
-  "2600002235": "2026-11-19T21:19:24Z"
+  "2600002235": "2026-11-19T21:19:24Z",
+  "2600002250": "2026-11-19T23:34:23Z"
  }
 }
