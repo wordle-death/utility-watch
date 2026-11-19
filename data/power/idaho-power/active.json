@@ -4,14 +4,14 @@
   "2600002154": {
    "cause": "Weather",
    "customer_hours_before_first_seen": 14.8,
-   "customer_hours_observed": 119.99333333333333,
+   "customer_hours_observed": 125.99333333333333,
    "customers": 24,
    "etr": "2026-11-19T22:30:00Z",
    "first_seen": "2026-11-19T16:49:24Z",
    "id": "2600002154",
    "in_progress_first_seen": "2026-11-19T16:49:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-19T21:49:23Z",
+   "last_seen": "2026-11-19T22:04:23Z",
    "lat": 43.67791138,
    "lon": -116.01079649,
    "max_gap_minutes": 15,
@@ -32,14 +32,14 @@
   "2600002196": {
    "cause": "Weather",
    "customer_hours_before_first_seen": 31.5,
-   "customer_hours_observed": 27.0,
+   "customer_hours_observed": 31.5,
    "customers": 18,
    "etr": "2026-11-19T23:30:00Z",
    "first_seen": "2026-11-19T20:19:23Z",
    "id": "2600002196",
    "in_progress_first_seen": "2026-11-19T20:19:23Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-19T21:49:23Z",
+   "last_seen": "2026-11-19T22:04:23Z",
    "lat": 43.7476308,
    "lon": -115.90418099,
    "max_gap_minutes": 15,
@@ -56,6 +56,34 @@
    "zips": [
     "83716"
    ]
+  },
+  "2600002237": {
+   "cause": "Weather",
+   "customer_hours_before_first_seen": 17.8,
+   "customer_hours_observed": 0.0,
+   "customers": 31,
+   "etr": null,
+   "first_seen": "2026-11-19T22:04:23Z",
+   "id": "2600002237",
+   "in_progress_first_seen": "2026-11-19T22:04:23Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-19T22:04:23Z",
+   "lat": 43.75921652,
+   "lon": -115.99875211,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 31,
+   "pending": false,
+   "places": [
+    "BOISE"
+   ],
+   "planned": false,
+   "start": "2026-11-19T21:29:51Z",
+   "start_basis": "reported",
+   "status": "Assigned",
+   "zips": [
+    "83716"
+   ]
   }
  },
  "logged_recent": {
@@ -63,7 +91,6 @@
   "2600000474": "2026-11-13T19:34:24Z",
   "2600000988": "2026-11-17T19:49:24Z",
   "2600001257": "2026-11-13T19:49:32Z",
-  "2600001320": "2026-11-12T21:49:23Z",
   "2600001332": "2026-11-16T18:04:24Z",
   "2600001364": "2026-11-17T19:19:23Z",
   "2600001406": "2026-11-17T16:49:29Z",
