@@ -1,6 +1,33 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "261122657": {
+   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
+   "customer_hours_before_first_seen": 3.6,
+   "customer_hours_observed": 0.0,
+   "customers": 32,
+   "etr": null,
+   "first_seen": "2026-11-19T16:04:24Z",
+   "id": "261122657",
+   "in_progress_first_seen": "2026-11-19T16:04:24Z",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-19T16:04:24Z",
+   "lat": 33.35381409381705,
+   "lon": -112.1475129434515,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 32,
+   "pending": false,
+   "places": [
+    "S 47TH  AVE TO S 35TH  AVE AND W DOBBINS  RD TO W CETON  DR"
+   ],
+   "planned": true,
+   "start": "2026-11-19T15:57:36Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  }
+ },
  "logged_recent": {
   "261121649": "2026-11-12T17:34:23Z",
   "261121651": "2026-11-12T18:04:34Z",
