@@ -1,33 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "261122597": {
-   "cause": "We are investigating the cause of the outage.",
-   "customer_hours_before_first_seen": 62.5,
-   "customer_hours_observed": 0.0,
-   "customers": 919,
-   "etr": null,
-   "first_seen": "2026-11-19T00:04:23Z",
-   "id": "261122597",
-   "in_progress_first_seen": "2026-11-19T00:04:23Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-19T00:04:23Z",
-   "lat": 33.368225018207696,
-   "lon": -111.96117865916449,
-   "max_gap_minutes": 0,
-   "opened_pending": false,
-   "peak_customers": 919,
-   "pending": false,
-   "places": [
-    "S 48TH  ST TO S KYRENE  RD AND W SUPERSTITION  FWY TO E MINERAL  RD"
-   ],
-   "planned": false,
-   "start": "2026-11-19T00:00:18Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  }
- },
+ "events": {},
  "logged_recent": {
   "261121594": "2026-11-12T01:49:23Z",
   "261121597": "2026-11-12T01:19:23Z",
@@ -146,6 +119,7 @@
   "261122477": "2026-11-18T19:19:24Z",
   "261122490": "2026-11-18T17:49:24Z",
   "261122513": "2026-11-18T18:04:30Z",
-  "261122591": "2026-11-19T00:04:23Z"
+  "261122591": "2026-11-19T00:04:23Z",
+  "261122597": "2026-11-19T00:19:24Z"
  }
 }
