@@ -4,14 +4,14 @@
   "2600002117": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 26.0,
-   "customer_hours_observed": 676.3716666666666,
+   "customer_hours_observed": 692.8899999999999,
    "customers": 66,
    "etr": "2026-11-19T06:30:00Z",
    "first_seen": "2026-11-19T05:19:30Z",
    "id": "2600002117",
    "in_progress_first_seen": "2026-11-19T05:19:30Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-19T15:34:23Z",
+   "last_seen": "2026-11-19T15:49:24Z",
    "lat": 43.64455287,
    "lon": -116.24761333,
    "max_gap_minutes": 15,
@@ -32,14 +32,14 @@
   "2600002121": {
    "cause": "Equipment Issue",
    "customer_hours_before_first_seen": 48.2,
-   "customer_hours_observed": 304.4838888888889,
+   "customer_hours_observed": 319.0,
    "customers": 58,
    "etr": "2026-11-19T15:00:00Z",
    "first_seen": "2026-11-19T10:19:24Z",
    "id": "2600002121",
    "in_progress_first_seen": "2026-11-19T10:19:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-19T15:34:23Z",
+   "last_seen": "2026-11-19T15:49:24Z",
    "lat": 43.92080204,
    "lon": -115.95748751,
    "max_gap_minutes": 15,
@@ -57,48 +57,20 @@
     "83631"
    ]
   },
-  "2600002127": {
-   "cause": "Object In Line",
-   "customer_hours_before_first_seen": 10.1,
-   "customer_hours_observed": 101.96000000000001,
-   "customers": 24,
-   "etr": "2026-11-19T14:00:00Z",
-   "first_seen": "2026-11-19T11:19:29Z",
-   "id": "2600002127",
-   "in_progress_first_seen": "2026-11-19T11:19:29Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-19T15:34:23Z",
-   "lat": 43.67791138,
-   "lon": -116.01079649,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 24,
-   "pending": false,
-   "places": [
-    "BOISE"
-   ],
-   "planned": false,
-   "start": "2026-11-19T10:54:12Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83716"
-   ]
-  },
   "2600002137": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 11.8,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 5.0055555555555555,
    "customers": 20,
    "etr": "2026-11-19T16:30:00Z",
    "first_seen": "2026-11-19T15:34:23Z",
    "id": "2600002137",
    "in_progress_first_seen": "2026-11-19T15:34:23Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-19T15:34:23Z",
+   "last_seen": "2026-11-19T15:49:24Z",
    "lat": 43.67057972,
    "lon": -116.04687778,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "opened_pending": false,
    "peak_customers": 20,
    "pending": false,
@@ -116,14 +88,14 @@
   "2600002138": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 4.1,
-   "customer_hours_observed": 3.7458333333333336,
+   "customer_hours_observed": 7.5,
    "customers": 15,
    "etr": "2026-11-19T17:00:00Z",
    "first_seen": "2026-11-19T15:19:24Z",
    "id": "2600002138",
    "in_progress_first_seen": "2026-11-19T15:19:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-19T15:34:23Z",
+   "last_seen": "2026-11-19T15:49:24Z",
    "lat": 43.75204712,
    "lon": -115.99374921,
    "max_gap_minutes": 15,
@@ -137,6 +109,34 @@
    "start": "2026-11-19T15:03:10Z",
    "start_basis": "reported",
    "status": "Assigned",
+   "zips": [
+    "83716"
+   ]
+  },
+  "2600002142": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 9.7,
+   "customer_hours_observed": 0.0,
+   "customers": 24,
+   "etr": "2026-11-19T17:30:00Z",
+   "first_seen": "2026-11-19T15:49:24Z",
+   "id": "2600002142",
+   "in_progress_first_seen": "2026-11-19T15:49:24Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-19T15:49:24Z",
+   "lat": 43.75789135,
+   "lon": -116.00749112,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 24,
+   "pending": false,
+   "places": [
+    "BOISE"
+   ],
+   "planned": false,
+   "start": "2026-11-19T15:25:03Z",
+   "start_basis": "reported",
+   "status": "Pending",
    "zips": [
     "83716"
    ]
@@ -245,6 +245,7 @@
   "2600002087": "2026-11-19T05:34:31Z",
   "2600002096": "2026-11-18T22:04:25Z",
   "2600002103": "2026-11-18T23:19:23Z",
-  "2600002115": "2026-11-19T05:04:33Z"
+  "2600002115": "2026-11-19T05:04:33Z",
+  "2600002127": "2026-11-19T15:49:24Z"
  }
 }
