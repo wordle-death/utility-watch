@@ -1,48 +1,20 @@
 {
  "empty_streak": 0,
  "events": {
-  "2600002087": {
-   "cause": "Equipment Issue",
-   "customer_hours_before_first_seen": 6.0,
-   "customer_hours_observed": 184.9666666666667,
-   "customers": 20,
-   "etr": "2026-11-19T04:30:00Z",
-   "first_seen": "2026-11-18T20:04:36Z",
-   "id": "2600002087",
-   "in_progress_first_seen": "2026-11-18T20:04:36Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-19T05:19:30Z",
-   "lat": 43.62770285,
-   "lon": -116.27728724,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 20,
-   "pending": false,
-   "places": [
-    "BOISE"
-   ],
-   "planned": false,
-   "start": "2026-11-18T19:46:41Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83704"
-   ]
-  },
   "2600002117": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 26.0,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 16.51833333333333,
    "customers": 66,
    "etr": "2026-11-19T06:30:00Z",
    "first_seen": "2026-11-19T05:19:30Z",
    "id": "2600002117",
    "in_progress_first_seen": "2026-11-19T05:19:30Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-19T05:19:30Z",
+   "last_seen": "2026-11-19T05:34:31Z",
    "lat": 43.64455287,
    "lon": -116.24761333,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "opened_pending": false,
    "peak_customers": 66,
    "pending": false,
@@ -159,6 +131,7 @@
   "2600002065": "2026-11-18T18:19:25Z",
   "2600002069": "2026-11-18T19:19:24Z",
   "2600002076": "2026-11-18T20:19:23Z",
+  "2600002087": "2026-11-19T05:34:31Z",
   "2600002096": "2026-11-18T22:04:25Z",
   "2600002103": "2026-11-18T23:19:23Z",
   "2600002115": "2026-11-19T05:04:33Z"
