@@ -1,43 +1,17 @@
 {
  "empty_streak": 0,
  "events": {
-  "261122622": {
-   "cause": "An underground power cable has failed. SRP crews are working to restore power.",
-   "customer_hours_before_first_seen": 0.3,
-   "customer_hours_observed": 7.5,
-   "customers": 2,
-   "etr": null,
-   "first_seen": "2026-11-19T16:49:24Z",
-   "id": "261122622",
-   "in_progress_first_seen": "2026-11-19T16:49:24Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-19T20:34:24Z",
-   "lat": 33.4152973169185,
-   "lon": -111.8596118366075,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 2,
-   "pending": false,
-   "places": [
-    "N LONGMORE   TO N ALMA SCHOOL  RD AND W UNIVERSITY  DR TO W BROADWAY  RD"
-   ],
-   "planned": false,
-   "start": "2026-11-19T16:39:19Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
   "261122729": {
    "cause": "We are investigating the cause of the outage.",
    "customer_hours_before_first_seen": 0.2,
-   "customer_hours_observed": 45.0,
+   "customer_hours_observed": 52.55,
    "customers": 30,
    "etr": null,
    "first_seen": "2026-11-19T19:04:24Z",
    "id": "261122729",
    "in_progress_first_seen": "2026-11-19T19:04:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-19T20:34:24Z",
+   "last_seen": "2026-11-19T20:49:30Z",
    "lat": 33.5019513827352,
    "lon": -111.994641941416,
    "max_gap_minutes": 15,
@@ -52,38 +26,11 @@
    "start_basis": "reported",
    "status": null,
    "zips": []
-  },
-  "261122747": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 0.3,
-   "customer_hours_observed": 0.5005555555555555,
-   "customers": 2,
-   "etr": null,
-   "first_seen": "2026-11-19T20:19:23Z",
-   "id": "261122747",
-   "in_progress_first_seen": "2026-11-19T20:19:23Z",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-19T20:34:24Z",
-   "lat": 33.2852352996858,
-   "lon": -111.635147555452,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 2,
-   "pending": false,
-   "places": [
-    "S 88TH  ST TO S CRISMON  RD AND E PECOS  RD TO E GERMANN  RD"
-   ],
-   "planned": true,
-   "start": "2026-11-19T20:10:52Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
   }
  },
  "logged_recent": {
   "261121682": "2026-11-12T21:49:23Z",
   "261121691": "2026-11-12T22:04:23Z",
-  "261121718": "2026-11-12T20:49:23Z",
   "261121769": "2026-11-13T01:19:24Z",
   "261121801": "2026-11-13T10:49:23Z",
   "261121809": "2026-11-13T18:04:25Z",
@@ -182,6 +129,7 @@
   "261122513": "2026-11-18T18:04:30Z",
   "261122591": "2026-11-19T00:04:23Z",
   "261122597": "2026-11-19T00:19:24Z",
+  "261122622": "2026-11-19T20:49:30Z",
   "261122657": "2026-11-19T17:49:24Z",
   "261122659": "2026-11-19T18:04:24Z",
   "261122661": "2026-11-19T19:49:23Z",
@@ -192,6 +140,7 @@
   "261122702": "2026-11-19T19:04:24Z",
   "261122707": "2026-11-19T19:19:23Z",
   "261122712": "2026-11-19T18:34:24Z",
-  "261122730": "2026-11-19T20:04:22Z"
+  "261122730": "2026-11-19T20:04:22Z",
+  "261122747": "2026-11-19T20:49:30Z"
  }
 }
