@@ -319,21 +319,24 @@ function CostMethod({ cost }) {
           <li><b>High, {money(WATER.high.perHousehold)}:</b> {WATER.high.source}.{" "}
             <a href={WATER.high.url} target="_blank" rel="noreferrer">Source</a></li>
         </ul>
-        {d ? (
+        {!d ? <p className="muted">None of the year's advisories could be counted, so no water cost is shown.</p>
+          : d.advisories === 0 ? <p className="muted">No boil-water advisories were issued this year.</p> : (
           <p className="muted">
             Multiplied by the households inside each advisory area: {whole(d.householdAdvisories)} across{" "}
             {d.advisories - d.missing} of the year's {d.advisories} advisories
-            {d.missing ? ` (${d.missing} had no map and could not be counted, so the total is too low)` : ""}.
-            {d.upperBound ? ` ${whole(d.upperBound)} of those households come from very small areas counted generously,` +
-              " which pushes the total up." : ""}
-            {d.concurrent ? " Advisories that overlapped in time are each counted in full, so some households are counted twice." : ""}
+            {d.missing ? ` (${d.missing} had no household count, so the total is too low)` : ""}.
+            {d.inAdvisoriesWithUpperBound ? ` ${whole(d.inAdvisoriesWithUpperBound)} of those households are in advisories` +
+              " that include a very small area counted generously, which pushes the total up slightly." : ""}
+            {d.concurrentAdvisories ? " Advisories that overlapped in time are each counted in full, so some households" +
+              " are counted twice." : ""}
             {" "}Every household is assumed to comply, and a longer advisory is not yet counted as costing more.
           </p>
-        ) : <p className="muted">None of the year's advisories could be counted, so no water cost is shown.</p>}
+        )}
       </div>
       <div className="flex flex-col gap-2">
         <h3>Power: {range(cost.power.city)} citywide</h3>
-        <p className="muted">
+        {cost.perCustomer == null ? <p className="muted">Entergy's outage figures for {cost.year} are not available,
+          so no power cost is shown.</p> : <p className="muted">
           The Department of Energy's Interruption Cost Estimate (ICE) Calculator, a widely used federal tool, gives a
           residential customer's cost for one outage by its length. Entergy New Orleans reported to the federal
           government how many outages its average customer had in {cost.year} and how many minutes they lasted in
@@ -343,7 +346,7 @@ function CostMethod({ cost }) {
           customer; Entergy's {whole(city.power.years.find((y) => y.year === cost.year)?.customers)} customers also include
           businesses, which are not counted here.{" "}
           <a href={ICE_SOURCE.url} target="_blank" rel="noreferrer">Source</a>
-        </p>
+        </p>}
       </div>
       <div className="flex flex-col gap-2">
         <h3>Not included yet</h3>

@@ -57,7 +57,8 @@ export function iceResidential(minutes) {
 /** Yearly residential cost per customer: outages per customer (SAIFI) × cost of an average-length outage (CAIDI). */
 export function powerPerCustomer(saidi, saifi) {
   if (saidi == null || saifi == null) return null;
-  if (saifi === 0 || saidi === 0) return 0; // no outages reported
+  if (saifi === 0 && saidi === 0) return 0; // no outages reported
+  if (saifi === 0 || saidi === 0) return null; // the two figures disagree: treat as unknown, not as zero
   return saifi * iceResidential(saidi / saifi);
 }
 
@@ -67,16 +68,16 @@ export function waterForYear(advisories) {
   const counted = advisories.filter((a) => a.households != null);
   if (advisories.length && !counted.length) return null; // nothing countable: unknown, not zero
   const householdAdvisories = counted.reduce((sum, a) => sum + a.households, 0);
-  const flagged = (flag) => counted.filter((a) => a.flags.includes(flag)).reduce((sum, a) => sum + a.households, 0);
   return {
     low: householdAdvisories * WATER.low.perHousehold,
     high: householdAdvisories * WATER.high.perHousehold,
     householdAdvisories,
     advisories: advisories.length,
     missing: advisories.length - counted.length,
-    // Households from very small areas counted generously, and from advisories that overlap another in time.
-    upperBound: counted.filter((a) => a.upper_bound).reduce((sum, a) => sum + a.households, 0),
-    concurrent: flagged("concurrent_with_another_advisory_may_double_count"),
+    // Households in advisories that include at least one very small area counted generously (most of each such
+    // advisory is usually counted exactly), and the number of advisories that overlap another in time.
+    inAdvisoriesWithUpperBound: counted.filter((a) => a.upper_bound).reduce((sum, a) => sum + a.households, 0),
+    concurrentAdvisories: counted.filter((a) => a.flags.includes("concurrent_with_another_advisory_may_double_count")).length,
   };
 }
 
