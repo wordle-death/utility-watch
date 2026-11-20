@@ -4,17 +4,17 @@
   "1543675": {
    "cause": null,
    "customer_hours_before_first_seen": 0.1,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 0.24972222222222223,
    "customers": 1,
    "etr": null,
    "first_seen": "2026-11-20T06:49:24Z",
    "id": "1543675",
    "in_progress_first_seen": "2026-11-20T06:49:24Z",
    "kind": null,
-   "last_seen": "2026-11-20T06:49:24Z",
+   "last_seen": "2026-11-20T07:04:23Z",
    "lat": 35.2337,
    "lon": -89.93544,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "opened_pending": false,
    "peak_customers": 1,
    "pending": false,
@@ -27,7 +27,6 @@
   }
  },
  "logged_recent": {
-  "1542659": "2026-11-13T06:49:24Z",
   "1542677": "2026-11-13T07:19:23Z",
   "1542714": "2026-11-13T18:49:22Z",
   "1542717": "2026-11-13T18:49:22Z",

@@ -4,14 +4,14 @@
   "2600002243": {
    "cause": "Third-Party Damage",
    "customer_hours_before_first_seen": 4.0,
-   "customer_hours_observed": 82.50000000000001,
+   "customer_hours_observed": 84.99722222222223,
    "customers": 10,
    "etr": "2026-11-20T06:00:00Z",
    "first_seen": "2026-11-19T22:34:24Z",
    "id": "2600002243",
    "in_progress_first_seen": "2026-11-19T22:34:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T06:49:24Z",
+   "last_seen": "2026-11-20T07:04:23Z",
    "lat": 43.60286153,
    "lon": -116.29300831,
    "max_gap_minutes": 15,
@@ -27,36 +27,6 @@
    "status": "On-site",
    "zips": [
     "83709"
-   ]
-  },
-  "2600002262": {
-   "cause": "Weather",
-   "customer_hours_before_first_seen": 23.8,
-   "customer_hours_observed": 262.48055555555555,
-   "customers": 70,
-   "etr": "2026-11-19T07:30:00Z",
-   "first_seen": "2026-11-20T03:04:25Z",
-   "id": "2600002262",
-   "in_progress_first_seen": "2026-11-20T03:04:25Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T06:49:24Z",
-   "lat": 43.47144819,
-   "lon": -112.70759884,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 70,
-   "pending": false,
-   "places": [
-    "ATOMIC CITY",
-    "BLACKFOOT"
-   ],
-   "planned": false,
-   "start": "2026-11-20T02:44:02Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83215",
-    "83221"
    ]
   }
  },
@@ -78,7 +48,6 @@
   "2600001569": "2026-11-18T16:49:24Z",
   "2600001592": "2026-11-13T09:19:23Z",
   "2600001608": "2026-11-18T17:34:24Z",
-  "2600001615": "2026-11-13T06:49:24Z",
   "2600001617": "2026-11-13T09:34:23Z",
   "2600001630": "2026-11-13T17:04:25Z",
   "2600001631": "2026-11-13T17:04:25Z",
@@ -183,6 +152,7 @@
   "2600002239": "2026-11-20T00:19:23Z",
   "2600002250": "2026-11-19T23:34:23Z",
   "2600002261": "2026-11-20T03:49:23Z",
+  "2600002262": "2026-11-20T07:04:23Z",
   "2600002265": "2026-11-20T06:34:23Z",
   "2600002267": "2026-11-20T06:34:23Z"
  }
