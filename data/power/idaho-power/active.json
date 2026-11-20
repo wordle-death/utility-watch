@@ -1,47 +1,17 @@
 {
  "empty_streak": 0,
  "events": {
-  "2600002319": {
-   "cause": "Under Investigation",
-   "customer_hours_before_first_seen": 4.3,
-   "customer_hours_observed": 63.99111111111111,
-   "customers": 16,
-   "etr": "2026-11-20T22:30:00Z",
-   "first_seen": "2026-11-20T19:34:24Z",
-   "id": "2600002319",
-   "in_progress_first_seen": "2026-11-20T19:34:24Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T23:34:22Z",
-   "lat": 44.19872765,
-   "lon": -117.49829192,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 16,
-   "pending": false,
-   "places": [
-    "JAMIESON",
-    "VALE"
-   ],
-   "planned": false,
-   "start": "2026-11-20T19:18:07Z",
-   "start_basis": "reported",
-   "status": "Pending",
-   "zips": [
-    "97909",
-    "97918"
-   ]
-  },
   "2600002344": {
    "cause": "Third-Party Damage",
    "customer_hours_before_first_seen": 3.4,
-   "customer_hours_observed": 52.97666666666667,
-   "customers": 64,
+   "customer_hours_observed": 68.99444444444444,
+   "customers": 23,
    "etr": "2026-11-21T00:00:00Z",
    "first_seen": "2026-11-20T22:19:25Z",
    "id": "2600002344",
    "in_progress_first_seen": "2026-11-20T22:19:25Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T23:34:22Z",
+   "last_seen": "2026-11-20T23:49:23Z",
    "lat": 43.56186603,
    "lon": -116.27874131,
    "max_gap_minutes": 15,
@@ -57,34 +27,6 @@
    "status": "On-site",
    "zips": [
     "83709"
-   ]
-  },
-  "2600002352": {
-   "cause": "Equipment Issue",
-   "customer_hours_before_first_seen": 10.4,
-   "customer_hours_observed": 10.981666666666666,
-   "customers": 22,
-   "etr": "2026-11-21T00:00:00Z",
-   "first_seen": "2026-11-20T23:04:25Z",
-   "id": "2600002352",
-   "in_progress_first_seen": "2026-11-20T23:04:25Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T23:34:22Z",
-   "lat": 42.64227942,
-   "lon": -114.54885409,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 22,
-   "pending": false,
-   "places": [
-    "JEROME"
-   ],
-   "planned": false,
-   "start": "2026-11-20T22:35:57Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83338"
    ]
   }
  },
@@ -104,7 +46,6 @@
   "2600001569": "2026-11-18T16:49:24Z",
   "2600001608": "2026-11-18T17:34:24Z",
   "2600001639": "2026-11-19T21:49:23Z",
-  "2600001657": "2026-11-13T23:34:24Z",
   "2600001661": "2026-11-18T16:49:24Z",
   "2600001671": "2026-11-14T02:19:24Z",
   "2600001673": "2026-11-18T20:04:36Z",
@@ -212,9 +153,11 @@
   "2600002288": "2026-11-20T18:04:26Z",
   "2600002290": "2026-11-20T17:49:26Z",
   "2600002302": "2026-11-20T19:49:23Z",
+  "2600002319": "2026-11-20T23:49:23Z",
   "2600002326": "2026-11-20T21:19:25Z",
   "2600002335": "2026-11-20T21:34:24Z",
   "2600002339": "2026-11-20T21:19:25Z",
+  "2600002352": "2026-11-20T23:49:23Z",
   "2600002357": "2026-11-20T23:19:24Z"
  }
 }
