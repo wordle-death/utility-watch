@@ -4,14 +4,14 @@
   "2600001819": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 16.1,
-   "customer_hours_observed": 128.03555555555556,
+   "customer_hours_observed": 144.0,
    "customers": 64,
    "etr": "2026-11-20T22:00:00Z",
    "first_seen": "2026-11-20T17:19:24Z",
    "id": "2600001819",
    "in_progress_first_seen": "2026-11-20T17:19:24Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-20T19:19:26Z",
+   "last_seen": "2026-11-20T19:34:24Z",
    "lat": 43.574615,
    "lon": -116.18960822,
    "max_gap_minutes": 15,
@@ -32,14 +32,14 @@
   "2600002302": {
    "cause": "Weather",
    "customer_hours_before_first_seen": 35.6,
-   "customer_hours_observed": 146.00666666666666,
+   "customer_hours_observed": 149.0,
    "customers": 12,
    "etr": "2026-11-20T20:30:00Z",
    "first_seen": "2026-11-20T17:19:24Z",
    "id": "2600002302",
    "in_progress_first_seen": "2026-11-20T17:19:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T19:19:26Z",
+   "last_seen": "2026-11-20T19:34:24Z",
    "lat": 44.41797166,
    "lon": -118.18549175,
    "max_gap_minutes": 15,
@@ -57,6 +57,36 @@
    "zips": [
     "97817",
     "97884"
+   ]
+  },
+  "2600002319": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 4.3,
+   "customer_hours_observed": 0.0,
+   "customers": 16,
+   "etr": "2026-11-20T22:30:00Z",
+   "first_seen": "2026-11-20T19:34:24Z",
+   "id": "2600002319",
+   "in_progress_first_seen": "2026-11-20T19:34:24Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-20T19:34:24Z",
+   "lat": 44.19872765,
+   "lon": -117.49829192,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 16,
+   "pending": false,
+   "places": [
+    "JAMIESON",
+    "VALE"
+   ],
+   "planned": false,
+   "start": "2026-11-20T19:18:07Z",
+   "start_basis": "reported",
+   "status": "Pending",
+   "zips": [
+    "97909",
+    "97918"
    ]
   }
  },

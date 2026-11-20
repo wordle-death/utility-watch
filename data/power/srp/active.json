@@ -1,43 +1,17 @@
 {
  "empty_streak": 0,
  "events": {
-  "261122922": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 0.9,
-   "customer_hours_observed": 2.0011111111111113,
-   "customers": 4,
-   "etr": null,
-   "first_seen": "2026-11-20T18:49:25Z",
-   "id": "261122922",
-   "in_progress_first_seen": "2026-11-20T18:49:25Z",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-20T19:19:26Z",
-   "lat": 33.359328393227855,
-   "lon": -111.6750600385405,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 4,
-   "pending": false,
-   "places": [
-    "S POWER  RD TO S SOSSAMAN  RD AND E GUADALUPE  RD TO E ELLIOT  RD"
-   ],
-   "planned": true,
-   "start": "2026-11-20T18:36:38Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
   "261122923": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 0.1,
-   "customer_hours_observed": 0.5002777777777778,
+   "customer_hours_observed": 0.7497222222222223,
    "customers": 1,
    "etr": null,
    "first_seen": "2026-11-20T18:49:25Z",
    "id": "261122923",
    "in_progress_first_seen": "2026-11-20T18:49:25Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-20T19:19:26Z",
+   "last_seen": "2026-11-20T19:34:24Z",
    "lat": 33.4946019804505,
    "lon": -111.87380620431901,
    "max_gap_minutes": 15,
@@ -49,6 +23,32 @@
    ],
    "planned": true,
    "start": "2026-11-20T18:41:07Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  },
+  "261122932": {
+   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
+   "customer_hours_before_first_seen": 0.1,
+   "customer_hours_observed": 0.0,
+   "customers": 1,
+   "etr": null,
+   "first_seen": "2026-11-20T19:34:24Z",
+   "id": "261122932",
+   "in_progress_first_seen": "2026-11-20T19:34:24Z",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-20T19:34:24Z",
+   "lat": 33.4158388436686,
+   "lon": -111.713158025296,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 1,
+   "pending": false,
+   "places": [
+    "N HIGLEY  RD TO S 56TH  ST AND E UNIVERSITY  DR TO E BROADWAY  RD"
+   ],
+   "planned": true,
+   "start": "2026-11-20T19:25:53Z",
    "start_basis": "reported",
    "status": null,
    "zips": []
@@ -173,6 +173,7 @@
   "261122884": "2026-11-20T17:19:24Z",
   "261122885": "2026-11-20T17:34:25Z",
   "261122901": "2026-11-20T18:19:24Z",
-  "261122909": "2026-11-20T18:19:24Z"
+  "261122909": "2026-11-20T18:19:24Z",
+  "261122922": "2026-11-20T19:34:24Z"
  }
 }
