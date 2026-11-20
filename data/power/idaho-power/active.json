@@ -4,14 +4,14 @@
   "2600002272": {
    "cause": "Weather",
    "customer_hours_before_first_seen": 4.8,
-   "customer_hours_observed": 30.006666666666668,
+   "customer_hours_observed": 33.03,
    "customers": 12,
    "etr": "2026-11-20T15:30:00Z",
    "first_seen": "2026-11-20T11:49:22Z",
    "id": "2600002272",
    "in_progress_first_seen": "2026-11-20T11:49:22Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T14:19:24Z",
+   "last_seen": "2026-11-20T14:34:31Z",
    "lat": 44.45061122,
    "lon": -118.24094557,
    "max_gap_minutes": 15,
@@ -24,7 +24,7 @@
    "planned": false,
    "start": "2026-11-20T11:25:35Z",
    "start_basis": "reported",
-   "status": "On the Way",
+   "status": "Assigned",
    "zips": [
     "97884"
    ]

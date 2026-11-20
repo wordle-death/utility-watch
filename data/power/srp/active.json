@@ -1,6 +1,33 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "261122876": {
+   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
+   "customer_hours_before_first_seen": 0.1,
+   "customer_hours_observed": 0.0,
+   "customers": 6,
+   "etr": null,
+   "first_seen": "2026-11-20T14:34:31Z",
+   "id": "261122876",
+   "in_progress_first_seen": "2026-11-20T14:34:31Z",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-20T14:34:31Z",
+   "lat": 33.496501508203195,
+   "lon": -111.9959211876095,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 6,
+   "pending": false,
+   "places": [
+    "N 36TH  ST TO N 44TH  ST AND E CAMPBELL  AVE TO E OSBORN  RD"
+   ],
+   "planned": true,
+   "start": "2026-11-20T14:33:37Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  }
+ },
  "logged_recent": {
   "261121809": "2026-11-13T18:04:25Z",
   "261121843": "2026-11-13T15:49:24Z",
