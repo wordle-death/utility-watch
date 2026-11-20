@@ -47,7 +47,8 @@ jobs:
       - run: npm run build
         env:
           # Cloudflare Web Analytics site token; public by design (it appears in the page).
-          CF_BEACON: ${{ vars.CF_BEACON }}
+          # A repo variable named CF_BEACON overrides it.
+          CF_BEACON: ${{ vars.CF_BEACON || '10e22a07d5f74e9a9c39a497acf6d40e' }}
       - name: Publish to Cloudflare
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
