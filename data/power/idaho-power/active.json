@@ -4,14 +4,14 @@
   "2600002319": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 4.3,
-   "customer_hours_observed": 47.995555555555555,
+   "customer_hours_observed": 51.995555555555555,
    "customers": 16,
    "etr": "2026-11-20T22:30:00Z",
    "first_seen": "2026-11-20T19:34:24Z",
    "id": "2600002319",
    "in_progress_first_seen": "2026-11-20T19:34:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T22:34:23Z",
+   "last_seen": "2026-11-20T22:49:23Z",
    "lat": 44.19872765,
    "lon": -117.49829192,
    "max_gap_minutes": 15,
@@ -32,21 +32,21 @@
    ]
   },
   "2600002344": {
-   "cause": "Under Investigation",
+   "cause": "Third-Party Damage",
    "customer_hours_before_first_seen": 3.4,
-   "customer_hours_observed": 2.4944444444444445,
-   "customers": 10,
-   "etr": "2026-11-20T23:30:00Z",
+   "customer_hours_observed": 4.9944444444444445,
+   "customers": 64,
+   "etr": "2026-11-21T00:00:00Z",
    "first_seen": "2026-11-20T22:19:25Z",
    "id": "2600002344",
    "in_progress_first_seen": "2026-11-20T22:19:25Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T22:34:23Z",
+   "last_seen": "2026-11-20T22:49:23Z",
    "lat": 43.56186603,
    "lon": -116.27874131,
    "max_gap_minutes": 15,
    "opened_pending": false,
-   "peak_customers": 10,
+   "peak_customers": 64,
    "pending": false,
    "places": [
     "BOISE"
@@ -54,7 +54,7 @@
    "planned": false,
    "start": "2026-11-20T21:59:11Z",
    "start_basis": "reported",
-   "status": "Pending",
+   "status": "Assigned",
    "zips": [
     "83709"
    ]
