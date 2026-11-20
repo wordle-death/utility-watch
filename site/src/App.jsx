@@ -369,7 +369,7 @@ function Incidents() {
                     <td style={{ whiteSpace: "nowrap" }}>{dayTime(e.start)}</td>
                     <td className="num">{whole(e.value.customers)}</td>
                     <td className="num">{e.duration_hours.toFixed(1)}</td>
-                    <td>{!e.cause || /^pending$/i.test(e.cause) ? "Not yet given" : e.cause.split(" - ").slice(-1)[0]}</td>
+                    <td>{!e.cause || /^pending$/i.test(e.cause) ? "Not yet given" : e.cause.split(" - ").slice(-1)[0].replace(/\s*\(describe in remarks\)/i, "")}</td>
                     <td className="num">{money(e.value.cost)}</td>
                   </tr>
                 ))}
