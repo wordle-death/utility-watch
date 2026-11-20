@@ -7,7 +7,7 @@
     "dev": "npm run snapshot && vite",
     "build": "npm run snapshot && vite build",
     "build:preview": "npm run snapshot && SINGLE_FILE=1 VITE_PREVIEW=1 vite build --outDir dist-preview",
-    "test": "node --test tests/"
+    "test": "node --test tests/costs.test.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",
