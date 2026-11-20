@@ -4,14 +4,14 @@
   "2600002243": {
    "cause": "Third-Party Damage",
    "customer_hours_before_first_seen": 4.0,
-   "customer_hours_observed": 77.49444444444445,
+   "customer_hours_observed": 79.99722222222223,
    "customers": 10,
    "etr": "2026-11-20T06:00:00Z",
    "first_seen": "2026-11-19T22:34:24Z",
    "id": "2600002243",
    "in_progress_first_seen": "2026-11-19T22:34:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T06:19:22Z",
+   "last_seen": "2026-11-20T06:34:23Z",
    "lat": 43.60286153,
    "lon": -116.29300831,
    "max_gap_minutes": 15,
@@ -32,14 +32,14 @@
   "2600002262": {
    "cause": "Weather",
    "customer_hours_before_first_seen": 23.8,
-   "customer_hours_observed": 227.44166666666666,
+   "customer_hours_observed": 244.9611111111111,
    "customers": 70,
    "etr": "2026-11-19T07:30:00Z",
    "first_seen": "2026-11-20T03:04:25Z",
    "id": "2600002262",
    "in_progress_first_seen": "2026-11-20T03:04:25Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T06:19:22Z",
+   "last_seen": "2026-11-20T06:34:23Z",
    "lat": 43.47144819,
    "lon": -112.70759884,
    "max_gap_minutes": 15,
@@ -57,62 +57,6 @@
    "zips": [
     "83215",
     "83221"
-   ]
-  },
-  "2600002265": {
-   "cause": "Weather",
-   "customer_hours_before_first_seen": 4.1,
-   "customer_hours_observed": 12.745277777777778,
-   "customers": 17,
-   "etr": "2026-11-21T07:00:00Z",
-   "first_seen": "2026-11-20T05:34:23Z",
-   "id": "2600002265",
-   "in_progress_first_seen": "2026-11-20T05:34:23Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T06:19:22Z",
-   "lat": 42.73300473,
-   "lon": -112.91315677,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 17,
-   "pending": false,
-   "places": [
-    "AMERICAN FALLS"
-   ],
-   "planned": false,
-   "start": "2026-11-20T05:20:04Z",
-   "start_basis": "reported",
-   "status": "On the Way",
-   "zips": [
-    "83211"
-   ]
-  },
-  "2600002267": {
-   "cause": "Under Investigation",
-   "customer_hours_before_first_seen": 3.6,
-   "customer_hours_observed": 0.0,
-   "customers": 15,
-   "etr": "2026-11-20T08:30:00Z",
-   "first_seen": "2026-11-20T06:19:22Z",
-   "id": "2600002267",
-   "in_progress_first_seen": "2026-11-20T06:19:22Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T06:19:22Z",
-   "lat": 42.7340425,
-   "lon": -112.91368728,
-   "max_gap_minutes": 0,
-   "opened_pending": false,
-   "peak_customers": 15,
-   "pending": false,
-   "places": [
-    "AMERICAN FALLS"
-   ],
-   "planned": false,
-   "start": "2026-11-20T06:05:04Z",
-   "start_basis": "reported",
-   "status": "Pending",
-   "zips": [
-    "83211"
    ]
   }
  },
@@ -238,6 +182,8 @@
   "2600002237": "2026-11-20T02:49:23Z",
   "2600002239": "2026-11-20T00:19:23Z",
   "2600002250": "2026-11-19T23:34:23Z",
-  "2600002261": "2026-11-20T03:49:23Z"
+  "2600002261": "2026-11-20T03:49:23Z",
+  "2600002265": "2026-11-20T06:34:23Z",
+  "2600002267": "2026-11-20T06:34:23Z"
  }
 }
