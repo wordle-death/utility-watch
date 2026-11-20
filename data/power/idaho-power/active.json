@@ -4,14 +4,14 @@
   "2600001819": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 16.1,
-   "customer_hours_observed": 240.0,
+   "customer_hours_observed": 256.0177777777778,
    "customers": 64,
    "etr": "2026-11-20T22:00:00Z",
    "first_seen": "2026-11-20T17:19:24Z",
    "id": "2600001819",
    "in_progress_first_seen": "2026-11-20T17:19:24Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-20T21:04:24Z",
+   "last_seen": "2026-11-20T21:19:25Z",
    "lat": 43.574615,
    "lon": -116.18960822,
    "max_gap_minutes": 15,
@@ -32,14 +32,14 @@
   "2600002319": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 4.3,
-   "customer_hours_observed": 24.0,
+   "customer_hours_observed": 28.004444444444445,
    "customers": 16,
    "etr": "2026-11-20T22:30:00Z",
    "first_seen": "2026-11-20T19:34:24Z",
    "id": "2600002319",
    "in_progress_first_seen": "2026-11-20T19:34:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T21:04:24Z",
+   "last_seen": "2026-11-20T21:19:25Z",
    "lat": 44.19872765,
    "lon": -117.49829192,
    "max_gap_minutes": 15,
@@ -59,45 +59,17 @@
     "97918"
    ]
   },
-  "2600002326": {
-   "cause": "Safety Related",
-   "customer_hours_before_first_seen": 29.9,
-   "customer_hours_observed": 84.0,
-   "customers": 112,
-   "etr": "2026-11-20T22:00:00Z",
-   "first_seen": "2026-11-20T20:19:24Z",
-   "id": "2600002326",
-   "in_progress_first_seen": "2026-11-20T20:19:24Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T21:04:24Z",
-   "lat": 43.63245924,
-   "lon": -116.21514892,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 112,
-   "pending": false,
-   "places": [
-    "BOISE"
-   ],
-   "planned": false,
-   "start": "2026-11-20T20:03:24Z",
-   "start_basis": "reported",
-   "status": "On the Way",
-   "zips": [
-    "83702"
-   ]
-  },
   "2600002335": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 851.2,
-   "customer_hours_observed": 544.5,
+   "customer_hours_observed": 1089.605,
    "customers": 2178,
    "etr": "2026-11-20T23:30:00Z",
    "first_seen": "2026-11-20T20:49:24Z",
    "id": "2600002335",
    "in_progress_first_seen": "2026-11-20T20:49:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T21:04:24Z",
+   "last_seen": "2026-11-20T21:19:25Z",
    "lat": 42.92124844,
    "lon": -114.95270206,
    "max_gap_minutes": 15,
@@ -113,40 +85,12 @@
    "planned": false,
    "start": "2026-11-20T20:25:57Z",
    "start_basis": "reported",
-   "status": "Assigned",
+   "status": "On-site",
    "zips": [
     "83314",
     "83330",
     "83332",
     "83633"
-   ]
-  },
-  "2600002339": {
-   "cause": "Under Investigation",
-   "customer_hours_before_first_seen": 3.9,
-   "customer_hours_observed": 0.0,
-   "customers": 14,
-   "etr": "2026-11-20T23:00:00Z",
-   "first_seen": "2026-11-20T21:04:24Z",
-   "id": "2600002339",
-   "in_progress_first_seen": "2026-11-20T21:04:24Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T21:04:24Z",
-   "lat": 43.78094171,
-   "lon": -116.73426917,
-   "max_gap_minutes": 0,
-   "opened_pending": false,
-   "peak_customers": 14,
-   "pending": false,
-   "places": [
-    "CALDWELL"
-   ],
-   "planned": false,
-   "start": "2026-11-20T20:47:35Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83607"
    ]
   }
  },
@@ -273,6 +217,8 @@
   "2600002272": "2026-11-20T18:19:24Z",
   "2600002288": "2026-11-20T18:04:26Z",
   "2600002290": "2026-11-20T17:49:26Z",
-  "2600002302": "2026-11-20T19:49:23Z"
+  "2600002302": "2026-11-20T19:49:23Z",
+  "2600002326": "2026-11-20T21:19:25Z",
+  "2600002339": "2026-11-20T21:19:25Z"
  }
 }
