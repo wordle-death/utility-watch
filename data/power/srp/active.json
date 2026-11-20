@@ -1,6 +1,33 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "261122865": {
+   "cause": "We are investigating the cause of the outage.",
+   "customer_hours_before_first_seen": 3.1,
+   "customer_hours_observed": 0.0,
+   "customers": 41,
+   "etr": null,
+   "first_seen": "2026-11-20T10:04:23Z",
+   "id": "261122865",
+   "in_progress_first_seen": "2026-11-20T10:04:23Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-20T10:04:23Z",
+   "lat": 33.408486020181854,
+   "lon": -111.981107842102,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 41,
+   "pending": false,
+   "places": [
+    "S 44TH  ST TO S MARICOPA  FWY AND E MARICOPA  FWY TO E ROESER  RD"
+   ],
+   "planned": false,
+   "start": "2026-11-20T09:59:48Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  }
+ },
  "logged_recent": {
   "261121801": "2026-11-13T10:49:23Z",
   "261121809": "2026-11-13T18:04:25Z",
