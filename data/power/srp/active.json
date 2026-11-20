@@ -4,14 +4,14 @@
   "261122879": {
    "cause": "An underground power cable has failed. SRP crews are working to restore power.",
    "customer_hours_before_first_seen": 5.8,
-   "customer_hours_observed": 150.2361111111111,
+   "customer_hours_observed": 160.9861111111111,
    "customers": 43,
    "etr": null,
    "first_seen": "2026-11-20T15:04:25Z",
    "id": "261122879",
    "in_progress_first_seen": "2026-11-20T15:04:25Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T18:19:24Z",
+   "last_seen": "2026-11-20T18:34:24Z",
    "lat": 33.47160777781065,
    "lon": -112.200923976025,
    "max_gap_minutes": 15,
@@ -29,10 +29,8 @@
   }
  },
  "logged_recent": {
-  "261121852": "2026-11-13T18:19:24Z",
   "261121853": "2026-11-13T18:49:22Z",
   "261121862": "2026-11-13T20:34:31Z",
-  "261121872": "2026-11-13T18:19:24Z",
   "261121874": "2026-11-13T19:04:24Z",
   "261121888": "2026-11-13T21:49:24Z",
   "261121921": "2026-11-13T22:04:24Z",
