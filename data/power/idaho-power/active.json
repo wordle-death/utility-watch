@@ -4,14 +4,14 @@
   "2600001819": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 16.1,
-   "customer_hours_observed": 144.0,
+   "customer_hours_observed": 159.98222222222222,
    "customers": 64,
    "etr": "2026-11-20T22:00:00Z",
    "first_seen": "2026-11-20T17:19:24Z",
    "id": "2600001819",
    "in_progress_first_seen": "2026-11-20T17:19:24Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-20T19:34:24Z",
+   "last_seen": "2026-11-20T19:49:23Z",
    "lat": 43.574615,
    "lon": -116.18960822,
    "max_gap_minutes": 15,
@@ -29,50 +29,20 @@
     "83706"
    ]
   },
-  "2600002302": {
-   "cause": "Weather",
-   "customer_hours_before_first_seen": 35.6,
-   "customer_hours_observed": 149.0,
-   "customers": 12,
-   "etr": "2026-11-20T20:30:00Z",
-   "first_seen": "2026-11-20T17:19:24Z",
-   "id": "2600002302",
-   "in_progress_first_seen": "2026-11-20T17:19:24Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T19:34:24Z",
-   "lat": 44.41797166,
-   "lon": -118.18549175,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 134,
-   "pending": false,
-   "places": [
-    "BATES",
-    "UNITY"
-   ],
-   "planned": false,
-   "start": "2026-11-20T17:03:28Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "97817",
-    "97884"
-   ]
-  },
   "2600002319": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 4.3,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 3.9955555555555557,
    "customers": 16,
    "etr": "2026-11-20T22:30:00Z",
    "first_seen": "2026-11-20T19:34:24Z",
    "id": "2600002319",
    "in_progress_first_seen": "2026-11-20T19:34:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T19:34:24Z",
+   "last_seen": "2026-11-20T19:49:23Z",
    "lat": 44.19872765,
    "lon": -117.49829192,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "opened_pending": false,
    "peak_customers": 16,
    "pending": false,
@@ -92,7 +62,6 @@
  },
  "logged_recent": {
   "2600000277": "2026-11-17T20:04:24Z",
-  "2600000474": "2026-11-13T19:34:24Z",
   "2600000988": "2026-11-17T19:49:24Z",
   "2600001257": "2026-11-13T19:49:32Z",
   "2600001332": "2026-11-16T18:04:24Z",
@@ -214,6 +183,7 @@
   "2600002267": "2026-11-20T06:34:23Z",
   "2600002272": "2026-11-20T18:19:24Z",
   "2600002288": "2026-11-20T18:04:26Z",
-  "2600002290": "2026-11-20T17:49:26Z"
+  "2600002290": "2026-11-20T17:49:26Z",
+  "2600002302": "2026-11-20T19:49:23Z"
  }
 }
