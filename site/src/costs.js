@@ -8,20 +8,22 @@ export const CPI = {
   current: 337.511, // October 2026, latest release (BLS, Nov 10, 2026)
 };
 export const CURRENT_DOLLARS = "October 2026 dollars";
+export const CPI_SOURCE = "https://www.bls.gov/news.release/cpi.nr0.htm";
 const inflate = (amount, year) => (amount * CPI.current) / CPI[year];
 
 // Boil-water advisories: cost per household for one advisory. No official standard exists for an advisory
-// (FEMA's standard value covers a complete loss of water), so the range spans two published studies.
+// (FEMA's standard value covers a complete loss of water), so the range spans two published studies,
+// neither of which measured a boil-water advisory exactly.
 export const WATER = {
   low: {
     perHousehold: inflate(3.6, 2014),
-    source: "Toledo, Ohio, 2014 three-day water advisory: extra bottled-water spending per household",
+    source: "extra bottled water bought per household during Toledo, Ohio's three-day do-not-drink advisory in 2014",
     cite: "Don't Drink the Water! The Impact of Harmful Algal Blooms on Household Averting Expenditure (Environmental and Resource Economics, 2023)",
     url: "https://link.springer.com/article/10.1007/s10640-023-00786-2",
   },
   high: {
     perHousehold: inflate(93.96, 2012),
-    source: "Interviews about routine water disruptions: money and time each household spent per incident",
+    source: "money and time each household spent per incident in routine local water disruptions, from interviews in 2012",
     cite: "Heflin et al., Understanding the economic impacts of disruptions in water service (Evaluation and Program Planning, 2014)",
     url: "https://www.sciencedirect.com/science/article/abs/pii/S0149718914000500",
   },
@@ -35,6 +37,8 @@ const ICE_RESIDENTIAL = [
   [480, 25.55],
   [1440, 54.52],
 ];
+// For context only, not used in the totals: one business customer's cost of a two-hour outage (2023 dollars).
+export const ICE_BUSINESS_2H = inflate(2839, 2023);
 export const ICE_SOURCE = {
   cite: "Berkeley Lab, ICE Calculator 2.0 Phase I final report (2025)",
   url: "https://eta-publications.lbl.gov/sites/default/files/2025-06/ice_2.0_phase_i_final_report_29may2025.pdf",
@@ -52,18 +56,36 @@ export function iceResidential(minutes) {
 
 /** Yearly residential cost per customer: outages per customer (SAIFI) × cost of an average-length outage (CAIDI). */
 export function powerPerCustomer(saidi, saifi) {
-  if (!saidi || !saifi) return null;
+  if (saidi == null || saifi == null) return null;
+  if (saifi === 0 || saidi === 0) return 0; // no outages reported
   return saifi * iceResidential(saidi / saifi);
 }
 
 /** Water cost for a year's advisories: households in each advisory × the per-household range. */
 export function waterForYear(advisories) {
-  const counted = advisories.filter((a) => a.households != null && a.hours != null);
+  // The cost is per advisory, so an advisory needs a household count but not its length.
+  const counted = advisories.filter((a) => a.households != null);
+  if (advisories.length && !counted.length) return null; // nothing countable: unknown, not zero
   const householdAdvisories = counted.reduce((sum, a) => sum + a.households, 0);
+  const flagged = (flag) => counted.filter((a) => a.flags.includes(flag)).reduce((sum, a) => sum + a.households, 0);
   return {
     low: householdAdvisories * WATER.low.perHousehold,
     high: householdAdvisories * WATER.high.perHousehold,
     householdAdvisories,
+    advisories: advisories.length,
     missing: advisories.length - counted.length,
+    // Households from very small areas counted generously, and from advisories that overlap another in time.
+    upperBound: counted.filter((a) => a.upper_bound).reduce((sum, a) => sum + a.households, 0),
+    concurrent: flagged("concurrent_with_another_advisory_may_double_count"),
   };
+}
+
+/** "$6", "$1,200", "$950K", "$1.0M", "$27M": rounded first, then given a unit. */
+export function money(n) {
+  if (n == null || Number.isNaN(n)) return "–";
+  const r = (x, d) => Number(x.toFixed(d));
+  if (n < 1e5) return `$${Math.round(n).toLocaleString("en-US")}`;
+  if (r(n / 1e3, 0) < 1000) return `$${r(n / 1e3, 0)}K`;
+  const m = n / 1e6;
+  return m < 9.95 ? `$${r(m, 1).toFixed(1)}M` : `$${Math.round(m)}M`;
 }

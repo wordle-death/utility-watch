@@ -6,7 +6,7 @@ import nationalData from "./data/national.json";
 const nationalCount = nationalData.utilities.length;
 import { YearBars, MinutesLines } from "./charts.jsx";
 import { FLAGS, day, dayTime, millions, short, whole } from "./format.js";
-import { CURRENT_DOLLARS, ICE_SOURCE, WATER, powerPerCustomer, waterForYear } from "./costs.js";
+import { CPI_SOURCE, CURRENT_DOLLARS, ICE_BUSINESS_2H, ICE_SOURCE, WATER, money, powerPerCustomer, waterForYear } from "./costs.js";
 
 const FIRST_YEAR = 2010; // the one 2009 advisory on record has no map and no count
 
@@ -260,53 +260,58 @@ function Power({ power, built }) {
   );
 }
 
-// Dollar ranges: "$6–$163", or "$1.0M–$27M" for city totals.
-function money(n, big) {
-  if (n == null) return "–";
-  if (big) return n >= 1e6 ? `$${(n / 1e6).toFixed(n >= 1e7 ? 0 : 1)}M` : `$${Math.round(n / 1e3)}K`;
-  return `$${whole(n)}`;
+// Say when some of the year's advisories are missing from the water cost.
+function waterNote(cost) {
+  const d = cost.waterDetail;
+  return d && d.missing ? ` ${d.advisories - d.missing} of ${d.advisories} advisories counted.` : "";
 }
-function range(r, big) {
+
+function range(r) {
   if (!r) return "Not yet";
-  const lo = money(r.low, big), hi = money(r.high, big);
+  const lo = money(r.low), hi = money(r.high);
   return lo === hi ? lo : `${lo}–${hi}`;
 }
 
 /** Preliminary yearly costs to households: water from the advisory timeline, power from the federal filing. */
 function costs(latest, year) {
   const homes = city.households;
+  const reason = !homes ? "Household counts are not available yet, so no cost is shown."
+    : latest.year !== year ? "Water and power figures for the same year are not both available yet."
+    : null;
+  if (reason) return { reason };
   const water = waterForYear(city.water.advisories.filter((a) => a.year === year));
-  // Power range: the year without major storms (low) and with them (high), each per customer.
-  const lowPer = powerPerCustomer(latest.saidi_without, latest.saifi_without);
-  const highPer = powerPerCustomer(latest.saidi_with, latest.saifi_with);
-  if (!homes || lowPer == null || highPer == null) return { perHousehold: null, city: null, water: {}, power: {} };
-  const power = { low: Math.min(lowPer, highPer), high: Math.max(lowPer, highPer) };
-  const w = { perHousehold: { low: water.low / homes, high: water.high / homes }, city: { low: water.low, high: water.high } };
-  const p = { perHousehold: power, city: { low: power.low * homes, high: power.high * homes } };
+  // Power: all outages, storms included. The figure without major storms is shown for context.
+  const perCustomer = powerPerCustomer(latest.saidi_with, latest.saifi_with);
+  const withoutStorms = powerPerCustomer(latest.saidi_without, latest.saifi_without);
+  const w = water && { perHousehold: { low: water.low / homes, high: water.high / homes }, city: { low: water.low, high: water.high } };
+  const p = perCustomer != null && {
+    perHousehold: { low: perCustomer, high: perCustomer }, city: { low: perCustomer * homes, high: perCustomer * homes },
+  };
+  const add = (key) => (w && p ? { low: w[key].low + p[key].low, high: w[key].high + p[key].high } : null);
   return {
-    year, homes, waterDetail: water, lowPer, highPer,
-    water: w, power: p,
-    perHousehold: { low: w.perHousehold.low + p.perHousehold.low, high: w.perHousehold.high + p.perHousehold.high },
-    city: { low: w.city.low + p.city.low, high: w.city.high + p.city.high },
+    year, homes, waterDetail: water, perCustomer, withoutStorms, water: w || {}, power: p || {},
+    perHousehold: add("perHousehold"), city: add("city"),
+    caidi: latest.saifi_with ? latest.saidi_with / latest.saifi_with : null,
   };
 }
 
 function CostMethod({ cost }) {
-  if (!cost.homes) return <p className="muted">Household counts are not available yet, so no cost is shown.</p>;
+  if (cost.reason) return <p className="muted">{cost.reason}</p>;
   const d = cost.waterDetail;
   return (
     <div className="flex flex-col gap-4" style={{ maxWidth: "68ch" }}>
       <p className="muted">
-        For {cost.year}, in {CURRENT_DOLLARS}. "Per household" spreads the citywide cost across all{" "}
-        {whole(cost.homes)} occupied households in Orleans Parish (2020 Census); households inside an advisory area paid
-        more, and others nothing.
+        For {cost.year}, in {CURRENT_DOLLARS} (adjusted with the federal{" "}
+        <a href={CPI_SOURCE} target="_blank" rel="noreferrer">consumer price index</a>). "Per household" spreads the
+        citywide cost across all {whole(cost.homes)} occupied households in Orleans Parish (2020 Census); households
+        inside an advisory area paid more, and others nothing.
       </p>
       <div className="flex flex-col gap-2">
-        <h3>Water: {range(cost.water.city, true)} citywide</h3>
+        <h3>Water: {range(cost.water.city)} citywide</h3>
         <p className="muted">
-          No official standard exists for the cost of a boil-water advisory; the federal standard value (FEMA) covers a
-          complete loss of water, which is far worse. So the range runs between two published studies, each giving a
-          cost per household for one advisory:
+          No official standard exists for the cost of a boil-water advisory. The federal standard value (FEMA) covers a
+          complete loss of water service, which is far worse. So the range runs between two published studies, neither
+          of which measured a boil-water advisory exactly, each giving a cost per household for one event:
         </p>
         <ul className="muted flex flex-col gap-1" style={{ margin: 0, paddingLeft: 18 }}>
           <li><b>Low, {money(WATER.low.perHousehold)}:</b> {WATER.low.source}.{" "}
@@ -314,33 +319,41 @@ function CostMethod({ cost }) {
           <li><b>High, {money(WATER.high.perHousehold)}:</b> {WATER.high.source}.{" "}
             <a href={WATER.high.url} target="_blank" rel="noreferrer">Source</a></li>
         </ul>
-        <p className="muted">
-          Multiplied by the households inside each advisory area ({whole(d.householdAdvisories)} across the year's
-          advisories{d.missing ? `; ${d.missing} ${d.missing === 1 ? "advisory" : "advisories"} could not be counted` : ""}).
-          Every household is assumed to comply. A longer advisory is not yet counted as costing more.
-        </p>
+        {d ? (
+          <p className="muted">
+            Multiplied by the households inside each advisory area: {whole(d.householdAdvisories)} across{" "}
+            {d.advisories - d.missing} of the year's {d.advisories} advisories
+            {d.missing ? ` (${d.missing} had no map and could not be counted, so the total is too low)` : ""}.
+            {d.upperBound ? ` ${whole(d.upperBound)} of those households come from very small areas counted generously,` +
+              " which pushes the total up." : ""}
+            {d.concurrent ? " Advisories that overlapped in time are each counted in full, so some households are counted twice." : ""}
+            {" "}Every household is assumed to comply, and a longer advisory is not yet counted as costing more.
+          </p>
+        ) : <p className="muted">None of the year's advisories could be counted, so no water cost is shown.</p>}
       </div>
       <div className="flex flex-col gap-2">
-        <h3>Power: {range(cost.power.city, true)} citywide</h3>
+        <h3>Power: {range(cost.power.city)} citywide</h3>
         <p className="muted">
-          The Department of Energy's Interruption Cost Estimate (ICE) Calculator is the standard tool for the cost of
-          power outages. It gives a residential customer's cost for one outage by its length. Entergy New Orleans reported
-          {" "}{cost.year} outages per customer and their average length to the federal government; the yearly cost is the
-          number of outages times the ICE cost of an average-length outage: {money(cost.lowPer)} per customer without
-          major storms and {money(cost.highPer)} with them. Each household is counted as one residential customer.{" "}
+          The Department of Energy's Interruption Cost Estimate (ICE) Calculator, a widely used federal tool, gives a
+          residential customer's cost for one outage by its length. Entergy New Orleans reported to the federal
+          government how many outages its average customer had in {cost.year} and how many minutes they lasted in
+          total; from those, the average outage lasted {whole(cost.caidi)} minutes. The yearly cost is the number of
+          outages times the ICE cost of an average-length outage: {money(cost.perCustomer)} per customer, storms
+          included ({money(cost.withoutStorms)} leaving out major storms). Each household is counted as one residential
+          customer; Entergy's {whole(city.power.years.find((y) => y.year === cost.year)?.customers)} customers also include
+          businesses, which are not counted here.{" "}
           <a href={ICE_SOURCE.url} target="_blank" rel="noreferrer">Source</a>
         </p>
       </div>
       <div className="flex flex-col gap-2">
         <h3>Not included yet</h3>
         <ul className="muted flex flex-col gap-1" style={{ margin: 0, paddingLeft: 18 }}>
-          <li>Businesses. ICE puts a business's cost of a two-hour outage in the thousands of dollars, so this is likely the
-            largest missing piece.</li>
+          <li>Businesses. ICE puts one business customer's cost of a two-hour outage at about {money(ICE_BUSINESS_2H)}{" "}
+            (<a href={ICE_SOURCE.url} target="_blank" rel="noreferrer">source</a>), so this is likely the largest missing
+            piece.</li>
           <li>School and daycare closures during boil-water advisories, and the lost work and wages that follow.</li>
-          <li>The full cost of very long outages. The calculation uses the average outage length (
-            {whole((city.power.years.find((y) => y.year === cost.year) || {}).saidi_with /
-              ((city.power.years.find((y) => y.year === cost.year) || {}).saifi_with || 1))} minutes in {cost.year}, storms
-            included), and ICE does not cover outages longer than a day.</li>
+          <li>The spread of outage lengths. Pricing every outage at the average length can push the estimate either
+            way, and ICE does not cover outages longer than a day.</li>
           <li>Illness, which is left out on purpose: these advisories are precautionary.</li>
         </ul>
       </div>
@@ -381,8 +394,9 @@ function NewOrleans() {
               {whole(latest.saidi_without)}, U.S. average {whole(latest.saidi_without_national_avg)}
             </Tile>
             <Tile service="cost" label="Cost per household, preliminary" figure={range(cost.perHousehold)}>
-              water {range(cost.water.perHousehold)} plus power {range(cost.power.perHousehold)}; estimated, households
-              only. <a href="#cost">How</a>
+              {cost.reason ? cost.reason : <>water {range(cost.water.perHousehold)} plus power{" "}
+              {range(cost.power.perHousehold)} (per customer); estimated, in 2026 dollars.{waterNote(cost)}{" "}
+              <a href="#cost">How</a></>}
             </Tile>
           </div>
         </div>
@@ -398,9 +412,9 @@ function NewOrleans() {
               estimated from Entergy's federal filing: minutes per customer × {whole(latest.customers)} customers,
               storms included
             </Tile>
-            <Tile service="cost" label="Cost to households citywide, preliminary" figure={range(cost.city, true)}>
-              water {range(cost.water.city, true)} plus power {range(cost.power.city, true)}; businesses, schools and
-              daycares not yet included. <a href="#cost">How</a>
+            <Tile service="cost" label="Cost to households citywide, preliminary" figure={range(cost.city)}>
+              {cost.reason ? cost.reason : <>water {range(cost.water.city)} plus power {range(cost.power.city)}, in 2026
+              dollars; businesses, schools and daycares not yet included.{waterNote(cost)} <a href="#cost">How</a></>}
             </Tile>
           </div>
         </div>
