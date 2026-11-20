@@ -1,59 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "261122832": {
-   "cause": "An object has made contact with power lines in your area. SRP crews are working to restore power.",
-   "customer_hours_before_first_seen": 0.2,
-   "customer_hours_observed": 4.406666666666666,
-   "customers": 3,
-   "etr": null,
-   "first_seen": "2026-11-19T23:49:25Z",
-   "id": "261122832",
-   "in_progress_first_seen": "2026-11-19T23:49:25Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T01:17:33Z",
-   "lat": 33.521765596169146,
-   "lon": -112.03520584563,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 3,
-   "pending": false,
-   "places": [
-    "N 20TH  ST TO N 24TH  ST AND E BETHANY HOME  RD TO E MISSOURI  AVE"
-   ],
-   "planned": false,
-   "start": "2026-11-19T23:44:35Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
-  "261122832#2": {
-   "cause": "An object has made contact with power lines in your area. SRP crews are working to restore power.",
-   "customer_hours_before_first_seen": 4.6,
-   "customer_hours_observed": 0.0,
-   "customers": 3,
-   "etr": null,
-   "first_seen": "2026-11-20T01:17:33Z",
-   "id": "261122832#2",
-   "in_progress_first_seen": "2026-11-20T01:17:33Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T01:17:33Z",
-   "lat": 33.521765596169146,
-   "lon": -112.03520584563,
-   "max_gap_minutes": 0,
-   "opened_pending": false,
-   "peak_customers": 3,
-   "pending": false,
-   "places": [
-    "N 20TH  ST TO N 24TH  ST AND E BETHANY HOME  RD TO E MISSOURI  AVE"
-   ],
-   "planned": false,
-   "start": "2026-11-19T23:44:35Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  }
- },
+ "events": {},
  "logged_recent": {
   "261121769": "2026-11-13T01:19:24Z",
   "261121801": "2026-11-13T10:49:23Z",
@@ -170,6 +117,8 @@
   "261122753": "2026-11-19T22:04:23Z",
   "261122825": "2026-11-20T00:49:23Z",
   "261122825#2": "2026-11-20T00:49:23Z",
+  "261122832": "2026-11-20T01:19:23Z",
+  "261122832#2": "2026-11-20T01:19:23Z",
   "261122834": "2026-11-20T00:34:23Z"
  }
 }
