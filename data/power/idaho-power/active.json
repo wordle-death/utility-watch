@@ -1,45 +1,17 @@
 {
  "empty_streak": 0,
  "events": {
-  "2600002237": {
-   "cause": "Weather",
-   "customer_hours_before_first_seen": 17.8,
-   "customer_hours_observed": 136.07166666666666,
-   "customers": 24,
-   "etr": null,
-   "first_seen": "2026-11-19T22:04:23Z",
-   "id": "2600002237",
-   "in_progress_first_seen": "2026-11-19T22:04:23Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T02:34:32Z",
-   "lat": 43.75921652,
-   "lon": -115.99875211,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 31,
-   "pending": false,
-   "places": [
-    "BOISE"
-   ],
-   "planned": false,
-   "start": "2026-11-19T21:29:51Z",
-   "start_basis": "reported",
-   "status": "On the Way",
-   "zips": [
-    "83716"
-   ]
-  },
   "2600002243": {
    "cause": "Third-Party Damage",
    "customer_hours_before_first_seen": 4.0,
-   "customer_hours_observed": 40.022222222222226,
+   "customer_hours_observed": 42.49722222222223,
    "customers": 10,
    "etr": "2026-11-20T03:00:00Z",
    "first_seen": "2026-11-19T22:34:24Z",
    "id": "2600002243",
    "in_progress_first_seen": "2026-11-19T22:34:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T02:34:32Z",
+   "last_seen": "2026-11-20T02:49:23Z",
    "lat": 43.60286153,
    "lon": -116.29300831,
    "max_gap_minutes": 15,
@@ -55,6 +27,34 @@
    "status": "On-site",
    "zips": [
     "83709"
+   ]
+  },
+  "2600002261": {
+   "cause": "Object In Line",
+   "customer_hours_before_first_seen": 210.5,
+   "customer_hours_observed": 0.0,
+   "customers": 618,
+   "etr": "2026-11-20T06:00:00Z",
+   "first_seen": "2026-11-20T02:49:23Z",
+   "id": "2600002261",
+   "in_progress_first_seen": "2026-11-20T02:49:23Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-20T02:49:23Z",
+   "lat": 44.90156721,
+   "lon": -116.10996882,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 618,
+   "pending": false,
+   "places": [
+    "MCCALL"
+   ],
+   "planned": false,
+   "start": "2026-11-20T02:28:57Z",
+   "start_basis": "reported",
+   "status": "Pending",
+   "zips": [
+    "83638"
    ]
   }
  },
@@ -177,6 +177,7 @@
   "2600002220": "2026-11-19T21:19:24Z",
   "2600002227": "2026-11-19T20:34:24Z",
   "2600002235": "2026-11-19T21:19:24Z",
+  "2600002237": "2026-11-20T02:49:23Z",
   "2600002239": "2026-11-20T00:19:23Z",
   "2600002250": "2026-11-19T23:34:23Z"
  }
