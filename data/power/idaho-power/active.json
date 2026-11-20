@@ -4,14 +4,14 @@
   "2600002237": {
    "cause": "Weather",
    "customer_hours_before_first_seen": 17.8,
-   "customer_hours_observed": 61.99138888888889,
+   "customer_hours_observed": 69.75,
    "customers": 31,
    "etr": null,
    "first_seen": "2026-11-19T22:04:23Z",
    "id": "2600002237",
    "in_progress_first_seen": "2026-11-19T22:04:23Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T00:04:22Z",
+   "last_seen": "2026-11-20T00:19:23Z",
    "lat": 43.75921652,
    "lon": -115.99875211,
    "max_gap_minutes": 15,
@@ -29,45 +29,17 @@
     "83716"
    ]
   },
-  "2600002239": {
-   "cause": "Not Found",
-   "customer_hours_before_first_seen": 31.0,
-   "customer_hours_observed": 136.435,
-   "customers": 78,
-   "etr": "2026-11-20T00:00:00Z",
-   "first_seen": "2026-11-19T22:19:25Z",
-   "id": "2600002239",
-   "in_progress_first_seen": "2026-11-19T22:19:25Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T00:04:22Z",
-   "lat": 43.63051382,
-   "lon": -116.22508788,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 78,
-   "pending": false,
-   "places": [
-    "BOISE"
-   ],
-   "planned": false,
-   "start": "2026-11-19T21:55:32Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83702"
-   ]
-  },
   "2600002243": {
    "cause": "Third-Party Damage",
    "customer_hours_before_first_seen": 4.0,
-   "customer_hours_observed": 14.994444444444447,
+   "customer_hours_observed": 17.497222222222224,
    "customers": 10,
    "etr": "2026-11-20T00:30:00Z",
    "first_seen": "2026-11-19T22:34:24Z",
    "id": "2600002243",
    "in_progress_first_seen": "2026-11-19T22:34:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T00:04:22Z",
+   "last_seen": "2026-11-20T00:19:23Z",
    "lat": 43.60286153,
    "lon": -116.29300831,
    "max_gap_minutes": 15,
@@ -205,6 +177,7 @@
   "2600002220": "2026-11-19T21:19:24Z",
   "2600002227": "2026-11-19T20:34:24Z",
   "2600002235": "2026-11-19T21:19:24Z",
+  "2600002239": "2026-11-20T00:19:23Z",
   "2600002250": "2026-11-19T23:34:23Z"
  }
 }
