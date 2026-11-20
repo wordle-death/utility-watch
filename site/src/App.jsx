@@ -32,10 +32,11 @@ function place(title) {
 }
 
 export function Section({ eyebrow, title, children }) {
+  const service = { Water: "water", Power: "power", Cost: "cost" }[eyebrow];
   return (
     <section className="flex flex-col gap-4">
       <div className="flex flex-col gap-1">
-        <span className="eyebrow">{eyebrow}</span>
+        {service ? <ServiceTag service={service} /> : <span className="eyebrow">{eyebrow}</span>}
         <h2>{title}</h2>
       </div>
       {children}
@@ -43,9 +44,29 @@ export function Section({ eyebrow, title, children }) {
   );
 }
 
-export function Tile({ label, figure, children }) {
+const SERVICES = {
+  water: { name: "Water", icon: "M12 3c-3.5 4.6-6 8-6 11a6 6 0 0 0 12 0c0-3-2.5-6.4-6-11z" },
+  power: { name: "Power", icon: "M13 2 5 13.5h5.5L10 22l8.5-12H13z" },
+  cost: { name: "Cost", icon: "M12 3v18M16.5 7.5c-.8-1.3-2.4-2-4.5-2-2.6 0-4.3 1.2-4.3 3.1 0 4.4 9 2.4 9 6.9 0 2-1.9 3.2-4.7 3.2-2.3 0-4.1-.9-4.9-2.4" },
+};
+
+function ServiceTag({ service }) {
+  const s = SERVICES[service];
+  return (
+    <span className={`service service-${service}`}>
+      <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+        <path d={s.icon} fill={service === "cost" ? "none" : "currentColor"} stroke="currentColor"
+          strokeWidth={service === "cost" ? 2 : 1} strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+      {s.name}
+    </span>
+  );
+}
+
+export function Tile({ label, figure, children, service }) {
   return (
     <div className="panel flex flex-col gap-1">
+      {service && <ServiceTag service={service} />}
       <span className="small muted">{label}</span>
       <span className="figure">{figure}</span>
       <span className="small muted">{children}</span>
@@ -261,30 +282,30 @@ function NewOrleans() {
         <div className="flex flex-col gap-2">
           <span className="eyebrow">For the average resident, {latest.year}</span>
           <div className="grid gap-3 sm:grid-cols-3">
-            <Tile label="Hours under a boil-water advisory, per resident" figure={whole(waterYear.person_hours / city.residents)}>
+            <Tile service="water" label="Hours under a boil-water advisory, per resident" figure={whole(waterYear.person_hours / city.residents)}>
               estimated average: some neighborhoods had none, others several days.{counted(waterYear)}{" "}
               {current.year} so far: {whole(current.person_hours / city.residents)}
             </Tile>
-            <Tile label="Minutes without power, per customer" figure={whole(latest.saidi_with)}>
+            <Tile service="power" label="Minutes without power, per customer" figure={whole(latest.saidi_with)}>
               storms included; U.S. average {whole(latest.saidi_with_national_avg)}. Without major storms:{" "}
               {whole(latest.saidi_without)}, U.S. average {whole(latest.saidi_without_national_avg)}
             </Tile>
-            <Tile label="Cost per household" figure="Not yet">method under review</Tile>
+            <Tile service="cost" label="Cost per household" figure="Not yet">method under review</Tile>
           </div>
         </div>
         <div className="flex flex-col gap-2">
           <span className="eyebrow">For the whole city, {latest.year}</span>
           <div className="grid gap-3 sm:grid-cols-3">
-            <Tile label="Hours residents spent under a boil-water advisory" figure={`${millions(waterYear.person_hours)}`}>
+            <Tile service="water" label="Hours residents spent under a boil-water advisory" figure={`${millions(waterYear.person_hours)}`}>
               estimated: people in each advisory area × the hours it lasted.{counted(waterYear)}
               {waterYear.upper ? ` ${millions(waterYear.upper)} comes from advisories that include a very small area, counted generously.` : ""}{" "}
               {current.year} so far: {millions(current.person_hours)}
             </Tile>
-            <Tile label="Hours customers spent without power" figure={whole(Math.round(powerHours / 1000) * 1000)}>
+            <Tile service="power" label="Hours customers spent without power" figure={whole(Math.round(powerHours / 1000) * 1000)}>
               estimated from Entergy's federal filing: minutes per customer × {whole(latest.customers)} customers,
               storms included
             </Tile>
-            <Tile label="Cost to the city" figure="Not yet">method under review</Tile>
+            <Tile service="cost" label="Cost to the city" figure="Not yet">method under review</Tile>
           </div>
         </div>
       </header>

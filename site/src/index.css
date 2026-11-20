@@ -16,6 +16,9 @@
   --series-3: #1baf7a;
   --note-bg: #fff6dc;
   --note-ink: #5c4300;
+  --water: #1f6fb2;
+  --power: #b45c00;
+  --cost: #4a535d;
   --font-body: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-data: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
 }
@@ -24,14 +27,14 @@
     --page: #0e1114; --surface: #1a1a19; --ink: #eef0f2; --ink-2: #bcc3ca; --ink-3: #8a929b;
     --line: #2b3036; --axis: #3d444c; --accent: #6db8e3; --wash: #1c252c;
     --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70;
-    --note-bg: #2e2710; --note-ink: #f0dc9a; color-scheme: dark;
+    --note-bg: #2e2710; --note-ink: #f0dc9a; --water: #6fb3f0; --power: #f2a65a; --cost: #bcc3ca; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --page: #0e1114; --surface: #1a1a19; --ink: #eef0f2; --ink-2: #bcc3ca; --ink-3: #8a929b;
   --line: #2b3036; --axis: #3d444c; --accent: #6db8e3; --wash: #1c252c;
   --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70;
-  --note-bg: #2e2710; --note-ink: #f0dc9a; color-scheme: dark;
+  --note-bg: #2e2710; --note-ink: #f0dc9a; --water: #6fb3f0; --power: #f2a65a; --cost: #bcc3ca; color-scheme: dark;
 }
 
 body { background: var(--page); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.55; margin: 0; }
@@ -83,3 +86,9 @@ input[type="search"]:focus-visible { outline: 2px solid var(--accent); outline-o
 .meter i { position: absolute; top: -3px; width: 4px; height: 12px; border-radius: 2px; background: var(--series-1); transform: translateX(-2px); }
 .btn { font: inherit; font-size: 0.88rem; padding: 7px 14px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--ink); cursor: pointer; }
 tr.pick td { background: var(--wash); }
+
+.service { display: inline-flex; align-items: center; gap: 5px; font-family: var(--font-data); font-size: 0.72rem;
+  letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; margin-bottom: 4px; }
+.service-water { color: var(--water); }
+.service-power { color: var(--power); }
+.service-cost { color: var(--cost); }
