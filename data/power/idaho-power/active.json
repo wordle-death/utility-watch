@@ -2,19 +2,19 @@
  "empty_streak": 0,
  "events": {
   "2600002272": {
-   "cause": "Under Investigation",
+   "cause": "Weather",
    "customer_hours_before_first_seen": 4.8,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 3.003333333333333,
    "customers": 12,
    "etr": "2026-11-20T14:30:00Z",
    "first_seen": "2026-11-20T11:49:22Z",
    "id": "2600002272",
    "in_progress_first_seen": "2026-11-20T11:49:22Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T11:49:22Z",
+   "last_seen": "2026-11-20T12:04:23Z",
    "lat": 44.45061122,
    "lon": -118.24094557,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "opened_pending": false,
    "peak_customers": 12,
    "pending": false,
@@ -24,7 +24,7 @@
    "planned": false,
    "start": "2026-11-20T11:25:35Z",
    "start_basis": "reported",
-   "status": "Pending",
+   "status": "On the Way",
    "zips": [
     "97884"
    ]
