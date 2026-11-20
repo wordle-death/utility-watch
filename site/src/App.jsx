@@ -306,8 +306,13 @@ function Incidents() {
     .filter((a) => a.cost)
     // Cost does not yet grow with length, so ties are broken by households × hours.
     .sort((a, b) => b.cost.high - a.cost.high || (b.households * (b.hours || 0)) - (a.households * (a.hours || 0))), []);
-  const power = useMemo(() => city.power.live.closed
-    .filter((e) => e.hours_trusted && !e.never_started)
+  // Unplanned outages only: planned work is often listed several times for one job, with hours estimated from its
+  // scheduled start. Outages over a day are left out because the ICE figures stop at 24 hours.
+  const logged = city.power.live.closed;
+  const power = useMemo(() => logged
+    // Entergy files some scheduled work as ordinary outages, with the cause "Scheduled Interruption".
+    .filter((e) => !e.planned && !/scheduled interruption/i.test(e.cause || "")
+      && e.hours_trusted && !e.never_started && e.duration_hours <= 24)
     .map((e) => ({ ...e, value: outageCost(e) }))
     .filter((e) => e.value)
     .sort((a, b) => b.value.cost - a.value.cost), []);
@@ -324,7 +329,7 @@ function Incidents() {
       <p className="small muted" style={{ padding: "0 18px" }}>
         {kind === "water"
           ? `Top ${TOP} of ${rows.length} advisories with a household count, since ${rows.length ? day([...rows].sort((a, b) => (a.issued_at < b.issued_at ? -1 : 1))[0].issued_at) : "–"}. Households × ${money(WATER.low.perHousehold)}–${money(WATER.high.perHousehold)} each. The cost does not yet grow with an advisory's length, so the whole-East-Bank advisories tie; they are listed longest first.`
-          : `Top ${TOP} of ${rows.length} outages logged since ${day(city.power.live.collecting_since)}. Valued as if every customer out were a home, using the ICE cost of an outage that long; businesses cost more, so these are low.`}
+          : `Top ${TOP} of ${rows.length} unplanned outages up to a day long, out of ${logged.length} logged since ${day(city.power.live.collecting_since)} (planned and scheduled work, and outages longer than a day, are left out for now). Valued as if every customer out were a home, using the ICE cost of an outage that long; businesses cost more, so these are low.`}
       </p>
       <div className="scroll-x">
         <table>
@@ -333,12 +338,22 @@ function Incidents() {
               <thead><tr><th>Issued</th><th>Where</th><th className="num">Households</th><th className="num">Hours</th>
                 <th className="num">Cost to households</th></tr></thead>
               <tbody>
-                {rows.slice(0, TOP).map((a) => (
-                  <tr key={a.issued_at + a.title}>
+                {rows.slice(0, TOP).map((a, i) => (
+                  <tr key={i}>
                     <td style={{ whiteSpace: "nowrap" }}>{day(a.issued_at)}</td>
-                    <td style={{ minWidth: 180 }}>{place(a.title)}{a.own_map ? "" : " (area borrowed)"}</td>
+                    <td style={{ minWidth: 220 }}>
+                      {place(a.title)}
+                      <div>
+                        {!a.own_map && <span className="chip" style={{ whiteSpace: "normal" }}>No map of its own; whole-area drawing used, may count too many</span>}
+                        {a.flags.filter((f) => f !== "area_from_named_area_lookup").map((f) => (
+                          <span className="chip" key={f} style={{ whiteSpace: "normal" }}>{FLAGS[f] || f}</span>
+                        ))}
+                      </div>
+                    </td>
                     <td className="num">{a.upper_bound ? "≤ " : ""}{whole(a.households)}</td>
-                    <td className="num">{a.hours == null ? "–" : whole(a.hours)}</td>
+                    <td className="num">
+                      {a.hours == null ? "–" : `${a.flags.includes("remainder_after_partial_lift_not_counted") ? "≥ " : ""}${whole(a.hours)}`}
+                    </td>
                     <td className="num">{money(a.cost.low)}–{money(a.cost.high)}</td>
                   </tr>
                 ))}
@@ -346,15 +361,15 @@ function Incidents() {
             </>
           ) : (
             <>
-              <thead><tr><th>Started</th><th className="num">Customers out</th><th className="num">Hours</th><th>Type</th>
-                <th className="num">Cost to customers</th></tr></thead>
+              <thead><tr><th>Started</th><th className="num">Avg. customers out</th><th className="num">Hours</th>
+                <th>Cause</th><th className="num">Cost to customers</th></tr></thead>
               <tbody>
-                {rows.slice(0, TOP).map((e) => (
-                  <tr key={e.id + e.start}>
+                {rows.slice(0, TOP).map((e, i) => (
+                  <tr key={i}>
                     <td style={{ whiteSpace: "nowrap" }}>{dayTime(e.start)}</td>
                     <td className="num">{whole(e.value.customers)}</td>
                     <td className="num">{e.duration_hours.toFixed(1)}</td>
-                    <td>{e.planned ? "Planned" : "Unplanned"}</td>
+                    <td>{!e.cause || /^pending$/i.test(e.cause) ? "Not yet given" : e.cause.split(" - ").slice(-1)[0]}</td>
                     <td className="num">{money(e.value.cost)}</td>
                   </tr>
                 ))}
