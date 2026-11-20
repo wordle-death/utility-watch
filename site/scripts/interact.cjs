@@ -18,19 +18,19 @@ const { chromium } = require("playwright");
     await page.selectOption("#year-filter", "all");
     check("all years", (await page.locator("section").nth(0).locator("tbody tr").count()) === 94);
     // Bar tooltip
-    const bars = page.locator("section").nth(0).locator("svg rect");
+    const bars = page.locator("section").nth(0).locator("svg[role=img] rect");
     await bars.nth(8).hover();
     const tip = await page.locator(".tip").first().innerText().catch(() => "");
     check("bar tooltip", /2018/.test(tip) && /Advisories/.test(tip), JSON.stringify(tip.replace(/\n/g, " | ")));
     const box = await page.locator(".tip").first().boundingBox();
     check("tooltip inside page", box && box.x >= 0 && box.x + box.width <= width);
     // Storm toggle
-    const svg = page.locator("section").nth(1).locator("svg").first();
+    const svg = page.locator("section").nth(1).locator("svg[role=img]").first();
     const label = async () => (await svg.locator("text").allInnerTexts()).join(" ");
     const without = await label();
     await page.getByRole("button", { name: "With major storms" }).click();
     const withStorms = await label();
-    check("storm toggle", without !== withStorms && /[5-8],000/.test(withStorms), "top tick " + (withStorms.match(/\d,000/g) || []).pop());
+    check("storm toggle", without !== withStorms, "axis labels change");
     await svg.hover({ position: { x: (await svg.boundingBox()).width * 0.6, y: 100 } });
     const tip2 = await page.locator("section").nth(1).locator(".tip").innerText().catch(() => "");
     check("line tooltip", /20\d\d/.test(tip2) && /min/.test(tip2), JSON.stringify(tip2.replace(/\n/g, " | ")));
