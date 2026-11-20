@@ -6,6 +6,7 @@ import nationalData from "./data/national.json";
 const nationalCount = nationalData.utilities.length;
 import { YearBars, MinutesLines } from "./charts.jsx";
 import { FLAGS, day, dayTime, millions, short, whole } from "./format.js";
+import { CURRENT_DOLLARS, ICE_SOURCE, WATER, powerPerCustomer, waterForYear } from "./costs.js";
 
 const FIRST_YEAR = 2010; // the one 2009 advisory on record has no map and no count
 
@@ -259,6 +260,94 @@ function Power({ power, built }) {
   );
 }
 
+// Dollar ranges: "$6–$163", or "$1.0M–$27M" for city totals.
+function money(n, big) {
+  if (n == null) return "–";
+  if (big) return n >= 1e6 ? `$${(n / 1e6).toFixed(n >= 1e7 ? 0 : 1)}M` : `$${Math.round(n / 1e3)}K`;
+  return `$${whole(n)}`;
+}
+function range(r, big) {
+  if (!r) return "Not yet";
+  const lo = money(r.low, big), hi = money(r.high, big);
+  return lo === hi ? lo : `${lo}–${hi}`;
+}
+
+/** Preliminary yearly costs to households: water from the advisory timeline, power from the federal filing. */
+function costs(latest, year) {
+  const homes = city.households;
+  const water = waterForYear(city.water.advisories.filter((a) => a.year === year));
+  // Power range: the year without major storms (low) and with them (high), each per customer.
+  const lowPer = powerPerCustomer(latest.saidi_without, latest.saifi_without);
+  const highPer = powerPerCustomer(latest.saidi_with, latest.saifi_with);
+  if (!homes || lowPer == null || highPer == null) return { perHousehold: null, city: null, water: {}, power: {} };
+  const power = { low: Math.min(lowPer, highPer), high: Math.max(lowPer, highPer) };
+  const w = { perHousehold: { low: water.low / homes, high: water.high / homes }, city: { low: water.low, high: water.high } };
+  const p = { perHousehold: power, city: { low: power.low * homes, high: power.high * homes } };
+  return {
+    year, homes, waterDetail: water, lowPer, highPer,
+    water: w, power: p,
+    perHousehold: { low: w.perHousehold.low + p.perHousehold.low, high: w.perHousehold.high + p.perHousehold.high },
+    city: { low: w.city.low + p.city.low, high: w.city.high + p.city.high },
+  };
+}
+
+function CostMethod({ cost }) {
+  if (!cost.homes) return <p className="muted">Household counts are not available yet, so no cost is shown.</p>;
+  const d = cost.waterDetail;
+  return (
+    <div className="flex flex-col gap-4" style={{ maxWidth: "68ch" }}>
+      <p className="muted">
+        For {cost.year}, in {CURRENT_DOLLARS}. "Per household" spreads the citywide cost across all{" "}
+        {whole(cost.homes)} occupied households in Orleans Parish (2020 Census); households inside an advisory area paid
+        more, and others nothing.
+      </p>
+      <div className="flex flex-col gap-2">
+        <h3>Water: {range(cost.water.city, true)} citywide</h3>
+        <p className="muted">
+          No official standard exists for the cost of a boil-water advisory; the federal standard value (FEMA) covers a
+          complete loss of water, which is far worse. So the range runs between two published studies, each giving a
+          cost per household for one advisory:
+        </p>
+        <ul className="muted flex flex-col gap-1" style={{ margin: 0, paddingLeft: 18 }}>
+          <li><b>Low, {money(WATER.low.perHousehold)}:</b> {WATER.low.source}.{" "}
+            <a href={WATER.low.url} target="_blank" rel="noreferrer">Source</a></li>
+          <li><b>High, {money(WATER.high.perHousehold)}:</b> {WATER.high.source}.{" "}
+            <a href={WATER.high.url} target="_blank" rel="noreferrer">Source</a></li>
+        </ul>
+        <p className="muted">
+          Multiplied by the households inside each advisory area ({whole(d.householdAdvisories)} across the year's
+          advisories{d.missing ? `; ${d.missing} ${d.missing === 1 ? "advisory" : "advisories"} could not be counted` : ""}).
+          Every household is assumed to comply. A longer advisory is not yet counted as costing more.
+        </p>
+      </div>
+      <div className="flex flex-col gap-2">
+        <h3>Power: {range(cost.power.city, true)} citywide</h3>
+        <p className="muted">
+          The Department of Energy's Interruption Cost Estimate (ICE) Calculator is the standard tool for the cost of
+          power outages. It gives a residential customer's cost for one outage by its length. Entergy New Orleans reported
+          {" "}{cost.year} outages per customer and their average length to the federal government; the yearly cost is the
+          number of outages times the ICE cost of an average-length outage: {money(cost.lowPer)} per customer without
+          major storms and {money(cost.highPer)} with them. Each household is counted as one residential customer.{" "}
+          <a href={ICE_SOURCE.url} target="_blank" rel="noreferrer">Source</a>
+        </p>
+      </div>
+      <div className="flex flex-col gap-2">
+        <h3>Not included yet</h3>
+        <ul className="muted flex flex-col gap-1" style={{ margin: 0, paddingLeft: 18 }}>
+          <li>Businesses. ICE puts a business's cost of a two-hour outage in the thousands of dollars, so this is likely the
+            largest missing piece.</li>
+          <li>School and daycare closures during boil-water advisories, and the lost work and wages that follow.</li>
+          <li>The full cost of very long outages. The calculation uses the average outage length (
+            {whole((city.power.years.find((y) => y.year === cost.year) || {}).saidi_with /
+              ((city.power.years.find((y) => y.year === cost.year) || {}).saifi_with || 1))} minutes in {cost.year}, storms
+            included), and ICE does not cover outages longer than a day.</li>
+          <li>Illness, which is left out on purpose: these advisories are precautionary.</li>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
 function NewOrleans() {
   const years = useMemo(() => waterYears(city.water.by_year, city.built_at), []);
   const current = years[years.length - 1];
@@ -266,6 +355,7 @@ function NewOrleans() {
   // Both rows use the last full year the power data covers, so water and power are on the same footing.
   const waterYear = years.find((y) => y.year === latest.year) || current;
   const powerHours = (latest.saidi_with * latest.customers) / 60;
+  const cost = useMemo(() => costs(latest, waterYear.year), [latest, waterYear]);
   // Say how many of the year's advisories are in the total when some could not be counted.
   const counted = (y) => (y.incomplete ? ` ${y.advisories - y.incomplete} of ${y.advisories} advisories counted.` : "");
   const borrowedShare = Math.round((years.reduce((sum, y) => sum + y.from_named_area_lookup, 0)
@@ -290,7 +380,10 @@ function NewOrleans() {
               storms included; U.S. average {whole(latest.saidi_with_national_avg)}. Without major storms:{" "}
               {whole(latest.saidi_without)}, U.S. average {whole(latest.saidi_without_national_avg)}
             </Tile>
-            <Tile service="cost" label="Cost per household" figure="Not yet">method under review</Tile>
+            <Tile service="cost" label="Cost per household, preliminary" figure={range(cost.perHousehold)}>
+              water {range(cost.water.perHousehold)} plus power {range(cost.power.perHousehold)}; estimated, households
+              only. <a href="#cost">How</a>
+            </Tile>
           </div>
         </div>
         <div className="flex flex-col gap-2">
@@ -305,7 +398,10 @@ function NewOrleans() {
               estimated from Entergy's federal filing: minutes per customer × {whole(latest.customers)} customers,
               storms included
             </Tile>
-            <Tile service="cost" label="Cost to the city" figure="Not yet">method under review</Tile>
+            <Tile service="cost" label="Cost to households citywide, preliminary" figure={range(cost.city, true)}>
+              water {range(cost.water.city, true)} plus power {range(cost.power.city, true)}; businesses, schools and
+              daycares not yet included. <a href="#cost">How</a>
+            </Tile>
           </div>
         </div>
       </header>
@@ -316,11 +412,10 @@ function NewOrleans() {
       <hr className="rule" />
 
       <Section eyebrow="Cost" title="What this costs households">
-        <p className="muted">Not estimated yet. The method for putting a dollar range on a boil-water advisory and on an
-          hour without power is still being worked out, and no figure will appear here until it has been reviewed.</p>
-        <p className="muted">School and daycare closures during boil-water advisories are part of that cost: a closed
-          school means lost wages and lost work for families well beyond the price of bottled water. Closures are not
-          collected yet.</p>
+        <div id="cost" className="note">Preliminary. These figures use published studies as stand-ins until the method has
+          been reviewed, and they leave out costs to businesses, schools and daycares. Treat them as a first range, not a
+          finding.</div>
+        <CostMethod cost={cost} />
       </Section>
       <hr className="rule" />
 
