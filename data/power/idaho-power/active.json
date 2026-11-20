@@ -4,14 +4,14 @@
   "2600001819": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 16.1,
-   "customer_hours_observed": 256.0177777777778,
+   "customer_hours_observed": 272.0,
    "customers": 64,
    "etr": "2026-11-20T22:00:00Z",
    "first_seen": "2026-11-20T17:19:24Z",
    "id": "2600001819",
    "in_progress_first_seen": "2026-11-20T17:19:24Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-20T21:19:25Z",
+   "last_seen": "2026-11-20T21:34:24Z",
    "lat": 43.574615,
    "lon": -116.18960822,
    "max_gap_minutes": 15,
@@ -32,14 +32,14 @@
   "2600002319": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 4.3,
-   "customer_hours_observed": 28.004444444444445,
+   "customer_hours_observed": 32.0,
    "customers": 16,
    "etr": "2026-11-20T22:30:00Z",
    "first_seen": "2026-11-20T19:34:24Z",
    "id": "2600002319",
    "in_progress_first_seen": "2026-11-20T19:34:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T21:19:25Z",
+   "last_seen": "2026-11-20T21:34:24Z",
    "lat": 44.19872765,
    "lon": -117.49829192,
    "max_gap_minutes": 15,
@@ -57,40 +57,6 @@
    "zips": [
     "97909",
     "97918"
-   ]
-  },
-  "2600002335": {
-   "cause": "Under Investigation",
-   "customer_hours_before_first_seen": 851.2,
-   "customer_hours_observed": 1089.605,
-   "customers": 2178,
-   "etr": "2026-11-20T23:30:00Z",
-   "first_seen": "2026-11-20T20:49:24Z",
-   "id": "2600002335",
-   "in_progress_first_seen": "2026-11-20T20:49:24Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T21:19:25Z",
-   "lat": 42.92124844,
-   "lon": -114.95270206,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 2178,
-   "pending": false,
-   "places": [
-    "BLISS",
-    "GOODING",
-    "HAGERMAN",
-    "KING HILL"
-   ],
-   "planned": false,
-   "start": "2026-11-20T20:25:57Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83314",
-    "83330",
-    "83332",
-    "83633"
    ]
   }
  },
@@ -110,7 +76,6 @@
   "2600001569": "2026-11-18T16:49:24Z",
   "2600001608": "2026-11-18T17:34:24Z",
   "2600001639": "2026-11-19T21:49:23Z",
-  "2600001651": "2026-11-13T21:34:23Z",
   "2600001657": "2026-11-13T23:34:24Z",
   "2600001661": "2026-11-18T16:49:24Z",
   "2600001671": "2026-11-14T02:19:24Z",
@@ -219,6 +184,7 @@
   "2600002290": "2026-11-20T17:49:26Z",
   "2600002302": "2026-11-20T19:49:23Z",
   "2600002326": "2026-11-20T21:19:25Z",
+  "2600002335": "2026-11-20T21:34:24Z",
   "2600002339": "2026-11-20T21:19:25Z"
  }
 }
