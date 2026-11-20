@@ -4,14 +4,14 @@
   "261122850": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 0.3,
-   "customer_hours_observed": 0.9988888888888889,
+   "customer_hours_observed": 1.498888888888889,
    "customers": 2,
    "etr": null,
    "first_seen": "2026-11-20T03:04:25Z",
    "id": "261122850",
    "in_progress_first_seen": "2026-11-20T03:04:25Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-20T03:34:23Z",
+   "last_seen": "2026-11-20T03:49:23Z",
    "lat": 33.461225982233344,
    "lon": -112.22001578796,
    "max_gap_minutes": 15,
@@ -23,32 +23,6 @@
    ],
    "planned": true,
    "start": "2026-11-20T02:55:17Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
-  "261122851": {
-   "cause": "An electrical safety hazard has been identified. SRP crews are working to restore power.",
-   "customer_hours_before_first_seen": 0.2,
-   "customer_hours_observed": 0.7424999999999999,
-   "customers": 3,
-   "etr": null,
-   "first_seen": "2026-11-20T03:19:32Z",
-   "id": "261122851",
-   "in_progress_first_seen": "2026-11-20T03:19:32Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T03:34:23Z",
-   "lat": 33.415134996564305,
-   "lon": -112.205705753245,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 3,
-   "pending": false,
-   "places": [
-    "S 71ST  AVE TO S 63RD  AVE AND W LOWER BUCKEYE  RD TO W BROADWAY  RD"
-   ],
-   "planned": false,
-   "start": "2026-11-20T03:15:03Z",
    "start_basis": "reported",
    "status": null,
    "zips": []
@@ -171,6 +145,7 @@
   "261122825#2": "2026-11-20T00:49:23Z",
   "261122832": "2026-11-20T01:19:23Z",
   "261122832#2": "2026-11-20T01:19:23Z",
-  "261122834": "2026-11-20T00:34:23Z"
+  "261122834": "2026-11-20T00:34:23Z",
+  "261122851": "2026-11-20T03:49:23Z"
  }
 }

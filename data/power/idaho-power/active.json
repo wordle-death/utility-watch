@@ -4,14 +4,14 @@
   "2600002243": {
    "cause": "Third-Party Damage",
    "customer_hours_before_first_seen": 4.0,
-   "customer_hours_observed": 49.99722222222223,
+   "customer_hours_observed": 52.49722222222223,
    "customers": 10,
    "etr": "2026-11-20T04:30:00Z",
    "first_seen": "2026-11-19T22:34:24Z",
    "id": "2600002243",
    "in_progress_first_seen": "2026-11-19T22:34:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T03:34:23Z",
+   "last_seen": "2026-11-20T03:49:23Z",
    "lat": 43.60286153,
    "lon": -116.29300831,
    "max_gap_minutes": 15,
@@ -29,45 +29,17 @@
     "83709"
    ]
   },
-  "2600002261": {
-   "cause": "Object In Line",
-   "customer_hours_before_first_seen": 210.5,
-   "customer_hours_observed": 463.5,
-   "customers": 618,
-   "etr": "2026-11-20T06:00:00Z",
-   "first_seen": "2026-11-20T02:49:23Z",
-   "id": "2600002261",
-   "in_progress_first_seen": "2026-11-20T02:49:23Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T03:34:23Z",
-   "lat": 44.90156721,
-   "lon": -116.10996882,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 618,
-   "pending": false,
-   "places": [
-    "MCCALL"
-   ],
-   "planned": false,
-   "start": "2026-11-20T02:28:57Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83638"
-   ]
-  },
   "2600002262": {
    "cause": "Weather",
    "customer_hours_before_first_seen": 23.8,
-   "customer_hours_observed": 34.96111111111111,
+   "customer_hours_observed": 52.46111111111111,
    "customers": 70,
    "etr": "2026-11-20T05:30:00Z",
    "first_seen": "2026-11-20T03:04:25Z",
    "id": "2600002262",
    "in_progress_first_seen": "2026-11-20T03:04:25Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T03:34:23Z",
+   "last_seen": "2026-11-20T03:49:23Z",
    "lat": 43.47144819,
    "lon": -112.70759884,
    "max_gap_minutes": 15,
@@ -81,7 +53,7 @@
    "planned": false,
    "start": "2026-11-20T02:44:02Z",
    "start_basis": "reported",
-   "status": "On the Way",
+   "status": "On-site",
    "zips": [
     "83215",
     "83221"
@@ -209,6 +181,7 @@
   "2600002235": "2026-11-19T21:19:24Z",
   "2600002237": "2026-11-20T02:49:23Z",
   "2600002239": "2026-11-20T00:19:23Z",
-  "2600002250": "2026-11-19T23:34:23Z"
+  "2600002250": "2026-11-19T23:34:23Z",
+  "2600002261": "2026-11-20T03:49:23Z"
  }
 }
