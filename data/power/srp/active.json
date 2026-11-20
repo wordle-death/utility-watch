@@ -1,33 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "261122850": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 0.3,
-   "customer_hours_observed": 10.5,
-   "customers": 2,
-   "etr": null,
-   "first_seen": "2026-11-20T03:04:25Z",
-   "id": "261122850",
-   "in_progress_first_seen": "2026-11-20T03:04:25Z",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-20T08:19:25Z",
-   "lat": 33.461225982233344,
-   "lon": -112.22001578796,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 2,
-   "pending": false,
-   "places": [
-    "N 79TH  AVE TO N 71ST  AVE AND W MCDOWELL  RD TO W ROOSEVELT  ST"
-   ],
-   "planned": true,
-   "start": "2026-11-20T02:55:17Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  }
- },
+ "events": {},
  "logged_recent": {
   "261121801": "2026-11-13T10:49:23Z",
   "261121809": "2026-11-13T18:04:25Z",
@@ -146,6 +119,7 @@
   "261122832": "2026-11-20T01:19:23Z",
   "261122832#2": "2026-11-20T01:19:23Z",
   "261122834": "2026-11-20T00:34:23Z",
+  "261122850": "2026-11-20T08:34:28Z",
   "261122851": "2026-11-20T03:49:23Z",
   "261122856": "2026-11-20T07:34:23Z",
   "261122856#2": "2026-11-20T07:34:23Z"
