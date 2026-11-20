@@ -26,7 +26,7 @@ const { chromium } = require("playwright");
     check("tooltip inside page", box && box.x >= 0 && box.x + box.width <= width);
     // Storm toggle
     const svg = page.locator("section").nth(1).locator("svg[role=img]").first();
-    const label = async () => (await svg.locator("text").allInnerTexts()).join(" ");
+    const label = async () => (await svg.locator("text").allTextContents()).join(" ");
     const without = await label();
     await page.getByRole("button", { name: "With major storms" }).click();
     const withStorms = await label();
