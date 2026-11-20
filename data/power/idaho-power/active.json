@@ -4,14 +4,14 @@
   "2600002272": {
    "cause": "Weather",
    "customer_hours_before_first_seen": 4.8,
-   "customer_hours_observed": 39.01,
+   "customer_hours_observed": 42.053333333333335,
    "customers": 12,
    "etr": "2026-11-20T15:30:00Z",
    "first_seen": "2026-11-20T11:49:22Z",
    "id": "2600002272",
    "in_progress_first_seen": "2026-11-20T11:49:22Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T15:04:25Z",
+   "last_seen": "2026-11-20T15:19:38Z",
    "lat": 44.45061122,
    "lon": -118.24094557,
    "max_gap_minutes": 15,
@@ -27,6 +27,34 @@
    "status": "Assigned",
    "zips": [
     "97884"
+   ]
+  },
+  "2600002288": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 2.4,
+   "customer_hours_observed": 0.0,
+   "customers": 11,
+   "etr": "2026-11-20T18:30:00Z",
+   "first_seen": "2026-11-20T15:19:38Z",
+   "id": "2600002288",
+   "in_progress_first_seen": "2026-11-20T15:19:38Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-20T15:19:38Z",
+   "lat": 44.26031041,
+   "lon": -117.52188681,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 11,
+   "pending": false,
+   "places": [
+    "BROGAN"
+   ],
+   "planned": false,
+   "start": "2026-11-20T15:06:24Z",
+   "start_basis": "reported",
+   "status": "Pending",
+   "zips": [
+    "97903"
    ]
   }
  },
