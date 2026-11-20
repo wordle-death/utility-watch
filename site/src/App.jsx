@@ -6,7 +6,8 @@ import nationalData from "./data/national.json";
 const nationalCount = nationalData.utilities.length;
 import { YearBars, MinutesLines } from "./charts.jsx";
 import { FLAGS, day, dayTime, millions, short, whole } from "./format.js";
-import { CPI_SOURCE, CURRENT_DOLLARS, ICE_BUSINESS_2H, ICE_SOURCE, WATER, money, powerPerCustomer, waterForYear } from "./costs.js";
+import { CPI_SOURCE, CURRENT_DOLLARS, ICE_BUSINESS_2H, ICE_SOURCE, WATER, advisoryCost, money, outageCost,
+  powerPerCustomer, waterForYear } from "./costs.js";
 
 const FIRST_YEAR = 2010; // the one 2009 advisory on record has no map and no count
 
@@ -29,7 +30,7 @@ function place(title) {
   const cleaned = title
     .replace(/^(expanded\s*[-–]?\s*)?(swb\s+|limited\s+|scheduled\s+)?(precautionary\s+)?boil[- ]water\s+(advisor(y|ies)|order)\s*(in effect\s+)?(issued|called|reinstated)?\s*(only\s+)?(for\s+)?(the\s+|an?\s+)?/i, "")
     .trim();
-  return cleaned ? cleaned[0].toUpperCase() + cleaned.slice(1) : "Place not named in the notice";
+  return cleaned ? cleaned[0].toUpperCase() + cleaned.slice(1) : "Not named in the first notice";
 }
 
 export function Section({ eyebrow, title, children }) {
@@ -295,6 +296,93 @@ function costs(latest, year) {
   };
 }
 
+const TOP = 10;
+
+/** The most costly single events: every boil-water advisory on record, and every power outage logged so far. */
+function Incidents() {
+  const [kind, setKind] = useState("water");
+  const water = useMemo(() => city.water.advisories
+    .map((a) => ({ ...a, cost: advisoryCost(a) }))
+    .filter((a) => a.cost)
+    // Cost does not yet grow with length, so ties are broken by households × hours.
+    .sort((a, b) => b.cost.high - a.cost.high || (b.households * (b.hours || 0)) - (a.households * (a.hours || 0))), []);
+  // Unplanned outages only: planned work is often listed several times for one job, with hours estimated from its
+  // scheduled start. Outages over a day are left out because the ICE figures stop at 24 hours.
+  const logged = city.power.live.closed;
+  const power = useMemo(() => logged
+    // Entergy files some scheduled work as ordinary outages, with the cause "Scheduled Interruption".
+    .filter((e) => !e.planned && !/scheduled interruption/i.test(e.cause || "")
+      && e.hours_trusted && !e.never_started && e.duration_hours <= 24)
+    .map((e) => ({ ...e, value: outageCost(e) }))
+    .filter((e) => e.value)
+    .sort((a, b) => b.value.cost - a.value.cost), []);
+  const rows = kind === "water" ? water : power;
+  return (
+    <div className="panel flex flex-col gap-3" style={{ padding: 0 }}>
+      <div className="flex flex-wrap items-center justify-between gap-3" style={{ padding: "16px 18px 0" }}>
+        <h3>The costliest single events</h3>
+        <div className="seg" role="group" aria-label="Service">
+          <button type="button" aria-pressed={kind === "water"} onClick={() => setKind("water")}>Boil-water advisories</button>
+          <button type="button" aria-pressed={kind === "power"} onClick={() => setKind("power")}>Power outages</button>
+        </div>
+      </div>
+      <p className="small muted" style={{ padding: "0 18px" }}>
+        {kind === "water"
+          ? `Top ${TOP} of ${rows.length} advisories with a household count, since ${rows.length ? day([...rows].sort((a, b) => (a.issued_at < b.issued_at ? -1 : 1))[0].issued_at) : "–"}. Households × ${money(WATER.low.perHousehold)}–${money(WATER.high.perHousehold)} each. The cost does not yet grow with an advisory's length, so the whole-East-Bank advisories tie; they are listed longest first.`
+          : `Top ${TOP} of ${rows.length} unplanned outages up to a day long, out of ${logged.length} logged since ${day(city.power.live.collecting_since)} (planned and scheduled work, and outages longer than a day, are left out for now). Valued as if every customer out were a home, using the ICE cost of an outage that long; businesses cost more, so these are low.`}
+      </p>
+      <div className="scroll-x">
+        <table>
+          {kind === "water" ? (
+            <>
+              <thead><tr><th>Issued</th><th>Where</th><th className="num">Households</th><th className="num">Hours</th>
+                <th className="num">Cost to households</th></tr></thead>
+              <tbody>
+                {rows.slice(0, TOP).map((a, i) => (
+                  <tr key={i}>
+                    <td style={{ whiteSpace: "nowrap" }}>{day(a.issued_at)}</td>
+                    <td style={{ minWidth: 220 }}>
+                      {place(a.title)}
+                      <div>
+                        {!a.own_map && <span className="chip" style={{ whiteSpace: "normal" }}>No map of its own; whole-area drawing used, may count too many</span>}
+                        {a.flags.filter((f) => f !== "area_from_named_area_lookup").map((f) => (
+                          <span className="chip" key={f} style={{ whiteSpace: "normal" }}>{FLAGS[f] || f}</span>
+                        ))}
+                      </div>
+                    </td>
+                    <td className="num">{a.upper_bound ? "≤ " : ""}{whole(a.households)}</td>
+                    <td className="num">
+                      {a.hours == null ? "–" : `${a.flags.includes("remainder_after_partial_lift_not_counted") ? "≥ " : ""}${whole(a.hours)}`}
+                    </td>
+                    <td className="num">{money(a.cost.low)}–{money(a.cost.high)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </>
+          ) : (
+            <>
+              <thead><tr><th>Started</th><th className="num">Avg. customers out</th><th className="num">Hours</th>
+                <th>Cause</th><th className="num">Cost to customers</th></tr></thead>
+              <tbody>
+                {rows.slice(0, TOP).map((e, i) => (
+                  <tr key={i}>
+                    <td style={{ whiteSpace: "nowrap" }}>{dayTime(e.start)}</td>
+                    <td className="num">{whole(e.value.customers)}</td>
+                    <td className="num">{e.duration_hours.toFixed(1)}</td>
+                    <td>{!e.cause || /^pending$/i.test(e.cause) ? "Not yet given" : e.cause.split(" - ").slice(-1)[0].replace(/\s*\(describe in remarks\)/i, "")}</td>
+                    <td className="num">{money(e.value.cost)}</td>
+                  </tr>
+                ))}
+                {rows.length === 0 && <tr><td colSpan="5" className="muted">No ended outages logged yet.</td></tr>}
+              </tbody>
+            </>
+          )}
+        </table>
+      </div>
+    </div>
+  );
+}
+
 function CostMethod({ cost }) {
   if (cost.reason) return <p className="muted">{cost.reason}</p>;
   const d = cost.waterDetail;
@@ -432,6 +520,7 @@ function NewOrleans() {
         <div id="cost" className="note">Preliminary. These figures use published studies as stand-ins until the method has
           been reviewed, and they leave out costs to businesses, schools and daycares. Treat them as a first range, not a
           finding.</div>
+        <Incidents />
         <CostMethod cost={cost} />
       </Section>
       <hr className="rule" />

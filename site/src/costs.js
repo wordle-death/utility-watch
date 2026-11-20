@@ -81,6 +81,22 @@ export function waterForYear(advisories) {
   };
 }
 
+/** Cost range of one boil-water advisory: its households × the per-household range. */
+export function advisoryCost(a) {
+  if (a.households == null) return null;
+  return { low: a.households * WATER.low.perHousehold, high: a.households * WATER.high.perHousehold };
+}
+
+/**
+ * Cost of one logged power outage, valued as if every affected customer were a home: average customers out
+ * (customer-hours ÷ length) × the ICE residential cost of an outage that long. Businesses cost more, so this is low.
+ */
+export function outageCost(e) {
+  if (!e.customer_hours || !e.duration_hours || e.duration_hours <= 0) return null;
+  const customers = e.customer_hours / e.duration_hours;
+  return { customers, cost: customers * iceResidential(e.duration_hours * 60) };
+}
+
 /** "$6", "$1,200", "$950K", "$1.0M", "$27M": rounded first, then given a unit. */
 export function money(n) {
   if (n == null || Number.isNaN(n)) return "–";

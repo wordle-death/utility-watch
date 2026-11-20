@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { CPI, WATER, iceResidential, money, powerPerCustomer, waterForYear } from "../src/costs.js";
+import { CPI, WATER, advisoryCost, iceResidential, money, outageCost, powerPerCustomer, waterForYear } from "../src/costs.js";
 
 const now = (x, year) => (x * CPI.current) / CPI[year];
 
@@ -36,4 +36,13 @@ test("money rounds before choosing a unit", () => {
   assert.deepEqual([5.13, 49999, 999600, 9960000, 26980000].map(money), ["$5", "$49,999", "$1.0M", "$10M", "$27M"]);
   assert.equal(money(null), "–");
   assert.equal(money(250000), "$250K");
+});
+
+test("incident costs", () => {
+  assert.deepEqual(advisoryCost({ households: null }), null);
+  assert.ok(Math.abs(advisoryCost({ households: 10 }).high - 10 * WATER.high.perHousehold) < 1e-9);
+  const o = outageCost({ customer_hours: 200, duration_hours: 2 });
+  assert.equal(o.customers, 100);
+  assert.ok(Math.abs(o.cost - 100 * iceResidential(120)) < 1e-9);
+  assert.equal(outageCost({ customer_hours: 0, duration_hours: 0 }), null);
 });
