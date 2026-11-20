@@ -20,6 +20,9 @@ const advisories = timeline.advisories.map((a) => ({
   title: a.title,
   hours: a.hours,
   people: a.people,
+  households: a.households ?? null,
+  // The year in New Orleans, matching the yearly totals.
+  year: Number(new Date(a.issued_at).toLocaleString("en-US", { timeZone: "America/Chicago", year: "numeric" })),
   person_hours: a.person_hours,
   own_map: a.area_keys.length > 0,
   upper_bound: a.upper_bound,
@@ -54,7 +57,10 @@ const slim = (e) => ({
 const firstSeen = [...closed, ...active].map((e) => e.first_seen).filter(Boolean).sort()[0] || null;
 
 // Residents of the parish, for per-resident averages: the same 2020 Census blocks the advisory counts use.
-const residents = read(data("census", "blocks-22071.json")).blocks.reduce((sum, b) => sum + b.people, 0);
+const blocks = read(data("census", "blocks-22071.json")).blocks;
+const residents = blocks.reduce((sum, b) => sum + b.people, 0);
+// Occupied households (2020 Census); null until every block has the count.
+const households = blocks.every((b) => b.occupied != null) ? blocks.reduce((sum, b) => sum + b.occupied, 0) : null;
 
 // When each feed last succeeded, so the page can warn a visitor when collection has stopped.
 const freshness = {
@@ -67,6 +73,7 @@ const out = {
   built_at: new Date().toISOString(),
   city: "New Orleans",
   residents,
+  households,
   water: {
     utility: "Sewerage & Water Board of New Orleans",
     method: timeline.method,
