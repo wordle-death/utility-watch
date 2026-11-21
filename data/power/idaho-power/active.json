@@ -4,14 +4,14 @@
   "2600002383": {
    "cause": "Not Found",
    "customer_hours_before_first_seen": 6.2,
-   "customer_hours_observed": 9.009999999999998,
-   "customers": 18,
-   "etr": "2026-11-21T23:30:00Z",
+   "customer_hours_observed": 13.509999999999998,
+   "customers": 14,
+   "etr": "2026-11-22T00:00:00Z",
    "first_seen": "2026-11-21T20:34:22Z",
    "id": "2600002383",
    "in_progress_first_seen": "2026-11-21T20:34:22Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-21T21:04:24Z",
+   "last_seen": "2026-11-21T21:19:24Z",
    "lat": 44.00435537,
    "lon": -116.98814411,
    "max_gap_minutes": 15,
@@ -24,7 +24,7 @@
    "planned": false,
    "start": "2026-11-21T20:13:47Z",
    "start_basis": "reported",
-   "status": "On the Way",
+   "status": "On-site",
    "zips": [
     "97914"
    ]
