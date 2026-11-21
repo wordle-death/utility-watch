@@ -1,35 +1,7 @@
 {
  "empty_streak": 0,
- "events": {
-  "261122963": {
-   "cause": "An underground power cable has failed. SRP crews are working to restore power.",
-   "customer_hours_before_first_seen": 0.0,
-   "customer_hours_observed": 3.999722222222222,
-   "customers": 1,
-   "etr": null,
-   "first_seen": "2026-11-20T22:19:25Z",
-   "id": "261122963",
-   "in_progress_first_seen": "2026-11-20T22:19:25Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-21T02:19:24Z",
-   "lat": 33.3921643939184,
-   "lon": -111.543517217092,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 1,
-   "pending": false,
-   "places": [
-    "S IDAHO  RD TO S ROYAL PALM  RD AND E 16TH  AVE TO E SUPERSTITION  FWY"
-   ],
-   "planned": false,
-   "start": "2026-11-20T22:18:42Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  }
- },
+ "events": {},
  "logged_recent": {
-  "261121946": "2026-11-14T02:19:24Z",
   "261121949": "2026-11-14T10:49:23Z",
   "261121969": "2026-11-14T17:34:24Z",
   "261121969#2": "2026-11-14T17:19:23Z",
@@ -147,6 +119,7 @@
   "261122922": "2026-11-20T19:34:24Z",
   "261122923": "2026-11-20T23:34:22Z",
   "261122932": "2026-11-20T23:49:23Z",
-  "261122952": "2026-11-20T23:49:23Z"
+  "261122952": "2026-11-20T23:49:23Z",
+  "261122963": "2026-11-21T02:34:24Z"
  }
 }
