@@ -4,14 +4,14 @@
   "2600002376": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 8.4,
-   "customer_hours_observed": 14.0,
+   "customer_hours_observed": 20.992222222222225,
    "customers": 28,
    "etr": "2026-11-21T13:00:00Z",
    "first_seen": "2026-11-21T11:19:23Z",
    "id": "2600002376",
    "in_progress_first_seen": "2026-11-21T11:19:23Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-21T11:49:23Z",
+   "last_seen": "2026-11-21T12:04:22Z",
    "lat": 43.58146295,
    "lon": -116.57653672,
    "max_gap_minutes": 15,
@@ -24,7 +24,7 @@
    "planned": false,
    "start": "2026-11-21T11:01:29Z",
    "start_basis": "reported",
-   "status": "Pending",
+   "status": "Assigned",
    "zips": [
     "83651"
    ]
