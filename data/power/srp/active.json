@@ -1,33 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "261122986": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 0.0,
-   "customer_hours_observed": 0.5,
-   "customers": 2,
-   "etr": null,
-   "first_seen": "2026-11-21T03:49:24Z",
-   "id": "261122986",
-   "in_progress_first_seen": "2026-11-21T03:49:24Z",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-21T04:04:24Z",
-   "lat": 33.263769613841504,
-   "lon": -111.8915123162765,
-   "max_gap_minutes": 13,
-   "opened_pending": false,
-   "peak_customers": 2,
-   "pending": false,
-   "places": [
-    "S PEARL HARBOR MEMORIAL  HWY TO S PRICE  RD AND W GERMANN  RD TO W OCOTILLO  RD"
-   ],
-   "planned": true,
-   "start": "2026-11-21T03:48:08Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  }
- },
+ "events": {},
  "logged_recent": {
   "261121949": "2026-11-14T10:49:23Z",
   "261121969": "2026-11-14T17:34:24Z",
@@ -147,6 +120,7 @@
   "261122923": "2026-11-20T23:34:22Z",
   "261122932": "2026-11-20T23:49:23Z",
   "261122952": "2026-11-20T23:49:23Z",
-  "261122963": "2026-11-21T02:34:24Z"
+  "261122963": "2026-11-21T02:34:24Z",
+  "261122986": "2026-11-21T04:19:25Z"
  }
 }
