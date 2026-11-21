@@ -1,6 +1,35 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "2600002383": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 6.2,
+   "customer_hours_observed": 0.0,
+   "customers": 18,
+   "etr": "2026-11-21T23:30:00Z",
+   "first_seen": "2026-11-21T20:34:22Z",
+   "id": "2600002383",
+   "in_progress_first_seen": "2026-11-21T20:34:22Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-21T20:34:22Z",
+   "lat": 44.00435537,
+   "lon": -116.98814411,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 18,
+   "pending": false,
+   "places": [
+    "ONTARIO"
+   ],
+   "planned": false,
+   "start": "2026-11-21T20:13:47Z",
+   "start_basis": "reported",
+   "status": "Assigned",
+   "zips": [
+    "97914"
+   ]
+  }
+ },
  "logged_recent": {
   "2600000277": "2026-11-17T20:04:24Z",
   "2600000988": "2026-11-17T19:49:24Z",
