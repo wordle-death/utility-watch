@@ -1,32 +1,32 @@
 {
  "empty_streak": 0,
  "events": {
-  "2600002383": {
-   "cause": "Not Found",
-   "customer_hours_before_first_seen": 6.2,
-   "customer_hours_observed": 24.00222222222222,
-   "customers": 14,
+  "2600002387": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 16.6,
+   "customer_hours_observed": 0.0,
+   "customers": 48,
    "etr": "2026-11-22T00:00:00Z",
-   "first_seen": "2026-11-21T20:34:22Z",
-   "id": "2600002383",
-   "in_progress_first_seen": "2026-11-21T20:34:22Z",
+   "first_seen": "2026-11-21T22:19:22Z",
+   "id": "2600002387",
+   "in_progress_first_seen": "2026-11-21T22:19:22Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-21T22:04:22Z",
-   "lat": 44.00435537,
-   "lon": -116.98814411,
-   "max_gap_minutes": 15,
+   "last_seen": "2026-11-21T22:19:22Z",
+   "lat": 43.56055762,
+   "lon": -117.00317276,
+   "max_gap_minutes": 0,
    "opened_pending": false,
-   "peak_customers": 18,
+   "peak_customers": 48,
    "pending": false,
    "places": [
-    "ONTARIO"
+    "HOMEDALE"
    ],
    "planned": false,
-   "start": "2026-11-21T20:13:47Z",
+   "start": "2026-11-21T21:58:39Z",
    "start_basis": "reported",
-   "status": "On-site",
+   "status": "Assigned",
    "zips": [
-    "97914"
+    "83628"
    ]
   }
  },
@@ -50,7 +50,6 @@
   "2600001673": "2026-11-18T20:04:36Z",
   "2600001677": "2026-11-19T00:34:22Z",
   "2600001741": "2026-11-14T22:19:25Z",
-  "2600001742": "2026-11-14T22:04:23Z",
   "2600001747": "2026-11-15T01:49:23Z",
   "2600001761": "2026-11-15T16:49:23Z",
   "2600001763": "2026-11-15T17:04:22Z",
@@ -150,6 +149,7 @@
   "2600002369": "2026-11-21T02:49:25Z",
   "2600002374": "2026-11-21T06:19:23Z",
   "2600002375": "2026-11-21T07:04:24Z",
-  "2600002376": "2026-11-21T14:19:23Z"
+  "2600002376": "2026-11-21T14:19:23Z",
+  "2600002383": "2026-11-21T22:19:22Z"
  }
 }
