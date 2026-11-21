@@ -4,14 +4,14 @@
   "261122994": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 9.2,
-   "customer_hours_observed": 507.5,
+   "customer_hours_observed": 524.9805555555556,
    "customers": 70,
    "etr": null,
    "first_seen": "2026-11-21T06:34:23Z",
    "id": "261122994",
    "in_progress_first_seen": "2026-11-21T06:34:23Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-21T13:49:23Z",
+   "last_seen": "2026-11-21T14:04:22Z",
    "lat": 33.45228471899105,
    "lon": -112.26489347859851,
    "max_gap_minutes": 15,
@@ -30,14 +30,14 @@
   "261122997": {
    "cause": "An underground power cable has failed. SRP crews are working to restore power.",
    "customer_hours_before_first_seen": 0.2,
-   "customer_hours_observed": 53.99777777777778,
+   "customer_hours_observed": 55.995555555555555,
    "customers": 8,
    "etr": null,
    "first_seen": "2026-11-21T07:04:24Z",
    "id": "261122997",
    "in_progress_first_seen": "2026-11-21T07:04:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-21T13:49:23Z",
+   "last_seen": "2026-11-21T14:04:22Z",
    "lat": 33.526809146534546,
    "lon": -112.2060545675145,
    "max_gap_minutes": 15,
@@ -53,28 +53,28 @@
    "status": null,
    "zips": []
   },
-  "261123012": {
+  "261123013": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 3.3,
-   "customer_hours_observed": 29.95,
-   "customers": 30,
+   "customer_hours_before_first_seen": 0.2,
+   "customer_hours_observed": 0.0,
+   "customers": 1,
    "etr": null,
-   "first_seen": "2026-11-21T12:49:29Z",
-   "id": "261123012",
-   "in_progress_first_seen": "2026-11-21T12:49:29Z",
+   "first_seen": "2026-11-21T14:04:22Z",
+   "id": "261123013",
+   "in_progress_first_seen": "2026-11-21T14:04:22Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-21T13:49:23Z",
-   "lat": 33.432917184934,
-   "lon": -111.726298359895,
-   "max_gap_minutes": 15,
+   "last_seen": "2026-11-21T14:04:22Z",
+   "lat": 33.4783930348122,
+   "lon": -112.260743712829,
+   "max_gap_minutes": 0,
    "opened_pending": false,
-   "peak_customers": 30,
+   "peak_customers": 1,
    "pending": false,
    "places": [
-    "N GREENFIELD  RD TO N HIGLEY  RD AND E BROWN  RD TO E UNIVERSITY  DR"
+    "N 95TH  AVE TO N 91ST  AVE AND W OSBORN  RD TO W ENCANTO  BLVD"
    ],
    "planned": true,
-   "start": "2026-11-21T12:42:56Z",
+   "start": "2026-11-21T13:50:36Z",
    "start_basis": "reported",
    "status": null,
    "zips": []
@@ -203,6 +203,7 @@
   "261122992": "2026-11-21T10:19:24Z",
   "261122999": "2026-11-21T10:49:23Z",
   "261123000": "2026-11-21T10:49:23Z",
-  "261123006": "2026-11-21T10:49:23Z"
+  "261123006": "2026-11-21T10:49:23Z",
+  "261123012": "2026-11-21T14:04:22Z"
  }
 }
