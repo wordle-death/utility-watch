@@ -1,43 +1,17 @@
 {
  "empty_streak": 0,
  "events": {
-  "261122997": {
-   "cause": "An underground power cable has failed. SRP crews are working to restore power.",
-   "customer_hours_before_first_seen": 0.2,
-   "customer_hours_observed": 70.0,
-   "customers": 8,
-   "etr": null,
-   "first_seen": "2026-11-21T07:04:24Z",
-   "id": "261122997",
-   "in_progress_first_seen": "2026-11-21T07:04:24Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-21T15:49:24Z",
-   "lat": 33.526809146534546,
-   "lon": -112.2060545675145,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 8,
-   "pending": false,
-   "places": [
-    "N 71ST  AVE TO N 67TH  AVE AND W MARYLAND  AVE TO W BETHANY HOME  RD"
-   ],
-   "planned": false,
-   "start": "2026-11-21T07:03:15Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
   "261123013": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 0.2,
-   "customer_hours_observed": 1.7505555555555556,
+   "customer_hours_observed": 2.0,
    "customers": 1,
    "etr": null,
    "first_seen": "2026-11-21T14:04:22Z",
    "id": "261123013",
    "in_progress_first_seen": "2026-11-21T14:04:22Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-21T15:49:24Z",
+   "last_seen": "2026-11-21T16:04:22Z",
    "lat": 33.4783930348122,
    "lon": -112.260743712829,
    "max_gap_minutes": 15,
@@ -49,32 +23,6 @@
    ],
    "planned": true,
    "start": "2026-11-21T13:50:36Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
-  "261123018": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 0.1,
-   "customer_hours_observed": 3.0005555555555556,
-   "customers": 2,
-   "etr": null,
-   "first_seen": "2026-11-21T14:19:23Z",
-   "id": "261123018",
-   "in_progress_first_seen": "2026-11-21T14:19:23Z",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-21T15:49:24Z",
-   "lat": 33.539667948851,
-   "lon": -112.136736623851,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 2,
-   "pending": false,
-   "places": [
-    "N 39TH  AVE TO N 35TH  AVE AND W ORANGEWOOD  AVE TO W MARYLAND  AVE"
-   ],
-   "planned": true,
-   "start": "2026-11-21T14:16:51Z",
    "start_basis": "reported",
    "status": null,
    "zips": []
@@ -202,10 +150,12 @@
   "261122986": "2026-11-21T04:19:25Z",
   "261122992": "2026-11-21T10:19:24Z",
   "261122994": "2026-11-21T14:19:23Z",
+  "261122997": "2026-11-21T16:04:22Z",
   "261122999": "2026-11-21T10:49:23Z",
   "261123000": "2026-11-21T10:49:23Z",
   "261123006": "2026-11-21T10:49:23Z",
   "261123012": "2026-11-21T14:04:22Z",
+  "261123018": "2026-11-21T16:04:22Z",
   "261123024": "2026-11-21T15:49:24Z"
  }
 }
