@@ -4,14 +4,14 @@
   "2600002368": {
    "cause": "Weather",
    "customer_hours_before_first_seen": 8.0,
-   "customer_hours_observed": 77.98916666666668,
+   "customer_hours_observed": 87.75000000000001,
    "customers": 39,
-   "etr": "2026-11-21T03:00:00Z",
+   "etr": "2026-11-21T07:00:00Z",
    "first_seen": "2026-11-21T01:04:24Z",
    "id": "2600002368",
    "in_progress_first_seen": "2026-11-21T01:04:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-21T03:04:23Z",
+   "last_seen": "2026-11-21T03:19:24Z",
    "lat": 42.64993843,
    "lon": -114.3614622,
    "max_gap_minutes": 15,
@@ -24,7 +24,7 @@
    "planned": false,
    "start": "2026-11-21T00:52:02Z",
    "start_basis": "reported",
-   "status": "Pending",
+   "status": "On the Way",
    "zips": [
     "83338"
    ]
