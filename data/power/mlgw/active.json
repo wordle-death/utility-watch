@@ -4,14 +4,14 @@
   "1543905": {
    "cause": null,
    "customer_hours_before_first_seen": 4.9,
-   "customer_hours_observed": 209.0,
+   "customer_hours_observed": 218.58444444444444,
    "customers": 38,
    "etr": null,
    "first_seen": "2026-11-21T13:19:23Z",
    "id": "1543905",
    "in_progress_first_seen": "2026-11-21T13:19:23Z",
    "kind": null,
-   "last_seen": "2026-11-21T18:49:23Z",
+   "last_seen": "2026-11-21T19:04:31Z",
    "lat": 35.10974,
    "lon": -89.88544,
    "max_gap_minutes": 15,
@@ -28,14 +28,14 @@
   "1543912": {
    "cause": null,
    "customer_hours_before_first_seen": 0.2,
-   "customer_hours_observed": 78.99972222222222,
+   "customer_hours_observed": 88.83638888888889,
    "customers": 39,
    "etr": null,
    "first_seen": "2026-11-21T15:49:24Z",
    "id": "1543912",
    "in_progress_first_seen": "2026-11-21T15:49:24Z",
    "kind": null,
-   "last_seen": "2026-11-21T18:49:23Z",
+   "last_seen": "2026-11-21T19:04:31Z",
    "lat": 35.1247,
    "lon": -89.95258,
    "max_gap_minutes": 15,
@@ -48,30 +48,6 @@
    "start_basis": "reported",
    "status": "Waiting for an available crew to perform repairs",
    "zips": []
-  },
-  "1543915": {
-   "cause": null,
-   "customer_hours_before_first_seen": 0.3,
-   "customer_hours_observed": 0.24805555555555556,
-   "customers": 1,
-   "etr": null,
-   "first_seen": "2026-11-21T18:34:30Z",
-   "id": "1543915",
-   "in_progress_first_seen": "2026-11-21T18:34:30Z",
-   "kind": null,
-   "last_seen": "2026-11-21T18:49:23Z",
-   "lat": 35.09562,
-   "lon": -89.97726,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 1,
-   "pending": false,
-   "places": [],
-   "planned": null,
-   "start": "2026-11-21T18:17:05Z",
-   "start_basis": "reported",
-   "status": "Customer Svc is working this single customer outage",
-   "zips": []
   }
  },
  "logged_recent": {
@@ -79,7 +55,6 @@
   "1542959": "2026-11-15T01:04:23Z",
   "1542963": "2026-11-14T19:19:24Z",
   "1542986": "2026-11-15T00:34:23Z",
-  "1543005": "2026-11-14T19:04:22Z",
   "1543008": "2026-11-14T20:19:22Z",
   "1543010": "2026-11-14T20:19:22Z",
   "1543011": "2026-11-14T20:19:22Z",
@@ -702,6 +677,7 @@
   "1543910": "2026-11-21T15:49:24Z",
   "1543911": "2026-11-21T17:49:22Z",
   "1543913": "2026-11-21T17:04:24Z",
-  "1543914": "2026-11-21T18:04:24Z"
+  "1543914": "2026-11-21T18:04:24Z",
+  "1543915": "2026-11-21T19:04:31Z"
  }
 }
