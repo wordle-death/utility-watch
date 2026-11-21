@@ -4,14 +4,14 @@
   "1543900": {
    "cause": null,
    "customer_hours_before_first_seen": 0.1,
-   "customer_hours_observed": 0.4997222222222222,
+   "customer_hours_observed": 0.7519444444444444,
    "customers": 1,
    "etr": null,
    "first_seen": "2026-11-21T10:19:24Z",
    "id": "1543900",
    "in_progress_first_seen": "2026-11-21T10:19:24Z",
    "kind": null,
-   "last_seen": "2026-11-21T10:49:23Z",
+   "last_seen": "2026-11-21T11:04:31Z",
    "lat": 35.08428,
    "lon": -89.98697,
    "max_gap_minutes": 15,
@@ -22,7 +22,7 @@
    "planned": null,
    "start": "2026-11-21T10:12:39Z",
    "start_basis": "reported",
-   "status": "Customer Svc is working this single customer outage",
+   "status": "Trouble Shooter is determining repairs required",
    "zips": []
   }
  },
