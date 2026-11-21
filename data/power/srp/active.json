@@ -1,6 +1,33 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "261122992": {
+   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
+   "customer_hours_before_first_seen": 0.0,
+   "customer_hours_observed": 0.0,
+   "customers": 1,
+   "etr": null,
+   "first_seen": "2026-11-21T05:04:23Z",
+   "id": "261122992",
+   "in_progress_first_seen": "2026-11-21T05:04:23Z",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-21T05:04:23Z",
+   "lat": 33.235685261609,
+   "lon": -111.771455217468,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 1,
+   "pending": false,
+   "places": [
+    "S MUSTANG  DR TO S 148TH  ST AND E BROOKS FARM  RD TO E CHANDLER HEIGHTS  RD"
+   ],
+   "planned": true,
+   "start": "2026-11-21T05:01:53Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  }
+ },
  "logged_recent": {
   "261121949": "2026-11-14T10:49:23Z",
   "261121969": "2026-11-14T17:34:24Z",
