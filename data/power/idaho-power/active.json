@@ -4,14 +4,14 @@
   "2600002368": {
    "cause": "Weather",
    "customer_hours_before_first_seen": 8.0,
-   "customer_hours_observed": 29.239166666666662,
+   "customer_hours_observed": 39.01083333333333,
    "customers": 39,
    "etr": "2026-11-21T03:00:00Z",
    "first_seen": "2026-11-21T01:04:24Z",
    "id": "2600002368",
    "in_progress_first_seen": "2026-11-21T01:04:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-21T01:49:23Z",
+   "last_seen": "2026-11-21T02:04:25Z",
    "lat": 42.64993843,
    "lon": -114.3614622,
    "max_gap_minutes": 15,
@@ -27,6 +27,34 @@
    "status": "Pending",
    "zips": [
     "83338"
+   ]
+  },
+  "2600002369": {
+   "cause": "Equipment Issue",
+   "customer_hours_before_first_seen": 12.6,
+   "customer_hours_observed": 0.0,
+   "customers": 11,
+   "etr": "2026-11-21T02:30:00Z",
+   "first_seen": "2026-11-21T02:04:25Z",
+   "id": "2600002369",
+   "in_progress_first_seen": "2026-11-21T02:04:25Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-21T02:04:25Z",
+   "lat": 43.039928,
+   "lon": -115.48212758,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 11,
+   "pending": false,
+   "places": [
+    "HAMMETT"
+   ],
+   "planned": false,
+   "start": "2026-11-21T00:55:48Z",
+   "start_basis": "reported",
+   "status": "On-site",
+   "zips": [
+    "83627"
    ]
   }
  },
