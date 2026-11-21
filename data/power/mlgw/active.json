@@ -1,41 +1,17 @@
 {
  "empty_streak": 0,
  "events": {
-  "1543818": {
-   "cause": null,
-   "customer_hours_before_first_seen": 0.1,
-   "customer_hours_observed": 0.9997222222222222,
-   "customers": 1,
-   "etr": null,
-   "first_seen": "2026-11-21T03:34:25Z",
-   "id": "1543818",
-   "in_progress_first_seen": "2026-11-21T03:34:25Z",
-   "kind": null,
-   "last_seen": "2026-11-21T04:34:24Z",
-   "lat": 35.16307,
-   "lon": -89.84997,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 1,
-   "pending": false,
-   "places": [],
-   "planned": null,
-   "start": "2026-11-21T03:30:23Z",
-   "start_basis": "reported",
-   "status": "Customer Svc is working this single customer outage",
-   "zips": []
-  },
   "1543819": {
    "cause": null,
    "customer_hours_before_first_seen": 0.1,
-   "customer_hours_observed": 0.5377777777777778,
+   "customer_hours_observed": 0.7875000000000001,
    "customers": 1,
    "etr": null,
    "first_seen": "2026-11-21T04:02:08Z",
    "id": "1543819",
    "in_progress_first_seen": "2026-11-21T04:02:08Z",
    "kind": null,
-   "last_seen": "2026-11-21T04:34:24Z",
+   "last_seen": "2026-11-21T04:49:23Z",
    "lat": 35.111,
    "lon": -90.00729,
    "max_gap_minutes": 15,
@@ -46,7 +22,7 @@
    "planned": null,
    "start": "2026-11-21T03:54:58Z",
    "start_basis": "reported",
-   "status": "Customer Svc is working this single customer outage",
+   "status": "Trouble Shooter is determining repairs required",
    "zips": []
   }
  },
@@ -677,6 +653,7 @@
   "1543814": "2026-11-21T02:04:25Z",
   "1543815": "2026-11-21T02:49:25Z",
   "1543816": "2026-11-21T02:04:25Z",
-  "1543817": "2026-11-21T03:04:23Z"
+  "1543817": "2026-11-21T03:04:23Z",
+  "1543818": "2026-11-21T04:49:23Z"
  }
 }
