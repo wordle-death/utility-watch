@@ -1,35 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "2600002344": {
-   "cause": "Third-Party Damage",
-   "customer_hours_before_first_seen": 3.4,
-   "customer_hours_observed": 68.99444444444444,
-   "customers": 23,
-   "etr": "2026-11-21T00:00:00Z",
-   "first_seen": "2026-11-20T22:19:25Z",
-   "id": "2600002344",
-   "in_progress_first_seen": "2026-11-20T22:19:25Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-20T23:49:23Z",
-   "lat": 43.56186603,
-   "lon": -116.27874131,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 64,
-   "pending": false,
-   "places": [
-    "BOISE"
-   ],
-   "planned": false,
-   "start": "2026-11-20T21:59:11Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83709"
-   ]
-  }
- },
+ "events": {},
  "logged_recent": {
   "2600000277": "2026-11-17T20:04:24Z",
   "2600000988": "2026-11-17T19:49:24Z",
@@ -157,6 +128,7 @@
   "2600002326": "2026-11-20T21:19:25Z",
   "2600002335": "2026-11-20T21:34:24Z",
   "2600002339": "2026-11-20T21:19:25Z",
+  "2600002344": "2026-11-21T00:04:23Z",
   "2600002352": "2026-11-20T23:49:23Z",
   "2600002357": "2026-11-20T23:19:24Z"
  }
