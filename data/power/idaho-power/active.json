@@ -4,17 +4,17 @@
   "2600002428": {
    "cause": "Equipment Issue",
    "customer_hours_before_first_seen": 35.7,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 28.28,
    "customers": 112,
    "etr": "2026-11-23T01:00:00Z",
    "first_seen": "2026-11-22T23:04:23Z",
    "id": "2600002428",
    "in_progress_first_seen": "2026-11-22T23:04:23Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-22T23:04:23Z",
+   "last_seen": "2026-11-22T23:19:32Z",
    "lat": 43.04426797,
    "lon": -116.40220141,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "opened_pending": false,
    "peak_customers": 112,
    "pending": false,
@@ -24,7 +24,7 @@
    "planned": false,
    "start": "2026-11-22T22:45:17Z",
    "start_basis": "reported",
-   "status": "Assigned",
+   "status": "On the Way",
    "zips": [
     "83650"
    ]
