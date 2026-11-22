@@ -1,33 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "261123104": {
-   "cause": "A transformer has failed. SRP crews are working to restore power.",
-   "customer_hours_before_first_seen": 0.6,
-   "customer_hours_observed": 32.50138888888889,
-   "customers": 5,
-   "etr": null,
-   "first_seen": "2026-11-22T14:49:24Z",
-   "id": "261123104",
-   "in_progress_first_seen": "2026-11-22T14:49:24Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-22T19:34:25Z",
-   "lat": 33.231251851131006,
-   "lon": -111.7842249133775,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 12,
-   "pending": false,
-   "places": [
-    "S GILBERT  RD TO S LINDSAY  RD AND E CHANDLER HEIGHTS  RD TO E CLOUD  RD"
-   ],
-   "planned": false,
-   "start": "2026-11-22T14:46:23Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  }
- },
+ "events": {},
  "logged_recent": {
   "261122084": "2026-11-15T20:04:22Z",
   "261122090": "2026-11-15T23:49:23Z",
@@ -157,6 +130,7 @@
   "261123100": "2026-11-22T19:19:23Z",
   "261123101": "2026-11-22T17:04:23Z",
   "261123102": "2026-11-22T16:49:23Z",
+  "261123104": "2026-11-22T19:49:24Z",
   "261123106": "2026-11-22T17:19:23Z",
   "261123110": "2026-11-22T17:34:29Z"
  }
