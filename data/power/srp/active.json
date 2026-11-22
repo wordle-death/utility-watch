@@ -1,43 +1,17 @@
 {
  "empty_streak": 0,
  "events": {
-  "261123078": {
-   "cause": "An underground power cable has failed. SRP crews are working to restore power.",
-   "customer_hours_before_first_seen": 6.9,
-   "customer_hours_observed": 32.0,
-   "customers": 8,
-   "etr": null,
-   "first_seen": "2026-11-22T05:49:23Z",
-   "id": "261123078",
-   "in_progress_first_seen": "2026-11-22T05:49:23Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-22T06:49:23Z",
-   "lat": 33.43011209901865,
-   "lon": -111.5656245459,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 32,
-   "pending": false,
-   "places": [
-    "N DELAWARE  DR TO N SAN MARCOS  DR AND W LOST DUTCHMAN  BLVD TO W SUPERSTITION  BLVD"
-   ],
-   "planned": false,
-   "start": "2026-11-22T05:36:29Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
   "261123084": {
    "cause": "We are investigating the cause of the outage.",
    "customer_hours_before_first_seen": 8.3,
-   "customer_hours_observed": 88.59833333333333,
+   "customer_hours_observed": 177.09833333333333,
    "customers": 354,
    "etr": null,
    "first_seen": "2026-11-22T06:34:22Z",
    "id": "261123084",
    "in_progress_first_seen": "2026-11-22T06:34:22Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-22T06:49:23Z",
+   "last_seen": "2026-11-22T07:04:23Z",
    "lat": 33.14128076435455,
    "lon": -111.56697218635651,
    "max_gap_minutes": 15,
@@ -49,6 +23,32 @@
    ],
    "planned": false,
    "start": "2026-11-22T06:32:58Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  },
+  "261123089": {
+   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
+   "customer_hours_before_first_seen": 0.5,
+   "customer_hours_observed": 0.0,
+   "customers": 3,
+   "etr": null,
+   "first_seen": "2026-11-22T07:04:23Z",
+   "id": "261123089",
+   "in_progress_first_seen": "2026-11-22T07:04:23Z",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-22T07:04:23Z",
+   "lat": 33.4168923859596,
+   "lon": -112.1662266912185,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 3,
+   "pending": false,
+   "places": [
+    "S 51ST  AVE TO S 47TH  AVE AND W LOWER BUCKEYE  RD TO W BROADWAY  RD"
+   ],
+   "planned": true,
+   "start": "2026-11-22T06:53:56Z",
    "start_basis": "reported",
    "status": null,
    "zips": []
@@ -178,6 +178,7 @@
   "261123028": "2026-11-21T18:04:24Z",
   "261123038": "2026-11-22T05:49:23Z",
   "261123058": "2026-11-22T00:34:22Z",
-  "261123074": "2026-11-22T05:49:23Z"
+  "261123074": "2026-11-22T05:49:23Z",
+  "261123078": "2026-11-22T07:04:23Z"
  }
 }
