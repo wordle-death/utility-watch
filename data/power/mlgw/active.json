@@ -1,34 +1,8 @@
 {
  "empty_streak": 0,
- "events": {
-  "1543929": {
-   "cause": null,
-   "customer_hours_before_first_seen": 0.3,
-   "customer_hours_observed": 1.7494444444444444,
-   "customers": 1,
-   "etr": null,
-   "first_seen": "2026-11-22T08:04:24Z",
-   "id": "1543929",
-   "in_progress_first_seen": "2026-11-22T08:04:24Z",
-   "kind": null,
-   "last_seen": "2026-11-22T09:49:22Z",
-   "lat": 35.04972,
-   "lon": -89.83008,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 1,
-   "pending": false,
-   "places": [],
-   "planned": null,
-   "start": "2026-11-22T07:48:41Z",
-   "start_basis": "reported",
-   "status": "A crew is currently working on the problem",
-   "zips": []
-  }
- },
+ "events": {},
  "logged_recent": {
   "1543067": "2026-11-15T16:19:23Z",
-  "1543069": "2026-11-15T09:49:22Z",
   "1543070": "2026-11-15T12:04:22Z",
   "1543072": "2026-11-15T12:04:22Z",
   "1543073": "2026-11-15T21:19:24Z",
@@ -625,6 +599,7 @@
   "1543925": "2026-11-22T00:34:22Z",
   "1543926": "2026-11-22T01:19:23Z",
   "1543927": "2026-11-22T01:34:26Z",
-  "1543928": "2026-11-22T06:49:23Z"
+  "1543928": "2026-11-22T06:49:23Z",
+  "1543929": "2026-11-22T10:04:22Z"
  }
 }
