@@ -1,6 +1,31 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "2600002406": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 322.5,
+   "customer_hours_observed": 0.0,
+   "customers": 240,
+   "etr": "2026-11-22T08:30:00Z",
+   "first_seen": "2026-11-22T06:19:23Z",
+   "id": "2600002406",
+   "in_progress_first_seen": "2026-11-22T06:19:23Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-22T06:19:23Z",
+   "lat": 44.46239472,
+   "lon": -118.20423018,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 240,
+   "pending": false,
+   "places": [],
+   "planned": false,
+   "start": "2026-11-22T04:58:45Z",
+   "start_basis": "reported",
+   "status": "On-site",
+   "zips": []
+  }
+ },
  "logged_recent": {
   "2600000277": "2026-11-17T20:04:24Z",
   "2600000988": "2026-11-17T19:49:24Z",
