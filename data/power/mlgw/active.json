@@ -1,6 +1,31 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "1543929": {
+   "cause": null,
+   "customer_hours_before_first_seen": 0.3,
+   "customer_hours_observed": 0.0,
+   "customers": 1,
+   "etr": null,
+   "first_seen": "2026-11-22T08:04:24Z",
+   "id": "1543929",
+   "in_progress_first_seen": "2026-11-22T08:04:24Z",
+   "kind": null,
+   "last_seen": "2026-11-22T08:04:24Z",
+   "lat": 35.04972,
+   "lon": -89.83008,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 1,
+   "pending": false,
+   "places": [],
+   "planned": null,
+   "start": "2026-11-22T07:48:41Z",
+   "start_basis": "reported",
+   "status": "Trouble Shooter is determining repairs required",
+   "zips": []
+  }
+ },
  "logged_recent": {
   "1543042": "2026-11-15T08:04:24Z",
   "1543067": "2026-11-15T16:19:23Z",
