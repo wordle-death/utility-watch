@@ -4,17 +4,17 @@
   "2600002418": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 7.5,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 3.5,
    "customers": 14,
    "etr": "2026-11-22T23:30:00Z",
    "first_seen": "2026-11-22T20:34:23Z",
    "id": "2600002418",
    "in_progress_first_seen": "2026-11-22T20:34:23Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-22T20:34:23Z",
+   "last_seen": "2026-11-22T20:49:23Z",
    "lat": 42.95825182,
    "lon": -114.48780288,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "opened_pending": false,
    "peak_customers": 14,
    "pending": false,
@@ -24,9 +24,37 @@
    "planned": false,
    "start": "2026-11-22T20:02:09Z",
    "start_basis": "reported",
-   "status": "Pending",
+   "status": "Assigned",
    "zips": [
     "83352"
+   ]
+  },
+  "2600002421": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 2.9,
+   "customer_hours_observed": 0.0,
+   "customers": 14,
+   "etr": "2026-11-22T22:30:00Z",
+   "first_seen": "2026-11-22T20:49:23Z",
+   "id": "2600002421",
+   "in_progress_first_seen": "2026-11-22T20:49:23Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-22T20:49:23Z",
+   "lat": 43.68477447,
+   "lon": -117.00334281,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 14,
+   "pending": false,
+   "places": [
+    "WILDER"
+   ],
+   "planned": false,
+   "start": "2026-11-22T20:37:08Z",
+   "start_basis": "reported",
+   "status": "Pending",
+   "zips": [
+    "83676"
    ]
   }
  },

@@ -1,6 +1,33 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "261123126": {
+   "cause": "We are investigating the cause of the outage.",
+   "customer_hours_before_first_seen": 6.4,
+   "customer_hours_observed": 0.0,
+   "customers": 37,
+   "etr": null,
+   "first_seen": "2026-11-22T20:49:23Z",
+   "id": "261123126",
+   "in_progress_first_seen": "2026-11-22T20:49:23Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-22T20:49:23Z",
+   "lat": 33.35056058156725,
+   "lon": -111.9951805772385,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 37,
+   "pending": false,
+   "places": [
+    "S 20TH  ST TO S WARNER-ELLIOT  LOOP AND E BASELINE  RD TO E WARNER  RD"
+   ],
+   "planned": false,
+   "start": "2026-11-22T20:39:00Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  }
+ },
  "logged_recent": {
   "261122090": "2026-11-15T23:49:23Z",
   "261122105": "2026-11-16T02:34:22Z",
