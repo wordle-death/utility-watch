@@ -1,45 +1,17 @@
 {
  "empty_streak": 0,
  "events": {
-  "2600002418": {
-   "cause": "Equipment Issue",
-   "customer_hours_before_first_seen": 7.5,
-   "customer_hours_observed": 10.503888888888888,
-   "customers": 14,
-   "etr": "2026-11-22T22:00:00Z",
-   "first_seen": "2026-11-22T20:34:23Z",
-   "id": "2600002418",
-   "in_progress_first_seen": "2026-11-22T20:34:23Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-22T21:19:24Z",
-   "lat": 42.95825182,
-   "lon": -114.48780288,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 14,
-   "pending": false,
-   "places": [
-    "SHOSHONE"
-   ],
-   "planned": false,
-   "start": "2026-11-22T20:02:09Z",
-   "start_basis": "reported",
-   "status": "On the Way",
-   "zips": [
-    "83352"
-   ]
-  },
   "2600002421": {
-   "cause": "Under Investigation",
+   "cause": "Object In Line",
    "customer_hours_before_first_seen": 2.9,
-   "customer_hours_observed": 7.003888888888888,
+   "customer_hours_observed": 10.5,
    "customers": 14,
    "etr": "2026-11-22T22:30:00Z",
    "first_seen": "2026-11-22T20:49:23Z",
    "id": "2600002421",
    "in_progress_first_seen": "2026-11-22T20:49:23Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-22T21:19:24Z",
+   "last_seen": "2026-11-22T21:34:23Z",
    "lat": 43.68477447,
    "lon": -117.00334281,
    "max_gap_minutes": 15,
@@ -52,7 +24,7 @@
    "planned": false,
    "start": "2026-11-22T20:37:08Z",
    "start_basis": "reported",
-   "status": "Pending",
+   "status": "On-site",
    "zips": [
     "83676"
    ]
@@ -77,7 +49,6 @@
   "2600001661": "2026-11-18T16:49:24Z",
   "2600001673": "2026-11-18T20:04:36Z",
   "2600001677": "2026-11-19T00:34:22Z",
-  "2600001771": "2026-11-15T21:34:22Z",
   "2600001773": "2026-11-15T22:49:23Z",
   "2600001776": "2026-11-16T11:04:24Z",
   "2600001779": "2026-11-16T05:49:23Z",
@@ -176,6 +147,7 @@
   "2600002383": "2026-11-21T22:19:22Z",
   "2600002387": "2026-11-22T00:34:22Z",
   "2600002406": "2026-11-22T06:34:22Z",
-  "2600002413": "2026-11-22T17:49:23Z"
+  "2600002413": "2026-11-22T17:49:23Z",
+  "2600002418": "2026-11-22T21:34:23Z"
  }
 }
