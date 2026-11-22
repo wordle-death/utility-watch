@@ -4,14 +4,14 @@
   "1543948": {
    "cause": null,
    "customer_hours_before_first_seen": 1.1,
-   "customer_hours_observed": 2.997777777777778,
+   "customer_hours_observed": 4.007777777777778,
    "customers": 4,
    "etr": null,
    "first_seen": "2026-11-22T18:04:23Z",
    "id": "1543948",
    "in_progress_first_seen": "2026-11-22T18:04:23Z",
    "kind": null,
-   "last_seen": "2026-11-22T18:49:21Z",
+   "last_seen": "2026-11-22T19:04:30Z",
    "lat": 35.11375,
    "lon": -90.03942,
    "max_gap_minutes": 15,
@@ -22,7 +22,7 @@
    "planned": null,
    "start": "2026-11-22T17:48:22Z",
    "start_basis": "reported",
-   "status": "Trouble Shooter is determining repairs required",
+   "status": "Tree Trimming is clearing debris from the area",
    "zips": []
   }
  },
@@ -34,7 +34,6 @@
   "1543094": "2026-11-15T20:49:22Z",
   "1543097": "2026-11-15T20:49:22Z",
   "1543103": "2026-11-15T19:55:04Z",
-  "1543108": "2026-11-15T19:04:23Z",
   "1543111": "2026-11-15T20:34:22Z",
   "1543112": "2026-11-15T19:19:22Z",
   "1543113": "2026-11-15T20:19:24Z",
