@@ -4,14 +4,14 @@
   "1543929": {
    "cause": null,
    "customer_hours_before_first_seen": 0.3,
-   "customer_hours_observed": 0.49972222222222223,
+   "customer_hours_observed": 0.7497222222222222,
    "customers": 1,
    "etr": null,
    "first_seen": "2026-11-22T08:04:24Z",
    "id": "1543929",
    "in_progress_first_seen": "2026-11-22T08:04:24Z",
    "kind": null,
-   "last_seen": "2026-11-22T08:34:23Z",
+   "last_seen": "2026-11-22T08:49:23Z",
    "lat": 35.04972,
    "lon": -89.83008,
    "max_gap_minutes": 15,
@@ -22,7 +22,7 @@
    "planned": null,
    "start": "2026-11-22T07:48:41Z",
    "start_basis": "reported",
-   "status": "Trouble Shooter is determining repairs required",
+   "status": "A crew is currently working on the problem",
    "zips": []
   }
  },
