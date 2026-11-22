@@ -4,14 +4,14 @@
   "261123100": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 0.3,
-   "customer_hours_observed": 9.0,
+   "customer_hours_observed": 9.754999999999999,
    "customers": 3,
    "etr": null,
    "first_seen": "2026-11-22T14:19:23Z",
    "id": "261123100",
    "in_progress_first_seen": "2026-11-22T14:19:23Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-22T17:19:23Z",
+   "last_seen": "2026-11-22T17:34:29Z",
    "lat": 33.45285906058575,
    "lon": -111.9108702801995,
    "max_gap_minutes": 15,
@@ -30,14 +30,14 @@
   "261123104": {
    "cause": "A transformer has failed. SRP crews are working to restore power.",
    "customer_hours_before_first_seen": 0.6,
-   "customer_hours_observed": 21.24861111111111,
+   "customer_hours_observed": 22.506944444444443,
    "customers": 5,
    "etr": null,
    "first_seen": "2026-11-22T14:49:24Z",
    "id": "261123104",
    "in_progress_first_seen": "2026-11-22T14:49:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-22T17:19:23Z",
+   "last_seen": "2026-11-22T17:34:29Z",
    "lat": 33.231251851131006,
    "lon": -111.7842249133775,
    "max_gap_minutes": 15,
@@ -52,37 +52,10 @@
    "start_basis": "reported",
    "status": null,
    "zips": []
-  },
-  "261123110": {
-   "cause": "We are investigating the cause of the outage.",
-   "customer_hours_before_first_seen": 3.1,
-   "customer_hours_observed": 46.23972222222222,
-   "customers": 37,
-   "etr": null,
-   "first_seen": "2026-11-22T16:04:24Z",
-   "id": "261123110",
-   "in_progress_first_seen": "2026-11-22T16:04:24Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-22T17:19:23Z",
-   "lat": 33.49289083116335,
-   "lon": -112.0158047198765,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 37,
-   "pending": false,
-   "places": [
-    "N 28TH  ST TO N 32ND  ST AND E INDIAN SCHOOL  RD TO E OSBORN  RD"
-   ],
-   "planned": false,
-   "start": "2026-11-22T15:59:21Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
   }
  },
  "logged_recent": {
   "261122069": "2026-11-15T19:04:23Z",
-  "261122069#2": "2026-11-15T17:34:26Z",
   "261122072": "2026-11-15T19:19:22Z",
   "261122084": "2026-11-15T20:04:22Z",
   "261122090": "2026-11-15T23:49:23Z",
@@ -211,6 +184,7 @@
   "261123099": "2026-11-22T17:04:23Z",
   "261123101": "2026-11-22T17:04:23Z",
   "261123102": "2026-11-22T16:49:23Z",
-  "261123106": "2026-11-22T17:19:23Z"
+  "261123106": "2026-11-22T17:19:23Z",
+  "261123110": "2026-11-22T17:34:29Z"
  }
 }
