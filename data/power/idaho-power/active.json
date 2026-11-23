@@ -1,35 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "2600002434": {
-   "cause": "Not Found",
-   "customer_hours_before_first_seen": 2.5,
-   "customer_hours_observed": 18.02,
-   "customers": 12,
-   "etr": "2026-11-23T03:00:00Z",
-   "first_seen": "2026-11-23T01:19:24Z",
-   "id": "2600002434",
-   "in_progress_first_seen": "2026-11-23T01:19:24Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-23T02:49:30Z",
-   "lat": 43.58111508,
-   "lon": -116.57648245,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 12,
-   "pending": false,
-   "places": [
-    "NAMPA"
-   ],
-   "planned": false,
-   "start": "2026-11-23T01:06:44Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83651"
-   ]
-  }
- },
+ "events": {},
  "logged_recent": {
   "2600000277": "2026-11-17T20:04:24Z",
   "2600000988": "2026-11-17T19:49:24Z",
@@ -150,6 +121,7 @@
   "2600002418": "2026-11-22T21:34:23Z",
   "2600002421": "2026-11-22T21:49:31Z",
   "2600002428": "2026-11-23T01:19:24Z",
-  "2600002433": "2026-11-23T01:04:23Z"
+  "2600002433": "2026-11-23T01:04:23Z",
+  "2600002434": "2026-11-23T03:04:24Z"
  }
 }
