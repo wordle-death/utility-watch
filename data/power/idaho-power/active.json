@@ -4,14 +4,14 @@
   "2600002090": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 5.6,
-   "customer_hours_observed": 103.50499999999998,
+   "customer_hours_observed": 108.00999999999998,
    "customers": 18,
    "etr": "2026-11-23T23:00:00Z",
    "first_seen": "2026-11-23T17:34:23Z",
    "id": "2600002090",
    "in_progress_first_seen": "2026-11-23T17:34:23Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-23T23:19:24Z",
+   "last_seen": "2026-11-23T23:34:25Z",
    "lat": 44.85693044,
    "lon": -116.11370146,
    "max_gap_minutes": 15,
@@ -27,36 +27,6 @@
    "status": "On-site",
    "zips": [
     "83638"
-   ]
-  },
-  "2600002517": {
-   "cause": "Object In Line",
-   "customer_hours_before_first_seen": 2.3,
-   "customer_hours_observed": 2.4972222222222222,
-   "customers": 10,
-   "etr": "2026-11-24T00:30:00Z",
-   "first_seen": "2026-11-23T23:04:25Z",
-   "id": "2600002517",
-   "in_progress_first_seen": "2026-11-23T23:04:25Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-23T23:19:24Z",
-   "lat": 43.31136829,
-   "lon": -114.05563347,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 10,
-   "pending": false,
-   "places": [
-    "CAREY",
-    "PICABO"
-   ],
-   "planned": false,
-   "start": "2026-11-23T22:50:44Z",
-   "start_basis": "reported",
-   "status": "On the Way",
-   "zips": [
-    "83320",
-    "83348"
    ]
   }
  },
@@ -80,7 +50,6 @@
   "2600001677": "2026-11-19T00:34:22Z",
   "2600001819": "2026-11-20T22:34:23Z",
   "2600001845": "2026-11-18T22:34:27Z",
-  "2600001848": "2026-11-16T23:34:22Z",
   "2600001862": "2026-11-16T23:48:28Z",
   "2600001877": "2026-11-19T20:34:24Z",
   "2600001881": "2026-11-17T08:34:26Z",
@@ -178,6 +147,7 @@
   "2600002460": "2026-11-23T16:49:25Z",
   "2600002483": "2026-11-23T18:34:25Z",
   "2600002495": "2026-11-23T19:49:24Z",
-  "2600002499": "2026-11-23T22:34:24Z"
+  "2600002499": "2026-11-23T22:34:24Z",
+  "2600002517": "2026-11-23T23:34:25Z"
  }
 }
