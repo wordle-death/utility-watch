@@ -1,43 +1,17 @@
 {
  "empty_streak": 0,
  "events": {
-  "261123126": {
-   "cause": "Electrical equipment has been hit or damaged. SRP crews are working to restore power.",
-   "customer_hours_before_first_seen": 6.4,
-   "customer_hours_observed": 69.56,
-   "customers": 10,
-   "etr": null,
-   "first_seen": "2026-11-22T20:49:23Z",
-   "id": "261123126",
-   "in_progress_first_seen": "2026-11-22T20:49:23Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-23T01:04:23Z",
-   "lat": 33.35056058156725,
-   "lon": -111.9951805772385,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 37,
-   "pending": false,
-   "places": [
-    "S 20TH  ST TO S WARNER-ELLIOT  LOOP AND E BASELINE  RD TO E WARNER  RD"
-   ],
-   "planned": false,
-   "start": "2026-11-22T20:39:00Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
   "261123134": {
    "cause": "We are investigating the cause of the outage.",
    "customer_hours_before_first_seen": 4.3,
-   "customer_hours_observed": 76.96888888888888,
+   "customer_hours_observed": 83.97666666666666,
    "customers": 28,
    "etr": null,
    "first_seen": "2026-11-22T22:19:27Z",
    "id": "261123134",
    "in_progress_first_seen": "2026-11-22T22:19:27Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-23T01:04:23Z",
+   "last_seen": "2026-11-23T01:19:24Z",
    "lat": 33.38830095343545,
    "lon": -112.319614297584,
    "max_gap_minutes": 15,
@@ -183,6 +157,7 @@
   "261123102": "2026-11-22T16:49:23Z",
   "261123104": "2026-11-22T19:49:24Z",
   "261123106": "2026-11-22T17:19:23Z",
-  "261123110": "2026-11-22T17:34:29Z"
+  "261123110": "2026-11-22T17:34:29Z",
+  "261123126": "2026-11-23T01:19:24Z"
  }
 }

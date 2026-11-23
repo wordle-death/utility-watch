@@ -1,32 +1,32 @@
 {
  "empty_streak": 0,
  "events": {
-  "2600002428": {
-   "cause": "Equipment Issue",
-   "customer_hours_before_first_seen": 35.7,
-   "customer_hours_observed": 223.99999999999997,
-   "customers": 112,
-   "etr": "2026-11-23T01:00:00Z",
-   "first_seen": "2026-11-22T23:04:23Z",
-   "id": "2600002428",
-   "in_progress_first_seen": "2026-11-22T23:04:23Z",
+  "2600002434": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 2.5,
+   "customer_hours_observed": 0.0,
+   "customers": 12,
+   "etr": "2026-11-23T02:30:00Z",
+   "first_seen": "2026-11-23T01:19:24Z",
+   "id": "2600002434",
+   "in_progress_first_seen": "2026-11-23T01:19:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-23T01:04:23Z",
-   "lat": 43.04426797,
-   "lon": -116.40220141,
-   "max_gap_minutes": 15,
+   "last_seen": "2026-11-23T01:19:24Z",
+   "lat": 43.58111508,
+   "lon": -116.57648245,
+   "max_gap_minutes": 0,
    "opened_pending": false,
-   "peak_customers": 112,
+   "peak_customers": 12,
    "pending": false,
    "places": [
-    "MURPHY"
+    "NAMPA"
    ],
    "planned": false,
-   "start": "2026-11-22T22:45:17Z",
+   "start": "2026-11-23T01:06:44Z",
    "start_basis": "reported",
-   "status": "On-site",
+   "status": "Assigned",
    "zips": [
-    "83650"
+    "83651"
    ]
   }
  },
@@ -149,6 +149,7 @@
   "2600002413": "2026-11-22T17:49:23Z",
   "2600002418": "2026-11-22T21:34:23Z",
   "2600002421": "2026-11-22T21:49:31Z",
+  "2600002428": "2026-11-23T01:19:24Z",
   "2600002433": "2026-11-23T01:04:23Z"
  }
 }
