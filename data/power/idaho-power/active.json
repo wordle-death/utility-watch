@@ -4,19 +4,19 @@
   "2600002445": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 7.9,
-   "customer_hours_observed": 18.756944444444443,
-   "customers": 25,
+   "customer_hours_observed": 25.0,
+   "customers": 26,
    "etr": "2026-11-23T11:30:00Z",
    "first_seen": "2026-11-23T10:04:24Z",
    "id": "2600002445",
    "in_progress_first_seen": "2026-11-23T10:04:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-23T10:49:25Z",
+   "last_seen": "2026-11-23T11:04:24Z",
    "lat": 43.58246987,
    "lon": -116.86689007,
    "max_gap_minutes": 15,
    "opened_pending": false,
-   "peak_customers": 25,
+   "peak_customers": 26,
    "pending": false,
    "places": [
     "HOMEDALE"
