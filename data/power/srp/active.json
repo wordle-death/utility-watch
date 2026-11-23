@@ -1,6 +1,33 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "261123194": {
+   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
+   "customer_hours_before_first_seen": 0.1,
+   "customer_hours_observed": 0.0,
+   "customers": 2,
+   "etr": null,
+   "first_seen": "2026-11-23T15:19:24Z",
+   "id": "261123194",
+   "in_progress_first_seen": "2026-11-23T15:19:24Z",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-23T15:19:24Z",
+   "lat": 33.4578915927643,
+   "lon": -111.6645524442375,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 2,
+   "pending": false,
+   "places": [
+    "N 76TH  ST TO N 80TH  ST AND E MCDOWELL  RD TO E MCKELLIPS  RD"
+   ],
+   "planned": true,
+   "start": "2026-11-23T15:16:39Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  }
+ },
  "logged_recent": {
   "261122142": "2026-11-16T17:34:23Z",
   "261122143": "2026-11-16T18:19:24Z",
