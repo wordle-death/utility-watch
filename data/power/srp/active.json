@@ -1,33 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "261123152": {
-   "cause": "A transformer has failed. SRP crews are working to restore power.",
-   "customer_hours_before_first_seen": 0.3,
-   "customer_hours_observed": 14.249166666666666,
-   "customers": 3,
-   "etr": null,
-   "first_seen": "2026-11-23T08:49:25Z",
-   "id": "261123152",
-   "in_progress_first_seen": "2026-11-23T08:49:25Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-23T13:34:24Z",
-   "lat": 33.56075110755344,
-   "lon": -112.16783711786749,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 3,
-   "pending": false,
-   "places": [
-    "N 55TH  AVE TO N 47TH  AVE AND W OLIVE  AVE TO W NORTHERN  AVE"
-   ],
-   "planned": false,
-   "start": "2026-11-23T08:42:49Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  }
- },
+ "events": {},
  "logged_recent": {
   "261122142": "2026-11-16T17:34:23Z",
   "261122143": "2026-11-16T18:19:24Z",
@@ -159,6 +132,7 @@
   "261123126": "2026-11-23T01:19:24Z",
   "261123134": "2026-11-23T05:19:23Z",
   "261123141": "2026-11-23T05:04:30Z",
+  "261123152": "2026-11-23T13:49:30Z",
   "261123165": "2026-11-23T09:19:23Z"
  }
 }
