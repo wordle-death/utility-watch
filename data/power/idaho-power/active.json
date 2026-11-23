@@ -4,17 +4,17 @@
   "2600001979": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 4.3,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 3.5038888888888886,
    "customers": 14,
    "etr": "2026-11-23T22:00:00Z",
    "first_seen": "2026-11-23T16:34:24Z",
    "id": "2600001979",
    "in_progress_first_seen": "2026-11-23T16:34:24Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-23T16:34:24Z",
+   "last_seen": "2026-11-23T16:49:25Z",
    "lat": 43.45059968,
    "lon": -116.38217675,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "opened_pending": false,
    "peak_customers": 14,
    "pending": false,
@@ -27,64 +27,6 @@
    "status": "Pending",
    "zips": [
     "83634"
-   ]
-  },
-  "2600002456": {
-   "cause": "Object In Line",
-   "customer_hours_before_first_seen": 2.5,
-   "customer_hours_observed": 18.997777777777777,
-   "customers": 13,
-   "etr": "2026-11-23T17:00:00Z",
-   "first_seen": "2026-11-23T15:34:24Z",
-   "id": "2600002456",
-   "in_progress_first_seen": "2026-11-23T15:34:24Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-23T16:34:24Z",
-   "lat": 43.53297033,
-   "lon": -116.73002078,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 21,
-   "pending": false,
-   "places": [
-    "CALDWELL"
-   ],
-   "planned": false,
-   "start": "2026-11-23T15:22:50Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83607"
-   ]
-  },
-  "2600002460": {
-   "cause": "Equipment Issue",
-   "customer_hours_before_first_seen": 101.3,
-   "customer_hours_observed": 105.06944444444444,
-   "customers": 425,
-   "etr": "2026-11-23T17:00:00Z",
-   "first_seen": "2026-11-23T16:19:34Z",
-   "id": "2600002460",
-   "in_progress_first_seen": "2026-11-23T16:19:34Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-23T16:34:24Z",
-   "lat": 43.02507657,
-   "lon": -114.51307523,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 425,
-   "pending": false,
-   "places": [
-    "GOODING",
-    "SHOSHONE"
-   ],
-   "planned": false,
-   "start": "2026-11-23T16:05:16Z",
-   "start_basis": "reported",
-   "status": "Pending",
-   "zips": [
-    "83330",
-    "83352"
    ]
   }
  },
@@ -107,7 +49,6 @@
   "2600001661": "2026-11-18T16:49:24Z",
   "2600001673": "2026-11-18T20:04:36Z",
   "2600001677": "2026-11-19T00:34:22Z",
-  "2600001800": "2026-11-16T16:34:24Z",
   "2600001814": "2026-11-16T21:34:24Z",
   "2600001819": "2026-11-20T22:34:23Z",
   "2600001823": "2026-11-16T17:34:23Z",
@@ -207,6 +148,8 @@
   "2600002434": "2026-11-23T03:04:24Z",
   "2600002436": "2026-11-23T04:04:23Z",
   "2600002441": "2026-11-23T07:34:26Z",
-  "2600002445": "2026-11-23T12:04:29Z"
+  "2600002445": "2026-11-23T12:04:29Z",
+  "2600002456": "2026-11-23T16:49:25Z",
+  "2600002460": "2026-11-23T16:49:25Z"
  }
 }
