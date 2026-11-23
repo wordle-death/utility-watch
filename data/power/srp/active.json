@@ -4,14 +4,14 @@
   "261123152": {
    "cause": "We are investigating the cause of the outage.",
    "customer_hours_before_first_seen": 0.3,
-   "customer_hours_observed": 0.7491666666666668,
+   "customer_hours_observed": 1.4983333333333335,
    "customers": 3,
    "etr": null,
    "first_seen": "2026-11-23T08:49:25Z",
    "id": "261123152",
    "in_progress_first_seen": "2026-11-23T08:49:25Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-23T09:04:24Z",
+   "last_seen": "2026-11-23T09:19:23Z",
    "lat": 33.56075110755344,
    "lon": -112.16783711786749,
    "max_gap_minutes": 15,
@@ -23,32 +23,6 @@
    ],
    "planned": false,
    "start": "2026-11-23T08:42:49Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
-  "261123165": {
-   "cause": "An electrical safety hazard has been identified. SRP crews are working to restore power.",
-   "customer_hours_before_first_seen": 248.8,
-   "customer_hours_observed": 967.5952777777777,
-   "customers": 1940,
-   "etr": null,
-   "first_seen": "2026-11-23T08:34:28Z",
-   "id": "261123165",
-   "in_progress_first_seen": "2026-11-23T08:34:28Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-23T09:04:24Z",
-   "lat": 33.217348971656705,
-   "lon": -111.858775199561,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 1940,
-   "pending": false,
-   "places": [
-    "S DOBSON  RD TO S ARIZONA  AVE AND W CHANDLER HEIGHTS  RD TO SOUTHERN BOUNDS OF SERVICE TERRITORY"
-   ],
-   "planned": false,
-   "start": "2026-11-23T08:26:46Z",
    "start_basis": "reported",
    "status": null,
    "zips": []
@@ -184,6 +158,7 @@
   "261123110": "2026-11-22T17:34:29Z",
   "261123126": "2026-11-23T01:19:24Z",
   "261123134": "2026-11-23T05:19:23Z",
-  "261123141": "2026-11-23T05:04:30Z"
+  "261123141": "2026-11-23T05:04:30Z",
+  "261123165": "2026-11-23T09:19:23Z"
  }
 }
