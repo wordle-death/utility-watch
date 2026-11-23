@@ -2,21 +2,21 @@
  "empty_streak": 0,
  "events": {
   "2600002456": {
-   "cause": "Under Investigation",
+   "cause": "Object In Line",
    "customer_hours_before_first_seen": 2.5,
-   "customer_hours_observed": 0.0,
-   "customers": 13,
+   "customer_hours_observed": 3.253611111111111,
+   "customers": 21,
    "etr": "2026-11-23T17:00:00Z",
    "first_seen": "2026-11-23T15:34:24Z",
    "id": "2600002456",
    "in_progress_first_seen": "2026-11-23T15:34:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-23T15:34:24Z",
+   "last_seen": "2026-11-23T15:49:25Z",
    "lat": 43.53297033,
    "lon": -116.73002078,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "opened_pending": false,
-   "peak_customers": 13,
+   "peak_customers": 21,
    "pending": false,
    "places": [
     "CALDWELL"
@@ -24,7 +24,7 @@
    "planned": false,
    "start": "2026-11-23T15:22:50Z",
    "start_basis": "reported",
-   "status": "Pending",
+   "status": "On the Way",
    "zips": [
     "83607"
    ]
