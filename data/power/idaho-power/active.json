@@ -1,37 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "2600002436": {
-   "cause": "Vehicle Accident",
-   "customer_hours_before_first_seen": 33.6,
-   "customer_hours_observed": 55.0,
-   "customers": 110,
-   "etr": "2026-11-23T04:30:00Z",
-   "first_seen": "2026-11-23T03:19:23Z",
-   "id": "2600002436",
-   "in_progress_first_seen": "2026-11-23T03:19:23Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-23T03:49:23Z",
-   "lat": 43.04867729,
-   "lon": -112.38582564,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 110,
-   "pending": false,
-   "places": [
-    "BLACKFOOT",
-    "POCATELLO"
-   ],
-   "planned": false,
-   "start": "2026-11-23T03:01:04Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83201",
-    "83221"
-   ]
-  }
- },
+ "events": {},
  "logged_recent": {
   "2600000277": "2026-11-17T20:04:24Z",
   "2600000988": "2026-11-17T19:49:24Z",
@@ -153,6 +122,7 @@
   "2600002421": "2026-11-22T21:49:31Z",
   "2600002428": "2026-11-23T01:19:24Z",
   "2600002433": "2026-11-23T01:04:23Z",
-  "2600002434": "2026-11-23T03:04:24Z"
+  "2600002434": "2026-11-23T03:04:24Z",
+  "2600002436": "2026-11-23T04:04:23Z"
  }
 }
