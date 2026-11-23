@@ -4,14 +4,14 @@
   "261123134": {
    "cause": "We are investigating the cause of the outage.",
    "customer_hours_before_first_seen": 4.3,
-   "customer_hours_observed": 111.97666666666666,
+   "customer_hours_observed": 118.96888888888888,
    "customers": 28,
    "etr": null,
    "first_seen": "2026-11-22T22:19:27Z",
    "id": "261123134",
    "in_progress_first_seen": "2026-11-22T22:19:27Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-23T02:19:24Z",
+   "last_seen": "2026-11-23T02:34:23Z",
    "lat": 33.38830095343545,
    "lon": -112.319614297584,
    "max_gap_minutes": 15,
@@ -29,7 +29,6 @@
   }
  },
  "logged_recent": {
-  "261122105": "2026-11-16T02:34:22Z",
   "261122113": "2026-11-16T09:04:23Z",
   "261122142": "2026-11-16T17:34:23Z",
   "261122143": "2026-11-16T18:19:24Z",
