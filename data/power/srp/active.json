@@ -1,33 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "261123134": {
-   "cause": "We are investigating the cause of the outage.",
-   "customer_hours_before_first_seen": 4.3,
-   "customer_hours_observed": 189.0233333333333,
-   "customers": 28,
-   "etr": null,
-   "first_seen": "2026-11-22T22:19:27Z",
-   "id": "261123134",
-   "in_progress_first_seen": "2026-11-22T22:19:27Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-23T05:04:30Z",
-   "lat": 33.38830095343545,
-   "lon": -112.319614297584,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 28,
-   "pending": false,
-   "places": [
-    "S EL MIRAGE  RD TO S 119TH  AVE AND W BROADWAY  RD TO W INDIAN SPRINGS  RD"
-   ],
-   "planned": false,
-   "start": "2026-11-22T22:10:13Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  }
- },
+ "events": {},
  "logged_recent": {
   "261122113": "2026-11-16T09:04:23Z",
   "261122142": "2026-11-16T17:34:23Z",
@@ -158,6 +131,7 @@
   "261123106": "2026-11-22T17:19:23Z",
   "261123110": "2026-11-22T17:34:29Z",
   "261123126": "2026-11-23T01:19:24Z",
+  "261123134": "2026-11-23T05:19:23Z",
   "261123141": "2026-11-23T05:04:30Z"
  }
 }
