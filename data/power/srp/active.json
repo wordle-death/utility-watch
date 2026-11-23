@@ -4,14 +4,14 @@
   "261123229": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 2.1,
-   "customer_hours_observed": 59.97333333333333,
+   "customer_hours_observed": 65.96666666666667,
    "customers": 24,
    "etr": null,
    "first_seen": "2026-11-23T17:49:29Z",
    "id": "261123229",
    "in_progress_first_seen": "2026-11-23T17:49:29Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-23T20:19:25Z",
+   "last_seen": "2026-11-23T20:34:24Z",
    "lat": 33.4908864856158,
    "lon": -111.99844946188199,
    "max_gap_minutes": 15,
@@ -23,32 +23,6 @@
    ],
    "planned": true,
    "start": "2026-11-23T17:44:13Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
-  "261123255": {
-   "cause": "We are investigating the cause of the outage.",
-   "customer_hours_before_first_seen": 187.7,
-   "customer_hours_observed": 282.31333333333333,
-   "customers": 1128,
-   "etr": null,
-   "first_seen": "2026-11-23T20:04:24Z",
-   "id": "261123255",
-   "in_progress_first_seen": "2026-11-23T20:04:24Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-23T20:19:25Z",
-   "lat": 33.400012656317756,
-   "lon": -112.0627833227345,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 1128,
-   "pending": false,
-   "places": [
-    "S 7TH  AVE TO S 16TH  ST AND E ELWOOD  ST TO E VINEYARD  RD"
-   ],
-   "planned": false,
-   "start": "2026-11-23T19:54:25Z",
    "start_basis": "reported",
    "status": null,
    "zips": []
@@ -180,6 +154,7 @@
   "261123196": "2026-11-23T17:49:29Z",
   "261123203": "2026-11-23T16:34:24Z",
   "261123204": "2026-11-23T17:04:25Z",
-  "261123219": "2026-11-23T17:49:29Z"
+  "261123219": "2026-11-23T17:49:29Z",
+  "261123255": "2026-11-23T20:34:24Z"
  }
 }
