@@ -1,61 +1,34 @@
 {
  "empty_streak": 0,
  "events": {
-  "261123196": {
+  "261123229": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 0.3,
-   "customer_hours_observed": 3.9994444444444444,
-   "customers": 2,
+   "customer_hours_before_first_seen": 2.1,
+   "customer_hours_observed": 0.0,
+   "customers": 24,
    "etr": null,
-   "first_seen": "2026-11-23T15:34:24Z",
-   "id": "261123196",
-   "in_progress_first_seen": "2026-11-23T15:34:24Z",
+   "first_seen": "2026-11-23T17:49:29Z",
+   "id": "261123229",
+   "in_progress_first_seen": "2026-11-23T17:49:29Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-23T17:34:23Z",
-   "lat": 33.3829760377375,
-   "lon": -111.700401138096,
-   "max_gap_minutes": 15,
+   "last_seen": "2026-11-23T17:49:29Z",
+   "lat": 33.4908864856158,
+   "lon": -111.99844946188199,
+   "max_gap_minutes": 0,
    "opened_pending": false,
-   "peak_customers": 2,
+   "peak_customers": 24,
    "pending": false,
    "places": [
-    "N RECKER  RD TO S POWER  RD AND E SUPERSTITION  FWY TO E BASELINE  RD"
+    "N 36TH  ST TO N 44TH  ST AND E INDIAN SCHOOL  RD TO E OSBORN  RD"
    ],
    "planned": true,
-   "start": "2026-11-23T15:24:53Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
-  "261123219": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 0.9,
-   "customer_hours_observed": 2.993333333333333,
-   "customers": 12,
-   "etr": null,
-   "first_seen": "2026-11-23T17:19:25Z",
-   "id": "261123219",
-   "in_progress_first_seen": "2026-11-23T17:19:25Z",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-23T17:34:23Z",
-   "lat": 33.588663288764295,
-   "lon": -112.2557619349745,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 12,
-   "pending": false,
-   "places": [
-    "N AGUA FRIA  FWY TO N 87TH  AVE AND W GRAND  AVE TO W PEORIA  AVE"
-   ],
-   "planned": true,
-   "start": "2026-11-23T17:14:41Z",
+   "start": "2026-11-23T17:44:13Z",
    "start_basis": "reported",
    "status": null,
    "zips": []
   }
  },
  "logged_recent": {
-  "261122142": "2026-11-16T17:34:23Z",
   "261122143": "2026-11-16T18:19:24Z",
   "261122146": "2026-11-16T19:49:25Z",
   "261122151": "2026-11-16T18:49:24Z",
@@ -185,7 +158,9 @@
   "261123152": "2026-11-23T13:49:30Z",
   "261123165": "2026-11-23T09:19:23Z",
   "261123194": "2026-11-23T17:34:23Z",
+  "261123196": "2026-11-23T17:49:29Z",
   "261123203": "2026-11-23T16:34:24Z",
-  "261123204": "2026-11-23T17:04:25Z"
+  "261123204": "2026-11-23T17:04:25Z",
+  "261123219": "2026-11-23T17:49:29Z"
  }
 }
