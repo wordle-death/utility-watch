@@ -4,14 +4,14 @@
   "1544146": {
    "cause": null,
    "customer_hours_before_first_seen": 0.1,
-   "customer_hours_observed": 34.50694444444445,
+   "customer_hours_observed": 35.50027777777778,
    "customers": 4,
    "etr": null,
    "first_seen": "2026-11-23T01:49:23Z",
    "id": "1544146",
    "in_progress_first_seen": "2026-11-23T01:49:23Z",
    "kind": null,
-   "last_seen": "2026-11-23T13:49:30Z",
+   "last_seen": "2026-11-23T14:04:24Z",
    "lat": 35.16702,
    "lon": -90.03659,
    "max_gap_minutes": 15,
@@ -25,28 +25,28 @@
    "status": "A crew is currently working on the problem",
    "zips": []
   },
-  "1544266": {
+  "1544267": {
    "cause": null,
-   "customer_hours_before_first_seen": 0.4,
+   "customer_hours_before_first_seen": 0.2,
    "customer_hours_observed": 0.0,
-   "customers": 5,
+   "customers": 1,
    "etr": null,
-   "first_seen": "2026-11-23T13:49:30Z",
-   "id": "1544266",
-   "in_progress_first_seen": "2026-11-23T13:49:30Z",
+   "first_seen": "2026-11-23T14:04:24Z",
+   "id": "1544267",
+   "in_progress_first_seen": "2026-11-23T14:04:24Z",
    "kind": null,
-   "last_seen": "2026-11-23T13:49:30Z",
-   "lat": 35.12686,
-   "lon": -90.03081,
+   "last_seen": "2026-11-23T14:04:24Z",
+   "lat": 35.15633,
+   "lon": -89.77427,
    "max_gap_minutes": 0,
    "opened_pending": false,
-   "peak_customers": 5,
+   "peak_customers": 1,
    "pending": false,
    "places": [],
    "planned": null,
-   "start": "2026-11-23T13:45:07Z",
+   "start": "2026-11-23T13:51:28Z",
    "start_basis": "reported",
-   "status": "Trouble Shooter is working on the problem",
+   "status": "Trouble Shooter is determining repairs required",
    "zips": []
   }
  },
@@ -788,6 +788,7 @@
   "1544262": "2026-11-23T09:19:23Z",
   "1544263": "2026-11-23T09:34:24Z",
   "1544264": "2026-11-23T13:49:30Z",
-  "1544265": "2026-11-23T12:19:25Z"
+  "1544265": "2026-11-23T12:19:25Z",
+  "1544266": "2026-11-23T14:04:24Z"
  }
 }
