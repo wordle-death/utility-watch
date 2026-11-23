@@ -4,14 +4,14 @@
   "2600002456": {
    "cause": "Object In Line",
    "customer_hours_before_first_seen": 2.5,
-   "customer_hours_observed": 8.50361111111111,
+   "customer_hours_observed": 13.806111111111111,
    "customers": 21,
    "etr": "2026-11-23T17:00:00Z",
    "first_seen": "2026-11-23T15:34:24Z",
    "id": "2600002456",
    "in_progress_first_seen": "2026-11-23T15:34:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-23T16:04:25Z",
+   "last_seen": "2026-11-23T16:19:34Z",
    "lat": 43.53297033,
    "lon": -116.73002078,
    "max_gap_minutes": 15,
@@ -24,9 +24,39 @@
    "planned": false,
    "start": "2026-11-23T15:22:50Z",
    "start_basis": "reported",
-   "status": "On the Way",
+   "status": "On-site",
    "zips": [
     "83607"
+   ]
+  },
+  "2600002460": {
+   "cause": "Equipment Issue",
+   "customer_hours_before_first_seen": 101.3,
+   "customer_hours_observed": 0.0,
+   "customers": 425,
+   "etr": "2026-11-23T17:00:00Z",
+   "first_seen": "2026-11-23T16:19:34Z",
+   "id": "2600002460",
+   "in_progress_first_seen": "2026-11-23T16:19:34Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-23T16:19:34Z",
+   "lat": 43.02507657,
+   "lon": -114.51307523,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 425,
+   "pending": false,
+   "places": [
+    "GOODING",
+    "SHOSHONE"
+   ],
+   "planned": false,
+   "start": "2026-11-23T16:05:16Z",
+   "start_basis": "reported",
+   "status": "Pending",
+   "zips": [
+    "83330",
+    "83352"
    ]
   }
  },
@@ -51,7 +81,6 @@
   "2600001677": "2026-11-19T00:34:22Z",
   "2600001800": "2026-11-16T16:34:24Z",
   "2600001814": "2026-11-16T21:34:24Z",
-  "2600001815": "2026-11-16T16:19:30Z",
   "2600001819": "2026-11-20T22:34:23Z",
   "2600001823": "2026-11-16T17:34:23Z",
   "2600001828": "2026-11-16T19:04:24Z",
