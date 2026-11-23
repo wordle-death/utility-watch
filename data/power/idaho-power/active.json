@@ -4,14 +4,14 @@
   "2600001979": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 4.3,
-   "customer_hours_observed": 38.527222222222214,
+   "customer_hours_observed": 41.99999999999999,
    "customers": 14,
    "etr": "2026-11-23T22:00:00Z",
    "first_seen": "2026-11-23T16:34:24Z",
    "id": "2600001979",
    "in_progress_first_seen": "2026-11-23T16:34:24Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-23T19:19:31Z",
+   "last_seen": "2026-11-23T19:34:24Z",
    "lat": 43.45059968,
    "lon": -116.38217675,
    "max_gap_minutes": 15,
@@ -32,14 +32,14 @@
   "2600002090": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 5.6,
-   "customer_hours_observed": 31.54,
+   "customer_hours_observed": 36.004999999999995,
    "customers": 18,
    "etr": "2026-11-23T22:00:00Z",
    "first_seen": "2026-11-23T17:34:23Z",
    "id": "2600002090",
    "in_progress_first_seen": "2026-11-23T17:34:23Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-23T19:19:31Z",
+   "last_seen": "2026-11-23T19:34:24Z",
    "lat": 44.85693044,
    "lon": -116.11370146,
    "max_gap_minutes": 15,
@@ -55,6 +55,34 @@
    "status": "On-site",
    "zips": [
     "83638"
+   ]
+  },
+  "2600002495": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 25.7,
+   "customer_hours_observed": 0.0,
+   "customers": 13,
+   "etr": "2026-11-23T21:30:00Z",
+   "first_seen": "2026-11-23T19:34:24Z",
+   "id": "2600002495",
+   "in_progress_first_seen": "2026-11-23T19:34:24Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-23T19:34:24Z",
+   "lat": 43.15484195,
+   "lon": -112.59011782,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 13,
+   "pending": false,
+   "places": [
+    "PINGREE"
+   ],
+   "planned": false,
+   "start": "2026-11-23T17:35:37Z",
+   "start_basis": "reported",
+   "status": "Pending",
+   "zips": [
+    "83262"
    ]
   }
  },
