@@ -1,6 +1,33 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "261123165": {
+   "cause": "An electrical safety hazard has been identified. SRP crews are working to restore power.",
+   "customer_hours_before_first_seen": 248.8,
+   "customer_hours_observed": 0.0,
+   "customers": 1939,
+   "etr": null,
+   "first_seen": "2026-11-23T08:34:28Z",
+   "id": "261123165",
+   "in_progress_first_seen": "2026-11-23T08:34:28Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-23T08:34:28Z",
+   "lat": 33.217348971656705,
+   "lon": -111.858775199561,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 1939,
+   "pending": false,
+   "places": [
+    "S DOBSON  RD TO S ARIZONA  AVE AND W CHANDLER HEIGHTS  RD TO SOUTHERN BOUNDS OF SERVICE TERRITORY"
+   ],
+   "planned": false,
+   "start": "2026-11-23T08:26:46Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  }
+ },
  "logged_recent": {
   "261122113": "2026-11-16T09:04:23Z",
   "261122142": "2026-11-16T17:34:23Z",
