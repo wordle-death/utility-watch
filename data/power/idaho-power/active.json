@@ -1,6 +1,37 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "2600002436": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 33.6,
+   "customer_hours_observed": 0.0,
+   "customers": 110,
+   "etr": "2026-11-23T05:30:00Z",
+   "first_seen": "2026-11-23T03:19:23Z",
+   "id": "2600002436",
+   "in_progress_first_seen": "2026-11-23T03:19:23Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-23T03:19:23Z",
+   "lat": 43.04867729,
+   "lon": -112.38582564,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 110,
+   "pending": false,
+   "places": [
+    "BLACKFOOT",
+    "POCATELLO"
+   ],
+   "planned": false,
+   "start": "2026-11-23T03:01:04Z",
+   "start_basis": "reported",
+   "status": "Assigned",
+   "zips": [
+    "83201",
+    "83221"
+   ]
+  }
+ },
  "logged_recent": {
   "2600000277": "2026-11-17T20:04:24Z",
   "2600000988": "2026-11-17T19:49:24Z",
