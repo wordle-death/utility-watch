@@ -2,19 +2,19 @@
  "empty_streak": 0,
  "events": {
   "2600002436": {
-   "cause": "Under Investigation",
+   "cause": "Vehicle Accident",
    "customer_hours_before_first_seen": 33.6,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 27.530555555555555,
    "customers": 110,
-   "etr": "2026-11-23T05:30:00Z",
+   "etr": "2026-11-23T04:30:00Z",
    "first_seen": "2026-11-23T03:19:23Z",
    "id": "2600002436",
    "in_progress_first_seen": "2026-11-23T03:19:23Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-23T03:19:23Z",
+   "last_seen": "2026-11-23T03:34:24Z",
    "lat": 43.04867729,
    "lon": -112.38582564,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "opened_pending": false,
    "peak_customers": 110,
    "pending": false,
@@ -25,7 +25,7 @@
    "planned": false,
    "start": "2026-11-23T03:01:04Z",
    "start_basis": "reported",
-   "status": "Assigned",
+   "status": "On-site",
    "zips": [
     "83201",
     "83221"
