@@ -4,17 +4,17 @@
   "2600002434": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 2.5,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 1.99,
    "customers": 12,
    "etr": "2026-11-23T02:30:00Z",
    "first_seen": "2026-11-23T01:19:24Z",
    "id": "2600002434",
    "in_progress_first_seen": "2026-11-23T01:19:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-23T01:19:24Z",
+   "last_seen": "2026-11-23T01:29:21Z",
    "lat": 43.58111508,
    "lon": -116.57648245,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 10,
    "opened_pending": false,
    "peak_customers": 12,
    "pending": false,
@@ -24,7 +24,7 @@
    "planned": false,
    "start": "2026-11-23T01:06:44Z",
    "start_basis": "reported",
-   "status": "Assigned",
+   "status": "On the Way",
    "zips": [
     "83651"
    ]
