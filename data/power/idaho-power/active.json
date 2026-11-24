@@ -4,14 +4,14 @@
   "2600001857": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 10.6,
-   "customer_hours_observed": 71.77277777777778,
+   "customer_hours_observed": 82.0,
    "customers": 41,
    "etr": "2026-11-24T22:00:00Z",
    "first_seen": "2026-11-24T18:19:23Z",
    "id": "2600001857",
    "in_progress_first_seen": "2026-11-24T18:19:23Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-24T20:04:25Z",
+   "last_seen": "2026-11-24T20:19:23Z",
    "lat": 43.42776695,
    "lon": -114.24226165,
    "max_gap_minutes": 15,
@@ -32,14 +32,14 @@
   "2600002550": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 3.8,
-   "customer_hours_observed": 45.003333333333345,
+   "customer_hours_observed": 47.99666666666668,
    "customers": 12,
    "etr": "2026-11-24T21:00:00Z",
    "first_seen": "2026-11-24T16:19:24Z",
    "id": "2600002550",
    "in_progress_first_seen": "2026-11-24T16:19:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-24T20:04:25Z",
+   "last_seen": "2026-11-24T20:19:23Z",
    "lat": 42.79594052,
    "lon": -115.96635277,
    "max_gap_minutes": 15,
@@ -60,14 +60,14 @@
   "2600002563": {
    "cause": "Third-Party Damage",
    "customer_hours_before_first_seen": 39.9,
-   "customer_hours_observed": 86.02638888888889,
+   "customer_hours_observed": 114.7125,
    "customers": 115,
    "etr": "2026-11-24T22:00:00Z",
    "first_seen": "2026-11-24T19:19:32Z",
    "id": "2600002563",
    "in_progress_first_seen": "2026-11-24T19:19:32Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-24T20:04:25Z",
+   "last_seen": "2026-11-24T20:19:23Z",
    "lat": 42.79986994,
    "lon": -114.50799139,
    "max_gap_minutes": 15,
@@ -83,6 +83,34 @@
    "status": "On-site",
    "zips": [
     "83338"
+   ]
+  },
+  "2600002564": {
+   "cause": "Equipment Issue",
+   "customer_hours_before_first_seen": 17.7,
+   "customer_hours_observed": 0.0,
+   "customers": 14,
+   "etr": "2026-11-24T21:30:00Z",
+   "first_seen": "2026-11-24T20:19:23Z",
+   "id": "2600002564",
+   "in_progress_first_seen": "2026-11-24T20:19:23Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-24T20:19:23Z",
+   "lat": 43.23510057,
+   "lon": -112.41842707,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 14,
+   "pending": false,
+   "places": [
+    "BLACKFOOT"
+   ],
+   "planned": false,
+   "start": "2026-11-24T19:03:41Z",
+   "start_basis": "reported",
+   "status": "On-site",
+   "zips": [
+    "83221"
    ]
   }
  },
