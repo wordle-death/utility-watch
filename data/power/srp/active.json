@@ -1,6 +1,33 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "261123355": {
+   "cause": "We are investigating the cause of the outage.",
+   "customer_hours_before_first_seen": 8.1,
+   "customer_hours_observed": 0.0,
+   "customers": 40,
+   "etr": null,
+   "first_seen": "2026-11-24T14:34:34Z",
+   "id": "261123355",
+   "in_progress_first_seen": "2026-11-24T14:34:34Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-24T14:34:34Z",
+   "lat": 33.47355952574705,
+   "lon": -112.2750866021425,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 40,
+   "pending": false,
+   "places": [
+    "N 103RD  AVE TO N AGUA FRIA  FWY AND W THOMAS  RD TO W MCDOWELL  RD"
+   ],
+   "planned": false,
+   "start": "2026-11-24T14:22:23Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  }
+ },
  "logged_recent": {
   "261122303": "2026-11-17T17:34:28Z",
   "261122307": "2026-11-17T22:04:24Z",
