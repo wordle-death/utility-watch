@@ -4,19 +4,19 @@
   "2600002531": {
    "cause": "Equipment Issue",
    "customer_hours_before_first_seen": 5.7,
-   "customer_hours_observed": 14.508055555555556,
-   "customers": 29,
+   "customer_hours_observed": 21.75,
+   "customers": 38,
    "etr": "2026-11-24T12:00:00Z",
    "first_seen": "2026-11-24T10:19:23Z",
    "id": "2600002531",
    "in_progress_first_seen": "2026-11-24T10:19:23Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-24T10:49:24Z",
+   "last_seen": "2026-11-24T11:04:23Z",
    "lat": 43.24295357,
    "lon": -112.47732874,
    "max_gap_minutes": 15,
    "opened_pending": false,
-   "peak_customers": 29,
+   "peak_customers": 38,
    "pending": false,
    "places": [
     "BLACKFOOT"
@@ -24,7 +24,7 @@
    "planned": false,
    "start": "2026-11-24T10:07:33Z",
    "start_basis": "reported",
-   "status": "On the Way",
+   "status": "On-site",
    "zips": [
     "83221"
    ]
@@ -54,7 +54,6 @@
   "2600001884": "2026-11-17T11:19:28Z",
   "2600001886": "2026-11-17T16:34:23Z",
   "2600001888": "2026-11-17T12:49:31Z",
-  "2600001904": "2026-11-17T10:49:25Z",
   "2600001916": "2026-11-17T19:04:34Z",
   "2600001917": "2026-11-17T18:49:35Z",
   "2600001919": "2026-11-17T20:19:23Z",
