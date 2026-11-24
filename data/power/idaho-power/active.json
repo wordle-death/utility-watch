@@ -4,14 +4,14 @@
   "2600002533": {
    "cause": "Equipment Issue",
    "customer_hours_before_first_seen": 853.8,
-   "customer_hours_observed": 5642.751666666667,
-   "customers": 1951,
+   "customer_hours_observed": 6126.708055555556,
+   "customers": 734,
    "etr": "2026-11-24T15:30:00Z",
    "first_seen": "2026-11-24T13:04:24Z",
    "id": "2600002533",
    "in_progress_first_seen": "2026-11-24T13:04:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-24T15:34:30Z",
+   "last_seen": "2026-11-24T15:49:23Z",
    "lat": 44.1078983,
    "lon": -116.02433721,
    "max_gap_minutes": 15,
@@ -36,14 +36,14 @@
   "2600002539": {
    "cause": "Not Found",
    "customer_hours_before_first_seen": 4.1,
-   "customer_hours_observed": 5.518333333333333,
+   "customer_hours_observed": 8.246944444444445,
    "customers": 11,
    "etr": "2026-11-24T17:30:00Z",
    "first_seen": "2026-11-24T15:04:24Z",
    "id": "2600002539",
    "in_progress_first_seen": "2026-11-24T15:04:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-24T15:34:30Z",
+   "last_seen": "2026-11-24T15:49:23Z",
    "lat": 42.55154613,
    "lon": -114.46492551,
    "max_gap_minutes": 15,
@@ -59,6 +59,34 @@
    "status": "On-site",
    "zips": [
     "83301"
+   ]
+  },
+  "2600002544": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 3.9,
+   "customer_hours_observed": 0.0,
+   "customers": 10,
+   "etr": "2026-11-24T19:00:00Z",
+   "first_seen": "2026-11-24T15:49:23Z",
+   "id": "2600002544",
+   "in_progress_first_seen": "2026-11-24T15:49:23Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-24T15:49:23Z",
+   "lat": 44.92955165,
+   "lon": -116.12717528,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 10,
+   "pending": false,
+   "places": [
+    "MCCALL"
+   ],
+   "planned": false,
+   "start": "2026-11-24T15:26:05Z",
+   "start_basis": "reported",
+   "status": "Pending",
+   "zips": [
+    "83638"
    ]
   }
  },
