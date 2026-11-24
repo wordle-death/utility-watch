@@ -1,33 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "261123333": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 0.7,
-   "customer_hours_observed": 2.255,
-   "customers": 3,
-   "etr": null,
-   "first_seen": "2026-11-24T08:49:24Z",
-   "id": "261123333",
-   "in_progress_first_seen": "2026-11-24T08:49:24Z",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-24T09:34:30Z",
-   "lat": 33.41638933771545,
-   "lon": -111.79976532348951,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 3,
-   "pending": false,
-   "places": [
-    "N STAPLEY  DR TO N HARRIS  DR AND E UNIVERSITY  DR TO E BROADWAY  RD"
-   ],
-   "planned": true,
-   "start": "2026-11-24T08:34:43Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  }
- },
+ "events": {},
  "logged_recent": {
   "261122288": "2026-11-17T10:34:24Z",
   "261122290": "2026-11-17T13:04:23Z",
@@ -151,6 +124,7 @@
   "261123229": "2026-11-23T23:04:25Z",
   "261123255": "2026-11-23T20:34:24Z",
   "261123270": "2026-11-24T01:34:23Z",
-  "261123275": "2026-11-24T00:49:30Z"
+  "261123275": "2026-11-24T00:49:30Z",
+  "261123333": "2026-11-24T09:49:26Z"
  }
 }
