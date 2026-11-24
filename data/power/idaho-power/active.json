@@ -4,14 +4,14 @@
   "2600001857": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 10.6,
-   "customer_hours_observed": 123.01138888888889,
+   "customer_hours_observed": 133.36388888888888,
    "customers": 41,
    "etr": "2026-11-24T22:00:00Z",
    "first_seen": "2026-11-24T18:19:23Z",
    "id": "2600001857",
    "in_progress_first_seen": "2026-11-24T18:19:23Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-24T21:19:24Z",
+   "last_seen": "2026-11-24T21:34:33Z",
    "lat": 43.42776695,
    "lon": -114.24226165,
    "max_gap_minutes": 15,
@@ -29,37 +29,36 @@
     "83313"
    ]
   },
-  "2600002550": {
-   "cause": "Under Investigation",
-   "customer_hours_before_first_seen": 3.8,
-   "customer_hours_observed": 60.00000000000001,
-   "customers": 12,
-   "etr": "2026-11-24T21:00:00Z",
-   "first_seen": "2026-11-24T16:19:24Z",
-   "id": "2600002550",
-   "in_progress_first_seen": "2026-11-24T16:19:24Z",
+  "2600002581": {
+   "cause": "Equipment Issue",
+   "customer_hours_before_first_seen": 8.6,
+   "customer_hours_observed": 0.0,
+   "customers": 10,
+   "etr": "2026-11-24T22:30:00Z",
+   "first_seen": "2026-11-24T21:34:33Z",
+   "id": "2600002581",
+   "in_progress_first_seen": "2026-11-24T21:34:33Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-24T21:19:24Z",
-   "lat": 42.79594052,
-   "lon": -115.96635277,
-   "max_gap_minutes": 15,
+   "last_seen": "2026-11-24T21:34:33Z",
+   "lat": 43.05040264,
+   "lon": -112.46589731,
+   "max_gap_minutes": 0,
    "opened_pending": false,
-   "peak_customers": 12,
+   "peak_customers": 10,
    "pending": false,
    "places": [
-    "GRAND VIEW"
+    "BLACKFOOT"
    ],
    "planned": false,
-   "start": "2026-11-24T16:00:33Z",
+   "start": "2026-11-24T20:43:00Z",
    "start_basis": "reported",
    "status": "On-site",
    "zips": [
-    "83624"
+    "83221"
    ]
   }
  },
  "logged_recent": {
-  "2600001431": "2026-11-17T21:19:25Z",
   "2600001433": "2026-11-18T16:49:24Z",
   "2600001530": "2026-11-18T20:19:23Z",
   "2600001550": "2026-11-19T18:49:24Z",
@@ -165,6 +164,7 @@
   "2600002539": "2026-11-24T16:29:41Z",
   "2600002544": "2026-11-24T19:34:24Z",
   "2600002548": "2026-11-24T16:49:30Z",
+  "2600002550": "2026-11-24T21:34:33Z",
   "2600002552": "2026-11-24T17:49:28Z",
   "2600002563": "2026-11-24T21:04:24Z",
   "2600002564": "2026-11-24T20:49:23Z"

@@ -1,6 +1,33 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "261123540": {
+   "cause": "We are investigating the cause of the outage.",
+   "customer_hours_before_first_seen": 125.8,
+   "customer_hours_observed": 0.0,
+   "customers": 1129,
+   "etr": null,
+   "first_seen": "2026-11-24T21:34:33Z",
+   "id": "261123540",
+   "in_progress_first_seen": "2026-11-24T21:34:33Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-24T21:34:33Z",
+   "lat": 33.400012656317756,
+   "lon": -112.0627833227345,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 1129,
+   "pending": false,
+   "places": [
+    "S 7TH  AVE TO S 16TH  ST AND E ELWOOD  ST TO E VINEYARD  RD"
+   ],
+   "planned": false,
+   "start": "2026-11-24T21:27:52Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  }
+ },
  "logged_recent": {
   "261122307": "2026-11-17T22:04:24Z",
   "261122388": "2026-11-18T03:04:24Z",
