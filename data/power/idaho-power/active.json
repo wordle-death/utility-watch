@@ -4,14 +4,14 @@
   "2600001857": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 10.6,
-   "customer_hours_observed": 153.7613888888889,
+   "customer_hours_observed": 164.02277777777778,
    "customers": 41,
    "etr": "2026-11-24T22:00:00Z",
    "first_seen": "2026-11-24T18:19:23Z",
    "id": "2600001857",
    "in_progress_first_seen": "2026-11-24T18:19:23Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-24T22:04:24Z",
+   "last_seen": "2026-11-24T22:19:25Z",
    "lat": 43.42776695,
    "lon": -114.24226165,
    "max_gap_minutes": 15,
@@ -24,7 +24,7 @@
    "planned": true,
    "start": "2026-11-24T18:03:50Z",
    "start_basis": "reported",
-   "status": "Pending",
+   "status": "On-site",
    "zips": [
     "83313"
    ]
