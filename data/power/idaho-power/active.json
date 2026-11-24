@@ -4,17 +4,17 @@
   "2600002531": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 5.7,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 7.3225,
    "customers": 29,
    "etr": "2026-11-24T13:00:00Z",
    "first_seen": "2026-11-24T10:19:23Z",
    "id": "2600002531",
    "in_progress_first_seen": "2026-11-24T10:19:23Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-24T10:19:23Z",
+   "last_seen": "2026-11-24T10:34:32Z",
    "lat": 43.24295357,
    "lon": -112.47732874,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "opened_pending": false,
    "peak_customers": 29,
    "pending": false,
@@ -24,7 +24,7 @@
    "planned": false,
    "start": "2026-11-24T10:07:33Z",
    "start_basis": "reported",
-   "status": "Pending",
+   "status": "On the Way",
    "zips": [
     "83221"
    ]

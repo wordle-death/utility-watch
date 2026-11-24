@@ -1,6 +1,31 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "1544390": {
+   "cause": null,
+   "customer_hours_before_first_seen": 0.1,
+   "customer_hours_observed": 0.0,
+   "customers": 1,
+   "etr": null,
+   "first_seen": "2026-11-24T10:34:32Z",
+   "id": "1544390",
+   "in_progress_first_seen": "2026-11-24T10:34:32Z",
+   "kind": null,
+   "last_seen": "2026-11-24T10:34:32Z",
+   "lat": 35.0461,
+   "lon": -90.07765,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 1,
+   "pending": false,
+   "places": [],
+   "planned": null,
+   "start": "2026-11-24T10:28:42Z",
+   "start_basis": "reported",
+   "status": "The extent of the outage has been determined",
+   "zips": []
+  }
+ },
  "logged_recent": {
   "1543239": "2026-11-17T18:34:30Z",
   "1543241": "2026-11-17T13:34:24Z",
