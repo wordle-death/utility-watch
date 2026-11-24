@@ -1,43 +1,17 @@
 {
  "empty_streak": 0,
  "events": {
-  "261123512": {
-   "cause": "We are investigating the cause of the outage.",
-   "customer_hours_before_first_seen": 7.0,
-   "customer_hours_observed": 17.939999999999998,
-   "customers": 36,
-   "etr": null,
-   "first_seen": "2026-11-24T19:04:30Z",
-   "id": "261123512",
-   "in_progress_first_seen": "2026-11-24T19:04:30Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-24T19:34:24Z",
-   "lat": 33.47940164855195,
-   "lon": -111.9530749834685,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 36,
-   "pending": false,
-   "places": [
-    "N 56TH  ST TO N 64TH  ST AND E OSBORN  RD TO E OAK  ST"
-   ],
-   "planned": false,
-   "start": "2026-11-24T18:52:45Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
   "261123513": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 9.5,
-   "customer_hours_observed": 31.89333333333333,
+   "customer_hours_observed": 47.87555555555555,
    "customers": 64,
    "etr": null,
    "first_seen": "2026-11-24T19:04:30Z",
    "id": "261123513",
    "in_progress_first_seen": "2026-11-24T19:04:30Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-24T19:34:24Z",
+   "last_seen": "2026-11-24T19:49:23Z",
    "lat": 33.48853337095685,
    "lon": -111.9492000132435,
    "max_gap_minutes": 15,
@@ -170,6 +144,7 @@
   "261123364": "2026-11-24T16:49:30Z",
   "261123368": "2026-11-24T18:19:23Z",
   "261123369": "2026-11-24T18:19:23Z",
-  "261123371": "2026-11-24T16:49:30Z"
+  "261123371": "2026-11-24T16:49:30Z",
+  "261123512": "2026-11-24T19:49:23Z"
  }
 }
