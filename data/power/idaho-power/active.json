@@ -4,14 +4,14 @@
   "2600002533": {
    "cause": "Equipment Issue",
    "customer_hours_before_first_seen": 853.8,
-   "customer_hours_observed": 5151.75,
+   "customer_hours_observed": 5642.751666666667,
    "customers": 1951,
    "etr": "2026-11-24T15:30:00Z",
    "first_seen": "2026-11-24T13:04:24Z",
    "id": "2600002533",
    "in_progress_first_seen": "2026-11-24T13:04:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-24T15:19:24Z",
+   "last_seen": "2026-11-24T15:34:30Z",
    "lat": 44.1078983,
    "lon": -116.02433721,
    "max_gap_minutes": 15,
@@ -36,14 +36,14 @@
   "2600002539": {
    "cause": "Not Found",
    "customer_hours_before_first_seen": 4.1,
-   "customer_hours_observed": 2.75,
+   "customer_hours_observed": 5.518333333333333,
    "customers": 11,
    "etr": "2026-11-24T17:30:00Z",
    "first_seen": "2026-11-24T15:04:24Z",
    "id": "2600002539",
    "in_progress_first_seen": "2026-11-24T15:04:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-24T15:19:24Z",
+   "last_seen": "2026-11-24T15:34:30Z",
    "lat": 42.55154613,
    "lon": -114.46492551,
    "max_gap_minutes": 15,
@@ -56,7 +56,7 @@
    "planned": false,
    "start": "2026-11-24T14:41:52Z",
    "start_basis": "reported",
-   "status": "Assigned",
+   "status": "On-site",
    "zips": [
     "83301"
    ]
