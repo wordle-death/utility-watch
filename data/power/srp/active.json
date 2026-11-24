@@ -4,14 +4,14 @@
   "261123270": {
    "cause": "Electrical equipment has failed. SRP crews are working to restore power.",
    "customer_hours_before_first_seen": 0.0,
-   "customer_hours_observed": 2.75,
+   "customer_hours_observed": 3.0016666666666665,
    "customers": 1,
    "etr": null,
    "first_seen": "2026-11-23T21:49:24Z",
    "id": "261123270",
    "in_progress_first_seen": "2026-11-23T21:49:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-24T00:34:24Z",
+   "last_seen": "2026-11-24T00:49:30Z",
    "lat": 33.448367598968204,
    "lon": -111.73191630152,
    "max_gap_minutes": 15,
@@ -23,32 +23,6 @@
    ],
    "planned": false,
    "start": "2026-11-23T21:47:18Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
-  "261123275": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 0.4,
-   "customer_hours_observed": 6.000555555555556,
-   "customers": 2,
-   "etr": null,
-   "first_seen": "2026-11-23T21:34:23Z",
-   "id": "261123275",
-   "in_progress_first_seen": "2026-11-23T21:34:23Z",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-24T00:34:24Z",
-   "lat": 33.2482793188413,
-   "lon": -111.595401749626,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 2,
-   "pending": false,
-   "places": [
-    "S SIGNAL BUTTE  RD TO S 228TH  ST AND E APPLEBY  RD TO E CLOUD  RD"
-   ],
-   "planned": true,
-   "start": "2026-11-23T21:21:08Z",
    "start_basis": "reported",
    "status": null,
    "zips": []
@@ -177,6 +151,7 @@
   "261123204": "2026-11-23T17:04:25Z",
   "261123219": "2026-11-23T17:49:29Z",
   "261123229": "2026-11-23T23:04:25Z",
-  "261123255": "2026-11-23T20:34:24Z"
+  "261123255": "2026-11-23T20:34:24Z",
+  "261123275": "2026-11-24T00:49:30Z"
  }
 }
