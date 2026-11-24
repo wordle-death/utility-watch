@@ -1,33 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "261123270": {
-   "cause": "Electrical equipment has failed. SRP crews are working to restore power.",
-   "customer_hours_before_first_seen": 0.0,
-   "customer_hours_observed": 3.500277777777778,
-   "customers": 1,
-   "etr": null,
-   "first_seen": "2026-11-23T21:49:24Z",
-   "id": "261123270",
-   "in_progress_first_seen": "2026-11-23T21:49:24Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-24T01:19:25Z",
-   "lat": 33.448367598968204,
-   "lon": -111.73191630152,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 1,
-   "pending": false,
-   "places": [
-    "N GREENFIELD  RD TO N 48TH  ST AND E MCKELLIPS  RD TO E MCLELLAN  RD"
-   ],
-   "planned": false,
-   "start": "2026-11-23T21:47:18Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  }
- },
+ "events": {},
  "logged_recent": {
   "261122262": "2026-11-17T07:19:23Z",
   "261122276": "2026-11-17T08:34:26Z",
@@ -152,6 +125,7 @@
   "261123219": "2026-11-23T17:49:29Z",
   "261123229": "2026-11-23T23:04:25Z",
   "261123255": "2026-11-23T20:34:24Z",
+  "261123270": "2026-11-24T01:34:23Z",
   "261123275": "2026-11-24T00:49:30Z"
  }
 }
