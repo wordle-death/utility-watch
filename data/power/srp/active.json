@@ -1,6 +1,33 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "261123530": {
+   "cause": "We are investigating the cause of the outage.",
+   "customer_hours_before_first_seen": 1.9,
+   "customer_hours_observed": 0.0,
+   "customers": 9,
+   "etr": null,
+   "first_seen": "2026-11-24T21:04:24Z",
+   "id": "261123530",
+   "in_progress_first_seen": "2026-11-24T21:04:24Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-24T21:04:24Z",
+   "lat": 33.401571833165846,
+   "lon": -112.051081201452,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 9,
+   "pending": false,
+   "places": [
+    "S 12TH  ST TO S 16TH  ST AND E BROADWAY  RD TO E ROESER  RD"
+   ],
+   "planned": false,
+   "start": "2026-11-24T20:51:35Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  }
+ },
  "logged_recent": {
   "261122307": "2026-11-17T22:04:24Z",
   "261122348": "2026-11-17T21:04:24Z",

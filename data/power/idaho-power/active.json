@@ -4,14 +4,14 @@
   "2600001857": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 10.6,
-   "customer_hours_observed": 102.5,
+   "customer_hours_observed": 112.76138888888889,
    "customers": 41,
    "etr": "2026-11-24T22:00:00Z",
    "first_seen": "2026-11-24T18:19:23Z",
    "id": "2600001857",
    "in_progress_first_seen": "2026-11-24T18:19:23Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-24T20:49:23Z",
+   "last_seen": "2026-11-24T21:04:24Z",
    "lat": 43.42776695,
    "lon": -114.24226165,
    "max_gap_minutes": 15,
@@ -32,14 +32,14 @@
   "2600002550": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 3.8,
-   "customer_hours_observed": 53.99666666666668,
+   "customer_hours_observed": 57.00000000000001,
    "customers": 12,
    "etr": "2026-11-24T21:00:00Z",
    "first_seen": "2026-11-24T16:19:24Z",
    "id": "2600002550",
    "in_progress_first_seen": "2026-11-24T16:19:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-24T20:49:23Z",
+   "last_seen": "2026-11-24T21:04:24Z",
    "lat": 42.79594052,
    "lon": -115.96635277,
    "max_gap_minutes": 15,
@@ -55,34 +55,6 @@
    "status": "On-site",
    "zips": [
     "83624"
-   ]
-  },
-  "2600002563": {
-   "cause": "Third-Party Damage",
-   "customer_hours_before_first_seen": 39.9,
-   "customer_hours_observed": 172.2125,
-   "customers": 115,
-   "etr": "2026-11-24T22:00:00Z",
-   "first_seen": "2026-11-24T19:19:32Z",
-   "id": "2600002563",
-   "in_progress_first_seen": "2026-11-24T19:19:32Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-24T20:49:23Z",
-   "lat": 42.79986994,
-   "lon": -114.50799139,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 115,
-   "pending": false,
-   "places": [
-    "JEROME"
-   ],
-   "planned": false,
-   "start": "2026-11-24T18:58:42Z",
-   "start_basis": "reported",
-   "status": "On the Way",
-   "zips": [
-    "83338"
    ]
   }
  },
@@ -194,6 +166,7 @@
   "2600002544": "2026-11-24T19:34:24Z",
   "2600002548": "2026-11-24T16:49:30Z",
   "2600002552": "2026-11-24T17:49:28Z",
+  "2600002563": "2026-11-24T21:04:24Z",
   "2600002564": "2026-11-24T20:49:23Z"
  }
 }
