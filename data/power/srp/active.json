@@ -1,59 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "261123368": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 2.0,
-   "customer_hours_observed": 27.506111111111103,
-   "customers": 11,
-   "etr": null,
-   "first_seen": "2026-11-24T15:34:30Z",
-   "id": "261123368",
-   "in_progress_first_seen": "2026-11-24T15:34:30Z",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-24T18:04:32Z",
-   "lat": 33.47593758432235,
-   "lon": -111.981761418889,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 11,
-   "pending": false,
-   "places": [
-    "N 44TH  ST TO N 48TH  ST AND E THOMAS  RD TO E OAK  ST"
-   ],
-   "planned": true,
-   "start": "2026-11-24T15:23:40Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
-  "261123369": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 0.4,
-   "customer_hours_observed": 10.002222222222224,
-   "customers": 4,
-   "etr": null,
-   "first_seen": "2026-11-24T15:34:30Z",
-   "id": "261123369",
-   "in_progress_first_seen": "2026-11-24T15:34:30Z",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-24T18:04:32Z",
-   "lat": 33.481748026923796,
-   "lon": -112.162955357492,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 4,
-   "pending": false,
-   "places": [
-    "N 51ST  AVE TO N 47TH  AVE AND W OSBORN  RD TO W ENCANTO  BLVD"
-   ],
-   "planned": true,
-   "start": "2026-11-24T15:28:18Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  }
- },
+ "events": {},
  "logged_recent": {
   "261122307": "2026-11-17T22:04:24Z",
   "261122323": "2026-11-17T19:04:34Z",
@@ -171,6 +118,8 @@
   "261123333": "2026-11-24T09:49:26Z",
   "261123355": "2026-11-24T17:34:24Z",
   "261123364": "2026-11-24T16:49:30Z",
+  "261123368": "2026-11-24T18:19:23Z",
+  "261123369": "2026-11-24T18:19:23Z",
   "261123371": "2026-11-24T16:49:30Z"
  }
 }
