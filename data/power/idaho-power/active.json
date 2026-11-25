@@ -4,17 +4,17 @@
   "2600002005": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 3.5,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 5.244166666666667,
    "customers": 21,
    "etr": "2026-11-25T19:00:00Z",
    "first_seen": "2026-11-25T19:49:23Z",
    "id": "2600002005",
    "in_progress_first_seen": "2026-11-25T19:49:23Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-25T19:49:23Z",
+   "last_seen": "2026-11-25T20:04:22Z",
    "lat": 45.00376034,
    "lon": -116.30903967,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "opened_pending": false,
    "peak_customers": 21,
    "pending": false,
@@ -27,6 +27,36 @@
    "status": "Pending",
    "zips": [
     "83654"
+   ]
+  },
+  "2600002113": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 3.3,
+   "customer_hours_observed": 0.0,
+   "customers": 10,
+   "etr": "2026-11-25T21:30:00Z",
+   "first_seen": "2026-11-25T20:04:22Z",
+   "id": "2600002113",
+   "in_progress_first_seen": "2026-11-25T20:04:22Z",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-25T20:04:22Z",
+   "lat": 42.8141306,
+   "lon": -115.91594171,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 10,
+   "pending": false,
+   "places": [
+    "BRUNEAU",
+    "GRAND VIEW"
+   ],
+   "planned": true,
+   "start": "2026-11-25T19:44:23Z",
+   "start_basis": "reported",
+   "status": "On-site",
+   "zips": [
+    "83604",
+    "83624"
    ]
   }
  },
