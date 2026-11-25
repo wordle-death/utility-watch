@@ -1,6 +1,35 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "2600002005": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 3.5,
+   "customer_hours_observed": 0.0,
+   "customers": 21,
+   "etr": "2026-11-25T19:00:00Z",
+   "first_seen": "2026-11-25T19:49:23Z",
+   "id": "2600002005",
+   "in_progress_first_seen": "2026-11-25T19:49:23Z",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-25T19:49:23Z",
+   "lat": 45.00376034,
+   "lon": -116.30903967,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 21,
+   "pending": false,
+   "places": [
+    "NEW MEADOWS"
+   ],
+   "planned": true,
+   "start": "2026-11-25T19:39:16Z",
+   "start_basis": "reported",
+   "status": "Pending",
+   "zips": [
+    "83654"
+   ]
+  }
+ },
  "logged_recent": {
   "2600001530": "2026-11-18T20:19:23Z",
   "2600001550": "2026-11-19T18:49:24Z",
