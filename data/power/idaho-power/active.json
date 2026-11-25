@@ -1,65 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "2600002113": {
-   "cause": "Under Investigation",
-   "customer_hours_before_first_seen": 3.3,
-   "customer_hours_observed": 12.505555555555556,
-   "customers": 10,
-   "etr": "2026-11-25T21:30:00Z",
-   "first_seen": "2026-11-25T20:04:22Z",
-   "id": "2600002113",
-   "in_progress_first_seen": "2026-11-25T20:04:22Z",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-25T21:19:24Z",
-   "lat": 42.8141306,
-   "lon": -115.91594171,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 10,
-   "pending": false,
-   "places": [
-    "BRUNEAU",
-    "GRAND VIEW"
-   ],
-   "planned": true,
-   "start": "2026-11-25T19:44:23Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83604",
-    "83624"
-   ]
-  },
-  "2600002645": {
-   "cause": "Object In Line",
-   "customer_hours_before_first_seen": 3.5,
-   "customer_hours_observed": 7.003888888888889,
-   "customers": 14,
-   "etr": "2026-11-25T21:30:00Z",
-   "first_seen": "2026-11-25T20:49:23Z",
-   "id": "2600002645",
-   "in_progress_first_seen": "2026-11-25T20:49:23Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-25T21:19:24Z",
-   "lat": 43.83241096,
-   "lon": -116.97064753,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 14,
-   "pending": false,
-   "places": [
-    "PARMA"
-   ],
-   "planned": false,
-   "start": "2026-11-25T20:34:21Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83660"
-   ]
-  }
- },
+ "events": {},
  "logged_recent": {
   "2600001550": "2026-11-19T18:49:24Z",
   "2600001557": "2026-11-20T19:19:26Z",
@@ -77,6 +18,7 @@
   "2600002090": "2026-11-24T01:19:25Z",
   "2600002096": "2026-11-18T22:04:25Z",
   "2600002103": "2026-11-18T23:19:23Z",
+  "2600002113": "2026-11-25T21:34:22Z",
   "2600002115": "2026-11-19T05:04:33Z",
   "2600002117": "2026-11-19T18:19:26Z",
   "2600002121": "2026-11-19T16:19:37Z",
@@ -156,6 +98,7 @@
   "2600002564": "2026-11-24T20:49:23Z",
   "2600002581": "2026-11-24T22:04:24Z",
   "2600002599": "2026-11-25T02:19:25Z",
-  "2600002625": "2026-11-25T19:34:24Z"
+  "2600002625": "2026-11-25T19:34:24Z",
+  "2600002645": "2026-11-25T21:34:22Z"
  }
 }
