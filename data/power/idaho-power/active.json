@@ -4,14 +4,14 @@
   "2600002180": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 11.8,
-   "customer_hours_observed": 21.093333333333334,
+   "customer_hours_observed": 31.5,
    "customers": 42,
    "etr": "2026-11-25T17:00:00Z",
    "first_seen": "2026-11-25T16:34:24Z",
    "id": "2600002180",
    "in_progress_first_seen": "2026-11-25T16:34:24Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-25T17:04:32Z",
+   "last_seen": "2026-11-25T17:19:24Z",
    "lat": 42.93246132,
    "lon": -112.47904284,
    "max_gap_minutes": 15,
@@ -24,7 +24,7 @@
    "planned": true,
    "start": "2026-11-25T16:17:33Z",
    "start_basis": "reported",
-   "status": "Pending",
+   "status": "On-site",
    "zips": [
     "83202"
    ]
