@@ -4,14 +4,14 @@
   "2600002113": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 3.3,
-   "customer_hours_observed": 5.0,
+   "customer_hours_observed": 7.502777777777778,
    "customers": 10,
    "etr": "2026-11-25T21:30:00Z",
    "first_seen": "2026-11-25T20:04:22Z",
    "id": "2600002113",
    "in_progress_first_seen": "2026-11-25T20:04:22Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-25T20:34:22Z",
+   "last_seen": "2026-11-25T20:49:23Z",
    "lat": 42.8141306,
    "lon": -115.91594171,
    "max_gap_minutes": 15,
@@ -29,6 +29,34 @@
    "zips": [
     "83604",
     "83624"
+   ]
+  },
+  "2600002645": {
+   "cause": "Not Found",
+   "customer_hours_before_first_seen": 3.5,
+   "customer_hours_observed": 0.0,
+   "customers": 14,
+   "etr": "2026-11-25T22:00:00Z",
+   "first_seen": "2026-11-25T20:49:23Z",
+   "id": "2600002645",
+   "in_progress_first_seen": "2026-11-25T20:49:23Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-25T20:49:23Z",
+   "lat": 43.83241096,
+   "lon": -116.97064753,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 14,
+   "pending": false,
+   "places": [
+    "PARMA"
+   ],
+   "planned": false,
+   "start": "2026-11-25T20:34:21Z",
+   "start_basis": "reported",
+   "status": "On-site",
+   "zips": [
+    "83660"
    ]
   }
  },
