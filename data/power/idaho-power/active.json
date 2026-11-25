@@ -2,16 +2,16 @@
  "empty_streak": 0,
  "events": {
   "2600002652": {
-   "cause": "Under Investigation",
+   "cause": "Object In Line",
    "customer_hours_before_first_seen": 16.7,
-   "customer_hours_observed": 23.395555555555557,
+   "customer_hours_observed": 35.14555555555556,
    "customers": 47,
-   "etr": "2026-11-26T00:00:00Z",
+   "etr": "2026-11-25T23:30:00Z",
    "first_seen": "2026-11-25T22:34:30Z",
    "id": "2600002652",
    "in_progress_first_seen": "2026-11-25T22:34:30Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-25T23:04:22Z",
+   "last_seen": "2026-11-25T23:19:22Z",
    "lat": 43.54846317,
    "lon": -116.81076246,
    "max_gap_minutes": 15,
@@ -24,7 +24,7 @@
    "planned": false,
    "start": "2026-11-25T22:13:10Z",
    "start_basis": "reported",
-   "status": "Assigned",
+   "status": "On-site",
    "zips": [
     "83639"
    ]
