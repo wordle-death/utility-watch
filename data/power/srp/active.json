@@ -4,14 +4,14 @@
   "261123608": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 0.4,
-   "customer_hours_observed": 16.501666666666665,
+   "customer_hours_observed": 18.0,
    "customers": 6,
    "etr": null,
    "first_seen": "2026-11-25T15:04:23Z",
    "id": "261123608",
    "in_progress_first_seen": "2026-11-25T15:04:23Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-25T17:49:24Z",
+   "last_seen": "2026-11-25T18:04:23Z",
    "lat": 33.48669200870115,
    "lon": -111.944361143569,
    "max_gap_minutes": 30,
@@ -30,14 +30,14 @@
   "261123621": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 2.3,
-   "customer_hours_observed": 15.0,
+   "customer_hours_observed": 17.996666666666666,
    "customers": 12,
    "etr": null,
    "first_seen": "2026-11-25T16:34:24Z",
    "id": "261123621",
    "in_progress_first_seen": "2026-11-25T16:34:24Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-25T17:49:24Z",
+   "last_seen": "2026-11-25T18:04:23Z",
    "lat": 33.421370103795454,
    "lon": -111.704434301563,
    "max_gap_minutes": 15,
@@ -52,32 +52,6 @@
    "start_basis": "reported",
    "status": null,
    "zips": []
-  },
-  "261123628": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 1.1,
-   "customer_hours_observed": 4.5,
-   "customers": 9,
-   "etr": null,
-   "first_seen": "2026-11-25T17:19:24Z",
-   "id": "261123628",
-   "in_progress_first_seen": "2026-11-25T17:19:24Z",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-25T17:49:24Z",
-   "lat": 33.133714262805654,
-   "lon": -111.53567967222295,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 9,
-   "pending": false,
-   "places": [
-    "N GANTZEL  RD TO N SIERRA VISTA  DR AND E JUDD  RD TO E ARIZONA FARMS  RD"
-   ],
-   "planned": true,
-   "start": "2026-11-25T17:12:22Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
   }
  },
  "logged_recent": {
@@ -85,7 +59,6 @@
   "261122468": "2026-11-18T19:19:24Z",
   "261122476": "2026-11-18T19:34:22Z",
   "261122477": "2026-11-18T19:19:24Z",
-  "261122490": "2026-11-18T17:49:24Z",
   "261122513": "2026-11-18T18:04:30Z",
   "261122591": "2026-11-19T00:04:23Z",
   "261122597": "2026-11-19T00:19:24Z",
@@ -187,6 +160,7 @@
   "261123600": "2026-11-25T15:04:23Z",
   "261123601": "2026-11-25T13:19:23Z",
   "261123604": "2026-11-25T14:49:23Z",
-  "261123605": "2026-11-25T16:19:35Z"
+  "261123605": "2026-11-25T16:19:35Z",
+  "261123628": "2026-11-25T18:04:23Z"
  }
 }
