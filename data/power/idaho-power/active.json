@@ -1,32 +1,32 @@
 {
  "empty_streak": 0,
  "events": {
-  "2600002180": {
+  "2600002625": {
    "cause": "Under Investigation",
-   "customer_hours_before_first_seen": 11.8,
-   "customer_hours_observed": 42.0,
-   "customers": 42,
-   "etr": "2026-11-25T17:00:00Z",
-   "first_seen": "2026-11-25T16:34:24Z",
-   "id": "2600002180",
-   "in_progress_first_seen": "2026-11-25T16:34:24Z",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-25T17:34:24Z",
-   "lat": 42.93246132,
-   "lon": -112.47904284,
-   "max_gap_minutes": 15,
+   "customer_hours_before_first_seen": 4.9,
+   "customer_hours_observed": 0.0,
+   "customers": 19,
+   "etr": "2026-11-25T19:30:00Z",
+   "first_seen": "2026-11-25T17:49:24Z",
+   "id": "2600002625",
+   "in_progress_first_seen": "2026-11-25T17:49:24Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-25T17:49:24Z",
+   "lat": 42.81388755,
+   "lon": -115.95226246,
+   "max_gap_minutes": 0,
    "opened_pending": false,
-   "peak_customers": 42,
+   "peak_customers": 19,
    "pending": false,
    "places": [
-    "POCATELLO"
+    "GRAND VIEW"
    ],
-   "planned": true,
-   "start": "2026-11-25T16:17:33Z",
+   "planned": false,
+   "start": "2026-11-25T17:33:49Z",
    "start_basis": "reported",
-   "status": "On-site",
+   "status": "Pending",
    "zips": [
-    "83202"
+    "83624"
    ]
   }
  },
@@ -34,7 +34,6 @@
   "2600001530": "2026-11-18T20:19:23Z",
   "2600001550": "2026-11-19T18:49:24Z",
   "2600001557": "2026-11-20T19:19:26Z",
-  "2600001608": "2026-11-18T17:34:24Z",
   "2600001639": "2026-11-19T21:49:23Z",
   "2600001673": "2026-11-18T20:04:36Z",
   "2600001677": "2026-11-19T00:34:22Z",
@@ -63,6 +62,7 @@
   "2600002146": "2026-11-19T18:19:26Z",
   "2600002150": "2026-11-19T17:49:24Z",
   "2600002154": "2026-11-19T23:04:24Z",
+  "2600002180": "2026-11-25T17:49:24Z",
   "2600002187": "2026-11-19T21:04:24Z",
   "2600002188": "2026-11-19T21:19:24Z",
   "2600002192": "2026-11-19T19:49:23Z",
