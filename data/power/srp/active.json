@@ -1,35 +1,7 @@
 {
  "empty_streak": 0,
- "events": {
-  "261123596": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 0.5,
-   "customer_hours_observed": 19.49833333333333,
-   "customers": 6,
-   "etr": null,
-   "first_seen": "2026-11-25T07:49:25Z",
-   "id": "261123596",
-   "in_progress_first_seen": "2026-11-25T07:49:25Z",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-25T11:04:24Z",
-   "lat": 33.394392175352195,
-   "lon": -111.77156081020951,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 6,
-   "pending": false,
-   "places": [
-    "S 24TH  ST TO S 32ND  ST AND E PUEBLO  AVE TO E SUPERSTITION  HWY"
-   ],
-   "planned": true,
-   "start": "2026-11-25T07:44:10Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  }
- },
+ "events": {},
  "logged_recent": {
-  "261122431": "2026-11-18T11:19:22Z",
   "261122438": "2026-11-18T12:04:25Z",
   "261122440": "2026-11-18T13:19:23Z",
   "261122448": "2026-11-18T16:34:36Z",
@@ -138,6 +110,7 @@
   "261123530": "2026-11-24T21:19:24Z",
   "261123540": "2026-11-25T03:34:30Z",
   "261123577": "2026-11-25T08:04:23Z",
-  "261123582": "2026-11-25T03:34:30Z"
+  "261123582": "2026-11-25T03:34:30Z",
+  "261123596": "2026-11-25T11:19:27Z"
  }
 }
