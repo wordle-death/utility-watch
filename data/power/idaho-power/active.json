@@ -1,13 +1,41 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "2600002652": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 16.7,
+   "customer_hours_observed": 0.0,
+   "customers": 47,
+   "etr": "2026-11-26T00:00:00Z",
+   "first_seen": "2026-11-25T22:34:30Z",
+   "id": "2600002652",
+   "in_progress_first_seen": "2026-11-25T22:34:30Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-25T22:34:30Z",
+   "lat": 43.54846317,
+   "lon": -116.81076246,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 47,
+   "pending": false,
+   "places": [
+    "MARSING"
+   ],
+   "planned": false,
+   "start": "2026-11-25T22:13:10Z",
+   "start_basis": "reported",
+   "status": "Assigned",
+   "zips": [
+    "83639"
+   ]
+  }
+ },
  "logged_recent": {
   "2600001550": "2026-11-19T18:49:24Z",
   "2600001557": "2026-11-20T19:19:26Z",
   "2600001639": "2026-11-19T21:49:23Z",
   "2600001677": "2026-11-19T00:34:22Z",
   "2600001819": "2026-11-20T22:34:23Z",
-  "2600001845": "2026-11-18T22:34:27Z",
   "2600001857": "2026-11-24T22:34:25Z",
   "2600001874": "2026-11-24T19:49:23Z",
   "2600001877": "2026-11-19T20:34:24Z",
