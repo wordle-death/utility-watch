@@ -1,28 +1,28 @@
 {
  "empty_streak": 0,
  "events": {
-  "1544465": {
+  "1544466": {
    "cause": null,
-   "customer_hours_before_first_seen": 0.2,
-   "customer_hours_observed": 0.24805555555555556,
+   "customer_hours_before_first_seen": 0.1,
+   "customer_hours_observed": 0.0,
    "customers": 1,
    "etr": null,
-   "first_seen": "2026-11-25T12:19:29Z",
-   "id": "1544465",
-   "in_progress_first_seen": "2026-11-25T12:19:29Z",
+   "first_seen": "2026-11-25T12:49:23Z",
+   "id": "1544466",
+   "in_progress_first_seen": "2026-11-25T12:49:23Z",
    "kind": null,
-   "last_seen": "2026-11-25T12:34:22Z",
-   "lat": 35.10387,
-   "lon": -89.93874,
-   "max_gap_minutes": 15,
+   "last_seen": "2026-11-25T12:49:23Z",
+   "lat": 35.06344,
+   "lon": -89.88326,
+   "max_gap_minutes": 0,
    "opened_pending": false,
    "peak_customers": 1,
    "pending": false,
    "places": [],
    "planned": null,
-   "start": "2026-11-25T12:09:17Z",
+   "start": "2026-11-25T12:44:10Z",
    "start_basis": "reported",
-   "status": "Customer Svc is working this single customer outage",
+   "status": "The extent of the outage has been determined",
    "zips": []
   }
  },
@@ -30,7 +30,6 @@
   "1543422": "2026-11-18T19:19:24Z",
   "1543483": "2026-11-18T19:19:24Z",
   "1543484": "2026-11-18T17:04:24Z",
-  "1543491": "2026-11-18T12:49:22Z",
   "1543492": "2026-11-18T17:04:24Z",
   "1543493": "2026-11-18T19:49:25Z",
   "1543494": "2026-11-18T13:49:24Z",
@@ -742,6 +741,7 @@
   "1544460": "2026-11-25T07:34:24Z",
   "1544461": "2026-11-25T07:49:25Z",
   "1544462": "2026-11-25T09:43:55Z",
-  "1544464": "2026-11-25T09:04:23Z"
+  "1544464": "2026-11-25T09:04:23Z",
+  "1544465": "2026-11-25T12:49:23Z"
  }
 }
