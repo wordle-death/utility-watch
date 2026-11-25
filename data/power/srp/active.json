@@ -4,14 +4,14 @@
   "261123596": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 0.5,
-   "customer_hours_observed": 2.998333333333333,
+   "customer_hours_observed": 4.498333333333333,
    "customers": 6,
    "etr": null,
    "first_seen": "2026-11-25T07:49:25Z",
    "id": "261123596",
    "in_progress_first_seen": "2026-11-25T07:49:25Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-25T08:19:24Z",
+   "last_seen": "2026-11-25T08:34:24Z",
    "lat": 33.394392175352195,
    "lon": -111.77156081020951,
    "max_gap_minutes": 15,
@@ -29,7 +29,6 @@
   }
  },
  "logged_recent": {
-  "261122424": "2026-11-18T08:19:24Z",
   "261122431": "2026-11-18T11:19:22Z",
   "261122438": "2026-11-18T12:04:25Z",
   "261122440": "2026-11-18T13:19:23Z",
