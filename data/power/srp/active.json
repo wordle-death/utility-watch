@@ -4,17 +4,17 @@
   "261123600": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 1.4,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 1.5,
    "customers": 6,
    "etr": null,
    "first_seen": "2026-11-25T13:04:23Z",
    "id": "261123600",
    "in_progress_first_seen": "2026-11-25T13:04:23Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-25T13:04:23Z",
+   "last_seen": "2026-11-25T13:19:23Z",
    "lat": 33.4777995230772,
    "lon": -112.135451681421,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "opened_pending": false,
    "peak_customers": 6,
    "pending": false,
@@ -23,32 +23,6 @@
    ],
    "planned": true,
    "start": "2026-11-25T12:50:34Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
-  "261123601": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 0.1,
-   "customer_hours_observed": 0.0,
-   "customers": 1,
-   "etr": null,
-   "first_seen": "2026-11-25T13:04:23Z",
-   "id": "261123601",
-   "in_progress_first_seen": "2026-11-25T13:04:23Z",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-25T13:04:23Z",
-   "lat": 33.4889738323747,
-   "lon": -112.292635332917,
-   "max_gap_minutes": 0,
-   "opened_pending": false,
-   "peak_customers": 1,
-   "pending": false,
-   "places": [
-    "N 111TH  AVE TO N 107TH  AVE AND W INDIAN SCHOOL  RD TO W THOMAS  RD"
-   ],
-   "planned": true,
-   "start": "2026-11-25T12:57:01Z",
    "start_basis": "reported",
    "status": null,
    "zips": []
@@ -163,6 +137,7 @@
   "261123540": "2026-11-25T03:34:30Z",
   "261123577": "2026-11-25T08:04:23Z",
   "261123582": "2026-11-25T03:34:30Z",
-  "261123596": "2026-11-25T11:19:27Z"
+  "261123596": "2026-11-25T11:19:27Z",
+  "261123601": "2026-11-25T13:19:23Z"
  }
 }
