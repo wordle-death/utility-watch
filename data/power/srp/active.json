@@ -1,46 +1,20 @@
 {
  "empty_streak": 0,
  "events": {
-  "261123577": {
-   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
-   "customer_hours_before_first_seen": 0.6,
-   "customer_hours_observed": 49.998888888888885,
-   "customers": 10,
-   "etr": null,
-   "first_seen": "2026-11-25T01:19:23Z",
-   "id": "261123577",
-   "in_progress_first_seen": "2026-11-25T01:19:23Z",
-   "kind": "PLANNED",
-   "last_seen": "2026-11-25T07:49:25Z",
-   "lat": 33.39370621327995,
-   "lon": -111.568568820592,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 10,
-   "pending": false,
-   "places": [
-    "S DELAWARE  DR TO S IRONWOOD  DR AND W 16TH  AVE TO W SUPERSTITION  FWY"
-   ],
-   "planned": true,
-   "start": "2026-11-25T01:13:03Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
   "261123596": {
    "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
    "customer_hours_before_first_seen": 0.5,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 1.4966666666666666,
    "customers": 6,
    "etr": null,
    "first_seen": "2026-11-25T07:49:25Z",
    "id": "261123596",
    "in_progress_first_seen": "2026-11-25T07:49:25Z",
    "kind": "PLANNED",
-   "last_seen": "2026-11-25T07:49:25Z",
+   "last_seen": "2026-11-25T08:04:23Z",
    "lat": 33.394392175352195,
    "lon": -111.77156081020951,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "opened_pending": false,
    "peak_customers": 6,
    "pending": false,
@@ -165,6 +139,7 @@
   "261123513": "2026-11-24T20:04:25Z",
   "261123530": "2026-11-24T21:19:24Z",
   "261123540": "2026-11-25T03:34:30Z",
+  "261123577": "2026-11-25T08:04:23Z",
   "261123582": "2026-11-25T03:34:30Z"
  }
 }
