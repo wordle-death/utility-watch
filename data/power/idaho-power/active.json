@@ -4,14 +4,14 @@
   "2600002652": {
    "cause": "Object In Line",
    "customer_hours_before_first_seen": 16.7,
-   "customer_hours_observed": 35.14555555555556,
+   "customer_hours_observed": 46.89555555555556,
    "customers": 47,
    "etr": "2026-11-25T23:30:00Z",
    "first_seen": "2026-11-25T22:34:30Z",
    "id": "2600002652",
    "in_progress_first_seen": "2026-11-25T22:34:30Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-25T23:19:22Z",
+   "last_seen": "2026-11-25T23:34:22Z",
    "lat": 43.54846317,
    "lon": -116.81076246,
    "max_gap_minutes": 15,
@@ -27,6 +27,34 @@
    "status": "On-site",
    "zips": [
     "83639"
+   ]
+  },
+  "2600002658": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 28.0,
+   "customer_hours_observed": 0.0,
+   "customers": 76,
+   "etr": "2026-11-26T02:30:00Z",
+   "first_seen": "2026-11-25T23:34:22Z",
+   "id": "2600002658",
+   "in_progress_first_seen": "2026-11-25T23:34:22Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-25T23:34:22Z",
+   "lat": 42.79743574,
+   "lon": -114.5653277,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 76,
+   "pending": false,
+   "places": [
+    "JEROME"
+   ],
+   "planned": false,
+   "start": "2026-11-25T23:12:18Z",
+   "start_basis": "reported",
+   "status": "Pending",
+   "zips": [
+    "83338"
    ]
   }
  },
@@ -44,7 +72,6 @@
   "2600002005": "2026-11-25T20:19:22Z",
   "2600002087": "2026-11-19T05:34:31Z",
   "2600002090": "2026-11-24T01:19:25Z",
-  "2600002103": "2026-11-18T23:19:23Z",
   "2600002113": "2026-11-25T21:34:22Z",
   "2600002115": "2026-11-19T05:04:33Z",
   "2600002117": "2026-11-19T18:19:26Z",
