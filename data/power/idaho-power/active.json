@@ -1,35 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "2600002658": {
-   "cause": "Under Investigation",
-   "customer_hours_before_first_seen": 28.0,
-   "customer_hours_observed": 38.0,
-   "customers": 76,
-   "etr": "2026-11-26T02:30:00Z",
-   "first_seen": "2026-11-25T23:34:22Z",
-   "id": "2600002658",
-   "in_progress_first_seen": "2026-11-25T23:34:22Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-26T00:04:22Z",
-   "lat": 42.79743574,
-   "lon": -114.5653277,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 76,
-   "pending": false,
-   "places": [
-    "JEROME"
-   ],
-   "planned": false,
-   "start": "2026-11-25T23:12:18Z",
-   "start_basis": "reported",
-   "status": "Pending",
-   "zips": [
-    "83338"
-   ]
-  }
- },
+ "events": {},
  "logged_recent": {
   "2600001550": "2026-11-19T18:49:24Z",
   "2600001557": "2026-11-20T19:19:26Z",
@@ -126,6 +97,7 @@
   "2600002599": "2026-11-25T02:19:25Z",
   "2600002625": "2026-11-25T19:34:24Z",
   "2600002645": "2026-11-25T21:34:22Z",
-  "2600002652": "2026-11-25T23:49:23Z"
+  "2600002652": "2026-11-25T23:49:23Z",
+  "2600002658": "2026-11-26T00:19:25Z"
  }
 }
