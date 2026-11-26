@@ -1,35 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "2600002665": {
-   "cause": "Equipment Issue",
-   "customer_hours_before_first_seen": 7.4,
-   "customer_hours_observed": 31.970555555555556,
-   "customers": 20,
-   "etr": "2026-11-26T04:30:00Z",
-   "first_seen": "2026-11-26T01:49:30Z",
-   "id": "2600002665",
-   "in_progress_first_seen": "2026-11-26T01:49:30Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-26T03:34:24Z",
-   "lat": 44.00437551,
-   "lon": -116.98850198,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 20,
-   "pending": false,
-   "places": [
-    "ONTARIO"
-   ],
-   "planned": false,
-   "start": "2026-11-26T01:24:58Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "97914"
-   ]
-  }
- },
+ "events": {},
  "logged_recent": {
   "2600001550": "2026-11-19T18:49:24Z",
   "2600001557": "2026-11-20T19:19:26Z",
@@ -126,6 +97,7 @@
   "2600002625": "2026-11-25T19:34:24Z",
   "2600002645": "2026-11-25T21:34:22Z",
   "2600002652": "2026-11-25T23:49:23Z",
-  "2600002658": "2026-11-26T00:19:25Z"
+  "2600002658": "2026-11-26T00:19:25Z",
+  "2600002665": "2026-11-26T03:49:23Z"
  }
 }
