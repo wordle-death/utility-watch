@@ -4,17 +4,17 @@
   "2600002665": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 7.4,
-   "customer_hours_observed": 0.0,
+   "customer_hours_observed": 4.46,
    "customers": 18,
    "etr": "2026-11-26T04:30:00Z",
    "first_seen": "2026-11-26T01:49:30Z",
    "id": "2600002665",
    "in_progress_first_seen": "2026-11-26T01:49:30Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-26T01:49:30Z",
+   "last_seen": "2026-11-26T02:04:22Z",
    "lat": 44.00437551,
    "lon": -116.98850198,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "opened_pending": false,
    "peak_customers": 18,
    "pending": false,
@@ -24,7 +24,7 @@
    "planned": false,
    "start": "2026-11-26T01:24:58Z",
    "start_basis": "reported",
-   "status": "Pending",
+   "status": "Assigned",
    "zips": [
     "97914"
    ]
