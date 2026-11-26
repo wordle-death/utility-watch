@@ -1,6 +1,33 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "261123678": {
+   "cause": "An SRP maintenance crew is performing critical maintenance work to repair or upgrade equipment. Power will be restored as quickly as possible.",
+   "customer_hours_before_first_seen": 0.0,
+   "customer_hours_observed": 0.0,
+   "customers": 1,
+   "etr": null,
+   "first_seen": "2026-11-26T07:04:26Z",
+   "id": "261123678",
+   "in_progress_first_seen": "2026-11-26T07:04:26Z",
+   "kind": "PLANNED",
+   "last_seen": "2026-11-26T07:04:26Z",
+   "lat": 33.5460890184336,
+   "lon": -112.14475534037,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 1,
+   "pending": false,
+   "places": [
+    "N 43RD  AVE TO N 35TH  AVE AND W NORTHERN  AVE TO W GLENDALE  AVE"
+   ],
+   "planned": true,
+   "start": "2026-11-26T07:04:03Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  }
+ },
  "logged_recent": {
   "261122622": "2026-11-19T20:49:30Z",
   "261122657": "2026-11-19T17:49:24Z",
