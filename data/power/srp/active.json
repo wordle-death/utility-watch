@@ -1,6 +1,33 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "261123695": {
+   "cause": "We are investigating the cause of the outage.",
+   "customer_hours_before_first_seen": 373.8,
+   "customer_hours_observed": 0.0,
+   "customers": 1587,
+   "etr": null,
+   "first_seen": "2026-11-26T14:34:23Z",
+   "id": "261123695",
+   "in_progress_first_seen": "2026-11-26T14:34:23Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-26T14:34:23Z",
+   "lat": 33.46823047523925,
+   "lon": -111.9708289042355,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 1587,
+   "pending": false,
+   "places": [
+    "N 44TH  ST TO N 60TH  ST AND E THOMAS  RD TO E RED MOUNTAIN  FWY"
+   ],
+   "planned": false,
+   "start": "2026-11-26T14:20:15Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  }
+ },
  "logged_recent": {
   "261122622": "2026-11-19T20:49:30Z",
   "261122657": "2026-11-19T17:49:24Z",
