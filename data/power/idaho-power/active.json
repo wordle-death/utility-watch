@@ -2,16 +2,16 @@
  "empty_streak": 0,
  "events": {
   "2600002674": {
-   "cause": "Not Found",
+   "cause": "Weather",
    "customer_hours_before_first_seen": 3.5,
-   "customer_hours_observed": 7.995555555555556,
+   "customer_hours_observed": 12.004444444444445,
    "customers": 16,
    "etr": "2026-11-26T17:00:00Z",
    "first_seen": "2026-11-26T14:49:23Z",
    "id": "2600002674",
    "in_progress_first_seen": "2026-11-26T14:49:23Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-26T15:19:22Z",
+   "last_seen": "2026-11-26T15:34:24Z",
    "lat": 42.90346567,
    "lon": -113.02036255,
    "max_gap_minutes": 15,
@@ -24,7 +24,7 @@
    "planned": false,
    "start": "2026-11-26T14:36:23Z",
    "start_basis": "reported",
-   "status": "Assigned",
+   "status": "On the Way",
    "zips": [
     "83211"
    ]
