@@ -1,6 +1,35 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "2600002674": {
+   "cause": "Not Found",
+   "customer_hours_before_first_seen": 3.5,
+   "customer_hours_observed": 0.0,
+   "customers": 16,
+   "etr": "2026-11-26T17:00:00Z",
+   "first_seen": "2026-11-26T14:49:23Z",
+   "id": "2600002674",
+   "in_progress_first_seen": "2026-11-26T14:49:23Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-26T14:49:23Z",
+   "lat": 42.90346567,
+   "lon": -113.02036255,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 16,
+   "pending": false,
+   "places": [
+    "AMERICAN FALLS"
+   ],
+   "planned": false,
+   "start": "2026-11-26T14:36:23Z",
+   "start_basis": "reported",
+   "status": "Assigned",
+   "zips": [
+    "83211"
+   ]
+  }
+ },
  "logged_recent": {
   "2600001550": "2026-11-19T18:49:24Z",
   "2600001557": "2026-11-20T19:19:26Z",
