@@ -1,33 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "261123707": {
-   "cause": "We are investigating the cause of the outage.",
-   "customer_hours_before_first_seen": 3.8,
-   "customer_hours_observed": 43.5,
-   "customers": 29,
-   "etr": null,
-   "first_seen": "2026-11-26T14:49:23Z",
-   "id": "261123707",
-   "in_progress_first_seen": "2026-11-26T14:49:23Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-26T16:19:23Z",
-   "lat": 33.3900919953142,
-   "lon": -111.6672077138265,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 29,
-   "pending": false,
-   "places": [
-    "S 72ND  ST TO S HAWES  RD AND E PUEBLO  AVE TO E BASELINE  RD"
-   ],
-   "planned": false,
-   "start": "2026-11-26T14:41:36Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  }
- },
+ "events": {},
  "logged_recent": {
   "261122622": "2026-11-19T20:49:30Z",
   "261122657": "2026-11-19T17:49:24Z",
@@ -134,6 +107,7 @@
   "261123629": "2026-11-26T00:49:24Z",
   "261123678": "2026-11-26T08:49:23Z",
   "261123687": "2026-11-26T12:19:29Z",
-  "261123695": "2026-11-26T15:49:29Z"
+  "261123695": "2026-11-26T15:49:29Z",
+  "261123707": "2026-11-26T16:34:22Z"
  }
 }
