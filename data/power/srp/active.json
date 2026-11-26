@@ -1,33 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "261123687": {
-   "cause": "An electrical safety hazard has been identified. SRP crews are working to restore power.",
-   "customer_hours_before_first_seen": 0.4,
-   "customer_hours_observed": 2.0,
-   "customers": 2,
-   "etr": null,
-   "first_seen": "2026-11-26T11:04:24Z",
-   "id": "261123687",
-   "in_progress_first_seen": "2026-11-26T11:04:24Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-26T12:04:24Z",
-   "lat": 33.4426265294651,
-   "lon": -111.78590532127899,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 2,
-   "pending": false,
-   "places": [
-    "N HARRIS  DR TO N 24TH  ST AND E MCKELLIPS  RD TO E BROWN  RD"
-   ],
-   "planned": false,
-   "start": "2026-11-26T10:53:30Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  }
- },
+ "events": {},
  "logged_recent": {
   "261122622": "2026-11-19T20:49:30Z",
   "261122657": "2026-11-19T17:49:24Z",
@@ -132,6 +105,7 @@
   "261123621": "2026-11-25T19:49:23Z",
   "261123628": "2026-11-25T18:04:23Z",
   "261123629": "2026-11-26T00:49:24Z",
-  "261123678": "2026-11-26T08:49:23Z"
+  "261123678": "2026-11-26T08:49:23Z",
+  "261123687": "2026-11-26T12:19:29Z"
  }
 }
