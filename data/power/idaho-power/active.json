@@ -1,37 +1,7 @@
 {
  "empty_streak": 0,
- "events": {
-  "2600002701": {
-   "cause": "Weather",
-   "customer_hours_before_first_seen": 9.9,
-   "customer_hours_observed": 17.490277777777777,
-   "customers": 35,
-   "etr": "2026-11-27T20:30:00Z",
-   "first_seen": "2026-11-27T18:49:24Z",
-   "id": "2600002701",
-   "in_progress_first_seen": "2026-11-27T18:49:24Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-27T19:19:23Z",
-   "lat": 43.14345507,
-   "lon": -115.68653094,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 35,
-   "pending": false,
-   "places": [
-    "MOUNTAIN HOME"
-   ],
-   "planned": false,
-   "start": "2026-11-27T18:32:22Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83647"
-   ]
-  }
- },
+ "events": {},
  "logged_recent": {
-  "2600001557": "2026-11-20T19:19:26Z",
   "2600001819": "2026-11-20T22:34:23Z",
   "2600001857": "2026-11-24T22:34:25Z",
   "2600001874": "2026-11-24T19:49:23Z",
@@ -92,6 +62,7 @@
   "2600002674": "2026-11-26T16:19:23Z",
   "2600002681": "2026-11-26T21:04:22Z",
   "2600002688": "2026-11-27T12:49:23Z",
-  "2600002694": "2026-11-27T17:19:23Z"
+  "2600002694": "2026-11-27T17:19:23Z",
+  "2600002701": "2026-11-27T19:34:23Z"
  }
 }
