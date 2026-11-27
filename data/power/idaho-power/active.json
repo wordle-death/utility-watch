@@ -1,35 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "2600002694": {
-   "cause": "Under Investigation",
-   "customer_hours_before_first_seen": 3.3,
-   "customer_hours_observed": 5.976666666666667,
-   "customers": 12,
-   "etr": "2026-11-27T19:00:00Z",
-   "first_seen": "2026-11-27T16:34:30Z",
-   "id": "2600002694",
-   "in_progress_first_seen": "2026-11-27T16:34:30Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-27T17:04:23Z",
-   "lat": 42.60086798,
-   "lon": -114.48676375,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 12,
-   "pending": false,
-   "places": [
-    "TWIN FALLS"
-   ],
-   "planned": false,
-   "start": "2026-11-27T16:17:56Z",
-   "start_basis": "reported",
-   "status": "Pending",
-   "zips": [
-    "83301"
-   ]
-  }
- },
+ "events": {},
  "logged_recent": {
   "2600001557": "2026-11-20T19:19:26Z",
   "2600001819": "2026-11-20T22:34:23Z",
@@ -94,6 +65,7 @@
   "2600002671": "2026-11-26T05:34:22Z",
   "2600002674": "2026-11-26T16:19:23Z",
   "2600002681": "2026-11-26T21:04:22Z",
-  "2600002688": "2026-11-27T12:49:23Z"
+  "2600002688": "2026-11-27T12:49:23Z",
+  "2600002694": "2026-11-27T17:19:23Z"
  }
 }
