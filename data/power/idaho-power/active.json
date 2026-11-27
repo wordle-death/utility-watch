@@ -1,37 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "2600002688": {
-   "cause": "Object In Line",
-   "customer_hours_before_first_seen": 47.2,
-   "customer_hours_observed": 2.96,
-   "customers": 36,
-   "etr": "2026-11-27T13:00:00Z",
-   "first_seen": "2026-11-27T12:29:27Z",
-   "id": "2600002688",
-   "in_progress_first_seen": "2026-11-27T12:29:27Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-27T12:34:23Z",
-   "lat": 43.76788466,
-   "lon": -116.65219625,
-   "max_gap_minutes": 5,
-   "opened_pending": false,
-   "peak_customers": 36,
-   "pending": false,
-   "places": [
-    "CALDWELL",
-    "MIDDLETON"
-   ],
-   "planned": false,
-   "start": "2026-11-27T11:10:48Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83607",
-    "83644"
-   ]
-  }
- },
+ "events": {},
  "logged_recent": {
   "2600001557": "2026-11-20T19:19:26Z",
   "2600001819": "2026-11-20T22:34:23Z",
@@ -95,6 +64,7 @@
   "2600002665": "2026-11-26T03:49:23Z",
   "2600002671": "2026-11-26T05:34:22Z",
   "2600002674": "2026-11-26T16:19:23Z",
-  "2600002681": "2026-11-26T21:04:22Z"
+  "2600002681": "2026-11-26T21:04:22Z",
+  "2600002688": "2026-11-27T12:49:23Z"
  }
 }
