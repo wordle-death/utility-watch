@@ -4,40 +4,14 @@
   "261123726": {
    "cause": "An underground power cable has failed. SRP crews are working to restore power.",
    "customer_hours_before_first_seen": 2.1,
-   "customer_hours_observed": 26.995,
+   "customer_hours_observed": 31.495,
    "customers": 18,
    "etr": null,
    "first_seen": "2026-11-26T23:49:23Z",
    "id": "261123726",
    "in_progress_first_seen": "2026-11-26T23:49:23Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-27T01:19:22Z",
-   "lat": 33.40826027828075,
-   "lon": -111.873756931711,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 18,
-   "pending": false,
-   "places": [
-    "S ROOSEVELT  RD TO S LONGMORE   AND W MAIN  ST TO W 8TH  AVE"
-   ],
-   "planned": false,
-   "start": "2026-11-26T23:42:22Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  },
-  "261123726#2": {
-   "cause": "An underground power cable has failed. SRP crews are working to restore power.",
-   "customer_hours_before_first_seen": 15.6,
-   "customer_hours_observed": 13.485,
-   "customers": 18,
-   "etr": null,
-   "first_seen": "2026-11-27T00:34:25Z",
-   "id": "261123726#2",
-   "in_progress_first_seen": "2026-11-27T00:34:25Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-27T01:19:22Z",
+   "last_seen": "2026-11-27T01:34:22Z",
    "lat": 33.40826027828075,
    "lon": -111.873756931711,
    "max_gap_minutes": 15,
@@ -55,8 +29,6 @@
   }
  },
  "logged_recent": {
-  "261122832": "2026-11-20T01:19:23Z",
-  "261122832#2": "2026-11-20T01:19:23Z",
   "261122850": "2026-11-20T08:34:28Z",
   "261122851": "2026-11-20T03:49:23Z",
   "261122856": "2026-11-20T07:34:23Z",
@@ -143,6 +115,7 @@
   "261123678": "2026-11-26T08:49:23Z",
   "261123687": "2026-11-26T12:19:29Z",
   "261123695": "2026-11-26T15:49:29Z",
-  "261123707": "2026-11-26T16:34:22Z"
+  "261123707": "2026-11-26T16:34:22Z",
+  "261123726#2": "2026-11-27T01:34:22Z"
  }
 }
