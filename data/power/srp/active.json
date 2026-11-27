@@ -1,33 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "261123765": {
-   "cause": "We are investigating the cause of the outage.",
-   "customer_hours_before_first_seen": 5.1,
-   "customer_hours_observed": 60.75,
-   "customers": 6,
-   "etr": null,
-   "first_seen": "2026-11-27T10:34:23Z",
-   "id": "261123765",
-   "in_progress_first_seen": "2026-11-27T10:34:23Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-27T13:34:23Z",
-   "lat": 33.2111213192589,
-   "lon": -111.84433461687351,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 25,
-   "pending": false,
-   "places": [
-    "S ALMA SCHOOL  RD TO S ARIZONA  AVE AND E RIGGS  RD TO E HUNT  HWY"
-   ],
-   "planned": false,
-   "start": "2026-11-27T10:22:04Z",
-   "start_basis": "reported",
-   "status": null,
-   "zips": []
-  }
- },
+ "events": {},
  "logged_recent": {
   "261122876": "2026-11-20T15:49:23Z",
   "261122879": "2026-11-20T19:19:26Z",
@@ -114,6 +87,7 @@
   "261123726": "2026-11-27T02:19:23Z",
   "261123726#2": "2026-11-27T01:34:22Z",
   "261123755": "2026-11-27T03:34:21Z",
-  "261123760": "2026-11-27T13:19:23Z"
+  "261123760": "2026-11-27T13:19:23Z",
+  "261123765": "2026-11-27T13:49:25Z"
  }
 }
