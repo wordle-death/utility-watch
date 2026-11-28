@@ -4,14 +4,14 @@
   "2600002754": {
    "cause": "Weather",
    "customer_hours_before_first_seen": 6.9,
-   "customer_hours_observed": 5.536666666666666,
+   "customer_hours_observed": 11.0,
    "customers": 22,
    "etr": "2026-11-28T13:00:00Z",
    "first_seen": "2026-11-28T11:34:23Z",
    "id": "2600002754",
    "in_progress_first_seen": "2026-11-28T11:34:23Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-28T11:49:29Z",
+   "last_seen": "2026-11-28T12:04:23Z",
    "lat": 42.74619393,
    "lon": -112.61172107,
    "max_gap_minutes": 15,
@@ -25,7 +25,7 @@
    "planned": false,
    "start": "2026-11-28T11:15:26Z",
    "start_basis": "reported",
-   "status": "On the Way",
+   "status": "On-site",
    "zips": [
     "83204",
     "83212"
