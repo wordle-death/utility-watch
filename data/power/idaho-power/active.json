@@ -4,14 +4,14 @@
   "2600002754": {
    "cause": "Weather",
    "customer_hours_before_first_seen": 6.9,
-   "customer_hours_observed": 27.5,
+   "customer_hours_observed": 32.99388888888889,
    "customers": 22,
-   "etr": "2026-11-28T13:00:00Z",
+   "etr": "2026-11-28T14:00:00Z",
    "first_seen": "2026-11-28T11:34:23Z",
    "id": "2600002754",
    "in_progress_first_seen": "2026-11-28T11:34:23Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-28T12:49:23Z",
+   "last_seen": "2026-11-28T13:04:22Z",
    "lat": 42.74619393,
    "lon": -112.61172107,
    "max_gap_minutes": 15,
@@ -29,6 +29,38 @@
    "zips": [
     "83204",
     "83212"
+   ]
+  },
+  "2600002757": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 70.0,
+   "customer_hours_observed": 0.0,
+   "customers": 197,
+   "etr": "2026-11-28T16:00:00Z",
+   "first_seen": "2026-11-28T13:04:22Z",
+   "id": "2600002757",
+   "in_progress_first_seen": "2026-11-28T13:04:22Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-28T13:04:22Z",
+   "lat": 42.59913609,
+   "lon": -114.31726336,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 197,
+   "pending": false,
+   "places": [
+    "EDEN",
+    "JEROME",
+    "TWIN FALLS"
+   ],
+   "planned": false,
+   "start": "2026-11-28T12:43:02Z",
+   "start_basis": "reported",
+   "status": "Pending",
+   "zips": [
+    "83301",
+    "83325",
+    "83338"
    ]
   }
  },
