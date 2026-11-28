@@ -1,54 +1,22 @@
 {
  "empty_streak": 0,
  "events": {
-  "2600002757": {
-   "cause": "Weather",
-   "customer_hours_before_first_seen": 70.0,
-   "customer_hours_observed": 459.3047222222222,
-   "customers": 24,
-   "etr": "2026-11-28T18:00:00Z",
-   "first_seen": "2026-11-28T13:04:22Z",
-   "id": "2600002757",
-   "in_progress_first_seen": "2026-11-28T13:04:22Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-28T17:49:23Z",
-   "lat": 42.59913609,
-   "lon": -114.31726336,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 197,
-   "pending": false,
-   "places": [
-    "EDEN",
-    "JEROME",
-    "TWIN FALLS"
-   ],
-   "planned": false,
-   "start": "2026-11-28T12:43:02Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83301",
-    "83325",
-    "83338"
-   ]
-  },
   "2600002778": {
    "cause": "Equipment Issue",
    "customer_hours_before_first_seen": 11.7,
-   "customer_hours_observed": 36.501666666666665,
-   "customers": 62,
+   "customer_hours_observed": 52.13944444444444,
+   "customers": 70,
    "etr": "2026-11-28T22:00:00Z",
    "first_seen": "2026-11-28T16:49:24Z",
    "id": "2600002778",
    "in_progress_first_seen": "2026-11-28T16:49:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-28T17:49:23Z",
+   "last_seen": "2026-11-28T18:04:31Z",
    "lat": 42.49634987,
    "lon": -114.85270872,
    "max_gap_minutes": 15,
    "opened_pending": false,
-   "peak_customers": 62,
+   "peak_customers": 70,
    "pending": false,
    "places": [
     "BUHL",
@@ -122,6 +90,7 @@
   "2600002745": "2026-11-28T06:34:23Z",
   "2600002751": "2026-11-28T09:34:23Z",
   "2600002754": "2026-11-28T15:34:23Z",
+  "2600002757": "2026-11-28T18:04:31Z",
   "2600002760": "2026-11-28T16:04:24Z",
   "2600002764": "2026-11-28T16:04:24Z"
  }
