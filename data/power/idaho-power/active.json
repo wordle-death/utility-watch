@@ -4,14 +4,14 @@
   "2600002736": {
    "cause": "Under Investigation",
    "customer_hours_before_first_seen": 3.7,
-   "customer_hours_observed": 4.245277777777778,
+   "customer_hours_observed": 8.528333333333334,
    "customers": 17,
    "etr": "2026-11-28T06:00:00Z",
    "first_seen": "2026-11-28T04:34:23Z",
    "id": "2600002736",
    "in_progress_first_seen": "2026-11-28T04:34:23Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-28T04:49:22Z",
+   "last_seen": "2026-11-28T05:04:29Z",
    "lat": 43.74683442,
    "lon": -116.6450797,
    "max_gap_minutes": 15,
@@ -27,6 +27,38 @@
    "status": "On-site",
    "zips": [
     "83644"
+   ]
+  },
+  "2600002738": {
+   "cause": "Vehicle Accident",
+   "customer_hours_before_first_seen": 64.2,
+   "customer_hours_observed": 0.0,
+   "customers": 154,
+   "etr": "2026-11-28T06:30:00Z",
+   "first_seen": "2026-11-28T05:04:29Z",
+   "id": "2600002738",
+   "in_progress_first_seen": "2026-11-28T05:04:29Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-28T05:04:29Z",
+   "lat": 43.52679526,
+   "lon": -116.35743485,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 154,
+   "pending": false,
+   "places": [
+    "BOISE",
+    "KUNA",
+    "MERIDIAN"
+   ],
+   "planned": false,
+   "start": "2026-11-28T04:39:28Z",
+   "start_basis": "reported",
+   "status": "Pending",
+   "zips": [
+    "83634",
+    "83642",
+    "83709"
    ]
   }
  },
