@@ -4,14 +4,14 @@
   "2600002738": {
    "cause": "Vehicle Accident",
    "customer_hours_before_first_seen": 64.2,
-   "customer_hours_observed": 76.95722222222221,
+   "customer_hours_observed": 115.2861111111111,
    "customers": 154,
    "etr": "2026-11-28T06:30:00Z",
    "first_seen": "2026-11-28T05:04:29Z",
    "id": "2600002738",
    "in_progress_first_seen": "2026-11-28T05:04:29Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-28T05:34:28Z",
+   "last_seen": "2026-11-28T05:49:24Z",
    "lat": 43.52679526,
    "lon": -116.35743485,
    "max_gap_minutes": 15,
@@ -34,19 +34,19 @@
    ]
   },
   "2600002741": {
-   "cause": "Under Investigation",
+   "cause": "Object In Line",
    "customer_hours_before_first_seen": 18.2,
-   "customer_hours_observed": 0.0,
-   "customers": 52,
+   "customer_hours_observed": 12.942222222222222,
+   "customers": 13,
    "etr": "2026-11-28T07:00:00Z",
    "first_seen": "2026-11-28T05:34:28Z",
    "id": "2600002741",
    "in_progress_first_seen": "2026-11-28T05:34:28Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-28T05:34:28Z",
+   "last_seen": "2026-11-28T05:49:24Z",
    "lat": 43.64472537,
    "lon": -116.24065449,
-   "max_gap_minutes": 0,
+   "max_gap_minutes": 15,
    "opened_pending": false,
    "peak_customers": 52,
    "pending": false,
@@ -56,7 +56,35 @@
    "planned": false,
    "start": "2026-11-28T05:13:29Z",
    "start_basis": "reported",
-   "status": "On the Way",
+   "status": "On-site",
+   "zips": [
+    "83703"
+   ]
+  },
+  "2600002745": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 20.0,
+   "customer_hours_observed": 0.0,
+   "customers": 39,
+   "etr": "2026-11-28T07:30:00Z",
+   "first_seen": "2026-11-28T05:49:24Z",
+   "id": "2600002745",
+   "in_progress_first_seen": "2026-11-28T05:49:24Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-28T05:49:24Z",
+   "lat": 43.64471136,
+   "lon": -116.2406155,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 39,
+   "pending": false,
+   "places": [
+    "BOISE"
+   ],
+   "planned": false,
+   "start": "2026-11-28T05:18:40Z",
+   "start_basis": "reported",
+   "status": "Pending",
    "zips": [
     "83703"
    ]
