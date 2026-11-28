@@ -1,47 +1,17 @@
 {
  "empty_streak": 0,
  "events": {
-  "2600002754": {
-   "cause": "Weather",
-   "customer_hours_before_first_seen": 6.9,
-   "customer_hours_observed": 82.5,
-   "customers": 22,
-   "etr": "2026-11-28T16:00:00Z",
-   "first_seen": "2026-11-28T11:34:23Z",
-   "id": "2600002754",
-   "in_progress_first_seen": "2026-11-28T11:34:23Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-28T15:19:23Z",
-   "lat": 42.74619393,
-   "lon": -112.61172107,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 22,
-   "pending": false,
-   "places": [
-    "ARBON",
-    "POCATELLO"
-   ],
-   "planned": false,
-   "start": "2026-11-28T11:15:26Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83204",
-    "83212"
-   ]
-  },
   "2600002757": {
    "cause": "Weather",
    "customer_hours_before_first_seen": 70.0,
-   "customer_hours_observed": 270.3047222222222,
+   "customer_hours_observed": 276.3047222222222,
    "customers": 24,
    "etr": "2026-11-28T16:00:00Z",
    "first_seen": "2026-11-28T13:04:22Z",
    "id": "2600002757",
    "in_progress_first_seen": "2026-11-28T13:04:22Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-28T15:19:23Z",
+   "last_seen": "2026-11-28T15:34:23Z",
    "lat": 42.59913609,
    "lon": -114.31726336,
    "max_gap_minutes": 15,
@@ -61,6 +31,34 @@
     "83301",
     "83325",
     "83338"
+   ]
+  },
+  "2600002760": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 38.0,
+   "customer_hours_observed": 0.0,
+   "customers": 33,
+   "etr": "2026-11-28T17:30:00Z",
+   "first_seen": "2026-11-28T15:34:23Z",
+   "id": "2600002760",
+   "in_progress_first_seen": "2026-11-28T15:34:23Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-28T15:34:23Z",
+   "lat": 42.5786535,
+   "lon": -114.28757985,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 33,
+   "pending": false,
+   "places": [
+    "EDEN"
+   ],
+   "planned": false,
+   "start": "2026-11-28T14:25:13Z",
+   "start_basis": "reported",
+   "status": "Pending",
+   "zips": [
+    "83325"
    ]
   }
  },
@@ -120,6 +118,7 @@
   "2600002738": "2026-11-28T06:19:22Z",
   "2600002741": "2026-11-28T06:34:23Z",
   "2600002745": "2026-11-28T06:34:23Z",
-  "2600002751": "2026-11-28T09:34:23Z"
+  "2600002751": "2026-11-28T09:34:23Z",
+  "2600002754": "2026-11-28T15:34:23Z"
  }
 }
