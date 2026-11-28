@@ -1,63 +1,6 @@
 {
  "empty_streak": 0,
- "events": {
-  "2600002741": {
-   "cause": "Object In Line",
-   "customer_hours_before_first_seen": 18.2,
-   "customer_hours_observed": 19.435,
-   "customers": 13,
-   "etr": "2026-11-28T07:00:00Z",
-   "first_seen": "2026-11-28T05:34:28Z",
-   "id": "2600002741",
-   "in_progress_first_seen": "2026-11-28T05:34:28Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-28T06:19:22Z",
-   "lat": 43.64472537,
-   "lon": -116.24065449,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 52,
-   "pending": false,
-   "places": [
-    "BOISE"
-   ],
-   "planned": false,
-   "start": "2026-11-28T05:13:29Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83703"
-   ]
-  },
-  "2600002745": {
-   "cause": "Under Investigation",
-   "customer_hours_before_first_seen": 20.0,
-   "customer_hours_observed": 14.738888888888889,
-   "customers": 20,
-   "etr": "2026-11-28T07:00:00Z",
-   "first_seen": "2026-11-28T05:49:24Z",
-   "id": "2600002745",
-   "in_progress_first_seen": "2026-11-28T05:49:24Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-28T06:19:22Z",
-   "lat": 43.64471136,
-   "lon": -116.2406155,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 39,
-   "pending": false,
-   "places": [
-    "BOISE"
-   ],
-   "planned": false,
-   "start": "2026-11-28T05:18:40Z",
-   "start_basis": "reported",
-   "status": "Pending",
-   "zips": [
-    "83703"
-   ]
-  }
- },
+ "events": {},
  "logged_recent": {
   "2600001857": "2026-11-24T22:34:25Z",
   "2600001874": "2026-11-24T19:49:23Z",
@@ -67,7 +10,6 @@
   "2600002113": "2026-11-25T21:34:22Z",
   "2600002180": "2026-11-25T17:49:24Z",
   "2600002368": "2026-11-21T07:04:24Z",
-  "2600002374": "2026-11-21T06:19:23Z",
   "2600002375": "2026-11-21T07:04:24Z",
   "2600002376": "2026-11-21T14:19:23Z",
   "2600002383": "2026-11-21T22:19:22Z",
@@ -115,6 +57,8 @@
   "2600002726": "2026-11-28T02:34:21Z",
   "2600002727": "2026-11-28T02:04:24Z",
   "2600002736": "2026-11-28T05:34:28Z",
-  "2600002738": "2026-11-28T06:19:22Z"
+  "2600002738": "2026-11-28T06:19:22Z",
+  "2600002741": "2026-11-28T06:34:23Z",
+  "2600002745": "2026-11-28T06:34:23Z"
  }
 }
