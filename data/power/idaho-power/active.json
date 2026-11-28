@@ -1,6 +1,35 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "2600002736": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 3.7,
+   "customer_hours_observed": 0.0,
+   "customers": 17,
+   "etr": "2026-11-28T06:00:00Z",
+   "first_seen": "2026-11-28T04:34:23Z",
+   "id": "2600002736",
+   "in_progress_first_seen": "2026-11-28T04:34:23Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-28T04:34:23Z",
+   "lat": 43.74683442,
+   "lon": -116.6450797,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 17,
+   "pending": false,
+   "places": [
+    "MIDDLETON"
+   ],
+   "planned": false,
+   "start": "2026-11-28T04:21:13Z",
+   "start_basis": "reported",
+   "status": "Pending",
+   "zips": [
+    "83644"
+   ]
+  }
+ },
  "logged_recent": {
   "2600001857": "2026-11-24T22:34:25Z",
   "2600001874": "2026-11-24T19:49:23Z",
