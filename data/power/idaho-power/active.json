@@ -1,45 +1,17 @@
 {
  "empty_streak": 0,
  "events": {
-  "2600002736": {
-   "cause": "Equipment Issue",
-   "customer_hours_before_first_seen": 3.7,
-   "customer_hours_observed": 12.754722222222224,
-   "customers": 17,
-   "etr": "2026-11-28T05:30:00Z",
-   "first_seen": "2026-11-28T04:34:23Z",
-   "id": "2600002736",
-   "in_progress_first_seen": "2026-11-28T04:34:23Z",
-   "kind": "UNPLANNED",
-   "last_seen": "2026-11-28T05:19:24Z",
-   "lat": 43.74683442,
-   "lon": -116.6450797,
-   "max_gap_minutes": 15,
-   "opened_pending": false,
-   "peak_customers": 17,
-   "pending": false,
-   "places": [
-    "MIDDLETON"
-   ],
-   "planned": false,
-   "start": "2026-11-28T04:21:13Z",
-   "start_basis": "reported",
-   "status": "On-site",
-   "zips": [
-    "83644"
-   ]
-  },
   "2600002738": {
    "cause": "Vehicle Accident",
    "customer_hours_before_first_seen": 64.2,
-   "customer_hours_observed": 38.28611111111111,
+   "customer_hours_observed": 76.95722222222221,
    "customers": 154,
    "etr": "2026-11-28T06:30:00Z",
    "first_seen": "2026-11-28T05:04:29Z",
    "id": "2600002738",
    "in_progress_first_seen": "2026-11-28T05:04:29Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-28T05:19:24Z",
+   "last_seen": "2026-11-28T05:34:28Z",
    "lat": 43.52679526,
    "lon": -116.35743485,
    "max_gap_minutes": 15,
@@ -59,6 +31,34 @@
     "83634",
     "83642",
     "83709"
+   ]
+  },
+  "2600002741": {
+   "cause": "Under Investigation",
+   "customer_hours_before_first_seen": 18.2,
+   "customer_hours_observed": 0.0,
+   "customers": 52,
+   "etr": "2026-11-28T07:00:00Z",
+   "first_seen": "2026-11-28T05:34:28Z",
+   "id": "2600002741",
+   "in_progress_first_seen": "2026-11-28T05:34:28Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-28T05:34:28Z",
+   "lat": 43.64472537,
+   "lon": -116.24065449,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 52,
+   "pending": false,
+   "places": [
+    "BOISE"
+   ],
+   "planned": false,
+   "start": "2026-11-28T05:13:29Z",
+   "start_basis": "reported",
+   "status": "On the Way",
+   "zips": [
+    "83703"
    ]
   }
  },
@@ -117,6 +117,7 @@
   "2600002701": "2026-11-27T19:34:23Z",
   "2600002712": "2026-11-28T00:49:23Z",
   "2600002726": "2026-11-28T02:34:21Z",
-  "2600002727": "2026-11-28T02:04:24Z"
+  "2600002727": "2026-11-28T02:04:24Z",
+  "2600002736": "2026-11-28T05:34:28Z"
  }
 }
