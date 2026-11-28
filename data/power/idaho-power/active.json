@@ -1,17 +1,45 @@
 {
  "empty_streak": 0,
  "events": {
+  "2600002769": {
+   "cause": "Weather",
+   "customer_hours_before_first_seen": 113.0,
+   "customer_hours_observed": 0.0,
+   "customers": 30,
+   "etr": "2026-11-28T19:00:00Z",
+   "first_seen": "2026-11-28T18:34:23Z",
+   "id": "2600002769",
+   "in_progress_first_seen": "2026-11-28T18:34:23Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-28T18:34:23Z",
+   "lat": 42.85323738,
+   "lon": -114.87062888,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 30,
+   "pending": false,
+   "places": [
+    "HAGERMAN"
+   ],
+   "planned": false,
+   "start": "2026-11-28T14:48:24Z",
+   "start_basis": "reported",
+   "status": "On-site",
+   "zips": [
+    "83332"
+   ]
+  },
   "2600002778": {
    "cause": "Equipment Issue",
    "customer_hours_before_first_seen": 11.7,
-   "customer_hours_observed": 69.48388888888888,
+   "customer_hours_observed": 86.98388888888888,
    "customers": 70,
    "etr": "2026-11-28T22:00:00Z",
    "first_seen": "2026-11-28T16:49:24Z",
    "id": "2600002778",
    "in_progress_first_seen": "2026-11-28T16:49:24Z",
    "kind": "UNPLANNED",
-   "last_seen": "2026-11-28T18:19:23Z",
+   "last_seen": "2026-11-28T18:34:23Z",
    "lat": 42.49634987,
    "lon": -114.85270872,
    "max_gap_minutes": 15,
