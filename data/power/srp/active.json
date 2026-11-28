@@ -1,6 +1,33 @@
 {
  "empty_streak": 0,
- "events": {},
+ "events": {
+  "261123861": {
+   "cause": "We are investigating the cause of the outage.",
+   "customer_hours_before_first_seen": 1.0,
+   "customer_hours_observed": 0.0,
+   "customers": 38,
+   "etr": null,
+   "first_seen": "2026-11-28T18:49:23Z",
+   "id": "261123861",
+   "in_progress_first_seen": "2026-11-28T18:49:23Z",
+   "kind": "UNPLANNED",
+   "last_seen": "2026-11-28T18:49:23Z",
+   "lat": 33.452520769584694,
+   "lon": -111.8160543332385,
+   "max_gap_minutes": 0,
+   "opened_pending": false,
+   "peak_customers": 38,
+   "pending": false,
+   "places": [
+    "N MESA  DR TO N STAPLEY  DR AND E LEHI  RD TO E MCLELLAN  RD"
+   ],
+   "planned": false,
+   "start": "2026-11-28T18:47:51Z",
+   "start_basis": "reported",
+   "status": null,
+   "zips": []
+  }
+ },
  "logged_recent": {
   "261123013": "2026-11-21T19:04:31Z",
   "261123038": "2026-11-22T05:49:23Z",
